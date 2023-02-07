@@ -1,0 +1,23 @@
+README
+
+CONTENTS:
+
+Folders:
+
+* SAS_Simulation
+
+Files:
+
+* UAV_NL_Aug.mdl
+* SAS_dampers.m
+
+To run the dampers design file, follow the next steps
+
+1. Unzip this folder in /trunk/Simulation or create a folder named 
+   SAS_Simulation in /trunk/Simulation and copy all files into it
+2. Point Matlab path to /Simulation/SAS_Simulation
+3. Run SAS_dampers.m
+
+Type doc SAS_dampers for more information
+
+By David Herrera, National University of Colombia, 2012

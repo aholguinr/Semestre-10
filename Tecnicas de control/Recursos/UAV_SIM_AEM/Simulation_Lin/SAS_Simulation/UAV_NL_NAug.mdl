@@ -1,0 +1,3484 @@
+Model {
+  Name			  "UAV_NL_NAug"
+  Version		  7.8
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.36"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "UTF-8"
+  slprops.hdlmdlprops {
+    $PropName		    "HDLParams"
+    $ObjectID		    1
+    Array {
+      Type		      "Cell"
+      Dimension		      2
+      Cell		      "HDLSubsystem"
+      Cell		      "UAV_NL_NAug"
+      PropName		      "mdlProps"
+    }
+  }
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  FPTRunName		  "Run 1"
+  MaxMDLFileLineLength	  120
+  Created		  "Fri Apr 20 11:36:33 2012"
+  Creator		  "david"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "david"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Jun 08 16:51:14 2012"
+  RTWModifiedTimeStamp	  261075073
+  ModelVersionFormat	  "1.%<AutoIncrement:36>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "disabled"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowDesignRanges	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  Object {
+    $PropName		    "DataLoggingOverride"
+    $ObjectID		    2
+    $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
+    model_		    "UAV_NL_NAug"
+    overrideMode_	    [0.0]
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      "UAV_NL_NAug"
+      PropName		      "logAsSpecifiedByModels_"
+    }
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      []
+      PropName		      "logAsSpecifiedByModelsSSIDs_"
+    }
+  }
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      3
+      Version		      "1.11.1"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  4
+	  Version		  "1.11.1"
+	  StartTime		  "0.0"
+	  StopTime		  "40"
+	  AbsTol		  "auto"
+	  FixedStep		  "SampleTime"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  ConcurrentTasks	  off
+	  Solver		  "ode3"
+	  SolverName		  "ode3"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  5
+	  Version		  "1.11.1"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  off
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  on
+	  SaveState		  on
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  6
+	  Version		  "1.11.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  UseFloatMulNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  AccelParallelForEachSubsystem	on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  7
+	  Version		  "1.11.1"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Enable All"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  FrameProcessingCompatibilityMsg "warning"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  8
+	  Version		  "1.11.1"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  9
+	  Version		  "1.11.1"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  10
+	  Version		  "1.11.1"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  11
+	  Version		  "1.11.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "GenerateSLWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateSLWebview	  off
+	  GenerateCodeMetricsReport off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      12
+	      Version		      "1.11.1"
+	      Array {
+		Type			"Cell"
+		Dimension		21
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      13
+	      Version		      "1.11.1"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      CodeExecutionProfiling  off
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      ConcurrentExecutionCompliant on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  14
+	  Version		  "1.11.1"
+	  Description		  "HDL Coder custom configuration component"
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    ""
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition     [ 205, 104, 1074, 674 ] 
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    3
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      BusCreator
+      Inputs		      "4"
+      DisplayOption	      "none"
+      OutDataTypeStr	      "Inherit: auto"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      BusSelector
+      OutputAsBus	      off
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      From
+      IconDisplay	      "Tag"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      FromWorkspace
+      VariableName	      "simulink_input"
+      SampleTime	      "-1"
+      Interpolate	      on
+      ZeroCross		      off
+      OutputAfterFinalValue   "Extrapolation"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Goto
+      IconDisplay	      "Tag"
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Scope
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      SFBlockType	      "NONE"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+    Block {
+      BlockType		      Terminator
+    }
+    Block {
+      BlockType		      ToWorkspace
+      VariableName	      "simulink_output"
+      MaxDataPoints	      "1000"
+      Decimation	      "1"
+      SampleTime	      "0"
+      FixptAsFi		      off
+      NumInputs		      "1"
+    }
+  }
+  System {
+    Name		    "UAV_NL_NAug"
+    Location		    [335, 151, 1279, 583]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "59"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "146"
+    Block {
+      BlockType		      Reference
+      Name		      "Actuators"
+      SID		      "3"
+      Ports		      [1, 1]
+      Position		      [465, 234, 705, 296]
+      BackgroundColor	      "lightBlue"
+      DropShadow	      on
+      LibraryVersion	      "$Id$"
+      SourceBlock	      "Actuator_Lib/Actuators"
+      SourceType	      "SubSystem"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Flight Data Display"
+      SID		      "9"
+      Ports		      []
+      Position		      [175, 368, 289, 463]
+      DropShadow	      on
+      FontSize		      12
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskDisplay	      "x = 0:.1:2*pi;\nplot(x,sin(x)+rand(size(x))*.5)"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Flight Data Display"
+	Location		[0, 51, 1280, 800]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Scope
+	  Name			  "Altitude"
+	  SID			  "10"
+	  Ports			  [1]
+	  Position		  [275, 674, 305, 706]
+	  Floating		  off
+	  Location		  [248, 115, 1361, 762]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  ZoomMode		  "xonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  TimeRange		  "60"
+	  YMin			  "75"
+	  YMax			  "115"
+	  SaveName		  "ScopeData10"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  BusSelector
+	  Name			  "Bus\nSelector1"
+	  SID			  "11"
+	  Ports			  [1, 17]
+	  Position		  [95, 327, 100, 813]
+	  ShowName		  off
+	  OutputSignals		  "V_s [m/s],alpha [rad],beta [rad],phi [rad],theta [rad],psi [rad],p [rad/s],q [rad/s],r [rad/s],Ax"
+	  " [m/s^2],Ay [m/s^2],Az [m/s^2],h [m],Pd [Kpa],Ps [Kpa],Geodetic Latitude [deg],Geodetic Longitude [deg]"
+	  Port {
+	    PortNumber		    1
+	    Name		    "<V_s [m/s]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "<alpha [rad]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "<beta [rad]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    4
+	    Name		    "<phi [rad]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    5
+	    Name		    "<theta [rad]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    6
+	    Name		    "<psi [rad]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    7
+	    Name		    "<p [rad/s]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    8
+	    Name		    "<q [rad/s]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    9
+	    Name		    "<r [rad/s]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    10
+	    Name		    "<Ax [m/s^2]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    11
+	    Name		    "<Ay [m/s^2]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    12
+	    Name		    "<Az [m/s^2]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    13
+	    Name		    "<h [m]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    14
+	    Name		    "<Pd [Kpa]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    15
+	    Name		    "<Ps [Kpa]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    16
+	    Name		    "<Geodetic Latitude [deg]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    17
+	    Name		    "<Geodetic Longitude [deg]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  BusSelector
+	  Name			  "Bus\nSelector4"
+	  SID			  "12"
+	  Ports			  [1, 7]
+	  Position		  [115, 15, 120, 215]
+	  ShowName		  off
+	  OutputSignals		  "throttle [nd],elevator [rad],rudder [rad],l_aileron [rad],r_aileron [rad],l_flap [rad],r_flap [ra"
+	  "d]"
+	  Port {
+	    PortNumber		    1
+	    Name		    "<throttle [nd]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "<elevator [rad]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "<rudder [rad]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    4
+	    Name		    "<l_aileron [rad]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    5
+	    Name		    "<r_aileron [rad]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    6
+	    Name		    "<l_flap [rad]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    7
+	    Name		    "<r_flap [rad]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  BusSelector
+	  Name			  "Bus\nSelector5"
+	  SID			  "13"
+	  Ports			  [1, 6]
+	  Position		  [585, 463, 590, 602]
+	  ShowName		  off
+	  OutputSignals		  "V_e [m/s].Xdot [m/s],V_e [m/s].Ydot [m/s],V_e [m/s].Zdot [m/s],X_e [m].X [m],X_e [m].Y [m],X_e [m"
+	  "].Z [m]"
+	  Port {
+	    PortNumber		    1
+	    Name		    "<Xdot [m/s]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "<Ydot [m/s]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "<Zdot [m/s]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    4
+	    Name		    "<X [m]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    5
+	    Name		    "<Y [m]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    6
+	    Name		    "<Z [m]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  BusSelector
+	  Name			  "Bus\nSelector6"
+	  SID			  "14"
+	  Ports			  [1, 6]
+	  Position		  [590, 622, 595, 783]
+	  ShowName		  off
+	  OutputSignals		  "AngAccel [rad/s^2].pdot [rad/s^2],AngAccel [rad/s^2].qdot [rad/s^2],AngAccel [rad/s^2].rdot [rad/"
+	  "s^2],A_b [m/s^2].udot [m/s^2],A_b [m/s^2].vdot [m/s^2],A_b [m/s^2].wdot [m/s^2]"
+	  Port {
+	    PortNumber		    1
+	    Name		    "<pdot [rad/s^2]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "<qdot [rad/s^2]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "<rdot [rad/s^2]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    4
+	    Name		    "<udot [m/s^2]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    5
+	    Name		    "<vdot [m/s^2]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    6
+	    Name		    "<wdot [m/s^2]>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From"
+	  SID			  "16"
+	  Position		  [15, 105, 105, 125]
+	  ShowName		  off
+	  GotoTag		  "control_cmds"
+	  TagVisibility		  "global"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From1"
+	  SID			  "17"
+	  Position		  [470, 526, 530, 544]
+	  ShowName		  off
+	  GotoTag		  "States"
+	  TagVisibility		  "global"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From2"
+	  SID			  "18"
+	  Position		  [15, 561, 75, 579]
+	  ShowName		  off
+	  GotoTag		  "Sensors"
+	  TagVisibility		  "global"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From4"
+	  SID			  "20"
+	  Position		  [480, 791, 540, 809]
+	  ShowName		  off
+	  GotoTag		  "EnvData"
+	  TagVisibility		  "global"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux2"
+	  SID			  "22"
+	  Ports			  [2, 1]
+	  Position		  [410, 104, 415, 151]
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Pd"
+	  SID			  "24"
+	  Ports			  [1]
+	  Position		  [340, 704, 370, 736]
+	  Floating		  off
+	  Location		  [248, 115, 1361, 762]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  TimeRange		  "25"
+	  YMin			  "0.14"
+	  YMax			  "0.2"
+	  SaveName		  "ScopeData5"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Ps"
+	  SID			  "25"
+	  Ports			  [1]
+	  Position		  [340, 749, 370, 781]
+	  Floating		  off
+	  Location		  [296, 98, 1409, 751]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  TimeRange		  "25"
+	  YMin			  "100.45"
+	  YMax			  "100.52"
+	  SaveName		  "ScopeData6"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Radians\nto Degrees1"
+	  SID			  "26"
+	  Ports			  [1, 1]
+	  Position		  [350, 298, 405, 312]
+	  ShowName		  off
+	  LibraryVersion	  "1.43"
+	  SourceBlock		  "simulink_extras/Transformations/Radians\nto Degrees"
+	  SourceType		  "RadiansToDegrees"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Radians\nto Degrees10"
+	  SID			  "27"
+	  Ports			  [1, 1]
+	  Position		  [350, 423, 405, 437]
+	  ShowName		  off
+	  LibraryVersion	  "1.43"
+	  SourceBlock		  "simulink_extras/Transformations/Radians\nto Degrees"
+	  SourceType		  "RadiansToDegrees"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Radians\nto Degrees11"
+	  SID			  "28"
+	  Ports			  [1, 1]
+	  Position		  [200, 168, 255, 182]
+	  ShowName		  off
+	  LibraryVersion	  "1.43"
+	  SourceBlock		  "simulink_extras/Transformations/Radians\nto Degrees"
+	  SourceType		  "RadiansToDegrees"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Radians\nto Degrees12"
+	  SID			  "29"
+	  Ports			  [1, 1]
+	  Position		  [200, 563, 255, 577]
+	  ShowName		  off
+	  LibraryVersion	  "1.43"
+	  SourceBlock		  "simulink_extras/Transformations/Radians\nto Degrees"
+	  SourceType		  "RadiansToDegrees"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Radians\nto Degrees14"
+	  SID			  "31"
+	  Ports			  [1, 1]
+	  Position		  [200, 138, 255, 152]
+	  ShowName		  off
+	  LibraryVersion	  "1.43"
+	  SourceBlock		  "simulink_extras/Transformations/Radians\nto Degrees"
+	  SourceType		  "RadiansToDegrees"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Radians\nto Degrees15"
+	  SID			  "32"
+	  Ports			  [1, 1]
+	  Position		  [200, 198, 255, 212]
+	  ShowName		  off
+	  LibraryVersion	  "1.43"
+	  SourceBlock		  "simulink_extras/Transformations/Radians\nto Degrees"
+	  SourceType		  "RadiansToDegrees"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Radians\nto Degrees2"
+	  SID			  "33"
+	  Ports			  [1, 1]
+	  Position		  [350, 258, 405, 272]
+	  ShowName		  off
+	  LibraryVersion	  "1.43"
+	  SourceBlock		  "simulink_extras/Transformations/Radians\nto Degrees"
+	  SourceType		  "RadiansToDegrees"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Radians\nto Degrees3"
+	  SID			  "34"
+	  Ports			  [1, 1]
+	  Position		  [200, 108, 255, 122]
+	  ShowName		  off
+	  LibraryVersion	  "1.43"
+	  SourceBlock		  "simulink_extras/Transformations/Radians\nto Degrees"
+	  SourceType		  "RadiansToDegrees"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Radians\nto Degrees4"
+	  SID			  "35"
+	  Ports			  [1, 1]
+	  Position		  [200, 78, 255, 92]
+	  ShowName		  off
+	  LibraryVersion	  "1.43"
+	  SourceBlock		  "simulink_extras/Transformations/Radians\nto Degrees"
+	  SourceType		  "RadiansToDegrees"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Radians\nto Degrees5"
+	  SID			  "36"
+	  Ports			  [1, 1]
+	  Position		  [200, 503, 255, 517]
+	  ShowName		  off
+	  LibraryVersion	  "1.43"
+	  SourceBlock		  "simulink_extras/Transformations/Radians\nto Degrees"
+	  SourceType		  "RadiansToDegrees"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Radians\nto Degrees6"
+	  SID			  "37"
+	  Ports			  [1, 1]
+	  Position		  [200, 533, 255, 547]
+	  ShowName		  off
+	  LibraryVersion	  "1.43"
+	  SourceBlock		  "simulink_extras/Transformations/Radians\nto Degrees"
+	  SourceType		  "RadiansToDegrees"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Radians\nto Degrees7"
+	  SID			  "38"
+	  Ports			  [1, 1]
+	  Position		  [200, 48, 255, 62]
+	  ShowName		  off
+	  LibraryVersion	  "1.43"
+	  SourceBlock		  "simulink_extras/Transformations/Radians\nto Degrees"
+	  SourceType		  "RadiansToDegrees"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Radians\nto Degrees8"
+	  SID			  "39"
+	  Ports			  [1, 1]
+	  Position		  [350, 343, 405, 357]
+	  ShowName		  off
+	  LibraryVersion	  "1.43"
+	  SourceBlock		  "simulink_extras/Transformations/Radians\nto Degrees"
+	  SourceType		  "RadiansToDegrees"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Radians\nto Degrees9"
+	  SID			  "40"
+	  Ports			  [1, 1]
+	  Position		  [350, 383, 405, 397]
+	  ShowName		  off
+	  LibraryVersion	  "1.43"
+	  SourceBlock		  "simulink_extras/Transformations/Radians\nto Degrees"
+	  SourceType		  "RadiansToDegrees"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "TAS"
+	  SID			  "41"
+	  Ports			  [1]
+	  Position		  [625, 194, 655, 226]
+	  Floating		  off
+	  Location		  [9, 521, 1272, 762]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[0.5 0.5 0.5]"
+	    AxesColor		    "[0 0 0]"
+	    AxesTickColor	    "[1 1 1]"
+	    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  TimeRange		  "45"
+	  YMin			  "14"
+	  YMax			  "19"
+	  SaveName		  "ScopeData3"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  SID			  "42"
+	  Position		  [555, 790, 575, 810]
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace"
+	  SID			  "43"
+	  Ports			  [1]
+	  Position		  [180, 682, 240, 698]
+	  ShowName		  off
+	  VariableName		  "alt"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace1"
+	  SID			  "44"
+	  Ports			  [1]
+	  Position		  [435, 422, 495, 438]
+	  ShowName		  off
+	  VariableName		  "psi"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace10"
+	  SID			  "45"
+	  Ports			  [1]
+	  Position		  [285, 167, 345, 183]
+	  ShowName		  off
+	  VariableName		  "l_flap"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace13"
+	  SID			  "48"
+	  Ports			  [1]
+	  Position		  [300, 502, 360, 518]
+	  ShowName		  off
+	  VariableName		  "p"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace14"
+	  SID			  "49"
+	  Ports			  [1]
+	  Position		  [295, 532, 355, 548]
+	  ShowName		  off
+	  VariableName		  "q"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace15"
+	  SID			  "50"
+	  Ports			  [1]
+	  Position		  [295, 562, 355, 578]
+	  ShowName		  off
+	  VariableName		  "r"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace16"
+	  SID			  "51"
+	  Ports			  [1]
+	  Position		  [230, 17, 290, 33]
+	  ShowName		  off
+	  VariableName		  "throttle"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace17"
+	  SID			  "52"
+	  Ports			  [1]
+	  Position		  [230, 772, 290, 788]
+	  ShowName		  off
+	  VariableName		  "lat"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace18"
+	  SID			  "53"
+	  Ports			  [1]
+	  Position		  [230, 802, 290, 818]
+	  ShowName		  off
+	  VariableName		  "lon"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace19"
+	  SID			  "54"
+	  Ports			  [1]
+	  Position		  [700, 462, 760, 478]
+	  ShowName		  off
+	  VariableName		  "Xdot"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace2"
+	  SID			  "55"
+	  Ports			  [1]
+	  Position		  [435, 382, 495, 398]
+	  ShowName		  off
+	  VariableName		  "theta"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace20"
+	  SID			  "56"
+	  Ports			  [1]
+	  Position		  [700, 487, 760, 503]
+	  ShowName		  off
+	  VariableName		  "Ydot"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace21"
+	  SID			  "57"
+	  Ports			  [1]
+	  Position		  [700, 512, 760, 528]
+	  ShowName		  off
+	  VariableName		  "Zdot"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace22"
+	  SID			  "58"
+	  Ports			  [1]
+	  Position		  [700, 537, 760, 553]
+	  ShowName		  off
+	  VariableName		  "X"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace23"
+	  SID			  "59"
+	  Ports			  [1]
+	  Position		  [700, 562, 760, 578]
+	  ShowName		  off
+	  VariableName		  "Y"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace24"
+	  SID			  "60"
+	  Ports			  [1]
+	  Position		  [700, 587, 760, 603]
+	  ShowName		  off
+	  VariableName		  "Z"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace25"
+	  SID			  "61"
+	  Ports			  [1]
+	  Position		  [290, 137, 350, 153]
+	  ShowName		  off
+	  VariableName		  "r_aileron"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace26"
+	  SID			  "62"
+	  Ports			  [1]
+	  Position		  [285, 197, 345, 213]
+	  ShowName		  off
+	  VariableName		  "r_flap"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace27"
+	  SID			  "63"
+	  Ports			  [1]
+	  Position		  [700, 632, 760, 648]
+	  ShowName		  off
+	  VariableName		  "pdot"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace28"
+	  SID			  "64"
+	  Ports			  [1]
+	  Position		  [700, 657, 760, 673]
+	  ShowName		  off
+	  VariableName		  "qdot"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace29"
+	  SID			  "65"
+	  Ports			  [1]
+	  Position		  [700, 682, 760, 698]
+	  ShowName		  off
+	  VariableName		  "rdot"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace3"
+	  SID			  "66"
+	  Ports			  [1]
+	  Position		  [435, 342, 495, 358]
+	  ShowName		  off
+	  VariableName		  "phi"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace30"
+	  SID			  "67"
+	  Ports			  [1]
+	  Position		  [700, 707, 760, 723]
+	  ShowName		  off
+	  VariableName		  "udot"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace31"
+	  SID			  "68"
+	  Ports			  [1]
+	  Position		  [700, 732, 760, 748]
+	  ShowName		  off
+	  VariableName		  "vdot"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace32"
+	  SID			  "69"
+	  Ports			  [1]
+	  Position		  [700, 757, 760, 773]
+	  ShowName		  off
+	  VariableName		  "wdot"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace33"
+	  SID			  "70"
+	  Ports			  [1]
+	  Position		  [180, 592, 240, 608]
+	  ShowName		  off
+	  VariableName		  "Ax"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace34"
+	  SID			  "71"
+	  Ports			  [1]
+	  Position		  [180, 622, 240, 638]
+	  ShowName		  off
+	  VariableName		  "Ay"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace35"
+	  SID			  "72"
+	  Ports			  [1]
+	  Position		  [180, 652, 240, 668]
+	  ShowName		  off
+	  VariableName		  "Az"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace4"
+	  SID			  "73"
+	  Ports			  [1]
+	  Position		  [435, 297, 495, 313]
+	  ShowName		  off
+	  VariableName		  "beta"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace5"
+	  SID			  "74"
+	  Ports			  [1]
+	  Position		  [435, 257, 495, 273]
+	  ShowName		  off
+	  VariableName		  "alpha"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace6"
+	  SID			  "75"
+	  Ports			  [1]
+	  Position		  [435, 217, 495, 233]
+	  ShowName		  off
+	  VariableName		  "V_s"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace7"
+	  SID			  "76"
+	  Ports			  [1]
+	  Position		  [285, 77, 345, 93]
+	  ShowName		  off
+	  VariableName		  "rudder"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace8"
+	  SID			  "77"
+	  Ports			  [1]
+	  Position		  [290, 107, 350, 123]
+	  ShowName		  off
+	  VariableName		  "l_aileron"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace9"
+	  SID			  "78"
+	  Ports			  [1]
+	  Position		  [285, 47, 345, 63]
+	  ShowName		  off
+	  VariableName		  "elevator"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "ailerons"
+	  SID			  "79"
+	  Ports			  [1]
+	  Position		  [445, 114, 475, 146]
+	  Floating		  off
+	  Location		  [9, 82, 1281, 494]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[0.5 0.5 0.5]"
+	    AxesColor		    "[0 0 0]"
+	    AxesTickColor	    "[1 1 1]"
+	    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  TimeRange		  "15              "
+	  YMin			  "-0.6"
+	  YMax			  "0.6"
+	  SaveName		  "ScopeData2"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "alpha"
+	  SID			  "80"
+	  Ports			  [1]
+	  Position		  [575, 224, 605, 256]
+	  Floating		  off
+	  Location		  [77, 82, 1347, 799]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[0.5 0.5 0.5]"
+	    AxesColor		    "[0 0 0]"
+	    AxesTickColor	    "[1 1 1]"
+	    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  TimeRange		  "25"
+	  YMin			  "0.035"
+	  YMax			  "0.08"
+	  SaveName		  "ScopeData7"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "beta"
+	  SID			  "81"
+	  Ports			  [1]
+	  Position		  [575, 284, 605, 316]
+	  Floating		  off
+	  Location		  [9, 53, 1273, 791]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[0.5 0.5 0.5]"
+	    AxesColor		    "[0 0 0]"
+	    AxesTickColor	    "[1 1 1]"
+	    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  TimeRange		  "25"
+	  YMin			  "-0.06"
+	  YMax			  "0.06"
+	  SaveName		  "ScopeData11"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "elevator"
+	  SID			  "82"
+	  Ports			  [1]
+	  Position		  [395, 24, 425, 56]
+	  Floating		  off
+	  Location		  [9, 82, 1281, 494]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[0.5 0.5 0.5]"
+	    AxesColor		    "[0 0 0]"
+	    AxesTickColor	    "[1 1 1]"
+	    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  TimeRange		  "15"
+	  YMin			  "-5.78087"
+	  YMax			  "-5.23031"
+	  SaveName		  "ScopeData1"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "p"
+	  SID			  "83"
+	  Ports			  [1]
+	  Position		  [435, 509, 465, 541]
+	  Floating		  off
+	  Location		  [9, 140, 1279, 552]
+	  Open			  on
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[0.5 0.5 0.5]"
+	    AxesColor		    "[0 0 0]"
+	    AxesTickColor	    "[1 1 1]"
+	    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  TimeRange		  "40              "
+	  YMin			  "-150"
+	  YMax			  "200"
+	  SaveName		  "ScopeData8"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "phi"
+	  SID			  "118"
+	  Ports			  [1]
+	  Position		  [695, 314, 725, 346]
+	  Floating		  off
+	  Location		  [78, 193, 1341, 434]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[0.5 0.5 0.5]"
+	    AxesColor		    "[0 0 0]"
+	    AxesTickColor	    "[1 1 1]"
+	    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  TimeRange		  "45"
+	  YMin			  "14"
+	  YMax			  "19"
+	  SaveName		  "ScopeData12"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "psi"
+	  SID			  "120"
+	  Ports			  [1]
+	  Position		  [535, 439, 565, 471]
+	  Floating		  off
+	  Location		  [9, 53, 1273, 791]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[0.5 0.5 0.5]"
+	    AxesColor		    "[0 0 0]"
+	    AxesTickColor	    "[1 1 1]"
+	    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  TimeRange		  "25"
+	  YMin			  "-0.06"
+	  YMax			  "0.06"
+	  SaveName		  "ScopeData14"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "q"
+	  SID			  "85"
+	  Ports			  [1]
+	  Position		  [395, 534, 425, 566]
+	  Floating		  off
+	  Location		  [9, 359, 1279, 771]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[0.5 0.5 0.5]"
+	    AxesColor		    "[0 0 0]"
+	    AxesTickColor	    "[1 1 1]"
+	    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  TimeRange		  "15              "
+	  YMin			  "0.252772"
+	  YMax			  "0.252772"
+	  SaveName		  "ScopeData9"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "r"
+	  SID			  "86"
+	  Ports			  [1]
+	  Position		  [435, 569, 465, 601]
+	  Floating		  off
+	  Location		  [9, 359, 1279, 771]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[0.5 0.5 0.5]"
+	    AxesColor		    "[0 0 0]"
+	    AxesTickColor	    "[1 1 1]"
+	    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  TimeRange		  "45"
+	  YMin			  "-8"
+	  YMax			  "8"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "rudder"
+	  SID			  "87"
+	  Ports			  [1]
+	  Position		  [445, 54, 475, 86]
+	  Floating		  off
+	  Location		  [9, 82, 1281, 494]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[0.5 0.5 0.5]"
+	    AxesColor		    "[0 0 0]"
+	    AxesTickColor	    "[1 1 1]"
+	    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  TimeRange		  "45"
+	  YMin			  "-1.5"
+	  YMax			  "2"
+	  SaveName		  "ScopeData4"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "theta"
+	  SID			  "119"
+	  Ports			  [1]
+	  Position		  [625, 354, 655, 386]
+	  Floating		  off
+	  Location		  [7, 77, 1277, 794]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[0.5 0.5 0.5]"
+	    AxesColor		    "[0 0 0]"
+	    AxesTickColor	    "[1 1 1]"
+	    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  TimeRange		  "25"
+	  YMin			  "0.035"
+	  YMax			  "0.08"
+	  SaveName		  "ScopeData13"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Line {
+	  Name			  "<V_s [m/s]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector1"
+	  SrcPort		  1
+	  Points		  [65, 0; 0, -105; 180, 0]
+	  Branch {
+	    Points		    [0, -15]
+	    DstBlock		    "TAS"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "To Workspace6"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "<alpha [rad]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector1"
+	  SrcPort		  2
+	  Points		  [85, 0; 0, -95; 125, 0]
+	  Branch {
+	    DstBlock		    "Radians\nto Degrees2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -25]
+	    DstBlock		    "alpha"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Radians\nto Degrees2"
+	  SrcPort		  1
+	  DstBlock		  "To Workspace5"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<beta [rad]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector1"
+	  SrcPort		  3
+	  Points		  [105, 0; 0, -85]
+	  DstBlock		  "Radians\nto Degrees1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Radians\nto Degrees1"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "To Workspace4"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15; 150, 0]
+	    DstBlock		    "beta"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "<phi [rad]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector1"
+	  SrcPort		  4
+	  Points		  [120, 0; 0, -70]
+	  DstBlock		  "Radians\nto Degrees8"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Radians\nto Degrees8"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "To Workspace3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -20]
+	    DstBlock		    "phi"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "<theta [rad]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector1"
+	  SrcPort		  5
+	  Points		  [140, 0; 0, -60]
+	  DstBlock		  "Radians\nto Degrees9"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Radians\nto Degrees9"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "To Workspace2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -20]
+	    DstBlock		    "theta"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "<psi [rad]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector1"
+	  SrcPort		  6
+	  Points		  [155, 0; 0, -50]
+	  DstBlock		  "Radians\nto Degrees10"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Radians\nto Degrees10"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "To Workspace1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 25]
+	    DstBlock		    "psi"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Radians\nto Degrees3"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "To Workspace8"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Mux2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Radians\nto Degrees7"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "To Workspace9"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -15]
+	    DstBlock		    "elevator"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Radians\nto Degrees4"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "To Workspace7"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -15]
+	    DstBlock		    "rudder"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Radians\nto Degrees11"
+	  SrcPort		  1
+	  DstBlock		  "To Workspace10"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Radians\nto Degrees5"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    DstBlock		    "To Workspace13"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "p"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Radians\nto Degrees6"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "To Workspace14"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 10]
+	    DstBlock		    "q"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Radians\nto Degrees12"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "To Workspace15"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "r"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "From1"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    DstBlock		    "Bus\nSelector5"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 165]
+	    DstBlock		    "Bus\nSelector6"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "<Xdot [m/s]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector5"
+	  SrcPort		  1
+	  DstBlock		  "To Workspace19"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<Ydot [m/s]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector5"
+	  SrcPort		  2
+	  DstBlock		  "To Workspace20"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<Zdot [m/s]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector5"
+	  SrcPort		  3
+	  DstBlock		  "To Workspace21"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<X [m]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector5"
+	  SrcPort		  4
+	  DstBlock		  "To Workspace22"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<Y [m]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector5"
+	  SrcPort		  5
+	  DstBlock		  "To Workspace23"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<Z [m]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector5"
+	  SrcPort		  6
+	  DstBlock		  "To Workspace24"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<throttle [nd]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector4"
+	  SrcPort		  1
+	  DstBlock		  "To Workspace16"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<elevator [rad]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector4"
+	  SrcPort		  2
+	  DstBlock		  "Radians\nto Degrees7"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<rudder [rad]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector4"
+	  SrcPort		  3
+	  DstBlock		  "Radians\nto Degrees4"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<l_aileron [rad]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector4"
+	  SrcPort		  4
+	  DstBlock		  "Radians\nto Degrees3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Radians\nto Degrees14"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    DstBlock		    "To Workspace25"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -10; 125, 0]
+	    DstBlock		    "Mux2"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "<r_aileron [rad]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector4"
+	  SrcPort		  5
+	  DstBlock		  "Radians\nto Degrees14"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<l_flap [rad]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector4"
+	  SrcPort		  6
+	  DstBlock		  "Radians\nto Degrees11"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Radians\nto Degrees15"
+	  SrcPort		  1
+	  DstBlock		  "To Workspace26"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<r_flap [rad]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector4"
+	  SrcPort		  7
+	  DstBlock		  "Radians\nto Degrees15"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux2"
+	  SrcPort		  1
+	  DstBlock		  "ailerons"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<pdot [rad/s^2]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector6"
+	  SrcPort		  1
+	  DstBlock		  "To Workspace27"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<qdot [rad/s^2]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector6"
+	  SrcPort		  2
+	  DstBlock		  "To Workspace28"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<rdot [rad/s^2]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector6"
+	  SrcPort		  3
+	  DstBlock		  "To Workspace29"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<udot [m/s^2]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector6"
+	  SrcPort		  4
+	  DstBlock		  "To Workspace30"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<vdot [m/s^2]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector6"
+	  SrcPort		  5
+	  DstBlock		  "To Workspace31"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<wdot [m/s^2]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector6"
+	  SrcPort		  6
+	  DstBlock		  "To Workspace32"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nSelector4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From2"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nSelector1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<p [rad/s]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector1"
+	  SrcPort		  7
+	  DstBlock		  "Radians\nto Degrees5"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<q [rad/s]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector1"
+	  SrcPort		  8
+	  DstBlock		  "Radians\nto Degrees6"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<r [rad/s]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector1"
+	  SrcPort		  9
+	  DstBlock		  "Radians\nto Degrees12"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<Ax [m/s^2]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector1"
+	  SrcPort		  10
+	  DstBlock		  "To Workspace33"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<Ay [m/s^2]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector1"
+	  SrcPort		  11
+	  DstBlock		  "To Workspace34"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<Az [m/s^2]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector1"
+	  SrcPort		  12
+	  DstBlock		  "To Workspace35"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<h [m]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector1"
+	  SrcPort		  13
+	  Points		  [40, 0]
+	  Branch {
+	    DstBlock		    "To Workspace"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15; 115, 0]
+	    DstBlock		    "Altitude"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "<Pd [Kpa]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector1"
+	  SrcPort		  14
+	  DstBlock		  "Pd"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<Ps [Kpa]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector1"
+	  SrcPort		  15
+	  Points		  [110, 0; 0, 15]
+	  DstBlock		  "Ps"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<Geodetic Latitude [deg]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector1"
+	  SrcPort		  16
+	  DstBlock		  "To Workspace17"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<Geodetic Longitude [deg]>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector1"
+	  SrcPort		  17
+	  DstBlock		  "To Workspace18"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From4"
+	  SrcPort		  1
+	  DstBlock		  "Terminator"
+	  DstPort		  1
+	}
+	Annotation {
+	  Name			  "** NOTE:  This compares commanded euler orientations to the actual orientations over time"
+	  Position		  [998, 443]
+	}
+      }
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto1"
+      SID		      "115"
+      Position		      [160, 89, 345, 141]
+      BlockMirror	      on
+      ShowName		      off
+      GotoTag		      "control_cmds"
+      TagVisibility	      "global"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto2"
+      SID		      "94"
+      Position		      [1270, 456, 1385, 484]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      GotoTag		      "EnvData"
+      TagVisibility	      "global"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto3"
+      SID		      "89"
+      Position		      [1445, 234, 1570, 266]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      GotoTag		      "Sensors"
+      TagVisibility	      "global"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto4"
+      SID		      "95"
+      Position		      [1245, 84, 1390, 116]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      GotoTag		      "States"
+      TagVisibility	      "global"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Nonlinear UAV Model"
+      SID		      "1"
+      Ports		      [1, 2]
+      Position		      [800, 59, 1015, 461]
+      BackgroundColor	      "lightBlue"
+      DropShadow	      on
+      LibraryVersion	      "$Id$"
+      SourceBlock	      "NonlinearModel_Lib/Nonlinear UAV Model"
+      SourceType	      "SubSystem"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Sensors"
+      SID		      "93"
+      Ports		      [2, 1]
+      Position		      [1190, 188, 1365, 312]
+      BackgroundColor	      "lightBlue"
+      DropShadow	      on
+      LibraryVersion	      "$Id$"
+      SourceBlock	      "Sensors_Lib/Sensors"
+      SourceType	      "SubSystem"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "cmds"
+      SID		      "105"
+      Ports		      [0, 1]
+      Position		      [155, 235, 310, 295]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"cmds"
+	Location		[422, 333, 1127, 784]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "Bus\nCreator"
+	  SID			  "112"
+	  Ports			  [7, 1]
+	  Position		  [105, 55, 110, 195]
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Inputs		  "7"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  SID			  "103"
+	  Position		  [465, 40, 495, 70]
+	  ZOrder		  -5
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  SID			  "111"
+	  Position		  [480, 300, 565, 330]
+	  ZOrder		  -5
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  Value			  "[0 0]"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  SID			  "113"
+	  Ports			  [1, 7]
+	  Position		  [215, 55, 220, 195]
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Outputs		  "7"
+	  DisplayOption		  "bar"
+	  Port {
+	    PortNumber		    1
+	    Name		    "throttle [nd]"
+	    PropagatedSignals	    "throttle [nd]"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "elevator [rad]"
+	    PropagatedSignals	    "elevator [rad]"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "rudder [rad]"
+	    PropagatedSignals	    "rudder [rad]"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    4
+	    Name		    "l_aileron [rad]"
+	    PropagatedSignals	    "l_aileron [rad]"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    5
+	    Name		    "r_aileron [rad]"
+	    PropagatedSignals	    "r_aileron [rad]"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    6
+	    Name		    "l_flap [rad]"
+	    PropagatedSignals	    "l_flap [rad]"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    7
+	    Name		    "r_flap [rad]"
+	    PropagatedSignals	    "r_flap [rad]"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  SID			  "117"
+	  Position		  [440, 89, 485, 131]
+	  ZOrder		  -11
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  Gain			  "pi/180"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain1"
+	  SID			  "128"
+	  Position		  [510, 89, 555, 131]
+	  ZOrder		  -11
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  Gain			  "pitch_input"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain2"
+	  SID			  "131"
+	  Position		  [560, 234, 605, 276]
+	  ZOrder		  -11
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  Gain			  "roll_input"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain3"
+	  SID			  "132"
+	  Position		  [495, 154, 540, 196]
+	  ZOrder		  -11
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  Gain			  "pi/180"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain4"
+	  SID			  "133"
+	  Position		  [400, 234, 445, 276]
+	  ZOrder		  -11
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  Gain			  "-1"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain5"
+	  SID			  "138"
+	  Position		  [490, 234, 535, 276]
+	  ZOrder		  -11
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  Gain			  "pi/180"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain6"
+	  SID			  "139"
+	  Position		  [430, 154, 475, 196]
+	  ZOrder		  -11
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  Gain			  "yaw_input"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  SID			  "104"
+	  Ports			  [6, 1]
+	  Position		  [340, 88, 345, 162]
+	  ZOrder		  -16
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Inputs		  "6"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Repeating\nSequence"
+	  SID			  "134"
+	  Ports			  [0, 1]
+	  Position		  [610, 160, 640, 190]
+	  ZOrder		  -16
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  LibraryVersion	  "1.256"
+	  SourceBlock		  "simulink/Sources/Repeating\nSequence"
+	  SourceType		  "Repeating table"
+	  rep_seq_t		  "[0 2 2 3 3 4 4 100]"
+	  rep_seq_y		  "[0 0 10 10 -10 -10 0 0]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Repeating\nSequence1"
+	  SID			  "135"
+	  Ports			  [0, 1]
+	  Position		  [650, 240, 680, 270]
+	  ZOrder		  -16
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  LibraryVersion	  "1.256"
+	  SourceBlock		  "simulink/Sources/Repeating\nSequence"
+	  SourceType		  "Repeating table"
+	  rep_seq_t		  "[0 20 20 21 21 22 22 100]"
+	  rep_seq_y		  "[0 0 10 10 -10 -10 0 0]"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Signal Builder"
+	  SID			  "110"
+	  Tag			  "STV Subsys"
+	  Ports			  [0, 1]
+	  Position		  [595, 90, 680, 130]
+	  ZOrder		  -20
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  CopyFcn		  "sigbuilder_block('copy');"
+	  DeleteFcn		  "sigbuilder_block('delete');"
+	  LoadFcn		  "sigbuilder_block('load');"
+	  ModelCloseFcn		  "sigbuilder_block('modelClose');"
+	  PreSaveFcn		  "sigbuilder_block('preSave');"
+	  StartFcn		  "sigbuilder_block('start');"
+	  StopFcn		  "sigbuilder_block('stop');"
+	  NameChangeFcn		  "sigbuilder_block('namechange');"
+	  ClipboardFcn		  "sigbuilder_block('clipboard');"
+	  OpenFcn		  "sigbuilder_block('open',[387.2 153.6 550.4 400 ]);"
+	  CloseFcn		  "sigbuilder_block('close');"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  on
+	  MaskType		  "Sigbuilder block"
+	  MaskDescription	  "Simulink:masks:SigbuilderBlock_MD"
+	  MaskInitialization	  "if ~strcmp(get_param(bdroot(gcbh),'SimulationStatus'),'stopped') tuvar = sigbuilder_block('ma"
+	  "skInit'); end"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "plot(0, 0, 100, 100,[2, 2, 32, 32, 2], [68, 8, 8, 68, 68],[32, 2], [38, 38], [32, 19, 2],[53, 60, 4"
+	  "4], [32, 17, 17, 2],[16, 16, 31, 31]);txt = getActiveGroup(gcbh);text(2, 100, txt,'verticalAlignment', 'top');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  off
+	  MaskIconRotate	  "port"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskCapabilities	  "slmaskedcaps(gcbh)"
+	  System {
+	    Name		    "Signal Builder"
+	    Location		    [480, 85, 980, 386]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "5"
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      SID		      "110:1"
+	      Tag		      "STV Demux"
+	      Ports		      [1, 1]
+	      Position		      [150, 38, 160, 612]
+	      ZOrder		      -1
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      FromWorkspace
+	      Name		      "FromWs"
+	      SID		      "110:2"
+	      Tag		      "STV FromWs"
+	      Position		      [30, 300, 115, 350]
+	      ZOrder		      -2
+	      VariableName	      "tuvar"
+	      SampleTime	      "0"
+	      ZeroCross		      on
+	      SigBuilderData	      "DataTag0"
+	      VnvData		      "DataTag1"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Signal 1"
+	      SID		      "110:3"
+	      Tag		      "STV Outport"
+	      Position		      [280, 30, 300, 40]
+	      ZOrder		      -3
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      Points		      [50, 0; 0, -290]
+	      DstBlock		      "Signal 1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "FromWs"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Trim setting "
+	  SID			  "114"
+	  Ports			  [1, 1]
+	  Position		  [250, 109, 305, 141]
+	  BlockMirror		  on
+	  BackgroundColor	  "lightBlue"
+	  DropShadow		  on
+	  LibraryVersion	  "$Id$"
+	  SourceBlock		  "Actuator_Lib/Trim setting "
+	  SourceType		  "SubSystem"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  SID			  "106"
+	  Position		  [30, 118, 60, 132]
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  Points		  [-55, 0; 0, 45]
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "throttle [nd]"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "elevator [rad]"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "rudder [rad]"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux"
+	  SrcPort		  3
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "l_aileron [rad]"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux"
+	  SrcPort		  4
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "r_aileron [rad]"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux"
+	  SrcPort		  5
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  5
+	}
+	Line {
+	  Name			  "l_flap [rad]"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux"
+	  SrcPort		  6
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  6
+	}
+	Line {
+	  Name			  "r_flap [rad]"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux"
+	  SrcPort		  7
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  7
+	}
+	Line {
+	  SrcBlock		  "Trim setting "
+	  SrcPort		  1
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "Trim setting "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Bus\nCreator"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Signal Builder"
+	  SrcPort		  1
+	  DstBlock		  "Gain1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain1"
+	  SrcPort		  1
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Repeating\nSequence"
+	  SrcPort		  1
+	  DstBlock		  "Gain3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain3"
+	  SrcPort		  1
+	  DstBlock		  "Gain6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain2"
+	  SrcPort		  1
+	  DstBlock		  "Gain5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain5"
+	  SrcPort		  1
+	  Points		  [-10, 0]
+	  Branch {
+	    DstBlock		    "Gain4"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -50; -80, 0; 0, -75]
+	    DstBlock		    "Mux"
+	    DstPort		    4
+	  }
+	}
+	Line {
+	  SrcBlock		  "Gain6"
+	  SrcPort		  1
+	  Points		  [-20, 0; 0, -55]
+	  DstBlock		  "Mux"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Gain4"
+	  SrcPort		  1
+	  Points		  [-15, 0; 0, -115]
+	  DstBlock		  "Mux"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  Points		  [-115, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "Repeating\nSequence1"
+	  SrcPort		  1
+	  DstBlock		  "Gain2"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Actuators"
+      SrcPort		      1
+      Points		      [0, -5]
+      DstBlock		      "Nonlinear UAV Model"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sensors"
+      SrcPort		      1
+      DstBlock		      "Goto3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Nonlinear UAV Model"
+      SrcPort		      1
+      Points		      [75, 0]
+      Branch {
+	Points			[0, 60]
+	DstBlock		"Sensors"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -60]
+	DstBlock		"Goto4"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Nonlinear UAV Model"
+      SrcPort		      2
+      Points		      [75, 0]
+      Branch {
+	Points			[0, -80]
+	DstBlock		"Sensors"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, 110]
+	DstBlock		"Goto2"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "cmds"
+      SrcPort		      1
+      Points		      [80, 0]
+      Branch {
+	DstBlock		"Actuators"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -150]
+	DstBlock		"Goto1"
+	DstPort			1
+      }
+    }
+  }
+}
+MatData {
+  NumRecords		  2
+  DataRecord {
+    Tag			    DataTag1
+    Data		    "  %)30     .    R ,   8    (     @         %    \"     $    !     0         %  0 $0    $   #,    =F5R:6"
+    "9Y0FQK4&%T:',   !V97)I9GE\";&M(86YD;&5S '9N=DUG<DED>           86-T:79E1W)O=7        !R97%$:7-P4')C;G0      &)L:T1"
+    "I<W!-;V1E        9W)O=7!#;G0           !G<F]U<%)E<4-N=        &=R;W5P1$]/4E-I9       ;6]D96Q(              !B;&]C:"
+    "T@              &]V97)I9&53971T:6YG<P        X    P    !@    @    &          4    (               !          D    "
+    "     #@   #     &    \"     8         !0    @               $         \"0         .    ,     8    (    !@         "
+    "%    \"                0         )          X    X    !@    @    &          4    (     0    $    !          D    ("
+    "            \\#\\.    ,     8    (    !@         %    \"                0         )          X    P    !@    @    "
+    "&          4    (               !          D         #@   #@    &    \"     8         !0    @    !     0    $     "
+    "    \"0    @           #P/PX    P    !@    @    &          4    (               !          D         #@   #     & "
+    "   \"     8         !0    @               $         \"0         .    .     8    (    !@         %    \"     $    !"
+    "     0         )    \"        .9GUN% #@   #@    &    \"     8         !0    @    !     0    $         \"0    @    "
+    "   !R:>WA0 X    P    !@    @    &          4    (               !          D         "
+  }
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    P H   8    (     @         %    \"     $    !     0         %  0 %@    $   \"P    9W)I9"
+    "%-E='1I;F<              &-H86YN96QS                  !A>&5S                        8V]M;6]N                     &1"
+    "A=&%3970                   !D871A4V5T261X                :7-697)I9FEC871I;VY6:7-I8FQE '-B;V)J                     "
+    "  .    ,     8    (    !          %    \"     $    \"     0         0  ( ;VX   X   #@ @  !@    @    \"          4 "
+    "   (     0    $    !          4 !  *     0   %H   !S=&5P6       <W1E<%D      'E-:6X       !Y36%X        8V]L;W(   "
+    "   &QI;F53='EL90!L:6YE5VED=&@ ;&%B96P      &]U=$EN9&5X           .    .     8    (    !@         %    \"     $    "
+    "!     0         )    \"               #@   #@    &    \"     8         !0    @    !     0    $         \"0    @   "
+    "            X    X    !@    @    &          4    (     0    $    !          D    (            \\/\\.    .     8   "
+    " (    !@         %    \"     $    !     0         )    \"            /!_#@   $@    &    \"     8         !0    @  "
+    "  !     P    $         \"0   !@   !\"/NC9K/KJ/P                     .    ,     8    (    !          %    \"     $ "
+    "   !     0         0  $ +0    X    X    !@    @    &          4    (     0    $    !          D    (            ^#"
+    "\\.    .     8    (    !          %    \"     $    (     0         0    \"    %-I9VYA;\" Q#@   #@    &    \"     8"
+    "         !0    @    !     0    $         \"0    @           #P/PX   \"P 0  !@    @    \"          4    (     0    "
+    "$    !          4 !  +     0   #<   !C:&%N;F5L<P   'E,:6T         ;&%B96Q0;W,   !L86)E;$@      &QA8F5L4&%T8V@   X "
+    "   X    !@    @    &          4    (     0    $    !          D    (            \\#\\.    0     8    (    !@      "
+    "   %    \"     $    \"     0         )    $            \"[         +D .    ,     8    (    !          %    \"     "
+    "$    \"     0         0  ( 5$P   X    X    !@    @    &          4    (     0    $    !          D    (        #(#"
+    "JS4 .    .     8    (    !@         %    \"     $    !     0         )    \"        !  C,U #@   &@\"   &    \"    "
+    " (         !0    @    !     0    $         !0 $  X    !    8@   &1I<W!4:6UE        9&ES<$UO9&4       !M:6Y4:6UE   "
+    "      &UA>%1I;64         869T97)&:6YA;%-T<@!S86UP;&54:6UE     'IE<F]#<F]S<P              #@   $     &    \"     8 "
+    "        !0    @    !     @    $         \"0   !                       \"A #@   #@    &    \"     8         !0    @"
+    "    !     0    $         \"0    @           #P/PX    X    !@    @    &          4    (     0    $    !          D "
+    "   (               .    .     8    (    !@         %    \"     $    !     0         )    \"            \"A #@   $ "
+    "    &    \"     0         !0    @    !    \"P    $         $     L   !%>'1R87!O;&%T90      #@   #@    &    \"     "
+    "8         !0    @    !     0    $         \"0    @               X    P    !@    @    $          4    (     0    ("
+    "    !         !   @!O;@  #@   ( !   &    \"     (         !0    @    !     0    $         !0 $  X    !    .    &%C"
+    "=&EV941I<W!)9'@ =&EM95)A;F=E      !N86UE             &1I<W!L87E286YG90  #@   #@    &    \"     8         !0    @  "
+    "  !     0    $         \"0    @           #P/PX   !     !@    @    &          4    (     0    (    !          D   "
+    " 0                       H0 X    X    !@    @    $          4    (     0    <    !         !     '    1W)O=7 @,0 ."
+    "    0     8    (    !@         %    \"     $    \"     0         )    $                       *$ .    .     8    ("
+    "    !@         %    \"     $    !     0         )    \"            / _#@   #@    &    \"     8         !0    @    "
+    "!     0    $         \"0    @               X   \"     !@    @    1          $          0 $ $U#3U,!    \"    %-I9U"
+    "-U:71E#@   $@    &    \"     T         !0    @    &     0    $         !@   !@       #= @    $    !     0    ,    "
+    ".    , L   8    (    \"0         %    \"     $     \"P   0         \"      L    !24T     #@   & *   &    \"     ( "
+    "        !0    @    !     0    $         !0 $  4    !    !0   $U#3U,     #@   !@*   &    \"    !$          0       "
+    "  !  0 34-/4P$    -    1FEL95=R87!P97)?7P    X   #8\"0  !@    @    !          4    (    \"@    $    !          X  "
+    "  ( @  !@    @    )          4    (    V $   $    !          (   #8 0   @    T   \"P    \\    /    !0 0  N $  -@! "
+    "            $=R;W5P<P!.86UE %-I9VYA;', 6$1A=&$ 641A=&$ 4VEG4W5I=&53:6=N86P 57-E<D1A=&$ 5&EM95)A;F=E %-I9U-U:71E1W)"
+    "O=7  06-T:79E4VEG;F%L %)E<75I<F5M96YT26YF;P!3:6=3=6ET90!!8W1I=F5'<F]U<                                     8      "
+    "              )                    #                                                P                    $    #   "
+    "  @                    (    \"     0                    ,    !               !     0    $    &     P    (    !    "
+    "      ,    !    !     @    !    !0    ,    \"     0    $    $     0    (    %     0    ,                          "
+    "                     X         #@   #@    &    \"     0         !0    @    !    !P    $         $     <   !'<F]U<\""
+    " Q  X    X    !@    @    $          4    (     0    @    !         !     (    4VEG;F%L(#$.    <     8    (    !@  "
+    "       %    \"     $    (     0         )    0                       \"$         (0        !!         $$         4"
+    "0        !1         *$ .    <     8    (    !@         %    \"     $    (     0         )    0                    "
+    "              D0        \"1         ),         DP                      .    2     8    (    #0         %    \"    "
+    " 8    !     0         &    &        -T\"     0    $    #     0    X   !     !@    @    &          4    (     0    "
+    "(    !          D    0                       H0 X   !(    !@    @    -          4    (    !@    $    !          8 "
+    "   8        W0(    !     0    (    \"    #@   #@%   &    \"     $         !0    @    $     0    $         #@   #@ "
+    "   &    \"     (         !0    @    !          $         !0 $  $    !          X   !  0  !@    @    \"          4 "
+    "   (     0    $    !          4 !  )     0   \"0   !.86UE      !81&%T80    !91&%T80    !5<V5R1&%T80      #@   #   "
+    "  &    \"     0         !0    @               $         $          .    ,     8    (    !@         %    \"        "
+    "        0         )          X    P    !@    @    &          4    (               !          D         #@   #     "
+    "&    \"     8         !0    @               $         \"0         .    $ (   8    (     @         %    \"     $   "
+    " !     0         %  0 $     $   !@    3F%M90               %-I9VYA;',           !!8W1I=F53:6=N86P     4F5Q=6ER96UE"
+    ";G1);F9O %5S97)$871A          !4:6UE4F%N9V4         #@   #     &    \"     0         !0    @               $      "
+    "   $          .    2     8    (    #0         %    \"     4    !     0         &    %        -T\"               ! "
+    "         X    P    !@    @    &          4    (               !          D         #@   #     &    \"     0       "
+    "  !0    @               $         $          .    ,     8    (    !@         %    \"                0         )   "
+    "       X   !     !@    @    &          4    (     0    (    !          D    0                       D0 X   !H 0  !"
+    "@    @    \"          4    (     0    $    !          4 !  ,     0   #    !.86UE          !'<F]U<',       !!8W1I=F"
+    "5'<F]U< !5<V5R1&%T80     .    ,     8    (    !          %    \"                0         0          X   !(    !@ "
+    "   @    -          4    (    !0    $    !          8    4        W0(               (         #@   #@    &    \"   "
+    "  8         !0    @    !     0    $         \"0    @           #P/PX    P    !@    @    &          4    (         "
+    "      !          D         #@   (@    &    \"     D         !0    @    !    6     $          @   %@      4E-      "
+    "X   !(    !@    @    \"          4    (     0    $    !          4 !  %     0    4   !-0T]3      X         "
+  }
+}

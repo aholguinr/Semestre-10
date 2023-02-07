@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+FASER (R/C)
+
+Started February 4 2011
+Jordan Larson
+UAV UMN Research
+************************************************************************
+-->
+
+<PropertyList>
+
+ <sim>
+
+  <model>
+   <path archive="y">Aircraft/FASER/Models/faser.xml</path>
+
+  </model>
+
+		<sound>
+			<path>Aircraft/Generic/generic-sound.xml</path>
+		</sound>
+
+
+<!--<presets>
+   <onground>false</onground>
+   <speed-set>knots</speed-set>
+   <airport-id type="string">EDTD</airport-id>
+   <runway type="string">18</runway>
+   <airspeed-kt type="double">60.0</airspeed-kt>
+   <altitude-ft type="double">6000.0</altitude-ft>
+  </presets>-->
+  
+   <!-- 
+  <help>
+   <title>FASER</title>
+     </help>
+ hide the 2D panel -->
+ 
+  <panel>
+   <visibility archive="y">false</visibility>
+  </panel>
+
+  <!-- position the pilot viewpoint and angle -->
+ 
+  <view>
+   <internal archive="y">true</internal>
+   <config>
+     <x-offset-m archive="y">0</x-offset-m>
+     <y-offset-m archive="y">-1.5</y-offset-m>
+     <z-offset-m archive="y">-3.5</z-offset-m>
+     <pitch-offset-deg>-15</pitch-offset-deg>
+   </config>
+  </view>
+
+ </sim>
+
+</PropertyList>

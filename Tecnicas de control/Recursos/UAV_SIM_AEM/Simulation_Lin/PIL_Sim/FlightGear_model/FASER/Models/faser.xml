@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>faser.ac</path>
+ <offsets>
+   <x-m>-7.22</x-m>
+   <y-m>0</y-m>
+   <z-m>-2.89</z-m>
+   <pitch-deg>0.0</pitch-deg>
+ </offsets>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>laileron</object-name>      
+    <property>controls/flight/aileron</property>
+  <factor>-24</factor>
+    <center>
+			<x-m>0.5</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0</z-m>
+		</center>
+ <axis>
+   <x1-m>1</x1-m>
+   <y1-m>0</y1-m>
+   <z1-m>0</z1-m>
+   </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>raileron</object-name>      
+    <property>controls/flight/aileron</property>
+  <factor>-24</factor>
+    <center>
+			<x-m>0.5</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0</z-m>
+		</center>
+ <axis>
+   <x1-m>1</x1-m>
+   <y1-m>0</y1-m>
+   <z1-m>0</z1-m>
+   </axis>
+ </animation>
+ 
+  <animation>
+  <type>rotate</type>
+  <object-name>rudder</object-name>      
+    <property>controls/flight/rudder</property>
+  <factor>24</factor>
+  <center>
+			<x-m>0.8</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>elevator</object-name>      
+    <property>controls/flight/elevator</property>
+  <factor>24</factor>  
+  <center>
+			<x-m>0.8</x-m>
+			<y-m>-0.25</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis> </animation>
+
+ </PropertyList>
