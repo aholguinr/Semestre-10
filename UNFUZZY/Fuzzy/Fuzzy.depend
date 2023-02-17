@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1655095481 source:c:\users\andre\downloads\semestre8\inteligencia artificial y mini-robots\modulo 2\unfuzzy\fuzzy\main.cpp
+	<iostream>
+	<iostream>
+	<string>
+	"fuzzy.cpp"
+
+1652852051 source:c:\users\andre\downloads\semestre8\inteligencia artificial y mini-robots\modulo 2\unfuzzy\fuzzy\codigo2.cpp
+	<iostream>
+	<iostream>
+	<string>
+	"fuzzy.h"
+
+1655095856 c:\users\andre\downloads\semestre8\inteligencia artificial y mini-robots\modulo 2\unfuzzy\fuzzy\fuzzy.h
+	<iostream>
+	<string.h>
+	<stdio.h>
+	<math.h>
+
+1652852050 source:c:\users\andre\downloads\semestre8\inteligencia artificial y mini-robots\modulo 2\unfuzzy\fuzzy\fuzzy.cpp
+	"fuzzy.h"
+
+1652852050 c:\users\andre\downloads\semestre8\inteligencia artificial y mini-robots\modulo 2\unfuzzy\fuzzy\fuzzy.cpp
+	"fuzzy.h"
+
+1655097542 source:c:\users\andre\downloads\semestre8\inteligencia artificial y mini-robots\modulo 2\unfuzzy\fuzzy\codigo.cpp
+	<iostream>
+	<iostream>
+	<string>
+	"fuzzy.h"
+
