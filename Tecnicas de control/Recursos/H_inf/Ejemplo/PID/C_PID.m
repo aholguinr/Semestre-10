@@ -11,4 +11,4 @@ J = 1.45e-3;
 
 N = 48;
 
-mex control_PID
+mex control_PID.c

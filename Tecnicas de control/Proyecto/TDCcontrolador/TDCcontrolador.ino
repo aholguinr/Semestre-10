@@ -70,9 +70,25 @@ void control(void){
 
       //CmdRed=6.580782192615031*E-18.891748968281533*Ep+18.051769213192244*Epp-5.740768357921944*Eppp+2.751239739291020*Up-2.514650765653094*Upp+0.763411026362074*Uppp;
 
-      CmdRed=12.79*E+1*Ep- 1.42e-15*Epp+8.725*Eppp+Upp;
+      //CmdRed=12.79*E+1*Ep- 1.42e-15*Epp+8.725*Eppp+Upp;
 
+      //CmdRed=(306.6*E-604.9*Ep+298.3*Epp)+(0.4051*Up+0.5949*Upp);  //Intento PID TUNER    Se satura
+      //CmdRed=8.215*E-16.2*Ep+7.989*Epp+1.006*Up-0.005624*Upp; //Intento 2 PID TUNER TF*2  Llega a unos 35, pero es lento, con sobrepico, y no soporta perturbaciones
+      //CmdRed=25.87*E-50.95*Ep+25.08*Epp+0.8011*Up+0.1989*Upp;  //Error estacionario
+      CmdRed=16.23*E-31.98*Ep+15.76*Epp+0.8909*Up+0.1091*Upp; //El mejor hasta el momento
 
+/*
+ * C_c =
+ 
+             1            s    
+  Kp + Ki * --- + Kd * --------
+             s          Tf*s+1 
+
+  with Kp = 0.42, Ki = 1.54, Kd = 0.0285, Tf = 0.000803
+ 
+Continuous-time PIDF controller in parallel form.
+
+ */
 
 
       Eppp=Epp;
