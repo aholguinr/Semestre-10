@@ -1,0 +1,159 @@
+[p GLOBOPT AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4550 ]
+[d frameptr 4065 ]
+"62 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul64.c
+[v ___omul __omul `(ul  1 e 4 0 ]
+"26 C:\Users\andre\MPLABXProjects\Parcial2.X\Parcial2.c
+[v _main main `(v  1 e 1 0 ]
+"58
+[v _Recibir Recibir `(uc  1 e 1 0 ]
+"63
+[v _Transmitir Transmitir `(v  1 e 1 0 ]
+"68
+[v _TransmitirMensaje TransmitirMensaje `(v  1 e 1 0 ]
+"75
+[v _TransmitirNumero TransmitirNumero `(v  1 e 1 0 ]
+"106
+[v _Conversion Conversion `(uc  1 e 1 0 ]
+"3428 C:\Program Files\Microchip\xc8\v2.32\pic\include\proc\pic18f4550.h
+[v _TRISA TRISA `VEuc  1 e 1 @3986 ]
+"4224
+[v _TRISE TRISE `VEuc  1 e 1 @3990 ]
+"4937
+[v _RCSTA RCSTA `VEuc  1 e 1 @4011 ]
+"5147
+[v _TXSTA TXSTA `VEuc  1 e 1 @4012 ]
+"5403
+[v _TXREG TXREG `VEuc  1 e 1 @4013 ]
+"5415
+[v _RCREG RCREG `VEuc  1 e 1 @4014 ]
+"5427
+[v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
+"6063
+[v _BAUDCON BAUDCON `VEuc  1 e 1 @4024 ]
+"6511
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
+"6582
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"6667
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @4034 ]
+"6800
+[v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
+"9754
+[v _GO GO `VEb  1 e 0 @32273 ]
+"10444
+[v _RCIF RCIF `VEb  1 e 0 @31989 ]
+"10975
+[v _TRMT TRMT `VEb  1 e 0 @32097 ]
+"15 C:\Users\andre\MPLABXProjects\Parcial2.X\Parcial2.c
+[v _canal canal `uc  1 e 1 0 ]
+"16
+[v _Van Van `ui  1 e 2 0 ]
+"26
+[v _main main `(v  1 e 1 0 ]
+{
+"55
+} 0
+"75
+[v _TransmitirNumero TransmitirNumero `(v  1 e 1 0 ]
+{
+"78
+[v TransmitirNumero@var var `i  1 a 2 17 ]
+"77
+[v TransmitirNumero@centena centena `ui  1 a 2 14 ]
+"76
+[v TransmitirNumero@unidad unidad `uc  1 a 1 20 ]
+[v TransmitirNumero@decena decena `uc  1 a 1 19 ]
+"79
+[v TransmitirNumero@b b `uc  1 a 1 16 ]
+"75
+[v TransmitirNumero@a a `ui  1 p 2 12 ]
+"104
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 4 ]
+"7
+[v ___lwmod@dividend dividend `ui  1 p 2 0 ]
+[v ___lwmod@divisor divisor `ui  1 p 2 2 ]
+"25
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 9 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 11 ]
+"7
+[v ___lwdiv@dividend dividend `ui  1 p 2 5 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 7 ]
+"30
+} 0
+"68 C:\Users\andre\MPLABXProjects\Parcial2.X\Parcial2.c
+[v _TransmitirMensaje TransmitirMensaje `(v  1 e 1 0 ]
+{
+[v TransmitirMensaje@a a `*.31uc  1 p 1 1 ]
+"73
+} 0
+"63
+[v _Transmitir Transmitir `(v  1 e 1 0 ]
+{
+[v Transmitir@BufferT BufferT `uc  1 a 1 wreg ]
+[v Transmitir@BufferT BufferT `uc  1 a 1 wreg ]
+[v Transmitir@BufferT BufferT `uc  1 a 1 0 ]
+"66
+} 0
+"58
+[v _Recibir Recibir `(uc  1 e 1 0 ]
+{
+"61
+} 0
+"106
+[v _Conversion Conversion `(uc  1 e 1 0 ]
+{
+[v Conversion@canal canal `uc  1 a 1 wreg ]
+[v Conversion@canal canal `uc  1 a 1 wreg ]
+[v Conversion@canal canal `uc  1 a 1 1 ]
+"111
+} 0
