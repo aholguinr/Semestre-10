@@ -1,0 +1,30 @@
+Currently available collaborative robots, such as the Universal Robots UR5, are safe enough to be able to 
+work alongside people without being fenced in. However their capabilities are still quite limited. We are 
+working on the next generation of collaborative robots that will be smarter, safer and much more interactive 
+with users. We have developed a collaborative robot arm, and C++ software for controlling it using sensor data. 
+The arm is equipped with a variety of sensors, including RGB-D sensors that provide real-time image and depth data. 
+The objective of this project is to design, program and experimentally test robot software for collaborative tasks. 
+Of particular interest is the so-called “handoff” or “handover” task where the robot retrieves a desired object 
+(e.g., a tool) and passes it to the person, or the person passes an object to the robot. This project will provide 
+an opportunity to learn and apply 3D vision, kinematics, and control algorithms to a next generation collaborative 
+robot. The software development will be in C++.
+
+
+
+Faculty Supervisor	Gary Bone
+Specialization	Creating control software, sensors and actuators for robotic systems with a focus on collaborative 
+and autonomous robots. Mentoring students is a very important part of my job.
+Province	Ontario
+Host University	McMaster University - Hamilton
+Language	English
+
+
+
+Project dates may be subject to change. Students must discuss any date limitations with the faculty supervisor. 
+Final project dates are confirmed in March 2023.
+
+Programming in C++. Some knowledge of robotics.
+
+The student is expected to design, program and experimentally test software for controlling the robot arm. 
+They will be working as a member of the robotics research team at McMaster University.
+
