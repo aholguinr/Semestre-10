@@ -1,0 +1,412 @@
+[p GLOBOPT AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4550 ]
+[d frameptr 4065 ]
+"7 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+[v i2___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+[v i2___ftmul __ftmul `(f  1 e 3 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+[v i2___fttol __fttol `(l  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+"27 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lbtoft.c
+[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
+[v i2___lbtoft __lbtoft `(f  1 e 3 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul64.c
+[v ___omul __omul `(ul  1 e 4 0 ]
+"37 C:\Users\andre\MPLABXProjects\Lab6.X\Lab6.c
+[v _main main `(v  1 e 1 0 ]
+"131
+[v _ISR ISR `II(v  1 e 1 0 ]
+"166
+[v _Recibir Recibir `(v  1 e 1 0 ]
+"175
+[v _Transmitir Transmitir `(v  1 e 1 0 ]
+[v i2_Transmitir Transmitir `(v  1 e 1 0 ]
+"188
+[v _TransmitirMensaje TransmitirMensaje `(v  1 e 1 0 ]
+"229
+[v _LecturaEntrada LecturaEntrada `(v  1 e 1 0 ]
+"51 C:\Users\andre\MPLABXProjects\Lab6.X\LibLCDXC8.h
+[v _ConfiguraLCD ConfiguraLCD `(v  1 e 1 0 ]
+"55
+[v _EnviaDato EnviaDato `(v  1 e 1 0 ]
+"67
+[v _InicializaLCD InicializaLCD `(v  1 e 1 0 ]
+"102
+[v _HabilitaLCD HabilitaLCD `(v  1 e 1 0 ]
+"110
+[v _BorraLCD BorraLCD `(v  1 e 1 0 ]
+"118
+[v _EscribeLCD_c EscribeLCD_c `(v  1 e 1 0 ]
+"128
+[v _EscribeLCD_n8 EscribeLCD_n8 `(v  1 e 1 0 ]
+"292
+[v _MensajeLCD_Var MensajeLCD_Var `(v  1 e 1 0 ]
+"302
+[v _DireccionaLCD DireccionaLCD `(v  1 e 1 0 ]
+"311
+[v _RetardoLCD RetardoLCD `(v  1 e 1 0 ]
+"3264 C:\Program Files\Microchip\xc8\v2.32\pic\include\proc\pic18f4550.h
+[v _LATD LATD `VEuc  1 e 1 @3980 ]
+"3376
+[v _LATE LATE `VEuc  1 e 1 @3981 ]
+"4002
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+"4937
+[v _RCSTA RCSTA `VEuc  1 e 1 @4011 ]
+"5147
+[v _TXSTA TXSTA `VEuc  1 e 1 @4012 ]
+"5403
+[v _TXREG TXREG `VEuc  1 e 1 @4013 ]
+"5415
+[v _RCREG RCREG `VEuc  1 e 1 @4014 ]
+"5427
+[v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
+"6063
+[v _BAUDCON BAUDCON `VEuc  1 e 1 @4024 ]
+"6328
+[v _CCP1CON CCP1CON `VEuc  1 e 1 @4029 ]
+"6497
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @4030 ]
+"6582
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"7201
+[v _T2CON T2CON `VEuc  1 e 1 @4042 ]
+"7299
+[v _PR2 PR2 `VEuc  1 e 1 @4043 ]
+"7409
+[v _TMR2 TMR2 `VEuc  1 e 1 @4044 ]
+"7416
+[v _T1CON T1CON `VEuc  1 e 1 @4045 ]
+"7519
+[v _TMR1 TMR1 `VEus  1 e 2 @4046 ]
+"9742
+[v _GIE GIE `VEb  1 e 0 @32663 ]
+"9991
+[v _LATD1 LATD1 `VEb  1 e 0 @31841 ]
+"9994
+[v _LATD2 LATD2 `VEb  1 e 0 @31842 ]
+"9997
+[v _LATD3 LATD3 `VEb  1 e 0 @31843 ]
+"10012
+[v _LATE0 LATE0 `VEb  1 e 0 @31848 ]
+"10015
+[v _LATE1 LATE1 `VEb  1 e 0 @31849 ]
+"10270
+[v _PEIE PEIE `VEb  1 e 0 @32662 ]
+"10381
+[v _RB7 RB7 `VEb  1 e 0 @31759 ]
+"10384
+[v _RBIE RBIE `VEb  1 e 0 @32659 ]
+"10387
+[v _RBIF RBIF `VEb  1 e 0 @32656 ]
+"10441
+[v _RCIE RCIE `VEb  1 e 0 @31981 ]
+"10444
+[v _RCIF RCIF `VEb  1 e 0 @31989 ]
+"10828
+[v _TMR1IE TMR1IE `VEb  1 e 0 @31976 ]
+"10831
+[v _TMR1IF TMR1IF `VEb  1 e 0 @31984 ]
+"10849
+[v _TMR2ON TMR2ON `VEb  1 e 0 @32338 ]
+"10930
+[v _TRISC1 TRISC1 `VEb  1 e 0 @31905 ]
+"10933
+[v _TRISC2 TRISC2 `VEb  1 e 0 @31906 ]
+"10966
+[v _TRISE0 TRISE0 `VEb  1 e 0 @31920 ]
+"10969
+[v _TRISE1 TRISE1 `VEb  1 e 0 @31921 ]
+"10975
+[v _TRMT TRMT `VEb  1 e 0 @32097 ]
+"23 C:\Users\andre\MPLABXProjects\Lab6.X\Lab6.c
+[v _precision precision `uc  1 e 1 0 ]
+"25
+[v _N N `uc  1 e 1 0 ]
+[v _n n `uc  1 e 1 0 ]
+"32
+[v _DutyI DutyI `d  1 e 3 0 ]
+[v _DutyF DutyF `d  1 e 3 0 ]
+[v _Duty Duty `d  1 e 3 0 ]
+[v _DeltaDuty DeltaDuty `d  1 e 3 0 ]
+[v _DutyF2 DutyF2 `d  1 e 3 0 ]
+"33
+[v _TiempoA TiempoA `uc  1 e 1 0 ]
+[v _CasoGiro CasoGiro `uc  1 e 1 0 ]
+[v _Activado Activado `uc  1 e 1 0 ]
+[v _IdaYvuelta IdaYvuelta `uc  1 e 1 0 ]
+"35 C:\Users\andre\MPLABXProjects\Lab6.X\LibLCDXC8.h
+[v _interfaz interfaz `uc  1 e 1 0 ]
+"37 C:\Users\andre\MPLABXProjects\Lab6.X\Lab6.c
+[v _main main `(v  1 e 1 0 ]
+{
+"129
+} 0
+"27 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lbtoft.c
+[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
+{
+[v ___lbtoft@c c `uc  1 a 1 wreg ]
+[v ___lbtoft@c c `uc  1 a 1 wreg ]
+"29
+[v ___lbtoft@c c `uc  1 a 1 42 ]
+"30
+} 0
+"44 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 36 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 40 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 35 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 26 ]
+"73
+} 0
+"19 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+{
+[v ___ftsub@f1 f1 `f  1 p 3 20 ]
+[v ___ftsub@f2 f2 `f  1 p 3 23 ]
+"26
+} 0
+"86 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+{
+"88
+[v ___ftadd@exp1 exp1 `uc  1 a 1 19 ]
+[v ___ftadd@exp2 exp2 `uc  1 a 1 18 ]
+[v ___ftadd@sign sign `uc  1 a 1 17 ]
+"86
+[v ___ftadd@f1 f1 `f  1 p 3 8 ]
+[v ___ftadd@f2 f2 `f  1 p 3 11 ]
+"148
+} 0
+"62 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 21 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 25 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 24 ]
+[v ___ftmul@exp exp `uc  1 a 1 20 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 11 ]
+[v ___ftmul@f2 f2 `f  1 p 3 14 ]
+"157
+} 0
+"54 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+{
+"60
+[v ___ftdiv@f3 f3 `f  1 a 3 36 ]
+"59
+[v ___ftdiv@sign sign `uc  1 a 1 40 ]
+[v ___ftdiv@exp exp `uc  1 a 1 39 ]
+[v ___ftdiv@cntr cntr `uc  1 a 1 35 ]
+"54
+[v ___ftdiv@f1 f1 `f  1 p 3 26 ]
+[v ___ftdiv@f2 f2 `f  1 p 3 29 ]
+"86
+} 0
+"62 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"188 C:\Users\andre\MPLABXProjects\Lab6.X\Lab6.c
+[v _TransmitirMensaje TransmitirMensaje `(v  1 e 1 0 ]
+{
+[v TransmitirMensaje@a a `*.31uc  1 p 1 0 ]
+"193
+} 0
+"175
+[v _Transmitir Transmitir `(v  1 e 1 0 ]
+{
+[v Transmitir@BufferT BufferT `uc  1 a 1 wreg ]
+[v Transmitir@BufferT BufferT `uc  1 a 1 wreg ]
+[v Transmitir@BufferT BufferT `uc  1 a 1 42 ]
+"178
+} 0
+"292 C:\Users\andre\MPLABXProjects\Lab6.X\LibLCDXC8.h
+[v _MensajeLCD_Var MensajeLCD_Var `(v  1 e 1 0 ]
+{
+[v MensajeLCD_Var@a a `*.31uc  1 p 1 4 ]
+"300
+} 0
+"118
+[v _EscribeLCD_c EscribeLCD_c `(v  1 e 1 0 ]
+{
+[v EscribeLCD_c@a a `uc  1 a 1 wreg ]
+[v EscribeLCD_c@a a `uc  1 a 1 wreg ]
+"122
+[v EscribeLCD_c@a a `uc  1 a 1 3 ]
+"126
+} 0
+"67
+[v _InicializaLCD InicializaLCD `(v  1 e 1 0 ]
+{
+"100
+} 0
+"110
+[v _BorraLCD BorraLCD `(v  1 e 1 0 ]
+{
+"116
+} 0
+"302
+[v _DireccionaLCD DireccionaLCD `(v  1 e 1 0 ]
+{
+[v DireccionaLCD@a a `uc  1 a 1 wreg ]
+[v DireccionaLCD@a a `uc  1 a 1 wreg ]
+"305
+[v DireccionaLCD@a a `uc  1 a 1 3 ]
+"309
+} 0
+"55
+[v _EnviaDato EnviaDato `(v  1 e 1 0 ]
+{
+[v EnviaDato@a a `uc  1 a 1 wreg ]
+[v EnviaDato@a a `uc  1 a 1 wreg ]
+[v EnviaDato@a a `uc  1 a 1 2 ]
+"66
+} 0
+"311
+[v _RetardoLCD RetardoLCD `(v  1 e 1 0 ]
+{
+[v RetardoLCD@a a `uc  1 a 1 wreg ]
+[v RetardoLCD@a a `uc  1 a 1 wreg ]
+[v RetardoLCD@a a `uc  1 a 1 0 ]
+"329
+} 0
+"102
+[v _HabilitaLCD HabilitaLCD `(v  1 e 1 0 ]
+{
+"108
+} 0
+"51
+[v _ConfiguraLCD ConfiguraLCD `(v  1 e 1 0 ]
+{
+[v ConfiguraLCD@a a `uc  1 a 1 wreg ]
+[v ConfiguraLCD@a a `uc  1 a 1 wreg ]
+[v ConfiguraLCD@a a `uc  1 a 1 42 ]
+"54
+} 0
+"131 C:\Users\andre\MPLABXProjects\Lab6.X\Lab6.c
+[v _ISR ISR `II(v  1 e 1 0 ]
+{
+"164
+} 0
+"27 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lbtoft.c
+[v i2___lbtoft __lbtoft `(f  1 e 3 0 ]
+{
+[v i2___lbtoft@c c `uc  1 a 1 wreg ]
+[v i2___lbtoft@c c `uc  1 a 1 wreg ]
+"29
+[v i2___lbtoft@c c `uc  1 a 1 11 ]
+"30
+} 0
+"44 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fttol.c
+[v i2___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v i2___fttol@lval lval `ul  1 a 4 37 ]
+"46
+[v i2___fttol@exp1 exp1 `uc  1 a 1 41 ]
+[v i2___fttol@sign1 sign1 `uc  1 a 1 36 ]
+"44
+[v i2___fttol@f1 f1 `f  1 p 3 27 ]
+"73
+} 0
+"166 C:\Users\andre\MPLABXProjects\Lab6.X\Lab6.c
+[v _Recibir Recibir `(v  1 e 1 0 ]
+{
+"170
+} 0
+"175
+[v i2_Transmitir Transmitir `(v  1 e 1 0 ]
+{
+[v i2Transmitir@BufferT BufferT `uc  1 a 1 wreg ]
+[v i2Transmitir@BufferT BufferT `uc  1 a 1 wreg ]
+[v i2Transmitir@BufferT BufferT `uc  1 a 1 0 ]
+"178
+} 0
+"229
+[v _LecturaEntrada LecturaEntrada `(v  1 e 1 0 ]
+{
+[v LecturaEntrada@entrada entrada `uc  1 a 1 wreg ]
+[v LecturaEntrada@entrada entrada `uc  1 a 1 wreg ]
+[v LecturaEntrada@entrada entrada `uc  1 a 1 27 ]
+"449
+} 0
+"62 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\ftmul.c
+[v i2___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v i2___ftmul@f3_as_product f3_as_product `um  1 a 3 22 ]
+"64
+[v i2___ftmul@sign sign `uc  1 a 1 26 ]
+[v i2___ftmul@cntr cntr `uc  1 a 1 25 ]
+[v i2___ftmul@exp exp `uc  1 a 1 21 ]
+"62
+[v i2___ftmul@f1 f1 `f  1 p 3 12 ]
+[v i2___ftmul@f2 f2 `f  1 p 3 15 ]
+"157
+} 0
+"62 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\float.c
+[v i2___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v i2___ftpack@arg arg `um  1 p 3 0 ]
+[v i2___ftpack@exp exp `uc  1 p 1 3 ]
+[v i2___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+{
+[v ___ftge@ff1 ff1 `f  1 p 3 0 ]
+[v ___ftge@ff2 ff2 `f  1 p 3 3 ]
+"13
+} 0

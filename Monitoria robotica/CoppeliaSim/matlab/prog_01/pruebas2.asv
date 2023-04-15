@@ -1,0 +1,43 @@
+function pruebas2()
+vrep=remApi('remoteApi'); % usar el archivo prototipo (remoteApiProto.m)
+    vrep.simxFinish(-1); % si se requiere, cerrar todas las conexiones abiertas.
+    % asigna el handle de identificación de cliente clientID
+    clientID=vrep.simxStart('127.0.0.1',19999,true,true,5000,5);
+    if (clientID>-1)
+     disp('Conexión exitosa')
+    end
+    %Algoritmo
+    
+    [returnCode,H_Rectangle]=vrep.simxGetObjectHandle(clientID,'Rectangle',vrep.simx_opmode_blocking);
+    
+    [returnCode,P_Rectangle]= vrep.simxGetObjectPosition(clientID, H_Rectangle,-1,vrep.simx_opmode_blocking);
+    [returnCode,VL_Rectangle,VA_Rectangle]= vrep.simxGetObjectVelocity(clientID, H_Rectangle,simx_opmode_streaming);
+    
+    disp('va')
+    disp(VL_Rectangle)
+    disp('vl')
+    disp(VA_Rectangle)
+    
+    %[returnCode,Or]=vrep.simxGetObjectOrientation(clientID,H_Cuboid,-1,vrep.simx_opmode_blocking);
+    %disp(Or)
+    %disp('ori')
+    
+
+     for i=1:10
+        % Asigna la posición Pd a la caja
+[returnCode,VL_Rectangle,VA_Rectangle]= vrep.simxGetObjectVelocity(clientID, H_Rectangle,simx_opmode_streaming);
+        disp('va')
+        disp(VL_Rectangle)
+        disp('vl')
+        disp(VA_Rectangle)
+        pause(1);
+        
+        
+        % Termina el programa y cierra la conexión de MATLAB con V-Rep.
+    end
+    
+    % Termina el programa y cierra la conexión de MATLAB con V-Rep.
+    disp('Programa terminado')
+    vrep.delete(); % llama el destructor!
+
+end
