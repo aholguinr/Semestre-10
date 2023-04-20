@@ -152,7 +152,7 @@ else if (msg.payload.chatId == flow.get('Id') &&autorKeywords.some(keyword => qu
 //Enviar una foto del QR
 else if (msg.payload.chatId == flow.get('Id') &&nombreQR.some(keyword => query.includes(keyword))) {
     msg.payload.type = "photo";
-    msg.payload.content = "https://drive.google.com/file/d/1W08YhoRDQg3QXaURkaVetjpLSA91Zd00/view";
+    msg.payload.content = "https://raw.githubusercontent.com/aholguinr/Semestre-10/main/SCADA%20y%20controladores%20industriales/Reto2/qr_tmp.jpg";
     msg.payload.caption = "https://t.me/DreamTeamScada_bot";
     return [msg, msg2];
 } 
