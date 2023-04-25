@@ -1,0 +1,21 @@
+Disassembly Listing for Guia2
+Generated From:
+G:/Unidades compartidas/Microcontroladores/Guia2.X/dist/default/debug/Guia2.X.debug.cof
+14/03/2023 09:35:30 PM
+
+---  G:/Unidades compartidas/Microcontroladores/Guia2.X/Guia2Main.asm  ----------------------------------
+                                                  1:     include P18f4550.inc
+                                                  2:         
+                                                  3:     CONFIG FOSC=EC_EC
+                                                  4:     CONFIG WDT=OFF
+                                                  5:         
+                                                  6:     SetUp
+0000  6A95     CLRF TRISD, ACCESS                 7:         clrf TRISD
+0002  6A8C     CLRF LATD, ACCESS                  8:         clrf LATD
+                                                  9:     Loop
+0004  0E01     MOVLW 0x1                          10:        movlw b'00000001'
+0006  6E8C     MOVWF LATD, ACCESS                 11:        movwf LATD
+0008  6A8C     CLRF LATD, ACCESS                  12:        clrf LATD
+000A  EF02     GOTO 0x4                           13:        goto Loop
+000C  F000     NOP
+                                                  14:    end
