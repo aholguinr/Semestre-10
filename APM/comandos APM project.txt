@@ -1,0 +1,9 @@
+Enable SSH on Ubuntu 18.04:
+
+sudo apt-get install ssh
+
+sudo mkdir /run/sshd
+sudo chmod 0755 /run/sshd
+sudo chown root:root /run/sshd
+
+service ssh status
