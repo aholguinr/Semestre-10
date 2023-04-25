@@ -68,11 +68,13 @@ const detenerKeywords = ["detener", "apagar", "parar", "desactivar", "desconecta
 const resetKeywords = ["reset", "reiniciar", "restaurar", "borrar", "reestablecer", "volver a cero", "limpiar", "formatear", "inicializar", "poner en blanco"];
 const estadosKeywords = ["estado", "condicion", "situacion", "posicion", "status", "contexto", "forma", "configuracion", "disposicion", "orden"];
 const sensorKeywords = ["sensor", "medicion", "deteccion", "dispositivo", "instrumento", "monitorizacion", "captacion", "registro"]
-const actuadorKeywords = ["actuador","mecanismo","actuacion","motor","movimiento","válvula"];
+const actuadorKeywords = ["actuador","mecanismo","actuacion","motor","banda","movimiento","valvula"];
+const indicadoresKeywords = ["bombillo","luces","led","luz","indicador","señal"];
 const preguntarModoKeywords = ["modo", "estado", "situacion", "condicion", "funcionamiento", "operativo", "actividad", "configuracion", "estatus", "status"];
 const sinonimosFoto =["foto","imagen", "escena","image", "photo","captura","grafico"]
 const sinonimosPlanta = ["fabrica", "assembler","escena","planta","instalacion","de fabricacion","de produccion"];
 const nombreQR = ["qr", "compartir", "share"];
+
 var saludado = flow.get('saludado') || false;
 
 //Saludo
@@ -96,7 +98,7 @@ if (!saludado) {
 else if (verifyChat() &&preguntarModoKeywords.some(keyword => query.includes(keyword))&&sinonimosPlanta.some(keyword => query.includes(keyword))) {
     actualizarEstado("FACTORY I/O RUNNING");
     actualizarEstado("Auto");
-    msg.payload.content=(estados[nombresEstados[nombresEstados.indexOf("FACTORY I/O RUNNING")]]? "Planta prendida 🟢 \n" :"Planta apagada 🔴\n" )+(estados[nombresEstados[nombresEstados.indexOf("Auto")]]? "Modo automático" :"Modo manual" );
+    msg.payload.content=(estados[nombresEstados[nombresEstados.indexOf("FACTORY I/O RUNNING")]]? "🟢 Planta prendida \n" :"🔴 Planta apagada \n" )+(estados[nombresEstados[nombresEstados.indexOf("Auto")]]? "Modo automático" :"Modo manual" );
     return [msg, msg2];
 }
 
@@ -117,7 +119,7 @@ else if (verifyChat() &&arrancarKeywords.some(keyword => query.includes(keyword)
 else if (verifyChat() &&detenerKeywords.some(keyword => query.includes(keyword))) {
     actualizarEstado("Auto");
     if(estados[nombresEstados[nombresEstados.indexOf("Auto")]]){
-        msg.payload.content = "Comando de arranque recibido";
+        msg.payload.content = "Comando de parada recibido";
         msg2.payload = "OFF";
         return [msg, msg2];
     }else{
@@ -130,7 +132,7 @@ else if (verifyChat() &&detenerKeywords.some(keyword => query.includes(keyword))
 else if (verifyChat() &&resetKeywords.some(keyword => query.includes(keyword))) {
     actualizarEstado("Auto");
     if(estados[nombresEstados[nombresEstados.indexOf("Auto")]]){
-        msg.payload.content = "Comando de arranque recibido";
+        msg.payload.content = "Comando de reset recibido";
         msg2.payload = "RESET";
         return [msg, msg2];
     }else{
@@ -179,29 +181,29 @@ else if (verifyChat() &&estadosKeywords.some(keyword => query.includes(keyword))
     var contentMsg = "Claro, acá están los estados de los sensores:\n";
     actualizarEstados(nombreSensores);
     for (var i = 0; i < nombreSensores.length; i++) {
-        (estados[nombreSensores[i]]? contentMsg += nombreSensores[i] + ": " + "🟢" + "\n":contentMsg += nombreSensores[i] + ": " + "🔴" + "\n")
+        (estados[nombreSensores[i]]? contentMsg += "🟢 " +nombreSensores[i] + "\n":contentMsg += "🔴 "+nombreSensores[i] + "\n")
     }
     msg.payload.content=contentMsg;
     return [msg, msg2];
 }
 
 //Enviar resumen de estado actuadores
-else if (verifyChat() &&estadosKeywords.some(keyword => query.includes(keyword))&&sensorKeywords.some(keyword => query.includes(keyword))) {
+else if (verifyChat() &&estadosKeywords.some(keyword => query.includes(keyword))&&actuadorKeywords.some(keyword => query.includes(keyword))) {
     var contentMsg = "Claro, acá están los estados de los actuadores:\n";
     actualizarEstados(nombreActuadores);
     for (var i = 0; i < nombreActuadores.length; i++) {
-        (estados[nombreActuadores[i]]? contentMsg += nombreActuadores[i] + ": " + "🟢" + "\n":contentMsg += nombreActuadores[i] + ": " + "🔴" + "\n")
+        (estados[nombreActuadores[i]]? contentMsg += "🟢 " +nombreActuadores[i] + "\n":contentMsg += "🔴 "+nombreActuadores[i] + "\n")
     }
     msg.payload.content=contentMsg;
     return [msg, msg2];
 }
 
 //Enviar resumen de estado indicadores
-else if (verifyChat() &&estadosKeywords.some(keyword => query.includes(keyword))&&sensorKeywords.some(keyword => query.includes(keyword))) {
+else if (verifyChat() &&estadosKeywords.some(keyword => query.includes(keyword))&&indicadoresKeywords.some(keyword => query.includes(keyword))) {
     var contentMsg = "Claro, acá están los estados de los indicadores:\n";
     actualizarEstados(nombreIndicadores);
     for (var i = 0; i < nombreIndicadores.length; i++) {
-        (estados[nombreIndicadores[i]]? contentMsg += nombreIndicadores[i] + ": " + "🟢" + "\n":contentMsg += nombreIndicadores[i] + ": " + "🔴" + "\n")
+        (estados[nombreIndicadores[i]]? contentMsg += "🟢 " +nombreIndicadores[i] + "\n":contentMsg += "🔴 "+nombreIndicadores[i] + "\n")
     }
     msg.payload.content=contentMsg;
     return [msg, msg2];
@@ -212,7 +214,7 @@ else if (verifyChat() &&estadosKeywords.some(keyword => query.includes(keyword))
     var contentMsg = "Claro, acá están los estados de todas las variables de entorno:\n";
     actualizarTodosLosEstados();
     for (var i = 0; i < nombresEstados.length; i++) {
-        (estados[nombresEstados[i]]? contentMsg += nombresEstados[i] + ": " + "🟢" + "\n":contentMsg += nombresEstados[i] + ": " + "🔴" + "\n")   
+        (estados[nombresEstados[i]]? contentMsg += "🟢 " +nombresEstados[i] + "\n":contentMsg += "🔴 "+nombresEstados[i] + "\n")
     }
     msg.payload.content=contentMsg;
     return [msg, msg2];
