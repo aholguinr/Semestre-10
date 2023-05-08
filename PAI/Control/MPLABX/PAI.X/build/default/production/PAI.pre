@@ -5662,199 +5662,508 @@ unsigned char __t3rd16on(void);
 # 4 "C:\Program Files\Microchip\xc8\v2.41\pic\include\c90\__size_t.h"
 typedef unsigned size_t;
 
-# 7 "C:\Program Files\Microchip\xc8\v2.41\pic\include\c90\stdlib.h"
-typedef unsigned short wchar_t;
+# 14 "C:\Program Files\Microchip\xc8\v2.41\pic\include\c90\string.h"
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
 
-# 15
-typedef struct {
-int rem;
-int quot;
-} div_t;
-typedef struct {
-unsigned rem;
-unsigned quot;
-} udiv_t;
-typedef struct {
-long quot;
-long rem;
-} ldiv_t;
-typedef struct {
-unsigned long quot;
-unsigned long rem;
-} uldiv_t;
-
-# 65
-extern double atof(const char *);
-extern double strtod(const char *, const char **);
-extern int atoi(const char *);
-extern unsigned xtoi(const char *);
-extern long atol(const char *);
-
-# 73
-extern long strtol(const char *, char **, int);
-
-extern int rand(void);
-extern void srand(unsigned int);
-extern void * calloc(size_t, size_t);
-extern div_t div(int numer, int denom);
-extern udiv_t udiv(unsigned numer, unsigned denom);
-extern ldiv_t ldiv(long numer, long denom);
-extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
-
-# 85
-extern unsigned long _lrotl(unsigned long value, unsigned int shift);
-extern unsigned long _lrotr(unsigned long value, unsigned int shift);
-extern unsigned int _rotl(unsigned int value, unsigned int shift);
-extern unsigned int _rotr(unsigned int value, unsigned int shift);
+# 36
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
 
 
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
+
+# 36 "LibLCDXC8.h"
+unsigned char interfaz=8;
+
+void ConfiguraLCD(unsigned char);
+void RetardoLCD(unsigned char);
+void EnviaDato(unsigned char);
+void InicializaLCD(void);
+void HabilitaLCD(void);
+void BorraLCD(void);
+void EscribeLCD_c(unsigned char);
+void EscribeLCD_n8(unsigned char, unsigned char);
+void Mensaje_LCD_Var_Mensaje20x4(char* a,char* b,char* c,char* d);
+void Mensaje_LCD_Var_Centrado(char* a);
+void MensajeLCD_Var(char* a);
+void DireccionaLCD(unsigned char);
+void EscribeLCD_n32(unsigned long);
+void EscribeLCD_2Decimales(double);
+void GuardarASCII(unsigned char,char[]);
+
+void ConfiguraLCD(unsigned char a){
+if(a==4 | a ==8)
+interfaz=a;
+}
+void EnviaDato(unsigned char a){
+if(interfaz==4){
+LATD=(LATD & 0b00001111) | (a & 0b11110000);
+HabilitaLCD();
+RetardoLCD(1);
+LATD=(LATD & 0b00001111) | (a<<4);
 
 
-extern void * malloc(size_t);
-extern void free(void *);
-extern void * realloc(void *, size_t);
+}else if(interfaz==8){
+LATD=a;
+}
+}
+void InicializaLCD(void){
 
-# 104
-extern int atexit(void (*)(void));
-extern char * getenv(const char *);
-extern char ** environ;
-extern int system(char *);
-extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
-extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
-extern int abs(int);
-extern long labs(long);
+LATD2=0;
+if(interfaz==4)
+LATD=(LATD & 0b00001111) | 0x30;
+else
+LATD=0x3F;
+HabilitaLCD();
+RetardoLCD(1);
+if(interfaz==4)
+LATD=(LATD & 0b00001111) | 0x30;
+else
+LATD=0x3F;
+HabilitaLCD();
+RetardoLCD(3);
+if(interfaz==4)
+LATD=(LATD & 0b00001111) | 0x30;
+else
+LATD=0x3F;
+HabilitaLCD();
+RetardoLCD(4);
+if(interfaz==4){
+LATD=(LATD & 0b00001111) | 0x20;
+HabilitaLCD();
+RetardoLCD(4);
+EnviaDato(0x2F);
+HabilitaLCD();
+RetardoLCD(4);
+}
+BorraLCD();
+EnviaDato(0xF);
+HabilitaLCD();
+RetardoLCD(4);
+}
 
-extern char * itoa(char * buf, int val, int base);
-extern char * utoa(char * buf, unsigned val, int base);
+void HabilitaLCD(void){
 
+LATD3=1;
+_delay((unsigned long)((40)*(1000000/4000000.0)));
 
+LATD3=0;
+}
 
+void BorraLCD(void){
 
-extern char * ltoa(char * buf, long val, int base);
-extern char * ultoa(char * buf, unsigned long val, int base);
+LATD2=0;
+EnviaDato(0x01);
+HabilitaLCD();
+RetardoLCD(2);
+}
 
-extern char * ftoa(float f, int * status);
-
-# 30 "C:\Program Files\Microchip\xc8\v2.41\pic\include\c90\math.h"
-extern double fabs(double);
-extern double floor(double);
-extern double ceil(double);
-extern double modf(double, double *);
-extern double sqrt(double);
-extern double atof(const char *);
-extern double sin(double) ;
-extern double cos(double) ;
-extern double tan(double) ;
-extern double asin(double) ;
-extern double acos(double) ;
-extern double atan(double);
-extern double atan2(double, double) ;
-extern double log(double);
-extern double log10(double);
-extern double pow(double, double) ;
-extern double exp(double) ;
-extern double sinh(double) ;
-extern double cosh(double) ;
-extern double tanh(double);
-extern double eval_poly(double, const double *, int);
-extern double frexp(double, int *);
-extern double ldexp(double, int);
-extern double fmod(double, double);
-extern double trunc(double);
-extern double round(double);
-
-# 88 "I2C.h"
-void I2C_Master_Init(uint32_t clock);
-void I2C_Master_Wait(void);
-void I2C_Start(void);
-void I2C_Stop(void);
-void I2C_Repeated_Start(void);
-void I2C_Master_Write(uint8_t dato);
-uint8_t I2C_Master_Read(uint8_t ACK);
+void EscribeLCD_c(unsigned char a){
 
 
 
-void I2C_Master_Init(uint32_t clock){
-TRISBbits.RB0 = 1;
-TRISBbits.RB1 = 1;
-SSPSTATbits.SMP = 1;
-SSPCON1bits.SSPEN = 1;
-SSPCON1bits.SSPM = 0b1000;
+LATD2=1;
+EnviaDato(a);
+HabilitaLCD();
+RetardoLCD(4);
+}
+
+void EscribeLCD_n8(unsigned char a,unsigned char b){
 
 
-SSPADD = (uint8_t)((8000000L/(4.0*clock))-1);
-SSPCON2=0x00;
+
+
+unsigned char centena,decena,unidad;
+LATD2=1;
+switch(b){
+case 1: unidad=a%10;
+EnviaDato(unidad+48);
+HabilitaLCD();
+RetardoLCD(4);
+break;
+case 2: decena=(a%100)/10;
+unidad=a%10;
+EnviaDato(decena+48);
+HabilitaLCD();
+RetardoLCD(4);
+EnviaDato(unidad+48);
+HabilitaLCD();
+RetardoLCD(4);
+break;
+case 3: centena=a/100;
+decena=(a%100)/10;
+unidad=a%10;
+EnviaDato(centena+48);
+HabilitaLCD();
+RetardoLCD(4);
+EnviaDato(decena+48);
+HabilitaLCD();
+RetardoLCD(4);
+EnviaDato(unidad+48);
+HabilitaLCD();
+RetardoLCD(4);
+break;
+default: break;
+}
+}
+
+void EscribeLCD_n32(unsigned long a){
+
+
+
+
+unsigned char decena,unidad;
+unsigned int centena,millar;
+unsigned long diezmil,cienmil,millon,diezmillon,cienmillon;
+LATD2=1;
+unsigned long var=1;
+char b=0;
+while(a>=var){
+var*=10;
+b+=1;
+}
+
+switch(b){
+case 1: unidad=a%10;
+EscribeLCD_c(unidad+48);
+break;
+case 2: decena=(a%100)/10;
+unidad=a%10;
+EscribeLCD_c(decena+48);
+EscribeLCD_c(unidad+48);
+break;
+case 3: centena=(a%1000)/100;
+decena=(a%100)/10;
+unidad=a%10;
+EscribeLCD_c(centena+48);
+EscribeLCD_c(decena+48);
+EscribeLCD_c(unidad+48);
+break;
+case 4: millar=(a%10000)/1000;
+centena=(a%1000)/100;
+decena=(a%100)/10;
+unidad=a%10;
+EscribeLCD_c(millar+48);
+EscribeLCD_c(centena+48);
+EscribeLCD_c(decena+48);
+EscribeLCD_c(unidad+48);
+break;
+case 5: diezmil=(a%100000)/10000;
+millar=(a%10000)/1000;
+centena=(a%1000)/100;
+decena=(a%100)/10;
+unidad=a%10;
+EscribeLCD_c(diezmil+48);
+EscribeLCD_c(millar+48);
+EscribeLCD_c(centena+48);
+EscribeLCD_c(decena+48);
+EscribeLCD_c(unidad+48);
+break;
+
+case 6: cienmil=(a%1000000)/100000;
+diezmil=(a%100000)/10000;
+millar=(a%10000)/1000;
+centena=(a%1000)/100;
+decena=(a%100)/10;
+unidad=a%10;
+EscribeLCD_c(cienmil+48);
+EscribeLCD_c(diezmil+48);
+EscribeLCD_c(millar+48);
+EscribeLCD_c(centena+48);
+EscribeLCD_c(decena+48);
+EscribeLCD_c(unidad+48);
+break;
+
+case 7: millon=(a%10000000)/1000000;
+cienmil=(a%1000000)/100000;
+diezmil=(a%100000)/10000;
+millar=(a%10000)/1000;
+centena=(a%1000)/100;
+decena=(a%100)/10;
+unidad=a%10;
+EscribeLCD_c(millon+48);
+EscribeLCD_c(cienmil+48);
+EscribeLCD_c(diezmil+48);
+EscribeLCD_c(millar+48);
+EscribeLCD_c(centena+48);
+EscribeLCD_c(decena+48);
+EscribeLCD_c(unidad+48);
+break;
+
+
+case 8: diezmillon=(a%100000000)/10000000;
+millon=(a%10000000)/1000000;
+cienmil=(a%1000000)/100000;
+diezmil=(a%100000)/10000;
+millar=(a%10000)/1000;
+centena=(a%1000)/100;
+decena=(a%100)/10;
+unidad=a%10;
+EscribeLCD_c(diezmillon+48);
+EscribeLCD_c(millon+48);
+EscribeLCD_c(cienmil+48);
+EscribeLCD_c(diezmil+48);
+EscribeLCD_c(millar+48);
+EscribeLCD_c(centena+48);
+EscribeLCD_c(decena+48);
+EscribeLCD_c(unidad+48);
+break;
+
+case 9: cienmillon=(a%1000000000)/100000000;
+diezmillon=(a%100000000)/10000000;
+millon=(a%10000000)/1000000;
+cienmil=(a%1000000)/100000;
+diezmil=(a%100000)/10000;
+millar=(a%10000)/1000;
+centena=(a%1000)/100;
+decena=(a%100)/10;
+unidad=a%10;
+EscribeLCD_c(cienmillon+48);
+EscribeLCD_c(diezmillon+48);
+EscribeLCD_c(millon+48);
+EscribeLCD_c(cienmil+48);
+EscribeLCD_c(diezmil+48);
+EscribeLCD_c(millar+48);
+EscribeLCD_c(centena+48);
+EscribeLCD_c(decena+48);
+EscribeLCD_c(unidad+48);
+break;
+
+
+default: break;
+}
+}
+
+
+void EscribeLCD_d(double num, unsigned char digi, unsigned char digd){
+
 }
 
 
 
-
-void I2C_Master_Wait(void){
-while( (SSPCON2 & 0b00011111) || (SSPSTAT & 0b00000100) );
+void Mensaje_LCD_Var_Mensaje20x4(char* a,char* b,char* c,char* d){
+BorraLCD();
+DireccionaLCD(0x00);
+Mensaje_LCD_Var_Centrado(a);
+DireccionaLCD(0xC0);
+Mensaje_LCD_Var_Centrado(b);
+DireccionaLCD(0xC0-44);
+Mensaje_LCD_Var_Centrado(c);
+DireccionaLCD(0xC0+20);
+Mensaje_LCD_Var_Centrado(d);
 }
 
-void I2C_Start(void){
-I2C_Master_Wait();
-SSPCON2bits.SEN = 1;
+# 320
+void Mensaje_LCD_Var_Centrado(char* a){
+char l =strlen(a);
+char n=(20-l)/2;
+char i;
+
+for(i=0;i<n;i++){
+EscribeLCD_c(' ');
 }
-
-void I2C_Stop(void){
-I2C_Master_Wait();
-SSPCON2bits.PEN = 1;
-}
-
-void I2C_Repeated_Start(void){
-I2C_Master_Wait();
-SSPCON2bits.RSEN = 1;
-}
-
-void I2C_Master_Write(uint8_t dato){
-I2C_Master_Wait();
-SSPBUF = dato;
-}
-
-uint8_t I2C_Master_Read(uint8_t ACK){
-uint8_t dato;
-I2C_Master_Wait();
-SSPCON2bits.RCEN = 1;
-I2C_Master_Wait();
-dato = SSPBUF;
-I2C_Master_Wait();
-
-
-
-SSPCON2bits.ACKDT = (ACK)?0:1;
-
-
-
-
-SSPCON2bits.ACKEN = 1;
-return dato;
+while(*a != '\0'){
+EscribeLCD_c(*a);
+a++;
 }
 
 
-# 8 "PAI.c"
+}
+
+void MensajeLCD_Var(char* a){
+
+
+
+while(*a != '\0'){
+EscribeLCD_c(*a);
+a++;
+}
+}
+
+void DireccionaLCD(unsigned char a){
+
+
+LATD2=0;
+EnviaDato(a);
+HabilitaLCD();
+RetardoLCD(4);
+}
+
+void RetardoLCD(unsigned char a){
+switch(a){
+case 1: _delay((unsigned long)((15)*(1000000/4000.0)));
+
+break;
+case 2: _delay((unsigned long)((1)*(1000000/4000.0)));
+_delay((unsigned long)((640)*(1000000/4000000.0)));
+
+break;
+case 3: _delay((unsigned long)((100)*(1000000/4000000.0)));
+
+break;
+case 4: _delay((unsigned long)((40)*(1000000/4000000.0)));
+
+break;
+default:
+break;
+}
+}
+
+
+void EscribeLCD_2Decimales(double a){
+int num;
+char decimalesP;
+char unidad;
+unidad=a;
+num=(a*100);
+decimalesP=num%100;
+EscribeLCD_n8(unidad,1);
+EscribeLCD_c('.');
+EscribeLCD_n8(decimalesP,2);
+}
+
+void GuardarASCII(unsigned char cgram,char arreglo[]){
+unsigned char i;
+DireccionaLCD(cgram);
+for(i=0;i<8;i++){
+EscribeLCD_c(arreglo[i]);
+}
+DireccionaLCD(128);
+}
+
+
+# 5 "PAI.c"
 #pragma config FOSC=INTOSC_EC
 #pragma config WDT=OFF
-#pragma config LVP=OFF
+
+
+char Estados=0;
+char a=0;
+char b=0;
+char c=0;
+char d=0;
 
 void main(void){
 
-# 39
-ADCON1 = 0x0F;
-OSCCON = 0x72;
 
-LCD_I2C_Init();
-LCD_I2C_WriteText(0,0,"PIC18F2550/4550 ");
-LCD_I2C_WriteText(1,0,"  LCD 16x2 20x4 ");
+ADCON1=15;
+TRISD=0;
+LATD=0;
+TRISB=0b11111111;
 
 
-_delay((unsigned long)((2000)*(8000000L/4000.0)));
 
+CCP1CON=0b00001100;
+CCP2CON=0b00001100;
+PR2=124;
+CCPR1L=0;
+CCPR2L=0;
+
+TRISC1=0;
+TRISC2=0;
+
+# 44
+GIE=1;
+PEIE=1;
+
+
+
+a=!RB0;
+b=!RB1;
+c=!RB2;
+d=!RB3;
+
+ConfiguraLCD(4);
+InicializaLCD();
+
+_delay((unsigned long)((500)*(1000000/4000.0)));
 
 while(1){
 
-}
+a=!RB0;
+b=!RB1;
+c=RB2;
+d=!RB3;
+
+
+switch(Estados){
+
+case 0:
+Mensaje_LCD_Var_Mensaje20x4("Cortadora UN","Espere un momento","UNAL","2023-1");
+LATD=0;
+_delay((unsigned long)((2000)*(1000000/4000.0)));
+Estados=1;
+break;
+
+case 1:
+Mensaje_LCD_Var_Mensaje20x4(" ","Revise la conexion a ","los motores","  ");
+
+RD0=0;
+if(a==0){Estados=1;break;}
+else{Estados=2;break;}
+
+break;
+case 2:
+Mensaje_LCD_Var_Mensaje20x4("Motor OFF","  ","Active el pulsador","para ajustarlo");
+
+RD0=1;
+if(a==0){Estados=1;break;}
+if(d==1){Estados=3;break;}
+else{Estados=2;break;}
+break;
+
+case 3:
+Mensaje_LCD_Var_Mensaje20x4("Seleccione un %","de operacion:"," ","0%");
+
+
+if(a==0){Estados=1;break;}
+
+if(b==1){Estados=2;break;}
+if(c==1){Estados=4;break;}
+break;
+
+case 4:
+Mensaje_LCD_Var_Mensaje20x4("Motor prendido","Operacion:"," ","0%");
+
+if(a==0){Estados=1;break;}
+if(b==1){Estados=2;break;}
+
+break;
+
+default:
+Estados=0;
+break;
+
 
 }
 
+
+}
+}
+
+void interrupt ISR(void){
+
+# 149
+}

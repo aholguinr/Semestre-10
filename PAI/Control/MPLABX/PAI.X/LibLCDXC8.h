@@ -19,6 +19,7 @@ extern "C" {
 }
 #endif
 #include<xc.h>
+#include<string.h>
 #ifndef _XTAL_FREQ
 #define _XTAL_FREQ 10000000
 #endif
@@ -42,9 +43,11 @@ void HabilitaLCD(void);
 void BorraLCD(void);
 void EscribeLCD_c(unsigned char);
 void EscribeLCD_n8(unsigned char, unsigned char);
-void MensajeLCD_Var(char[],char);
+void Mensaje_LCD_Var_Mensaje20x4(char* a,char* b,char* c,char* d);
+void Mensaje_LCD_Var_Centrado(char* a);
+void MensajeLCD_Var(char* a);
 void DireccionaLCD(unsigned char);
-void EscribeLCD_n32(unsigned long, unsigned char);
+void EscribeLCD_n32(unsigned long);
 void EscribeLCD_2Decimales(double);
 void GuardarASCII(unsigned char,char[]);
 
@@ -164,7 +167,7 @@ void EscribeLCD_n8(unsigned char a,unsigned char b){
 	}
 }
 
-void EscribeLCD_n32(unsigned long a, unsigned char b){
+void EscribeLCD_n32(unsigned long a){
 //Función que escribe un número positivo de 32 bits en la pantalla
 //a es el número a escribir, el cual debe estar en el rango de 0 a 999999999
 //para que sea de forma adecuada.
@@ -173,7 +176,13 @@ void EscribeLCD_n32(unsigned long a, unsigned char b){
 	unsigned int centena,millar;
     unsigned long diezmil,cienmil,millon,diezmillon,cienmillon;
     RS=1;
-    
+    unsigned long var=1;
+    char b=0;
+    while(a>=var){
+        var*=10;
+        b+=1;
+    }
+
 	switch(b){
 		case 1: unidad=a%10;
                 EscribeLCD_c(unidad+48);
@@ -289,11 +298,49 @@ void EscribeLCD_n32(unsigned long a, unsigned char b){
 void EscribeLCD_d(double num, unsigned char digi, unsigned char digd){
 	
 }
-void MensajeLCD_Var(char a[],char cont){
-    int i; 
-    for(i=0;i<(cont);i++){
-        EscribeLCD_c(a[i]);
-    }  
+
+
+
+void Mensaje_LCD_Var_Mensaje20x4(char* a,char* b,char* c,char* d){
+    BorraLCD();
+    DireccionaLCD(0x00);
+    Mensaje_LCD_Var_Centrado(a);
+    DireccionaLCD(0xC0);
+    Mensaje_LCD_Var_Centrado(b);
+    DireccionaLCD(0xC0-44);
+    Mensaje_LCD_Var_Centrado(c);
+    DireccionaLCD(0xC0+20);
+    Mensaje_LCD_Var_Centrado(d);
+}
+
+
+/**/
+
+
+void Mensaje_LCD_Var_Centrado(char* a){
+    char l =strlen(a);
+    char n=(20-l)/2;
+    char i;
+    
+    for(i=0;i<n;i++){
+        EscribeLCD_c(' ');
+    }
+    while(*a != '\0'){
+        EscribeLCD_c(*a);
+        a++;
+    }
+    
+    
+}
+
+void MensajeLCD_Var(char* a){
+//Función que escribe una cadena de caracteres variable en la pantalla
+//a es una cadena de caracteres guardada en una variable *char
+//Ejemplo: char aux[4]="Hola"; MensajeLCD_Var(aux);
+    while(*a != '\0'){
+        EscribeLCD_c(*a);
+        a++;
+    }
 }
 
 void DireccionaLCD(unsigned char a){
@@ -349,7 +396,6 @@ void GuardarASCII(unsigned char cgram,char arreglo[]){
 
 
 #endif	/* LIBLCDXC8_H */
-
 
 
 

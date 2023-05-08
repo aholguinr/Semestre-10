@@ -4,8 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>I2C.h</itemPath>
-      <itemPath>LCD_I2C_16X2.h</itemPath>
+      <itemPath>LibLCDXC8.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

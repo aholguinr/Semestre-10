@@ -3,6 +3,12 @@
 [d edition pro ]
 [d chip 18F4550 ]
 [d frameptr 4065 ]
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
 "62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\ftadd.c
@@ -15,8 +21,12 @@
 [v ___ftsub __ftsub `(f  1 e 3 0 ]
 "44 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\fttol.c
 [v ___fttol __fttol `(l  1 e 4 0 ]
-"35 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\lltoft.c
-[v ___lltoft __lltoft `(f  1 e 3 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 3 0 ]
 "245
@@ -25,127 +35,198 @@
 [v ___fldiv __fldiv `(d  1 e 3 0 ]
 "8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 3 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
 "15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\Umul64.c
 [v ___omul __omul `(ul  1 e 4 0 ]
-"113 C:\Users\andre\Downloads\Semestre-10\PAI\Control\MPLABX\PAI.X\I2C.h
-[v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
-"12 C:\Users\andre\Downloads\Semestre-10\PAI\Control\MPLABX\PAI.X\PAI.c
+"54 C:\Users\andre\Downloads\Semestre-10\PAI\Control\MPLABX\PAI.X\LibLCDXC8.h
+[v _ConfiguraLCD ConfiguraLCD `(v  1 e 1 0 ]
+"58
+[v _EnviaDato EnviaDato `(v  1 e 1 0 ]
+"70
+[v _InicializaLCD InicializaLCD `(v  1 e 1 0 ]
+"105
+[v _HabilitaLCD HabilitaLCD `(v  1 e 1 0 ]
+"113
+[v _BorraLCD BorraLCD `(v  1 e 1 0 ]
+"121
+[v _EscribeLCD_c EscribeLCD_c `(v  1 e 1 0 ]
+"131
+[v _EscribeLCD_n8 EscribeLCD_n8 `(v  1 e 1 0 ]
+"304
+[v _Mensaje_LCD_Var_Mensaje20x4 Mensaje_LCD_Var_Mensaje20x4 `(v  1 e 1 0 ]
+"320
+[v _Mensaje_LCD_Var_Centrado Mensaje_LCD_Var_Centrado `(v  1 e 1 0 ]
+"346
+[v _DireccionaLCD DireccionaLCD `(v  1 e 1 0 ]
+"355
+[v _RetardoLCD RetardoLCD `(v  1 e 1 0 ]
+"15 C:\Users\andre\Downloads\Semestre-10\PAI\Control\MPLABX\PAI.X\PAI.c
 [v _main main `(v  1 e 1 0 ]
-[s S24 . 1 `uc 1 TRISB0 1 0 :1:0 
-`uc 1 TRISB1 1 0 :1:1 
-`uc 1 TRISB2 1 0 :1:2 
-`uc 1 TRISB3 1 0 :1:3 
-`uc 1 TRISB4 1 0 :1:4 
-`uc 1 TRISB5 1 0 :1:5 
-`uc 1 TRISB6 1 0 :1:6 
-`uc 1 TRISB7 1 0 :1:7 
-]
-"3657 C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4550.h
-[s S33 . 1 `uc 1 RB0 1 0 :1:0 
-`uc 1 RB1 1 0 :1:1 
-`uc 1 RB2 1 0 :1:2 
-`uc 1 RB3 1 0 :1:3 
-`uc 1 RB4 1 0 :1:4 
-`uc 1 RB5 1 0 :1:5 
-`uc 1 RB6 1 0 :1:6 
-`uc 1 RB7 1 0 :1:7 
-]
-[u S42 . 1 `S24 1 . 1 0 `S33 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES42  1 e 1 @3987 ]
+"122
+[v _ISR ISR `II(v  1 e 1 0 ]
+"3263 C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4550.h
+[v _LATD LATD `VEuc  1 e 1 @3980 ]
+"3625
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+"4001
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+"6242
+[v _CCP2CON CCP2CON `VEuc  1 e 1 @4026 ]
+"6313
+[v _CCPR2L CCPR2L `VEuc  1 e 1 @4027 ]
+"6327
+[v _CCP1CON CCP1CON `VEuc  1 e 1 @4029 ]
+"6496
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @4030 ]
 "6581
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
-"6806
-[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @4037 ]
-[s S205 . 1 `uc 1 SSPM 1 0 :4:0 
-`uc 1 CKP 1 0 :1:4 
-`uc 1 SSPEN 1 0 :1:5 
-`uc 1 SSPOV 1 0 :1:6 
-`uc 1 WCOL 1 0 :1:7 
-]
-"6888
-[s S211 . 1 `uc 1 SSPM0 1 0 :1:0 
-`uc 1 SSPM1 1 0 :1:1 
-`uc 1 SSPM2 1 0 :1:2 
-`uc 1 SSPM3 1 0 :1:3 
-]
-[u S216 . 1 `S205 1 . 1 0 `S211 1 . 1 0 ]
-[v _SSPCON1bits SSPCON1bits `VES216  1 e 1 @4038 ]
-[s S64 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 R_NOT_W 1 0 :1:2 
-]
-"7021
-[s S67 . 1 `uc 1 . 1 0 :5:0 
-`uc 1 D_NOT_A 1 0 :1:5 
-]
-[s S70 . 1 `uc 1 BF 1 0 :1:0 
-`uc 1 UA 1 0 :1:1 
-`uc 1 R_nW 1 0 :1:2 
-`uc 1 S 1 0 :1:3 
-`uc 1 P 1 0 :1:4 
-`uc 1 D_nA 1 0 :1:5 
-`uc 1 CKE 1 0 :1:6 
-`uc 1 SMP 1 0 :1:7 
-]
-[s S79 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 R_W 1 0 :1:2 
-`uc 1 . 1 0 :2:3 
-`uc 1 D_A 1 0 :1:5 
-]
-[s S84 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 I2C_READ 1 0 :1:2 
-`uc 1 I2C_START 1 0 :1:3 
-`uc 1 I2C_STOP 1 0 :1:4 
-`uc 1 I2C_DAT 1 0 :1:5 
-]
-[s S90 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 nW 1 0 :1:2 
-`uc 1 . 1 0 :2:3 
-`uc 1 nA 1 0 :1:5 
-]
-[s S95 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 NOT_WRITE 1 0 :1:2 
-]
-[s S98 . 1 `uc 1 . 1 0 :5:0 
-`uc 1 NOT_ADDRESS 1 0 :1:5 
-]
-[s S101 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 nWRITE 1 0 :1:2 
-`uc 1 . 1 0 :2:3 
-`uc 1 nADDRESS 1 0 :1:5 
-]
-[s S106 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 READ_WRITE 1 0 :1:2 
-`uc 1 . 1 0 :2:3 
-`uc 1 DATA_ADDRESS 1 0 :1:5 
-]
-[s S111 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 R 1 0 :1:2 
-`uc 1 . 1 0 :2:3 
-`uc 1 D 1 0 :1:5 
-]
-[s S116 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 RW 1 0 :1:2 
-`uc 1 START 1 0 :1:3 
-`uc 1 STOP 1 0 :1:4 
-`uc 1 DA 1 0 :1:5 
-]
-[s S122 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 NOT_W 1 0 :1:2 
-`uc 1 . 1 0 :2:3 
-`uc 1 NOT_A 1 0 :1:5 
-]
-[u S127 . 1 `S64 1 . 1 0 `S67 1 . 1 0 `S70 1 . 1 0 `S79 1 . 1 0 `S84 1 . 1 0 `S90 1 . 1 0 `S95 1 . 1 0 `S98 1 . 1 0 `S101 1 . 1 0 `S106 1 . 1 0 `S111 1 . 1 0 `S116 1 . 1 0 `S122 1 . 1 0 ]
-[v _SSPSTATbits SSPSTATbits `VES127  1 e 1 @4039 ]
-"7186
-[v _SSPADD SSPADD `VEuc  1 e 1 @4040 ]
-"7193
-[v _SSPBUF SSPBUF `VEuc  1 e 1 @4041 ]
-"7986
-[v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
-"12 C:\Users\andre\Downloads\Semestre-10\PAI\Control\MPLABX\PAI.X\PAI.c
+"7298
+[v _PR2 PR2 `VEuc  1 e 1 @4043 ]
+"9745
+[v _GIE GIE `VEb  1 e 0 @32663 ]
+"9997
+[v _LATD2 LATD2 `VEb  1 e 0 @31842 ]
+"10000
+[v _LATD3 LATD3 `VEb  1 e 0 @31843 ]
+"10273
+[v _PEIE PEIE `VEb  1 e 0 @32662 ]
+"10363
+[v _RB0 RB0 `VEb  1 e 0 @31752 ]
+"10366
+[v _RB1 RB1 `VEb  1 e 0 @31753 ]
+"10369
+[v _RB2 RB2 `VEb  1 e 0 @31754 ]
+"10372
+[v _RB3 RB3 `VEb  1 e 0 @31755 ]
+"10459
+[v _RD0 RD0 `VEb  1 e 0 @31768 ]
+"10933
+[v _TRISC1 TRISC1 `VEb  1 e 0 @31905 ]
+"10936
+[v _TRISC2 TRISC2 `VEb  1 e 0 @31906 ]
+"36 C:\Users\andre\Downloads\Semestre-10\PAI\Control\MPLABX\PAI.X\LibLCDXC8.h
+[v _interfaz interfaz `uc  1 e 1 0 ]
+"9 C:\Users\andre\Downloads\Semestre-10\PAI\Control\MPLABX\PAI.X\PAI.c
+[v _Estados Estados `uc  1 e 1 0 ]
+"10
+[v _a a `uc  1 e 1 0 ]
+"11
+[v _b b `uc  1 e 1 0 ]
+"12
+[v _c c `uc  1 e 1 0 ]
+"13
+[v _d d `uc  1 e 1 0 ]
+"15
 [v _main main `(v  1 e 1 0 ]
 {
+"120
+} 0
+"304 C:\Users\andre\Downloads\Semestre-10\PAI\Control\MPLABX\PAI.X\LibLCDXC8.h
+[v _Mensaje_LCD_Var_Mensaje20x4 Mensaje_LCD_Var_Mensaje20x4 `(v  1 e 1 0 ]
+{
+[v Mensaje_LCD_Var_Mensaje20x4@a a `*.31uc  1 p 1 12 ]
+[v Mensaje_LCD_Var_Mensaje20x4@b b `*.31uc  1 p 1 13 ]
+[v Mensaje_LCD_Var_Mensaje20x4@c c `*.31uc  1 p 1 14 ]
+[v Mensaje_LCD_Var_Mensaje20x4@d d `*.31uc  1 p 1 15 ]
+"314
+} 0
+"320
+[v _Mensaje_LCD_Var_Centrado Mensaje_LCD_Var_Centrado `(v  1 e 1 0 ]
+{
+"323
+[v Mensaje_LCD_Var_Centrado@i i `uc  1 a 1 11 ]
+"322
+[v Mensaje_LCD_Var_Centrado@n n `uc  1 a 1 10 ]
+"321
+[v Mensaje_LCD_Var_Centrado@l l `uc  1 a 1 9 ]
+"320
+[v Mensaje_LCD_Var_Centrado@a a `*.31uc  1 p 1 8 ]
+"334
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+{
+"6
+[v strlen@cp cp `*.31Cuc  1 a 1 2 ]
+"4
+[v strlen@s s `*.31Cuc  1 p 1 0 ]
+"13
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 6 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 5 ]
+[v ___awdiv@counter counter `uc  1 a 1 4 ]
+"7
+[v ___awdiv@dividend dividend `i  1 p 2 0 ]
+[v ___awdiv@divisor divisor `i  1 p 2 2 ]
+"41
+} 0
+"121 C:\Users\andre\Downloads\Semestre-10\PAI\Control\MPLABX\PAI.X\LibLCDXC8.h
+[v _EscribeLCD_c EscribeLCD_c `(v  1 e 1 0 ]
+{
+[v EscribeLCD_c@a a `uc  1 a 1 wreg ]
+[v EscribeLCD_c@a a `uc  1 a 1 wreg ]
+"125
+[v EscribeLCD_c@a a `uc  1 a 1 4 ]
+"129
+} 0
+"346
+[v _DireccionaLCD DireccionaLCD `(v  1 e 1 0 ]
+{
+[v DireccionaLCD@a a `uc  1 a 1 wreg ]
+[v DireccionaLCD@a a `uc  1 a 1 wreg ]
+"349
+[v DireccionaLCD@a a `uc  1 a 1 4 ]
+"353
+} 0
+"70
+[v _InicializaLCD InicializaLCD `(v  1 e 1 0 ]
+{
+"103
+} 0
+"113
+[v _BorraLCD BorraLCD `(v  1 e 1 0 ]
+{
+"119
+} 0
+"58
+[v _EnviaDato EnviaDato `(v  1 e 1 0 ]
+{
+[v EnviaDato@a a `uc  1 a 1 wreg ]
+[v EnviaDato@a a `uc  1 a 1 wreg ]
+[v EnviaDato@a a `uc  1 a 1 3 ]
+"69
+} 0
+"355
+[v _RetardoLCD RetardoLCD `(v  1 e 1 0 ]
+{
+[v RetardoLCD@a a `uc  1 a 1 wreg ]
+[v RetardoLCD@a a `uc  1 a 1 wreg ]
+[v RetardoLCD@a a `uc  1 a 1 1 ]
+"373
+} 0
+"105
+[v _HabilitaLCD HabilitaLCD `(v  1 e 1 0 ]
+{
+"111
+} 0
 "54
+[v _ConfiguraLCD ConfiguraLCD `(v  1 e 1 0 ]
+{
+[v ConfiguraLCD@a a `uc  1 a 1 wreg ]
+[v ConfiguraLCD@a a `uc  1 a 1 wreg ]
+[v ConfiguraLCD@a a `uc  1 a 1 0 ]
+"57
+} 0
+"122 C:\Users\andre\Downloads\Semestre-10\PAI\Control\MPLABX\PAI.X\PAI.c
+[v _ISR ISR `II(v  1 e 1 0 ]
+{
+"149
 } 0
