@@ -1,0 +1,28 @@
+IBM input cloud
+
+CLAVE API
+a-zozjmi-5898go7vpa
+SEÑAL DE AUTENTICACION
+K(l+hLlYUU_qUjFTVK
+
+
+
+IBM input local
+CLAVE API
+a-zozjmi-gzaldmauu1
+SEÑAL DE AUTENTICACION
+nE)w3fzwgQj7FMAp6v
+
+
+
+
+ID de Organización
+zozjmi
+Tipo de dispositivo
+IOT
+ID de dispositivo
+UNAL_SCADA_NUBE
+Método de autenticación
+use-token-auth
+Señal de autenticación
+9xSbJ_Ak)@kXH6PGaB

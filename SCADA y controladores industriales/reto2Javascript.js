@@ -66,7 +66,7 @@ const autorKeywords = ["creditos", "equipo", "desarrolladores", "creadores", "au
 const arrancarKeywords = ["iniciar", "encender", "arrancar", "activar", "conectar", "encendido", "inicio", "comenzar", "poner en marcha", "prender","on"];
 const detenerKeywords = ["detener", "apagar", "parar", "desactivar", "desconectar", "apagado", "fin", "terminar", "off"];
 const resetKeywords = ["reset", "reiniciar", "restaurar", "borrar", "reestablecer", "volver a cero", "limpiar", "formatear", "inicializar", "poner en blanco"];
-const estadosKeywords = ["estado", "condicion", "situacion", "posicion", "status", "contexto", "forma", "configuracion", "disposicion", "orden"];
+const estadosKeywords = ["estado","estan", "condicion", "situacion", "posicion", "status", "contexto", "forma", "configuracion", "disposicion", "orden"];
 const sensorKeywords = ["sensor", "medicion", "deteccion", "dispositivo", "instrumento", "monitorizacion", "captacion", "registro"]
 const actuadorKeywords = ["actuador","mecanismo","actuacion","motor","banda","movimiento","valvula"];
 const indicadoresKeywords = ["bombillo","luces","led","luz","indicador","señal"];
@@ -144,8 +144,8 @@ else if (verifyChat() &&resetKeywords.some(keyword => query.includes(keyword))) 
 //Enviar una foto de los autores
 else if (verifyChat() &&autorKeywords.some(keyword => query.includes(keyword))) {
     msg.payload.type = "photo";
-    msg.payload.content = "https://i.ibb.co/QD6hHsn/The-Last-Warriors.png";
-    msg.payload.caption = "Los autores son:\nAndres Holguín\nSara Jimenez\nNicolas Lopez";
+    msg.payload.content = "https://raw.githubusercontent.com/aholguinr/Semestre-10/main/SCADA%20y%20controladores%20industriales/Reto2/fotoautores.jpg";
+    msg.payload.caption = "Los autores son:\nSara Jimenez\nAndres Holguín\nNicolas Lopez";
     return [msg, msg2];
 } 
 
