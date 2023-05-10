@@ -25,6 +25,8 @@
 [v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\lbmod.c
 [v ___lbmod __lbmod `(uc  1 e 1 0 ]
+"27 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\lbtoft.c
+[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
 "7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\llmod.c
 [v ___llmod __llmod `(ul  1 e 4 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\sprcadd.c
@@ -63,9 +65,9 @@
 [v _DireccionaLCD DireccionaLCD `(v  1 e 1 0 ]
 "355
 [v _RetardoLCD RetardoLCD `(v  1 e 1 0 ]
-"15 C:\Users\andre\Downloads\Semestre-10\PAI\Control\MPLABX\PAI.X\PAI.c
+"16 C:\Users\andre\Downloads\Semestre-10\PAI\Control\MPLABX\PAI.X\PAI.c
 [v _main main `(v  1 e 1 0 ]
-"122
+"160
 [v _ISR ISR `II(v  1 e 1 0 ]
 "3263 C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4550.h
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
@@ -83,10 +85,26 @@
 [v _CCPR1L CCPR1L `VEuc  1 e 1 @4030 ]
 "6581
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"7200
+[v _T2CON T2CON `VEuc  1 e 1 @4042 ]
 "7298
 [v _PR2 PR2 `VEuc  1 e 1 @4043 ]
+"7408
+[v _TMR2 TMR2 `VEuc  1 e 1 @4044 ]
 "9745
 [v _GIE GIE `VEb  1 e 0 @32663 ]
+"9829
+[v _INT0IE INT0IE `VEb  1 e 0 @32660 ]
+"9832
+[v _INT0IF INT0IF `VEb  1 e 0 @32657 ]
+"9844
+[v _INT1IE INT1IE `VEb  1 e 0 @32643 ]
+"9847
+[v _INT1IF INT1IF `VEb  1 e 0 @32640 ]
+"9865
+[v _INT2IE INT2IE `VEb  1 e 0 @32644 ]
+"9868
+[v _INT2IF INT2IF `VEb  1 e 0 @32641 ]
 "9997
 [v _LATD2 LATD2 `VEb  1 e 0 @31842 ]
 "10000
@@ -95,14 +113,16 @@
 [v _PEIE PEIE `VEb  1 e 0 @32662 ]
 "10363
 [v _RB0 RB0 `VEb  1 e 0 @31752 ]
-"10366
-[v _RB1 RB1 `VEb  1 e 0 @31753 ]
-"10369
-[v _RB2 RB2 `VEb  1 e 0 @31754 ]
 "10372
 [v _RB3 RB3 `VEb  1 e 0 @31755 ]
+"10396
+[v _RBPU RBPU `VEb  1 e 0 @32655 ]
 "10459
 [v _RD0 RD0 `VEb  1 e 0 @31768 ]
+"10462
+[v _RD1 RD1 `VEb  1 e 0 @31769 ]
+"10852
+[v _TMR2ON TMR2ON `VEb  1 e 0 @32338 ]
 "10933
 [v _TRISC1 TRISC1 `VEb  1 e 0 @31905 ]
 "10936
@@ -112,17 +132,64 @@
 "9 C:\Users\andre\Downloads\Semestre-10\PAI\Control\MPLABX\PAI.X\PAI.c
 [v _Estados Estados `uc  1 e 1 0 ]
 "10
-[v _a a `uc  1 e 1 0 ]
+[v _EstadosPrev EstadosPrev `uc  1 e 1 0 ]
 "11
-[v _b b `uc  1 e 1 0 ]
+[v _a a `uc  1 e 1 0 ]
 "12
-[v _c c `uc  1 e 1 0 ]
+[v _b b `uc  1 e 1 0 ]
 "13
+[v _c c `uc  1 e 1 0 ]
+"14
 [v _d d `uc  1 e 1 0 ]
 "15
+[v _Duty Duty `d  1 e 3 0 ]
+"16
 [v _main main `(v  1 e 1 0 ]
 {
-"120
+"158
+} 0
+"27 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\lbtoft.c
+[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
+{
+[v ___lbtoft@c c `uc  1 a 1 wreg ]
+[v ___lbtoft@c c `uc  1 a 1 wreg ]
+"29
+[v ___lbtoft@c c `uc  1 a 1 11 ]
+"30
+} 0
+"44 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 37 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 41 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 36 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 27 ]
+"73
+} 0
+"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 22 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 26 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 25 ]
+[v ___ftmul@exp exp `uc  1 a 1 21 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 12 ]
+[v ___ftmul@f2 f2 `f  1 p 3 15 ]
+"157
+} 0
+"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
 } 0
 "304 C:\Users\andre\Downloads\Semestre-10\PAI\Control\MPLABX\PAI.X\LibLCDXC8.h
 [v _Mensaje_LCD_Var_Mensaje20x4 Mensaje_LCD_Var_Mensaje20x4 `(v  1 e 1 0 ]
@@ -225,8 +292,8 @@
 [v ConfiguraLCD@a a `uc  1 a 1 0 ]
 "57
 } 0
-"122 C:\Users\andre\Downloads\Semestre-10\PAI\Control\MPLABX\PAI.X\PAI.c
+"160 C:\Users\andre\Downloads\Semestre-10\PAI\Control\MPLABX\PAI.X\PAI.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"149
+"194
 } 0
