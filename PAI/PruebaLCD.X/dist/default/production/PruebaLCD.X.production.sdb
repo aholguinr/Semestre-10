@@ -1,0 +1,135 @@
+[p GLOBOPT AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4550 ]
+[d frameptr 4065 ]
+"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\Umul64.c
+[v ___omul __omul `(ul  1 e 4 0 ]
+"60 C:\Users\andre\Downloads\Semestre-10\PAI\PruebaLCD.X\LibLCDXC8.h
+[v _ConfiguraLCD ConfiguraLCD `(v  1 e 1 0 ]
+"64
+[v _EnviaDato EnviaDato `(v  1 e 1 0 ]
+"76
+[v _InicializaLCD InicializaLCD `(v  1 e 1 0 ]
+"110
+[v _HabilitaLCD HabilitaLCD `(v  1 e 1 0 ]
+"117
+[v _BorraLCD BorraLCD `(v  1 e 1 0 ]
+"124
+[v _CursorAInicio CursorAInicio `(v  1 e 1 0 ]
+"141
+[v _EscribeLCD_c EscribeLCD_c `(v  1 e 1 0 ]
+"257
+[v _DireccionaLCD DireccionaLCD `(v  1 e 1 0 ]
+"293
+[v _RetardoLCD RetardoLCD `(v  1 e 1 0 ]
+"7 C:\Users\andre\Downloads\Semestre-10\PAI\PruebaLCD.X\PruebaLCD.c
+[v _main main `(v  1 e 1 0 ]
+"3263 C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4550.h
+[v _LATD LATD `VEuc  1 e 1 @3980 ]
+"4001
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+"9895
+[v _IRCF0 IRCF0 `VEb  1 e 0 @32412 ]
+"9898
+[v _IRCF1 IRCF1 `VEb  1 e 0 @32413 ]
+"9997
+[v _LATD2 LATD2 `VEb  1 e 0 @31842 ]
+"10000
+[v _LATD3 LATD3 `VEb  1 e 0 @31843 ]
+"10459
+[v _RD0 RD0 `VEb  1 e 0 @31768 ]
+"10462
+[v _RD1 RD1 `VEb  1 e 0 @31769 ]
+"35 C:\Users\andre\Downloads\Semestre-10\PAI\PruebaLCD.X\LibLCDXC8.h
+[v _interfaz interfaz `uc  1 e 1 0 ]
+"7 C:\Users\andre\Downloads\Semestre-10\PAI\PruebaLCD.X\PruebaLCD.c
+[v _main main `(v  1 e 1 0 ]
+{
+"36
+} 0
+"76 C:\Users\andre\Downloads\Semestre-10\PAI\PruebaLCD.X\LibLCDXC8.h
+[v _InicializaLCD InicializaLCD `(v  1 e 1 0 ]
+{
+"109
+} 0
+"117
+[v _BorraLCD BorraLCD `(v  1 e 1 0 ]
+{
+"123
+} 0
+"141
+[v _EscribeLCD_c EscribeLCD_c `(v  1 e 1 0 ]
+{
+[v EscribeLCD_c@a a `uc  1 a 1 wreg ]
+[v EscribeLCD_c@a a `uc  1 a 1 wreg ]
+"145
+[v EscribeLCD_c@a a `uc  1 a 1 4 ]
+"149
+} 0
+"257
+[v _DireccionaLCD DireccionaLCD `(v  1 e 1 0 ]
+{
+[v DireccionaLCD@a a `uc  1 a 1 wreg ]
+[v DireccionaLCD@a a `uc  1 a 1 wreg ]
+"260
+[v DireccionaLCD@a a `uc  1 a 1 4 ]
+"264
+} 0
+"64
+[v _EnviaDato EnviaDato `(v  1 e 1 0 ]
+{
+[v EnviaDato@a a `uc  1 a 1 wreg ]
+[v EnviaDato@a a `uc  1 a 1 wreg ]
+[v EnviaDato@a a `uc  1 a 1 3 ]
+"75
+} 0
+"293
+[v _RetardoLCD RetardoLCD `(v  1 e 1 0 ]
+{
+[v RetardoLCD@a a `uc  1 a 1 wreg ]
+[v RetardoLCD@a a `uc  1 a 1 wreg ]
+[v RetardoLCD@a a `uc  1 a 1 1 ]
+"311
+} 0
+"110
+[v _HabilitaLCD HabilitaLCD `(v  1 e 1 0 ]
+{
+"116
+} 0
+"60
+[v _ConfiguraLCD ConfiguraLCD `(v  1 e 1 0 ]
+{
+[v ConfiguraLCD@a a `uc  1 a 1 wreg ]
+[v ConfiguraLCD@a a `uc  1 a 1 wreg ]
+[v ConfiguraLCD@a a `uc  1 a 1 0 ]
+"63
+} 0

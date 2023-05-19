@@ -44,6 +44,7 @@ void BorraLCD(void);
 void EscribeLCD_c(unsigned char);
 void EscribeLCD_n8(unsigned char, unsigned char);
 void Mensaje_LCD_Var_Mensaje20x4(char* a,char* b,char* c,char* d);
+void Mensaje_LCD_4ta_Fila_Mensaje20x4(char* a);
 void Mensaje_LCD_Var_Centrado(char* a);
 void MensajeLCD_Var(char* a);
 void DireccionaLCD(unsigned char);
@@ -135,6 +136,9 @@ void EscribeLCD_n8(unsigned char a,unsigned char b){
 //Ejemplo EscribeLCD_n8(204,3);	
     unsigned char centena,decena,unidad;
 	RS=1;
+    
+    
+    
 	switch(b){
 		case 1: unidad=a%10;
 				EnviaDato(unidad+48);
@@ -314,7 +318,12 @@ void Mensaje_LCD_Var_Mensaje20x4(char* a,char* b,char* c,char* d){
 }
 
 
-/**/
+void Mensaje_LCD_4ta_Fila_Mensaje20x4(char* a){
+    DireccionaLCD(0xC0+20);
+    MensajeLCD_Var("                    ");
+    DireccionaLCD(0xC0+20);
+    Mensaje_LCD_Var_Centrado(a);
+}
 
 
 void Mensaje_LCD_Var_Centrado(char* a){
