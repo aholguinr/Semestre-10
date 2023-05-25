@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\andre\AppData\Local\Temp\xcAsq74.\driver_tmp_3.obj
+ C:\Users\andre\AppData\Local\Temp\xcAsk5g.\driver_tmp_3.obj
  -Odist/default/production\PAI.X.production.hex
  -logfile=dist/default/production\PAI.X.production.hxl
  -addressing=1
@@ -9,21 +9,21 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(C:\Users\andre\AppData\Local\Temp\xcAsq74.\driver_tmp_3.obj)
-  8h - 11h		(C:\Users\andre\AppData\Local\Temp\xcAsq74.\driver_tmp_3.obj)
-  800h - 180Eh		(C:\Users\andre\AppData\Local\Temp\xcAsq74.\driver_tmp_3.obj)
-  200000h - 200007h		(C:\Users\andre\AppData\Local\Temp\xcAsq74.\driver_tmp_3.obj)
-  300000h - 30000Dh		(C:\Users\andre\AppData\Local\Temp\xcAsq74.\driver_tmp_3.obj)
+  0h - 3h		(C:\Users\andre\AppData\Local\Temp\xcAsk5g.\driver_tmp_3.obj)
+  8h - 11h		(C:\Users\andre\AppData\Local\Temp\xcAsk5g.\driver_tmp_3.obj)
+  800h - 1816h		(C:\Users\andre\AppData\Local\Temp\xcAsk5g.\driver_tmp_3.obj)
+  200000h - 200007h		(C:\Users\andre\AppData\Local\Temp\xcAsk5g.\driver_tmp_3.obj)
+  300000h - 30000Dh		(C:\Users\andre\AppData\Local\Temp\xcAsk5g.\driver_tmp_3.obj)
  Unused ranges:
   4h - 7h
   12h - 7FFh
-  180Fh - 1FFFFFh
+  1817h - 1FFFFFh
   200008h - 2FFFFFh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\andre\AppData\Local\Temp\xcAsq74.\driver_tmp_3.obj)
+  H1 = Input file             (C:\Users\andre\AppData\Local\Temp\xcAsk5g.\driver_tmp_3.obj)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -286,7 +286,8 @@
 000017D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000017E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000017F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00001800 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 --
+00001800 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001810 | H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- -- --
 ----------------------------------------------------------
 00200000 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
 ----------------------------------------------------------

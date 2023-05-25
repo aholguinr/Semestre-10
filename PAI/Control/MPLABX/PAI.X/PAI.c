@@ -105,13 +105,15 @@ void main(void){
                 LATD=0;
                 Mensaje_LCD_Var_Mensaje20x4("Cortadora UN","Espere un momento","UNAL","2023-1");
                 Estados=1;
+                
+                CCPR1L=0;
                 __delay_ms(2000);
                 break;
                 
             case 1: //Activar conexión de motores
                 
-                RD0=0;
-                RD1=0;
+                RD0=1;
+                RD1=1;
                 //RD1=0;
                 CCPR1L=0;
                 c=0;
@@ -125,8 +127,8 @@ void main(void){
                 break;
             case 2: //Motores conectados, a la espera de apagado o OP
  
-                RD0=1;
-                RD1=1;
+                RD0=0;
+                RD1=0;
                 //RD1=0;
                 b=1;
                 c=0;
@@ -143,6 +145,10 @@ void main(void){
                 
             case 3: //Seleccionar punto de operacion
                 //RD1=0;
+                if(b==1){Estados=2;b=0;break;}//Apagar motor
+                
+                RD0=1;
+                RD1=1;
                 d=0;
                 CCPR1L=0;
                 if(a==0){Estados=1;break;}//Motor desconectado
@@ -160,13 +166,14 @@ void main(void){
                 
                 
                 EstadosPrev=3;
-                if(b==1){Estados=2;b=0;break;}//Apagar motor
+                
                 if(c==1){Estados=4;c=0;break;}//Prender motor
                 break;
                 
             case 4: //Se activa punto de operación
                 //RD1=1;
-             
+                if(a==0){Estados=1;break;}//Motor desconectado
+                if(b==1){Estados=2;b=0;break;}//Apagar motor
                 Duty=Val_PWM/100;
                 //CCPR1L=Duty*PR2;
 
@@ -193,10 +200,7 @@ void main(void){
                 }
                 
                 EstadosPrev=4;
-                //CCPR2L=Duty*PR2;
-                if(a==0){Estados=1;break;}//Motor desconectado
-                if(b==1){Estados=2;b=0;break;}//Apagar motor
-                //if(b==0){Estados=2;break;}
+                
                 break;
                 
             default:

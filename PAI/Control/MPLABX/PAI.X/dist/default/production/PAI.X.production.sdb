@@ -73,11 +73,11 @@
 [v _RetardoLCD RetardoLCD `(v  1 e 1 0 ]
 "30 C:\Users\andre\Downloads\Semestre-10\PAI\Control\MPLABX\PAI.X\PAI.c
 [v _main main `(v  1 e 1 0 ]
-"213
+"217
 [v _ISR ISR `II(v  1 e 1 0 ]
-"253
+"257
 [v _Conversion Conversion `(ui  1 e 2 0 ]
-"260
+"264
 [v _imprimir_porcentaje imprimir_porcentaje `(v  1 e 1 0 ]
 "3263 C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f4550.h
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
@@ -182,14 +182,14 @@
 "30
 [v _main main `(v  1 e 1 0 ]
 {
-"180
+"187
 [v main@i i `i  1 a 2 44 ]
-"211
+"215
 } 0
-"260
+"264
 [v _imprimir_porcentaje imprimir_porcentaje `(v  1 e 1 0 ]
 {
-"277
+"281
 } 0
 "4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\ftge.c
 [v ___ftge __ftge `(b  1 e 0 0 ]
@@ -405,13 +405,13 @@
 {
 "112
 } 0
-"253 C:\Users\andre\Downloads\Semestre-10\PAI\Control\MPLABX\PAI.X\PAI.c
+"257 C:\Users\andre\Downloads\Semestre-10\PAI\Control\MPLABX\PAI.X\PAI.c
 [v _Conversion Conversion `(ui  1 e 2 0 ]
 {
 [v Conversion@canal canal `uc  1 a 1 wreg ]
 [v Conversion@canal canal `uc  1 a 1 wreg ]
 [v Conversion@canal canal `uc  1 a 1 3 ]
-"258
+"262
 } 0
 "55 C:\Users\andre\Downloads\Semestre-10\PAI\Control\MPLABX\PAI.X\LibLCDXC8.h
 [v _ConfiguraLCD ConfiguraLCD `(v  1 e 1 0 ]
@@ -421,8 +421,8 @@
 [v ConfiguraLCD@a a `uc  1 a 1 0 ]
 "58
 } 0
-"213 C:\Users\andre\Downloads\Semestre-10\PAI\Control\MPLABX\PAI.X\PAI.c
+"217 C:\Users\andre\Downloads\Semestre-10\PAI\Control\MPLABX\PAI.X\PAI.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"251
+"255
 } 0

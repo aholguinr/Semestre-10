@@ -6160,13 +6160,15 @@ case 0:
 LATD=0;
 Mensaje_LCD_Var_Mensaje20x4("Cortadora UN","Espere un momento","UNAL","2023-1");
 Estados=1;
+
+CCPR1L=0;
 _delay((unsigned long)((2000)*(4000000/4000.0)));
 break;
 
 case 1:
 
-RD0=0;
-RD1=0;
+RD0=1;
+RD1=1;
 
 CCPR1L=0;
 c=0;
@@ -6180,8 +6182,8 @@ else{Estados=2;break;}
 break;
 case 2:
 
-RD0=1;
-RD1=1;
+RD0=0;
+RD1=0;
 
 b=1;
 c=0;
@@ -6198,6 +6200,10 @@ break;
 
 case 3:
 
+if(b==1){Estados=2;b=0;break;}
+
+RD0=1;
+RD1=1;
 d=0;
 CCPR1L=0;
 if(a==0){Estados=1;break;}
@@ -6215,13 +6221,14 @@ Val_PWM_LCD_prev=Val_PWM_LCD;
 
 
 EstadosPrev=3;
-if(b==1){Estados=2;b=0;break;}
+
 if(c==1){Estados=4;c=0;break;}
 break;
 
 case 4:
 
-
+if(a==0){Estados=1;break;}
+if(b==1){Estados=2;b=0;break;}
 Duty=Val_PWM/100;
 
 
@@ -6248,9 +6255,6 @@ imprimir_porcentaje();
 }
 
 EstadosPrev=4;
-
-if(a==0){Estados=1;break;}
-if(b==1){Estados=2;b=0;break;}
 
 break;
 
@@ -6291,7 +6295,7 @@ c=1;
 INT2IF=0;
 }
 
-# 251
+# 255
 }
 
 unsigned int Conversion(unsigned char canal){
@@ -6303,7 +6307,7 @@ return ADRES;
 
 void imprimir_porcentaje(void){
 
-# 265
+# 269
 DireccionaLCD(0xC0+4);
 MensajeLCD_Var("    ");
 DireccionaLCD(0xC0+4);

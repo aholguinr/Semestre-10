@@ -5254,102 +5254,105 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;PAI.c: 107: Estados=1;
 "107
 [e = _Estados -> -> 1 `i `uc ]
-[; ;PAI.c: 108: _delay((unsigned long)((2000)*(4000000/4000.0)));
-"108
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;PAI.c: 109: break;
+[; ;PAI.c: 109: CCPR1L=0;
 "109
-[e $U 435  ]
-[; ;PAI.c: 111: case 1:
-"111
-[e :U 438 ]
-[; ;PAI.c: 113: RD0=0;
-"113
-[e = _RD0 -> -> 0 `i `b ]
-[; ;PAI.c: 114: RD1=0;
-"114
-[e = _RD1 -> -> 0 `i `b ]
-[; ;PAI.c: 116: CCPR1L=0;
-"116
 [e = _CCPR1L -> -> 0 `i `uc ]
-[; ;PAI.c: 117: c=0;
-"117
-[e = _c -> -> 0 `i `uc ]
-[; ;PAI.c: 118: if(Estados!=EstadosPrev){
+[; ;PAI.c: 110: _delay((unsigned long)((2000)*(4000000/4000.0)));
+"110
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;PAI.c: 111: break;
+"111
+[e $U 435  ]
+[; ;PAI.c: 113: case 1:
+"113
+[e :U 438 ]
+[; ;PAI.c: 115: RD0=1;
+"115
+[e = _RD0 -> -> 1 `i `b ]
+[; ;PAI.c: 116: RD1=1;
+"116
+[e = _RD1 -> -> 1 `i `b ]
+[; ;PAI.c: 118: CCPR1L=0;
 "118
+[e = _CCPR1L -> -> 0 `i `uc ]
+[; ;PAI.c: 119: c=0;
+"119
+[e = _c -> -> 0 `i `uc ]
+[; ;PAI.c: 120: if(Estados!=EstadosPrev){
+"120
 [e $ ! != -> _Estados `i -> _EstadosPrev `i 439  ]
 {
-[; ;PAI.c: 119: Mensaje_LCD_Var_Mensaje20x4(" ","Revise la conexion a ","los motores","  ");
-"119
+[; ;PAI.c: 121: Mensaje_LCD_Var_Mensaje20x4(" ","Revise la conexion a ","los motores","  ");
+"121
 [e ( _Mensaje_LCD_Var_Mensaje20x4 (4 , , , -> :s 10C `*uc -> :s 11C `*uc -> :s 12C `*uc -> :s 13C `*uc ]
-"120
+"122
 }
 [e :U 439 ]
-[; ;PAI.c: 120: }
-[; ;PAI.c: 121: EstadosPrev=1;
-"121
+[; ;PAI.c: 122: }
+[; ;PAI.c: 123: EstadosPrev=1;
+"123
 [e = _EstadosPrev -> -> 1 `i `uc ]
-[; ;PAI.c: 122: if(a==0){Estados=1;break;}
-"122
+[; ;PAI.c: 124: if(a==0){Estados=1;break;}
+"124
 [e $ ! == -> _a `i -> 0 `i 440  ]
 {
 [e = _Estados -> -> 1 `i `uc ]
 [e $U 435  ]
 }
 [e $U 441  ]
-"123
+"125
 [e :U 440 ]
-[; ;PAI.c: 123: else{Estados=2;break;}
+[; ;PAI.c: 125: else{Estados=2;break;}
 {
 [e = _Estados -> -> 2 `i `uc ]
 [e $U 435  ]
 }
 [e :U 441 ]
-[; ;PAI.c: 125: break;
-"125
+[; ;PAI.c: 127: break;
+"127
 [e $U 435  ]
-[; ;PAI.c: 126: case 2:
-"126
-[e :U 442 ]
-[; ;PAI.c: 128: RD0=1;
+[; ;PAI.c: 128: case 2:
 "128
-[e = _RD0 -> -> 1 `i `b ]
-[; ;PAI.c: 129: RD1=1;
-"129
-[e = _RD1 -> -> 1 `i `b ]
-[; ;PAI.c: 131: b=1;
+[e :U 442 ]
+[; ;PAI.c: 130: RD0=0;
+"130
+[e = _RD0 -> -> 0 `i `b ]
+[; ;PAI.c: 131: RD1=0;
 "131
-[e = _b -> -> 1 `i `uc ]
-[; ;PAI.c: 132: c=0;
-"132
-[e = _c -> -> 0 `i `uc ]
-[; ;PAI.c: 133: CCPR1L=0;
+[e = _RD1 -> -> 0 `i `b ]
+[; ;PAI.c: 133: b=1;
 "133
-[e = _CCPR1L -> -> 0 `i `uc ]
-[; ;PAI.c: 134: if(Estados!=EstadosPrev){
+[e = _b -> -> 1 `i `uc ]
+[; ;PAI.c: 134: c=0;
 "134
+[e = _c -> -> 0 `i `uc ]
+[; ;PAI.c: 135: CCPR1L=0;
+"135
+[e = _CCPR1L -> -> 0 `i `uc ]
+[; ;PAI.c: 136: if(Estados!=EstadosPrev){
+"136
 [e $ ! != -> _Estados `i -> _EstadosPrev `i 443  ]
 {
-[; ;PAI.c: 135: Mensaje_LCD_Var_Mensaje20x4("Motor OFF","  ","Active el pulsador","para ajustarlo");
-"135
+[; ;PAI.c: 137: Mensaje_LCD_Var_Mensaje20x4("Motor OFF","  ","Active el pulsador","para ajustarlo");
+"137
 [e ( _Mensaje_LCD_Var_Mensaje20x4 (4 , , , -> :s 14C `*uc -> :s 15C `*uc -> :s 16C `*uc -> :s 17C `*uc ]
-"136
+"138
 }
 [e :U 443 ]
-[; ;PAI.c: 136: }
-[; ;PAI.c: 138: EstadosPrev=2;
-"138
+[; ;PAI.c: 138: }
+[; ;PAI.c: 140: EstadosPrev=2;
+"140
 [e = _EstadosPrev -> -> 2 `i `uc ]
-[; ;PAI.c: 139: if(a==0){Estados=1;break;}
-"139
+[; ;PAI.c: 141: if(a==0){Estados=1;break;}
+"141
 [e $ ! == -> _a `i -> 0 `i 444  ]
 {
 [e = _Estados -> -> 1 `i `uc ]
 [e $U 435  ]
 }
 [e :U 444 ]
-[; ;PAI.c: 140: if(d==1){Estados=3;b=0;Val_PWM_LCD_prev=0;break;}
-"140
+[; ;PAI.c: 142: if(d==1){Estados=3;b=0;Val_PWM_LCD_prev=0;break;}
+"142
 [e $ ! == -> _d `i -> 1 `i 445  ]
 {
 [e = _Estados -> -> 3 `i `uc ]
@@ -5358,76 +5361,82 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 435  ]
 }
 [e $U 446  ]
-"141
+"143
 [e :U 445 ]
-[; ;PAI.c: 141: else{Estados=2;break;}
+[; ;PAI.c: 143: else{Estados=2;break;}
 {
 [e = _Estados -> -> 2 `i `uc ]
 [e $U 435  ]
 }
 [e :U 446 ]
-[; ;PAI.c: 142: break;
-"142
-[e $U 435  ]
-[; ;PAI.c: 144: case 3:
+[; ;PAI.c: 144: break;
 "144
-[e :U 447 ]
-[; ;PAI.c: 146: d=0;
-"146
-[e = _d -> -> 0 `i `uc ]
-[; ;PAI.c: 147: CCPR1L=0;
-"147
-[e = _CCPR1L -> -> 0 `i `uc ]
-[; ;PAI.c: 148: if(a==0){Estados=1;break;}
-"148
-[e $ ! == -> _a `i -> 0 `i 448  ]
-{
-[e = _Estados -> -> 1 `i `uc ]
 [e $U 435  ]
-}
-[e :U 448 ]
-[; ;PAI.c: 150: if(Estados!=EstadosPrev){
-"150
-[e $ ! != -> _Estados `i -> _EstadosPrev `i 449  ]
-{
-[; ;PAI.c: 151: Mensaje_LCD_Var_Mensaje20x4("Seleccione un %","de operacion:"," ","    ");
-"151
-[e ( _Mensaje_LCD_Var_Mensaje20x4 (4 , , , -> :s 18C `*uc -> :s 19C `*uc -> :s 20C `*uc -> :s 21C `*uc ]
-"152
-}
-[e :U 449 ]
-[; ;PAI.c: 152: }
-[; ;PAI.c: 154: Val_PWM_LCD=Val_PWM;
-"154
-[e = _Val_PWM_LCD -> _Val_PWM `uc ]
-[; ;PAI.c: 156: if(Val_PWM_LCD_prev!=Val_PWM_LCD){
-"156
-[e $ ! != -> _Val_PWM_LCD_prev `i -> _Val_PWM_LCD `i 450  ]
-{
-[; ;PAI.c: 157: imprimir_porcentaje();
-"157
-[e ( _imprimir_porcentaje ..  ]
-"158
-}
-[e :U 450 ]
-[; ;PAI.c: 158: }
-[; ;PAI.c: 159: Val_PWM_LCD_prev=Val_PWM_LCD;
-"159
-[e = _Val_PWM_LCD_prev _Val_PWM_LCD ]
-[; ;PAI.c: 162: EstadosPrev=3;
-"162
-[e = _EstadosPrev -> -> 3 `i `uc ]
-[; ;PAI.c: 163: if(b==1){Estados=2;b=0;break;}
-"163
-[e $ ! == -> _b `i -> 1 `i 451  ]
+[; ;PAI.c: 146: case 3:
+"146
+[e :U 447 ]
+[; ;PAI.c: 148: if(b==1){Estados=2;b=0;break;}
+"148
+[e $ ! == -> _b `i -> 1 `i 448  ]
 {
 [e = _Estados -> -> 2 `i `uc ]
 [e = _b -> -> 0 `i `uc ]
 [e $U 435  ]
 }
-[e :U 451 ]
-[; ;PAI.c: 164: if(c==1){Estados=4;c=0;break;}
+[e :U 448 ]
+[; ;PAI.c: 150: RD0=1;
+"150
+[e = _RD0 -> -> 1 `i `b ]
+[; ;PAI.c: 151: RD1=1;
+"151
+[e = _RD1 -> -> 1 `i `b ]
+[; ;PAI.c: 152: d=0;
+"152
+[e = _d -> -> 0 `i `uc ]
+[; ;PAI.c: 153: CCPR1L=0;
+"153
+[e = _CCPR1L -> -> 0 `i `uc ]
+[; ;PAI.c: 154: if(a==0){Estados=1;break;}
+"154
+[e $ ! == -> _a `i -> 0 `i 449  ]
+{
+[e = _Estados -> -> 1 `i `uc ]
+[e $U 435  ]
+}
+[e :U 449 ]
+[; ;PAI.c: 156: if(Estados!=EstadosPrev){
+"156
+[e $ ! != -> _Estados `i -> _EstadosPrev `i 450  ]
+{
+[; ;PAI.c: 157: Mensaje_LCD_Var_Mensaje20x4("Seleccione un %","de operacion:"," ","    ");
+"157
+[e ( _Mensaje_LCD_Var_Mensaje20x4 (4 , , , -> :s 18C `*uc -> :s 19C `*uc -> :s 20C `*uc -> :s 21C `*uc ]
+"158
+}
+[e :U 450 ]
+[; ;PAI.c: 158: }
+[; ;PAI.c: 160: Val_PWM_LCD=Val_PWM;
+"160
+[e = _Val_PWM_LCD -> _Val_PWM `uc ]
+[; ;PAI.c: 162: if(Val_PWM_LCD_prev!=Val_PWM_LCD){
+"162
+[e $ ! != -> _Val_PWM_LCD_prev `i -> _Val_PWM_LCD `i 451  ]
+{
+[; ;PAI.c: 163: imprimir_porcentaje();
+"163
+[e ( _imprimir_porcentaje ..  ]
 "164
+}
+[e :U 451 ]
+[; ;PAI.c: 164: }
+[; ;PAI.c: 165: Val_PWM_LCD_prev=Val_PWM_LCD;
+"165
+[e = _Val_PWM_LCD_prev _Val_PWM_LCD ]
+[; ;PAI.c: 168: EstadosPrev=3;
+"168
+[e = _EstadosPrev -> -> 3 `i `uc ]
+[; ;PAI.c: 170: if(c==1){Estados=4;c=0;break;}
+"170
 [e $ ! == -> _c `i -> 1 `i 452  ]
 {
 [e = _Estados -> -> 4 `i `uc ]
@@ -5435,95 +5444,82 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 435  ]
 }
 [e :U 452 ]
-[; ;PAI.c: 165: break;
-"165
+[; ;PAI.c: 171: break;
+"171
 [e $U 435  ]
-[; ;PAI.c: 167: case 4:
-"167
-[e :U 453 ]
-[; ;PAI.c: 170: Duty=Val_PWM/100;
-"170
-[e = _Duty / _Val_PWM -> -> 100 `i `d ]
-[; ;PAI.c: 173: if(Estados!=EstadosPrev){
+[; ;PAI.c: 173: case 4:
 "173
-[e $ ! != -> _Estados `i -> _EstadosPrev `i 454  ]
-{
-[; ;PAI.c: 178: Mensaje_LCD_Var_Mensaje20x4("  ","Prendiendo Motor"," ","Espere un momento");
-"178
-[e ( _Mensaje_LCD_Var_Mensaje20x4 (4 , , , -> :s 22C `*uc -> :s 23C `*uc -> :s 24C `*uc -> :s 25C `*uc ]
-"180
-[v _i `i ~T0 @X0 1 a ]
-[; ;PAI.c: 180: int i;
-[; ;PAI.c: 181: for (i = 0; i < len; i++) {
-"181
-{
-[e = _i -> 0 `i ]
-[e $U 458  ]
-[e :U 455 ]
-{
-[; ;PAI.c: 182: if(b==1||a==0){break;}
-"182
-[e $ ! || == -> _b `i -> 1 `i == -> _a `i -> 0 `i 459  ]
-{
-[e $U 456  ]
-}
-[e :U 459 ]
-[; ;PAI.c: 183: CCPR1L = Vals24[i]*Duty;
-"183
-[e = _CCPR1L -> * -> *U + &U _Vals24 * -> -> _i `ui `ux -> -> # *U &U _Vals24 `ui `ux `d _Duty `uc ]
-[; ;PAI.c: 184: _delay((unsigned long)((ts)*(4000000/4000.0)));
-"184
-[e ( __delay (1 -> * -> _ts `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"185
-}
-"181
-[e ++ _i -> 1 `i ]
-[e :U 458 ]
-[e $ < _i _len 455  ]
-[e :U 456 ]
-"185
-}
-[; ;PAI.c: 185: }
-[; ;PAI.c: 187: if(a==0){Estados=1;break;}
-"187
-[e $ ! == -> _a `i -> 0 `i 460  ]
+[e :U 453 ]
+[; ;PAI.c: 175: if(a==0){Estados=1;break;}
+"175
+[e $ ! == -> _a `i -> 0 `i 454  ]
 {
 [e = _Estados -> -> 1 `i `uc ]
 [e $U 435  ]
 }
-[e :U 460 ]
-[; ;PAI.c: 188: if(b==1){Estados=2;b=0;break;}
-"188
-[e $ ! == -> _b `i -> 1 `i 461  ]
+[e :U 454 ]
+[; ;PAI.c: 176: if(b==1){Estados=2;b=0;break;}
+"176
+[e $ ! == -> _b `i -> 1 `i 455  ]
 {
 [e = _Estados -> -> 2 `i `uc ]
 [e = _b -> -> 0 `i `uc ]
 [e $U 435  ]
 }
-[e :U 461 ]
-[; ;PAI.c: 191: Mensaje_LCD_Var_Mensaje20x4("Motor prendido","Operacion:"," ","    ");
-"191
-[e ( _Mensaje_LCD_Var_Mensaje20x4 (4 , , , -> :s 26C `*uc -> :s 27C `*uc -> :s 28C `*uc -> :s 29C `*uc ]
-[; ;PAI.c: 192: imprimir_porcentaje();
-"192
-[e ( _imprimir_porcentaje ..  ]
-"193
+[e :U 455 ]
+[; ;PAI.c: 177: Duty=Val_PWM/100;
+"177
+[e = _Duty / _Val_PWM -> -> 100 `i `d ]
+[; ;PAI.c: 180: if(Estados!=EstadosPrev){
+"180
+[e $ ! != -> _Estados `i -> _EstadosPrev `i 456  ]
+{
+[; ;PAI.c: 185: Mensaje_LCD_Var_Mensaje20x4("  ","Prendiendo Motor"," ","Espere un momento");
+"185
+[e ( _Mensaje_LCD_Var_Mensaje20x4 (4 , , , -> :s 22C `*uc -> :s 23C `*uc -> :s 24C `*uc -> :s 25C `*uc ]
+"187
+[v _i `i ~T0 @X0 1 a ]
+[; ;PAI.c: 187: int i;
+[; ;PAI.c: 188: for (i = 0; i < len; i++) {
+"188
+{
+[e = _i -> 0 `i ]
+[e $U 460  ]
+[e :U 457 ]
+{
+[; ;PAI.c: 189: if(b==1||a==0){break;}
+"189
+[e $ ! || == -> _b `i -> 1 `i == -> _a `i -> 0 `i 461  ]
+{
+[e $U 458  ]
 }
-[e :U 454 ]
-[; ;PAI.c: 193: }
-[; ;PAI.c: 195: EstadosPrev=4;
-"195
-[e = _EstadosPrev -> -> 4 `i `uc ]
-[; ;PAI.c: 197: if(a==0){Estados=1;break;}
-"197
+[e :U 461 ]
+[; ;PAI.c: 190: CCPR1L = Vals24[i]*Duty;
+"190
+[e = _CCPR1L -> * -> *U + &U _Vals24 * -> -> _i `ui `ux -> -> # *U &U _Vals24 `ui `ux `d _Duty `uc ]
+[; ;PAI.c: 191: _delay((unsigned long)((ts)*(4000000/4000.0)));
+"191
+[e ( __delay (1 -> * -> _ts `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"192
+}
+"188
+[e ++ _i -> 1 `i ]
+[e :U 460 ]
+[e $ < _i _len 457  ]
+[e :U 458 ]
+"192
+}
+[; ;PAI.c: 192: }
+[; ;PAI.c: 194: if(a==0){Estados=1;break;}
+"194
 [e $ ! == -> _a `i -> 0 `i 462  ]
 {
 [e = _Estados -> -> 1 `i `uc ]
 [e $U 435  ]
 }
 [e :U 462 ]
-[; ;PAI.c: 198: if(b==1){Estados=2;b=0;break;}
-"198
+[; ;PAI.c: 195: if(b==1){Estados=2;b=0;break;}
+"195
 [e $ ! == -> _b `i -> 1 `i 463  ]
 {
 [e = _Estados -> -> 2 `i `uc ]
@@ -5531,21 +5527,34 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 435  ]
 }
 [e :U 463 ]
-[; ;PAI.c: 200: break;
+[; ;PAI.c: 198: Mensaje_LCD_Var_Mensaje20x4("Motor prendido","Operacion:"," ","    ");
+"198
+[e ( _Mensaje_LCD_Var_Mensaje20x4 (4 , , , -> :s 26C `*uc -> :s 27C `*uc -> :s 28C `*uc -> :s 29C `*uc ]
+[; ;PAI.c: 199: imprimir_porcentaje();
+"199
+[e ( _imprimir_porcentaje ..  ]
 "200
-[e $U 435  ]
-[; ;PAI.c: 202: default:
+}
+[e :U 456 ]
+[; ;PAI.c: 200: }
+[; ;PAI.c: 202: EstadosPrev=4;
 "202
-[e :U 464 ]
-[; ;PAI.c: 203: Estados=0;
-"203
-[e = _Estados -> -> 0 `i `uc ]
+[e = _EstadosPrev -> -> 4 `i `uc ]
 [; ;PAI.c: 204: break;
 "204
 [e $U 435  ]
+[; ;PAI.c: 206: default:
+"206
+[e :U 464 ]
+[; ;PAI.c: 207: Estados=0;
 "207
+[e = _Estados -> -> 0 `i `uc ]
+[; ;PAI.c: 208: break;
+"208
+[e $U 435  ]
+"211
 }
-[; ;PAI.c: 207: }
+[; ;PAI.c: 211: }
 [e $U 435  ]
 "102
 [e :U 436 ]
@@ -5555,181 +5564,181 @@ Version 3.2 HI-TECH Software Intermediate Code
  , $ -> -> 3 `i `uc 447
  , $ -> -> 4 `i `uc 453
  464 ]
-"207
+"211
 [e :U 435 ]
-"210
+"214
 }
 [e :U 432 ]
 "96
 [e $U 433  ]
 [e :U 434 ]
-[; ;PAI.c: 210: }
-[; ;PAI.c: 211: }
-"211
+[; ;PAI.c: 214: }
+[; ;PAI.c: 215: }
+"215
 [e :UE 431 ]
 }
 [v $root$_ISR `(v ~T0 @X0 0 e ]
 [v F3258 `(v ~T0 @X0 1 tf ]
-"213
+"217
 [v _ISR `IF3258 ~T0 @X0 1 e ]
 {
-[; ;PAI.c: 213: void interrupt ISR(void){
+[; ;PAI.c: 217: void interrupt ISR(void){
 [e :U _ISR ]
 [f ]
-[; ;PAI.c: 216: if(INT0IF==1){
-"216
+[; ;PAI.c: 220: if(INT0IF==1){
+"220
 [e $ ! == -> _INT0IF `i -> 1 `i 466  ]
 {
-[; ;PAI.c: 218: a=0;
-"218
+[; ;PAI.c: 222: a=0;
+"222
 [e = _a -> -> 0 `i `uc ]
-[; ;PAI.c: 219: INT0IF=0;
-"219
+[; ;PAI.c: 223: INT0IF=0;
+"223
 [e = _INT0IF -> -> 0 `i `b ]
-"220
+"224
 }
 [e :U 466 ]
-[; ;PAI.c: 220: }
-[; ;PAI.c: 222: if(INT1IF==1){
-"222
+[; ;PAI.c: 224: }
+[; ;PAI.c: 226: if(INT1IF==1){
+"226
 [e $ ! == -> _INT1IF `i -> 1 `i 467  ]
 {
-[; ;PAI.c: 224: b=1;
-"224
+[; ;PAI.c: 228: b=1;
+"228
 [e = _b -> -> 1 `i `uc ]
-[; ;PAI.c: 225: INT1IF=0;
-"225
+[; ;PAI.c: 229: INT1IF=0;
+"229
 [e = _INT1IF -> -> 0 `i `b ]
-"226
+"230
 }
 [e :U 467 ]
-[; ;PAI.c: 226: }
-[; ;PAI.c: 229: if(INT2IF==1){
-"229
+[; ;PAI.c: 230: }
+[; ;PAI.c: 233: if(INT2IF==1){
+"233
 [e $ ! == -> _INT2IF `i -> 1 `i 468  ]
 {
-[; ;PAI.c: 231: if(Estados==2){
-"231
+[; ;PAI.c: 235: if(Estados==2){
+"235
 [e $ ! == -> _Estados `i -> 2 `i 469  ]
 {
-[; ;PAI.c: 232: d=1;
-"232
+[; ;PAI.c: 236: d=1;
+"236
 [e = _d -> -> 1 `i `uc ]
-"233
+"237
 }
-[; ;PAI.c: 233: }else if (Estados==3){
+[; ;PAI.c: 237: }else if (Estados==3){
 [e $U 470  ]
 [e :U 469 ]
 [e $ ! == -> _Estados `i -> 3 `i 471  ]
 {
-[; ;PAI.c: 234: c=1;
-"234
+[; ;PAI.c: 238: c=1;
+"238
 [e = _c -> -> 1 `i `uc ]
-"235
+"239
 }
 [e :U 471 ]
-"236
+"240
 [e :U 470 ]
-[; ;PAI.c: 235: }
-[; ;PAI.c: 236: INT2IF=0;
+[; ;PAI.c: 239: }
+[; ;PAI.c: 240: INT2IF=0;
 [e = _INT2IF -> -> 0 `i `b ]
-"237
+"241
 }
 [e :U 468 ]
-[; ;PAI.c: 237: }
-[; ;PAI.c: 251: }
-"251
+[; ;PAI.c: 241: }
+[; ;PAI.c: 255: }
+"255
 [e :UE 465 ]
 }
-"253
+"257
 [v _Conversion `(ui ~T0 @X0 1 ef1`uc ]
 {
-[; ;PAI.c: 253: unsigned int Conversion(unsigned char canal){
+[; ;PAI.c: 257: unsigned int Conversion(unsigned char canal){
 [e :U _Conversion ]
 [v _canal `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;PAI.c: 254: ADCON0=(ADCON0 & 0b00000011) | (canal<<2);
-"254
+[; ;PAI.c: 258: ADCON0=(ADCON0 & 0b00000011) | (canal<<2);
+"258
 [e = _ADCON0 -> | & -> _ADCON0 `i -> 3 `i << -> _canal `i -> 2 `i `uc ]
-[; ;PAI.c: 255: GO=1;
-"255
+[; ;PAI.c: 259: GO=1;
+"259
 [e = _GO -> -> 1 `i `b ]
-[; ;PAI.c: 256: while(GO==1);
-"256
+[; ;PAI.c: 260: while(GO==1);
+"260
 [e $U 473  ]
 [e :U 474 ]
 [e :U 473 ]
 [e $ == -> _GO `i -> 1 `i 474  ]
 [e :U 475 ]
-[; ;PAI.c: 257: return ADRES;
-"257
+[; ;PAI.c: 261: return ADRES;
+"261
 [e ) -> _ADRES `ui ]
 [e $UE 472  ]
-[; ;PAI.c: 258: }
-"258
+[; ;PAI.c: 262: }
+"262
 [e :UE 472 ]
 }
-"260
+"264
 [v _imprimir_porcentaje `(v ~T0 @X0 1 ef ]
 {
-[; ;PAI.c: 260: void imprimir_porcentaje(void){
+[; ;PAI.c: 264: void imprimir_porcentaje(void){
 [e :U _imprimir_porcentaje ]
 [f ]
-[; ;PAI.c: 265: DireccionaLCD(0xC0+4);
-"265
-[e ( _DireccionaLCD (1 -> + -> 192 `i -> 4 `i `uc ]
-[; ;PAI.c: 266: MensajeLCD_Var("    ");
-"266
-[e ( _MensajeLCD_Var (1 -> :s 30C `*uc ]
-[; ;PAI.c: 267: DireccionaLCD(0xC0+4);
-"267
-[e ( _DireccionaLCD (1 -> + -> 192 `i -> 4 `i `uc ]
-[; ;PAI.c: 269: if(Val_PWM>99){
+[; ;PAI.c: 269: DireccionaLCD(0xC0+4);
 "269
+[e ( _DireccionaLCD (1 -> + -> 192 `i -> 4 `i `uc ]
+[; ;PAI.c: 270: MensajeLCD_Var("    ");
+"270
+[e ( _MensajeLCD_Var (1 -> :s 30C `*uc ]
+[; ;PAI.c: 271: DireccionaLCD(0xC0+4);
+"271
+[e ( _DireccionaLCD (1 -> + -> 192 `i -> 4 `i `uc ]
+[; ;PAI.c: 273: if(Val_PWM>99){
+"273
 [e $ ! > _Val_PWM -> -> 99 `i `d 477  ]
 {
-[; ;PAI.c: 270: EscribeLCD_n8(100,3);
-"270
+[; ;PAI.c: 274: EscribeLCD_n8(100,3);
+"274
 [e ( _EscribeLCD_n8 (2 , -> -> 100 `i `uc -> -> 3 `i `uc ]
-"271
+"275
 }
-[; ;PAI.c: 271: }else if (Val_PWM<=10){
+[; ;PAI.c: 275: }else if (Val_PWM<=10){
 [e $U 478  ]
 [e :U 477 ]
 [e $ ! <= _Val_PWM -> -> 10 `i `d 479  ]
 {
-[; ;PAI.c: 272: EscribeLCD_n8(Val_PWM_LCD,1);
-"272
+[; ;PAI.c: 276: EscribeLCD_n8(Val_PWM_LCD,1);
+"276
 [e ( _EscribeLCD_n8 (2 , _Val_PWM_LCD -> -> 1 `i `uc ]
-"273
+"277
 }
-[; ;PAI.c: 273: }else{
+[; ;PAI.c: 277: }else{
 [e $U 480  ]
 [e :U 479 ]
 {
-[; ;PAI.c: 274: EscribeLCD_n8(Val_PWM_LCD,2);
-"274
+[; ;PAI.c: 278: EscribeLCD_n8(Val_PWM_LCD,2);
+"278
 [e ( _EscribeLCD_n8 (2 , _Val_PWM_LCD -> -> 2 `i `uc ]
-"275
+"279
 }
 [e :U 480 ]
 [e :U 478 ]
-[; ;PAI.c: 275: }
-[; ;PAI.c: 276: EscribeLCD_c('%');
-"276
+[; ;PAI.c: 279: }
+[; ;PAI.c: 280: EscribeLCD_c('%');
+"280
 [e ( _EscribeLCD_c (1 -> -> 37 `ui `uc ]
-[; ;PAI.c: 277: }
-"277
-[e :UE 476 ]
-}
-"279
-[v _Iniciar_Perfil_Vel `(v ~T0 @X0 1 ef ]
-{
-[; ;PAI.c: 279: void Iniciar_Perfil_Vel(void){
-[e :U _Iniciar_Perfil_Vel ]
-[f ]
 [; ;PAI.c: 281: }
 "281
+[e :UE 476 ]
+}
+"283
+[v _Iniciar_Perfil_Vel `(v ~T0 @X0 1 ef ]
+{
+[; ;PAI.c: 283: void Iniciar_Perfil_Vel(void){
+[e :U _Iniciar_Perfil_Vel ]
+[f ]
+[; ;PAI.c: 285: }
+"285
 [e :UE 481 ]
 }
 [a 12C 108 111 115 32 109 111 116 111 114 101 115 0 ]
