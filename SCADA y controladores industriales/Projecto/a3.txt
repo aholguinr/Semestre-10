@@ -1,0 +1,21 @@
+serial number: nombre: string: ns=4;s=140-102229_140-102229/MotionDevices/ROB_1/SerialNumber
+in control: si hay guard on: bool: ns=4;s=140-102229_140-102229/MotionDevices/ROB_1/ParameterSet/InControl
+
+
+
+Robotware manufacturer ns=4;s=140-102229_140-102229/Controllers/140-102229/Software/RobotWare/Manufacturer
+robot ware ns=4;s=140-102229_140-102229/Controllers/140-102229/Software/RobotWare/Model
+robot ware ver ns=4;s=140-102229_140-102229/Controllers/140-102229/Software/RobotWare/SoftwareRevision
+
+
+
+programa cargado bool: ns=4;s=140-102229_140-102229/Controllers/140-102229/TaskControls/T_ROB1/ParameterSet/TaskProgramLoaded
+task program name string : ns=4;s=140-102229_140-102229/Controllers/140-102229/TaskControls/T_ROB1/ParameterSet/TaskProgramName
+
+
+
+variable que diga si está on o off para ejecutar ns=3;s=140-102229_140-102229/ControllerExecutionState
+
+
+controler id ns=3;s=140-102229_140-102229/ControllerExecutionState
+controller name: ns=3;s=140-102229_140-102229/ControllerName

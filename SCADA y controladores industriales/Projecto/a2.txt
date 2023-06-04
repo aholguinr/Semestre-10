@@ -1,0 +1,126 @@
+MODULE Module1
+    PERS string strOPC:= "timestamp";
+    VAR bool bOPC :=TRUE;
+    PERS bool bOPC2 :=TRUE;
+    PERS num Cont :=90;
+    
+    PERS num IOTJ1 :=0;
+    PERS num IOTJ2 :=0;
+    PERS num IOTJ3 :=0;
+    PERS num IOTJ4 :=0;
+    PERS num IOTJ5 :=34;
+    PERS num IOTJ6 :=1;
+    
+    PERS num POSX:=530.295;
+    PERS num POSY:=-63.7723;
+    PERS num POSZ:=714.475;
+    
+    PERS num MOVEPOSX:=-100;
+    PERS num MOVEPOSY:=-100;
+    PERS num MOVEPOSZ:=-100;
+    
+    
+    VAR robtarget posMoveL;
+    VAR pos pos1;
+
+    
+    
+    CONST jointtarget JointTarget_2:=[[0,50,-40,70,-50,-50],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST jointtarget JointTarget_1:=[[0,20,-20,40,-20,-20],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST jointtarget HomeP:=[[0,0,0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST jointtarget HomeR:=[[0,0,0,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST jointtarget JointTarget_TL:=[[90,40,-45,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST jointtarget JointTarget_TR:=[[-90,40,-45,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    
+    VAR jointtarget myJointTarget;
+    PROC main()
+        ActualizarDatoPos;
+        WaitDI DI_IOT_01,1;
+        TEST DI_INT_IOT_01
+        
+            CASE 1:
+                ToHomeP;
+            CASE 2:
+                ToHomeR;
+            CASE 3:
+                ToolQL;
+            CASE 4:
+                ToolQR;
+            CASE 5:
+                Security;
+            CASE 6:
+            myJointTarget := [[IOTJ1,IOTJ2,IOTJ3,IOTJ4,IOTJ5,IOTJ6],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+            MoveAbsJ myJointTarget,v100,z10,tool0\WObj:=wobj0;
+            CASE 7:
+            MovePosL;
+            
+        ENDTEST
+        
+
+    ENDPROC
+    PROC ToHomeP()
+        ActualizarDatoPos;
+        MoveAbsJ HomeP,v100,z10,tool0\WObj:=wobj0;
+    ENDPROC
+    
+    PROC ToHomeR()
+        ActualizarDatoPos;
+        MoveAbsJ HomeR,v100,z10,tool0\WObj:=wobj0;
+    ENDPROC
+    
+    
+    PROC Security()
+        ActualizarDatoPos;
+        MoveAbsJ HomeP,v100,z10,tool0\WObj:=wobj0;
+        ActualizarDatoPos;
+        MoveAbsJ JointTarget_1,v100,z10,tool0\WObj:=wobj0;
+        ActualizarDatoPos;
+        MoveAbsJ JointTarget_2,v100,z10,tool0\WObj:=wobj0;
+    ENDPROC
+    PROC ToolQL()
+        MoveAbsJ HomeP,v100,z10,tool0\WObj:=wobj0;
+        ActualizarDatoPos;
+        MoveAbsJ JointTarget_TL,v100,z10,tool0\WObj:=wobj0;
+    ENDPROC
+    
+    PROC ToolQR()
+        ActualizarDatoPos;
+        MoveAbsJ HomeP,v100,z10,tool0\WObj:=wobj0;
+        ActualizarDatoPos;
+        MoveAbsJ JointTarget_TR,v100,z10,tool0\WObj:=wobj0;
+    ENDPROC
+    !PROC Path_40()
+    !    MoveL Target_180,v100,z10,tool0\WObj:=wobj0;
+    !    MoveL Target_190,v100,z10,tool0\WObj:=wobj0;
+    !    MoveL Target_200,v100,z10,tool0\WObj:=wobj0;
+    !    MoveL Target_210,v100,z10,tool0\WObj:=wobj0;
+    !    MoveL Target_220,v100,z10,tool0\WObj:=wobj0;
+    !    MoveL Target_230,v100,z10,tool0\WObj:=wobj0;
+    !    MoveL Target_240,v100,z10,tool0\WObj:=wobj0;
+    !    MoveL Target_250,v100,z10,tool0\WObj:=wobj0;
+    !    MoveL Target_260,v100,z10,tool0\WObj:=wobj0;
+    !    MoveL Target_270,v100,z10,tool0\WObj:=wobj0;
+    !    MoveL Target_280,v100,z10,tool0\WObj:=wobj0;
+    !    MoveL Target_290,v100,z10,tool0\WObj:=wobj0;
+    !    MoveL Target_300,v100,z10,tool0\WObj:=wobj0;
+    !    MoveL Target_310,v100,z10,tool0\WObj:=wobj0;
+    !ENDPROC
+    
+    
+    
+    PROC ActualizarDatoPos()
+        pos1 := CPos(\Tool:=tool0 \WObj:=wobj0);
+        POSX:=pos1.x;
+        POSY:=pos1.y;
+        POSZ:=pos1.z;
+    ENDPROC
+    
+    
+    PROC MovePosL()
+        posMoveL:=CRobT(\Tool:=tool0 \WObj:=wobj0);
+        posMoveL.trans.x:=posMoveL.trans.x+MOVEPOSX;
+        posMoveL.trans.y:=posMoveL.trans.y+MOVEPOSY;
+        posMoveL.trans.z:=posMoveL.trans.z+MOVEPOSZ;
+        MoveL posMoveL,v50,z5,tool0\WObj:=wobj0;
+    ENDPROC
+ENDMODULE

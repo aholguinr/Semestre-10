@@ -1,0 +1,93 @@
+MODULE Module1
+    PERS string strOPC:= "timestamp";
+    PERS bool bOPC :=TRUE;
+    PERS bool bOPC2 :=TRUE;
+    PERS intnum Cont :=32;
+    
+    CONST jointtarget JointTarget_2:=[[0,50,-40,70,-50,-50],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST jointtarget JointTarget_1:=[[0,20,-20,40,-20,-20],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST jointtarget HomeP:=[[0,0,0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST jointtarget JointTarget_4:=[[90,40,-45,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_180:=[[-130.684278975,166.513773343,100.000300403],[-0.000000024,0.819152044,-0.573576437,-0.000000024],[0,1,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_190:=[[-130.684278975,166.513780154,0.000300403],[0.000000024,-0.707106781,0.707106781,0.000000024],[0,1,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_200:=[[-130.684278975,107.401152167,0.000296377],[0.000000024,-0.707106781,0.707106781,0.000000024],[0,1,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_210:=[[-140.172333582,107.401152167,0.000296377],[0.000000024,-0.707106781,0.707106781,0.000000024],[0,1,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_220:=[[-140.172333582,167.537670939,0.000300473],[0.000000024,0.819152044,-0.573576437,-0.000000024],[0,1,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_230:=[[-138.363459862,177.588865478,0.000301158],[0.000000024,0.819152044,-0.573576437,-0.000000024],[0,1,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_240:=[[-132.936838702,184.67077674,0.00030164],[0.000000024,0.819152044,-0.573576437,-0.000000024],[0,1,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_250:=[[-118.807145869,188.971118037,0.000301932],[0.000000024,-0.707106781,0.707106781,0.000000024],[0,1,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_260:=[[-111.23035406,188.561561724,0.000301905],[0.000000024,-0.707106781,0.707106781,0.000000024],[0,1,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_270:=[[-110.820797746,180.779991758,0.000301375],[0.000000024,-0.707106781,0.707106781,0.000000024],[0,1,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_280:=[[-123.482913787,180.353370597,0.000301346],[0.000000024,-0.707106781,0.707106781,0.000000024],[0,1,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_290:=[[-129.882231193,172.605930324,0.000300819],[0.000000024,-0.707106781,0.707106781,0.000000024],[0,1,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_300:=[[-130.684278975,166.513780154,0.000300403],[0.000000024,-0.707106781,0.707106781,0.000000024],[0,1,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_310:=[[-130.684278975,166.513773343,100.000300403],[0.000000024,0.819152044,-0.573576437,-0.000000024],[0,1,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    
+    PROC main()
+        SetDO DO_03,1;
+        
+        WaitDI DI_IOT_01,1;
+        SetDO DO_03,0;
+        SetDO DO_01,1;
+        ToolQ;
+        SetDO DO_01,0;
+        SetDO DO_03,1;
+        
+        WaitDI DI_IOT_01,1;
+        
+        
+        
+        SetDO DO_03,0;
+        SetDO DO_01,1;
+        ToHome;
+        Security;
+        Path_40;
+        ToHome;
+        SetDO DO_01,0;
+        SetDO DO_03,1;
+        
+        WaitDI DI_IOT_01,1;
+        SetDO DO_03,0;
+        SetDO DO_01,1;
+        ToolQ;
+        SetDO DO_01,0;
+        SetDO DO_03,1;
+        
+        WaitDI DI_IOT_01,1;
+        SetDO DO_03,0;
+        SetDO DO_01,1;
+        ToHome;
+        SetDO DO_01,0;
+        SetDO DO_03,1;
+    ENDPROC
+    PROC ToHome()
+        MoveAbsJ JointTarget_2,v100,z10,ToolAJATCP\WObj:=WOAJA;
+        MoveAbsJ JointTarget_1,v100,z10,ToolAJATCP\WObj:=WOAJA;
+        MoveAbsJ HomeP,v100,z10,ToolAJATCP\WObj:=WOAJA;
+    ENDPROC
+    PROC Security()
+        MoveAbsJ HomeP,v100,z10,ToolAJATCP\WObj:=WOAJA;
+        MoveAbsJ JointTarget_1,v100,z10,ToolAJATCP\WObj:=WOAJA;
+        MoveAbsJ JointTarget_2,v100,z10,ToolAJATCP\WObj:=WOAJA;
+    ENDPROC
+    PROC ToolQ()
+        MoveAbsJ HomeP,v100,z10,ToolAJATCP\WObj:=WOAJA;
+        MoveAbsJ JointTarget_4,v100,z10,ToolAJATCP\WObj:=WOAJA;
+    ENDPROC
+    PROC Path_40()
+        MoveL Target_180,v100,z10,ToolAJATCP\WObj:=WOAJA;
+        MoveL Target_190,v100,z10,ToolAJATCP\WObj:=WOAJA;
+        MoveL Target_200,v100,z10,ToolAJATCP\WObj:=WOAJA;
+        MoveL Target_210,v100,z10,ToolAJATCP\WObj:=WOAJA;
+        MoveL Target_220,v100,z10,ToolAJATCP\WObj:=WOAJA;
+        MoveL Target_230,v100,z10,ToolAJATCP\WObj:=WOAJA;
+        MoveL Target_240,v100,z10,ToolAJATCP\WObj:=WOAJA;
+        MoveL Target_250,v100,z10,ToolAJATCP\WObj:=WOAJA;
+        MoveL Target_260,v100,z10,ToolAJATCP\WObj:=WOAJA;
+        MoveL Target_270,v100,z10,ToolAJATCP\WObj:=WOAJA;
+        MoveL Target_280,v100,z10,ToolAJATCP\WObj:=WOAJA;
+        MoveL Target_290,v100,z10,ToolAJATCP\WObj:=WOAJA;
+        MoveL Target_300,v100,z10,ToolAJATCP\WObj:=WOAJA;
+        MoveL Target_310,v100,z10,ToolAJATCP\WObj:=WOAJA;
+    ENDPROC
+ENDMODULE
