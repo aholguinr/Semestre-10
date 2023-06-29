@@ -1,0 +1,1571 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "667ef40ac52c6574",
+        "type": "group",
+        "z": "f6f2187d.f17ca8",
+        "name": "Modo Planta",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "f7cfd56c3e33a5fb",
+            "93d551c9c2b30f79",
+            "8d70a995f0cff90f"
+        ],
+        "x": 654,
+        "y": 379,
+        "w": 192,
+        "h": 182
+    },
+    {
+        "id": "7c4ce7e295ef89df",
+        "type": "group",
+        "z": "f6f2187d.f17ca8",
+        "name": "Panel actuadores",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "e6e55f3ffd187c78",
+            "daf546669282e017",
+            "2caf45093e6a385d",
+            "19dbf720814899e1",
+            "49b4b5c0e6f25986",
+            "4f72c3853fecc962",
+            "554ff90cd2ada855",
+            "883b3c991232ea66",
+            "9bc53378a6b5fd24",
+            "a8ede065c5af69ac",
+            "e5846a040bd9a34c",
+            "b5bfc2e6dd73edf1",
+            "3ee273ecda0c4fe3"
+        ],
+        "x": 274,
+        "y": 1174,
+        "w": 572,
+        "h": 367
+    },
+    {
+        "id": "64a989f92eaad949",
+        "type": "group",
+        "z": "f6f2187d.f17ca8",
+        "name": "Alarmas",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "eceac9bab607ac70",
+            "b7d5127ea5bd1681",
+            "20f1252530b25c70",
+            "dff49bc33982fa74",
+            "7ce855bdc41be3af"
+        ],
+        "x": 274,
+        "y": 819,
+        "w": 372,
+        "h": 202
+    },
+    {
+        "id": "fed7b134637cfede",
+        "type": "group",
+        "z": "f6f2187d.f17ca8",
+        "name": "Sensores",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "8f11b400d35ae7b8",
+            "6a697d87b693ba29",
+            "e92f5692f7a36c2d"
+        ],
+        "x": 274,
+        "y": 1039,
+        "w": 432,
+        "h": 122
+    },
+    {
+        "id": "897891d6c570b0af",
+        "type": "group",
+        "z": "f6f2187d.f17ca8",
+        "name": "Control",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "7460c11fb697bf64",
+            "dd9de883b7e46dfe",
+            "6a80cba3d15d33e1",
+            "2fba7bcade6cfba4",
+            "80dac2b0cbb670e4",
+            "67e5e721de431836",
+            "d86b086d3e9525e1",
+            "1621d4c5f7e4172d"
+        ],
+        "x": 74,
+        "y": 239,
+        "w": 492,
+        "h": 222
+    },
+    {
+        "id": "c45e45c2e9989538",
+        "type": "group",
+        "z": "f6f2187d.f17ca8",
+        "name": "SUPERVISIÓN CAJAS",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "a3635d95c7d9a755",
+            "7d03f586c07bb825",
+            "c54633949f3f164c",
+            "1341fe5e607f268b",
+            "198350514b6c703b",
+            "a0ffa197440e8c6a",
+            "60958238a39ec261"
+        ],
+        "x": 654,
+        "y": 579,
+        "w": 372,
+        "h": 222
+    },
+    {
+        "id": "dbb0ae397c74fa80",
+        "type": "group",
+        "z": "f6f2187d.f17ca8",
+        "name": "Históricos",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "10c3035b4a1a1840",
+            "3a07fbbb9681d21b"
+        ],
+        "x": 634,
+        "y": 239,
+        "w": 212,
+        "h": 122
+    },
+    {
+        "id": "e30ad807a3de62c3",
+        "type": "wiotp-credentials",
+        "name": "",
+        "org": "zozjmi",
+        "serverName": "",
+        "devType": "IOT",
+        "devId": "UNAL_PLC_246",
+        "keepalive": "60",
+        "cleansession": true,
+        "tls": "",
+        "usetls": false
+    },
+    {
+        "id": "836946a21b6f060d",
+        "type": "ibmiot",
+        "name": "WATSON input",
+        "keepalive": "60",
+        "serverName": "",
+        "cleansession": true,
+        "appId": "",
+        "shared": false
+    },
+    {
+        "id": "f3e89767d5aea87c",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "c2b4826197fc8f57",
+        "type": "ui_tab",
+        "name": "SCADA Reto 3",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "57c50183e9d2baf1",
+        "type": "ui_group",
+        "name": "Panel Modo",
+        "tab": "c2b4826197fc8f57",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "4e57c9412e97fd22",
+        "type": "wiotp-credentials",
+        "name": "",
+        "org": "zozjmi",
+        "serverName": "",
+        "devType": "IOT",
+        "devId": "UNAL_SCADA_NUBE",
+        "keepalive": "60",
+        "cleansession": true,
+        "tls": "",
+        "usetls": false
+    },
+    {
+        "id": "63be456f4e245b76",
+        "type": "ui_group",
+        "name": "Panel de Control",
+        "tab": "c2b4826197fc8f57",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "2238147802e21931",
+        "type": "ui_group",
+        "name": "Panel Sensores",
+        "tab": "c2b4826197fc8f57",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "bd690c38f16488ae",
+        "type": "ui_group",
+        "name": "Panel Actuadores",
+        "tab": "c2b4826197fc8f57",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "4babea7ed25094f5",
+        "type": "ui_group",
+        "name": "Panel Alarmas",
+        "tab": "c2b4826197fc8f57",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "9d2569ee7bb44bc2",
+        "type": "ui_group",
+        "name": "SUPERVISIÓN CAJAS",
+        "tab": "c2b4826197fc8f57",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "f6cf55f414ca0e20",
+        "type": "ui_group",
+        "name": "HISTÓRICOS",
+        "tab": "c2b4826197fc8f57",
+        "order": 7,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "b6f1581588deced2",
+        "type": "ui_spacer",
+        "z": "f6f2187d.f17ca8",
+        "name": "spacer",
+        "group": "57c50183e9d2baf1",
+        "order": 2,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "92b1450b4063d5a4",
+        "type": "ibmiot in",
+        "z": "f6f2187d.f17ca8",
+        "authentication": "apiKey",
+        "apiKey": "836946a21b6f060d",
+        "inputType": "evt",
+        "logicalInterface": "",
+        "ruleId": "",
+        "deviceId": "UNAL_PLC_246",
+        "applicationId": "",
+        "deviceType": "IOT",
+        "eventType": "+",
+        "commandType": "",
+        "format": "json",
+        "name": "IBM IoT",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": "",
+        "allLogicalInterfaces": "",
+        "allEvents": true,
+        "allCommands": "",
+        "allFormats": "",
+        "qos": 0,
+        "x": 70,
+        "y": 980,
+        "wires": [
+            [
+                "1cd932c6f2e82f4c",
+                "3ee273ecda0c4fe3",
+                "dff49bc33982fa74",
+                "6a697d87b693ba29"
+            ]
+        ]
+    },
+    {
+        "id": "f7cfd56c3e33a5fb",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "g": "667ef40ac52c6574",
+        "group": "57c50183e9d2baf1",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Modo planta:           ",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 750,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "1cd932c6f2e82f4c",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "HIST/ MODO PLANTA",
+        "func": "var array = [];\n\nfor (var key in msg.payload.d) {\n    if (msg.payload.d.hasOwnProperty(key)) {\n        array.push(msg.payload.d[key]);\n    }\n}\n\n(array[5] ? msg.payload = 'Automático' : msg.payload = 'Manual' )\n    \nvar msg2 = { payload: null };\nvar msg3 = { payload: null, topic: \"Metálicas\"};\nvar msg4 = { payload: null, topic: \"Azules\"};\nvar msg5 = { payload: null, topic: \"Verdes\"};\n\nmsg2.payload = array[5];\nmsg3.payload = array[19];\nmsg4.payload = array[20];\nmsg5.payload = array[21];\n\nreturn [msg, msg2, msg3, msg4, msg5];\n",
+        "outputs": 5,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 620,
+        "wires": [
+            [
+                "f7cfd56c3e33a5fb"
+            ],
+            [
+                "93d551c9c2b30f79",
+                "8d70a995f0cff90f"
+            ],
+            [
+                "60958238a39ec261",
+                "10c3035b4a1a1840",
+                "a3635d95c7d9a755"
+            ],
+            [
+                "60958238a39ec261",
+                "10c3035b4a1a1840",
+                "7d03f586c07bb825"
+            ],
+            [
+                "60958238a39ec261",
+                "10c3035b4a1a1840",
+                "c54633949f3f164c"
+            ]
+        ]
+    },
+    {
+        "id": "93d551c9c2b30f79",
+        "type": "ui_led",
+        "z": "f6f2187d.f17ca8",
+        "g": "667ef40ac52c6574",
+        "order": 3,
+        "group": "57c50183e9d2baf1",
+        "width": 0,
+        "height": 0,
+        "label": "Automático",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 730,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "8d70a995f0cff90f",
+        "type": "ui_led",
+        "z": "f6f2187d.f17ca8",
+        "g": "667ef40ac52c6574",
+        "order": 4,
+        "group": "57c50183e9d2baf1",
+        "width": 0,
+        "height": 0,
+        "label": "Manual",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 730,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "e6e55f3ffd187c78",
+        "type": "ui_led",
+        "z": "f6f2187d.f17ca8",
+        "g": "7c4ce7e295ef89df",
+        "order": 2,
+        "group": "bd690c38f16488ae",
+        "width": 0,
+        "height": 0,
+        "label": "Conveyor In",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 650,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "daf546669282e017",
+        "type": "ui_led",
+        "z": "f6f2187d.f17ca8",
+        "g": "7c4ce7e295ef89df",
+        "order": 3,
+        "group": "bd690c38f16488ae",
+        "width": 0,
+        "height": 0,
+        "label": "Conveyor Out",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 650,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "2caf45093e6a385d",
+        "type": "ui_led",
+        "z": "f6f2187d.f17ca8",
+        "g": "7c4ce7e295ef89df",
+        "order": 5,
+        "group": "bd690c38f16488ae",
+        "width": 0,
+        "height": 0,
+        "label": "Lateral Turn 1",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 650,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "19dbf720814899e1",
+        "type": "ui_led",
+        "z": "f6f2187d.f17ca8",
+        "g": "7c4ce7e295ef89df",
+        "order": 6,
+        "group": "bd690c38f16488ae",
+        "width": 0,
+        "height": 0,
+        "label": "Lateral Conveyor 1",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 650,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "49b4b5c0e6f25986",
+        "type": "ui_led",
+        "z": "f6f2187d.f17ca8",
+        "g": "7c4ce7e295ef89df",
+        "order": 8,
+        "group": "bd690c38f16488ae",
+        "width": 0,
+        "height": 0,
+        "label": "Lateral Turn 2",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 650,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "4f72c3853fecc962",
+        "type": "ui_led",
+        "z": "f6f2187d.f17ca8",
+        "g": "7c4ce7e295ef89df",
+        "order": 9,
+        "group": "bd690c38f16488ae",
+        "width": 0,
+        "height": 0,
+        "label": "Lateral Conveyor 2",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 650,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "554ff90cd2ada855",
+        "type": "ui_led",
+        "z": "f6f2187d.f17ca8",
+        "g": "7c4ce7e295ef89df",
+        "order": 11,
+        "group": "bd690c38f16488ae",
+        "width": 0,
+        "height": 0,
+        "label": "Lateral Turn 3",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 650,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "883b3c991232ea66",
+        "type": "ui_led",
+        "z": "f6f2187d.f17ca8",
+        "g": "7c4ce7e295ef89df",
+        "order": 12,
+        "group": "bd690c38f16488ae",
+        "width": 0,
+        "height": 0,
+        "label": "Lateral Conveyor 3",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 650,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "9bc53378a6b5fd24",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "g": "7c4ce7e295ef89df",
+        "group": "bd690c38f16488ae",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "Bandas Principales",
+        "layout": "col-center",
+        "className": "",
+        "x": 770,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "a8ede065c5af69ac",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "g": "7c4ce7e295ef89df",
+        "group": "bd690c38f16488ae",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "Cajas Metalicas",
+        "layout": "col-center",
+        "className": "",
+        "x": 770,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "e5846a040bd9a34c",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "g": "7c4ce7e295ef89df",
+        "group": "bd690c38f16488ae",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "Cajas Azules",
+        "layout": "col-center",
+        "className": "",
+        "x": 770,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "b5bfc2e6dd73edf1",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "g": "7c4ce7e295ef89df",
+        "group": "bd690c38f16488ae",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "Cajas Verdes",
+        "layout": "col-center",
+        "className": "",
+        "x": 770,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "8f11b400d35ae7b8",
+        "type": "ui_led",
+        "z": "f6f2187d.f17ca8",
+        "g": "fed7b134637cfede",
+        "order": 2,
+        "group": "2238147802e21931",
+        "width": 0,
+        "height": 0,
+        "label": "At Exit",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 550,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "eceac9bab607ac70",
+        "type": "ui_led",
+        "z": "f6f2187d.f17ca8",
+        "g": "64a989f92eaad949",
+        "order": 2,
+        "group": "4babea7ed25094f5",
+        "width": 0,
+        "height": 0,
+        "label": "Start",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#bfbfbf",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 570,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "b7d5127ea5bd1681",
+        "type": "ui_led",
+        "z": "f6f2187d.f17ca8",
+        "g": "64a989f92eaad949",
+        "order": 3,
+        "group": "4babea7ed25094f5",
+        "width": 0,
+        "height": 0,
+        "label": "Stop",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#bfbfbf",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 570,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "20f1252530b25c70",
+        "type": "ui_led",
+        "z": "f6f2187d.f17ca8",
+        "g": "64a989f92eaad949",
+        "order": 4,
+        "group": "4babea7ed25094f5",
+        "width": 0,
+        "height": 0,
+        "label": "Reset",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#bfbfbf",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#ffff00",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 570,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "3ee273ecda0c4fe3",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "g": "7c4ce7e295ef89df",
+        "name": "function 2",
+        "func": "var array = [];\n\nfor (var key in msg.payload.d) {\n    if (msg.payload.d.hasOwnProperty(key)) {\n        array.push(msg.payload.d[key]);\n    }\n}\n\nvar msg2 = { payload: null};\nvar msg3 = { payload: null};\nvar msg4 = { payload: null};\nvar msg5 = { payload: null};\nvar msg6 = { payload: null};\nvar msg7 = { payload: null};\nvar msg8 = { payload: null};\n\nmsg.payload = array[7];\nmsg2.payload = array[9];\nmsg3.payload = array[10];\nmsg4.payload = array[11];\nmsg5.payload = array[12];\nmsg6.payload = array[13];\nmsg7.payload = array[14];\nmsg8.payload = array[15];\n\nreturn [msg, msg2, msg3, msg4, msg5, msg6, msg7, msg8];\n",
+        "outputs": 8,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 1260,
+        "wires": [
+            [
+                "e6e55f3ffd187c78"
+            ],
+            [
+                "daf546669282e017"
+            ],
+            [
+                "2caf45093e6a385d"
+            ],
+            [
+                "19dbf720814899e1"
+            ],
+            [
+                "49b4b5c0e6f25986"
+            ],
+            [
+                "4f72c3853fecc962"
+            ],
+            [
+                "554ff90cd2ada855"
+            ],
+            [
+                "883b3c991232ea66"
+            ]
+        ]
+    },
+    {
+        "id": "dff49bc33982fa74",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "g": "64a989f92eaad949",
+        "name": "function 3",
+        "func": "var array = [];\n\nfor (var key in msg.payload.d) {\n    if (msg.payload.d.hasOwnProperty(key)) {\n        array.push(msg.payload.d[key]);\n    }\n}\n\nvar msg2 = { payload: null };\nvar msg3 = { payload: null };\nvar msg4 = { payload: null };\n\nmsg.payload = array[16];\nmsg2.payload = array[18];\nmsg3.payload = array[17];\nmsg4.payload = array[4];\n\nreturn [msg, msg2, msg3, msg4];\n",
+        "outputs": 4,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 880,
+        "wires": [
+            [
+                "eceac9bab607ac70"
+            ],
+            [
+                "b7d5127ea5bd1681"
+            ],
+            [
+                "20f1252530b25c70"
+            ],
+            [
+                "7ce855bdc41be3af"
+            ]
+        ]
+    },
+    {
+        "id": "6a697d87b693ba29",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "g": "fed7b134637cfede",
+        "name": "function 4",
+        "func": "var array = [];\n\nfor (var key in msg.payload.d) {\n    if (msg.payload.d.hasOwnProperty(key)) {\n        array.push(msg.payload.d[key]);\n    }\n}\n\nswitch (array[6]){\n\n    case 0: msg.payload = 'No hay objeto' ;\n        break;\n    case 1: msg.payload = 'Material azul en bruto' ;\n        break;\n    case 2: msg.payload = 'Tapa azúl' ;\n        break;\n    case 3: msg.payload = 'Base azúl' ;\n        break;\n    case 4: msg.payload = 'Material verde en bruto' ;\n        break;\n    case 5: msg.payload = 'Tapa verde' ;\n        break;\n    case 6: msg.payload = 'Base verde' ;\n        break;\n    case 7: msg.payload = 'Metal en bruto' ;\n        break;\n    case 8: msg.payload = 'Tapa metálica' ;\n        break;\n    case 9: msg.payload = 'Base metálica' ;\n        break;\n\n}\n\nvar msg2 = { payload: null };\nmsg2.payload = array[0];\n\nreturn [msg, msg2];\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 1100,
+        "wires": [
+            [
+                "e92f5692f7a36c2d"
+            ],
+            [
+                "8f11b400d35ae7b8"
+            ]
+        ]
+    },
+    {
+        "id": "e92f5692f7a36c2d",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "g": "fed7b134637cfede",
+        "group": "2238147802e21931",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Objeto detectado:",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 590,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "7ce855bdc41be3af",
+        "type": "ui_led",
+        "z": "f6f2187d.f17ca8",
+        "g": "64a989f92eaad949",
+        "order": 1,
+        "group": "4babea7ed25094f5",
+        "width": 0,
+        "height": 0,
+        "label": "EMERGENCY STOP",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#ffffff",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": true,
+        "shape": "square",
+        "showGlow": true,
+        "name": "",
+        "x": 570,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "7460c11fb697bf64",
+        "type": "ui_slider",
+        "z": "f6f2187d.f17ca8",
+        "g": "897891d6c570b0af",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "63be456f4e245b76",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 170,
+        "y": 280,
+        "wires": [
+            [
+                "dd9de883b7e46dfe",
+                "2fba7bcade6cfba4",
+                "3a07fbbb9681d21b",
+                "80dac2b0cbb670e4"
+            ]
+        ]
+    },
+    {
+        "id": "dd9de883b7e46dfe",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "g": "897891d6c570b0af",
+        "group": "63be456f4e245b76",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Porcentaje de uso del motor (0-100%):",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 335,
+        "y": 360,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "6a80cba3d15d33e1",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "g": "897891d6c570b0af",
+        "group": "63be456f4e245b76",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 490,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "2fba7bcade6cfba4",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "g": "897891d6c570b0af",
+        "name": "function 5",
+        "func": "\nif (msg.payload == 0 ){\n    msg.payload = \"Motor detenido\";\n} else if (msg.payload >=90){\n    msg.payload = \"Motor en alto uso\";\n}else{\n    msg.payload = \"\";}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 300,
+        "wires": [
+            [
+                "6a80cba3d15d33e1"
+            ]
+        ]
+    },
+    {
+        "id": "60958238a39ec261",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "g": "c45e45c2e9989538",
+        "name": "",
+        "group": "9d2569ee7bb44bc2",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Cajas organizadas",
+        "chartType": "pie",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "No hay cajas",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "10",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#00ff00",
+            "#0000ff",
+            "#b3b3b3",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 770,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "10c3035b4a1a1840",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "g": "dbb0ae397c74fa80",
+        "name": "",
+        "group": "f6cf55f414ca0e20",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Cajas vs Tiempo",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "No hay cajas",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#bfbfbf",
+            "#0000ff",
+            "#00ff00",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 740,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a3635d95c7d9a755",
+        "type": "ui_digital_display",
+        "z": "f6f2187d.f17ca8",
+        "g": "c45e45c2e9989538",
+        "name": "Cajas Verdes",
+        "group": "9d2569ee7bb44bc2",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "digits": 5,
+        "decimals": 1,
+        "x": 750,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "7d03f586c07bb825",
+        "type": "ui_digital_display",
+        "z": "f6f2187d.f17ca8",
+        "g": "c45e45c2e9989538",
+        "name": "Cajas azules",
+        "group": "9d2569ee7bb44bc2",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "digits": 5,
+        "decimals": 1,
+        "x": 750,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "c54633949f3f164c",
+        "type": "ui_digital_display",
+        "z": "f6f2187d.f17ca8",
+        "g": "c45e45c2e9989538",
+        "name": "Cajas metálicas",
+        "group": "9d2569ee7bb44bc2",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "digits": 5,
+        "decimals": 1,
+        "x": 760,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "1341fe5e607f268b",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "g": "c45e45c2e9989538",
+        "group": "9d2569ee7bb44bc2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "Cajas Metalicas:",
+        "layout": "row-spread",
+        "className": "",
+        "x": 950,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "198350514b6c703b",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "g": "c45e45c2e9989538",
+        "group": "9d2569ee7bb44bc2",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "Cajas Azules:",
+        "layout": "row-spread",
+        "className": "",
+        "x": 950,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "a0ffa197440e8c6a",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "g": "c45e45c2e9989538",
+        "group": "9d2569ee7bb44bc2",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "Cajas Verdes:",
+        "layout": "row-spread",
+        "className": "",
+        "x": 950,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "3a07fbbb9681d21b",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "g": "dbb0ae397c74fa80",
+        "name": "",
+        "group": "f6cf55f414ca0e20",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "% del Motor",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#bfbfbf",
+            "#0000ff",
+            "#00ff00",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 730,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "80dac2b0cbb670e4",
+        "type": "wiotp out",
+        "z": "f6f2187d.f17ca8",
+        "g": "897891d6c570b0af",
+        "authType": "d",
+        "qs": "false",
+        "qsDeviceId": "",
+        "deviceKey": "4e57c9412e97fd22",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "",
+        "x": 350,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "67e5e721de431836",
+        "type": "ui_button",
+        "z": "f6f2187d.f17ca8",
+        "g": "897891d6c570b0af",
+        "name": "",
+        "group": "63be456f4e245b76",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "ON",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "green",
+        "className": "",
+        "icon": "",
+        "payload": "-1",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 340,
+        "wires": [
+            [
+                "80dac2b0cbb670e4"
+            ]
+        ]
+    },
+    {
+        "id": "d86b086d3e9525e1",
+        "type": "ui_button",
+        "z": "f6f2187d.f17ca8",
+        "g": "897891d6c570b0af",
+        "name": "",
+        "group": "63be456f4e245b76",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "OFF",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "",
+        "payload": "-2",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 380,
+        "wires": [
+            [
+                "80dac2b0cbb670e4"
+            ]
+        ]
+    },
+    {
+        "id": "1621d4c5f7e4172d",
+        "type": "ui_button",
+        "z": "f6f2187d.f17ca8",
+        "g": "897891d6c570b0af",
+        "name": "",
+        "group": "63be456f4e245b76",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "RESET",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#D4FF00",
+        "className": "",
+        "icon": "",
+        "payload": "-3",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 160,
+        "y": 420,
+        "wires": [
+            [
+                "80dac2b0cbb670e4"
+            ]
+        ]
+    }
+]

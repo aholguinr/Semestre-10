@@ -1,0 +1,43 @@
+Vehículos Auto Guiados SDV-UN
+=============================
+
+Inicio de operación
+-------------------
+
+Para conectarse con el vehículo de forma remota se usa el protocolo *ssh* con el siguiente comando::
+
+    # Formato
+    # ssh sdvunX@192.168.1.1X
+    # Ejemplo con SDV-UN 2
+    ssh sdvun2@192.168.1.12
+
+Una vez iniciada una sesión remota se debe ejecutar desde la terminal el siguiente comando::
+
+    roslaunch sdv_process process.launch
+
+Finalmente, para conectarlo con la base de datos remota se ejecuta el siguiente comando desde otra terminal::
+
+    curl -X POST localhost:3000/connect
+
+También es posible conectar el equipo desde otro computador incluyendo la IP del vehículo. Por ejemplo, para conectar el vehículo SDV-UN 2 desde cualquier computador dentro de la red del laboratorio se puede ejecutar en la terminal del computador remoto::
+
+    curl -X POST 192.168.1.12:3000/connect
+
+El resultado de cualquiera de los dos comandos anteriores debe ser de éxito :code:`{status: "OK", code: 200}`
+
+Múltiples terminales
+--------------------
+
+Para el procedimiento anterior se necesitan como mínimo dos terminales, ya que la conexión es remota y por medio de *ssh*, se debería repetir el proceso de conexión para cada uno de los comandos, por esta razón se recomienda el uso de la herramienta *tmux* que permite dividir la pantalla en varias terminales sin necesidad de autenticarse nuevamente. Para ello, luego de iniciar sesión por primera vez se ejecuta el siguiente comando en la terminal::
+
+    tmux
+
+La pantalla adquiere una apariencia distita y es posible dividirla usando las siguientes combinaciónes:
+
++--------------+------------------------------+
++Teclas        + Función                      +
++==============+==============================+
++Ctrl + A + |  + Crea una división vertical   +
++--------------+------------------------------+
++Ctrl + A + -  + Crea una división horizontal +
++--------------+------------------------------+

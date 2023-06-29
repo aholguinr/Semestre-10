@@ -1,0 +1,49 @@
+..
+   Authors:
+      Wilmer David Garzon caceres
+   email:
+      wdgarzonc@unal.edu.co
+   date:
+      14/03/2022
+      
+Maintenance manual
+==================
+
+Commun errors
+-------------
+
+Listed below are common problems and their possible solution:
+
++-------------------------------------------------+------------------------------------------------+
+|                **Problem**                      |                      **Solution**              |
++=================================================+================================================+
+| Some axis does not stop in a mecanical limit    | Run test_fc.ino script and confirm the correct |
+|                                                 | reading  of limit switch, if reading is falling|
+|                                                 | check the conection in the terminal boards     |
+|                                                 | and arduino board.                             |
++-------------------------------------------------+------------------------------------------------+
+| Vertical axis does not move                     | If the lift is inclined, move one of the motors|
+|                                                 | to straightened it, can do it manually but     |
+|                                                 | ideally with the script testZ.ino,loop function|
+|                                                 | may need some modification.                    |
++                                                 +------------------------------------------------+
+|                                                 | If the lift is in the botom of warehouse,      |
+|                                                 | restart it to made the home routine ,check     |
+|                                                 | the marks for inductive sensors.               |
++-------------------------------------------------+------------------------------------------------+
+| Some motor of vertical axis does not stop in the| Check the marks for inductive sensors.         |
+| desired mark.                                   |                                                |
++-------------------------------------------------+------------------------------------------------+
+| Warehouse does not repond                       | Check the conection between the computer and   |
+|                                                 | the arduino, note that the store only receives |
+|                                                 | select Cell instructions if the status is      |
+|                                                 | ready (0) and toSDV if the status is           |
+|                                                 | wait sdv(2).                                   |
++-------------------------------------------------+------------------------------------------------+
+
+Periodic maintenance
+--------------------
+- Check nuts and bolts, vibrations may have loosened them.
+- Tighten the belts of each axis.
+- Engage the horizontal and vertical linear guides and the scissor screw.
+

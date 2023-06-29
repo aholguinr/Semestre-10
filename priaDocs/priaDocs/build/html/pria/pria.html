@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRIA - UN &#8212; LabFabEx  documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Grúa Maya" href="maya.html" />
+    <link rel="prev" title="Check position on [R1S1]" href="../motoman/errors/Check_position_R1S1/check_position_R1S1.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+
+<div style="background-color: #f8f8f8; text-align: left; padding: 10px 10px 15px 15px">
+    <a href="../index.html"><h1 font-family="" style="font-size: 15pt;">Documentación LabFabEx</h1></a>
+</div>
+
+
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="pria-un">
+<h1>PRIA - UN<a class="headerlink" href="#pria-un" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="maya.html">Grúa Maya</a></li>
+<li class="toctree-l1"><a class="reference internal" href="torno.html">Torno Suizo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="motoman.html">Plataforma robótica - Motoman</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdv.html">Vehículos Auto Guiados SDV-UN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="node_red/node_red.html">Node-Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pilots/2019_2/2019_2.html">PRIA &amp; Odoo</a></li>
+</ul>
+</div>
+<div class="section" id="plataforma-robotica-de-integracion-y-automatizacion">
+<h2>Plataforma Robótica de Integración y Automatización<a class="headerlink" href="#plataforma-robotica-de-integracion-y-automatizacion" title="Permalink to this headline">¶</a></h2>
+<p>Desarrollo software que busca integrar los equipos de manufactura de planta presentes en el laboratorio fábrica experimental (LabFabEx) para el diseño, monitorizacion, supervision y control de tareas o procesos en tiempo real.</p>
+<p>Equipos disponibles para integración:</p>
+<ul class="simple">
+<li><p>Robot Motoman</p></li>
+<li><p>Torno Tipo Suizo</p></li>
+<li><p>Grúa Maya</p></li>
+<li><p>SDV-UN</p></li>
+</ul>
+<p>El protocolo que se sigue para la integración de los equipos se describe a continuación:</p>
+<ol class="arabic simple">
+<li><p>Identificación de las variables de proceso mínimas (primitivas) necesarias para el envío de órdenes de tareas.</p></li>
+<li><p>Estandarización de tareas realizables por parte de las máquinas.</p></li>
+<li><p>Generación de código para ejecución local (standalone) que pruebe la funcionalidad d elas tareas identificadas anteriormente. El lenguaje de programación recomendado para esto es Typescript junto con el uso del entorno NodeJS.</p></li>
+<li><p>Vinculación del código anterior con la base de datos de tiempo real (Firebase) por medio de la creación de un servidor local.</p></li>
+<li><p>Pruebas de funcionamiento de conectividad con la base de datos.</p></li>
+</ol>
+<p>Los numerales 1 al 3 son responsabilidad el desarrollador específico de cada máquina. PRIA-UN integra el recurso en los numerales 4 y 5.</p>
+<p>En la siguiente tabla se encuncias las primitivas estandarizadas de cada una de las máquinas. En el caso del Torno tipo suizo y el robot Motoman, sus primitivas relacionan procesos de manufactura completos, es decir, una rutina pregrabada que es invocada utilizando PRIA-UN.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 52%" />
+<col style="width: 48%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Equipo</p></th>
+<th class="head"><p>Primitivas</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SDV</p></td>
+<td><p>X, Y, Y, W</p></td>
+</tr>
+<tr class="row-odd"><td><p>Grúa Maya</p></td>
+<td><p>X, Y, Z</p></td>
+</tr>
+<tr class="row-even"><td><p>Torno Suizo</p></td>
+<td><p>Proceso</p></td>
+</tr>
+<tr class="row-odd"><td><p>Motoman</p></td>
+<td><p>Proceso</p></td>
+</tr>
+</tbody>
+</table>
+<p>Como ejemplo se enuncian los procesos a los que se refiere la tabla anterior.</p>
+<p>Procesos Torno Suizo:</p>
+<ul class="simple">
+<li><p>Digitech: pieza mecanizada que incluye el uso de los dos sistemas (S1 y S2).</p></li>
+<li><p>Banda: movimiento de la banda para expulsión de material.</p></li>
+</ul>
+<p>Procesos Motoman:</p>
+<ul class="simple">
+<li><p>Pick table: agarre de bandeja situada en la mesa de trabajo ubicada frente al robot motoman.</p></li>
+<li><p>Pick lathe: agarre de bandeja situada frente al torno suizo.</p></li>
+<li><p>Pick SDV: agarre de bandeja situada en plataforma del vehículo SDV una vez es situado al lado del robot Motoman.</p></li>
+<li><p>Place table: Depósito de bandeja en la mesa de trabajo ubicada frente al robot motoman.</p></li>
+<li><p>Place lathe: Depósito de bandeja en frente del torno suizo.</p></li>
+<li><p>Place SDV: Depósito de bandeja en plataforma del vehículo SDV una vez es situado al lado del robot Motoman.</p></li>
+</ul>
+</div>
+<div class="section" id="red-de-conexiones">
+<h2>Red de conexiones<a class="headerlink" href="#red-de-conexiones" title="Permalink to this headline">¶</a></h2>
+<p>La topología de comunicaciones que se utiliza para conectar un equipo (agente) a PRIA-UN es la mostrada a continuación:</p>
+<img alt="../_images/topologia.png" src="../_images/topologia.png" />
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">LabFabEx</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../motoman/motoman.html">Plataforma robótica</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">PRIA - UN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../almacen/almacen_material.html">Automated warehouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdv_slam/sdv_slam.html">SDV SLAM aplication</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../motoman/errors/Check_position_R1S1/check_position_R1S1.html" title="previous chapter">Check position on [R1S1]</a></li>
+      <li>Next: <a href="maya.html" title="next chapter">Grúa Maya</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, LabFabEx.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/pria/pria.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

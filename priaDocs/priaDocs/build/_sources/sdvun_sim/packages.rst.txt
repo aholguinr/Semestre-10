@@ -1,0 +1,29 @@
+*sdvun_sim* packages
+####################
+
+This page lists the structure of *sdvun_sim* metapackage.
+
+
+Package Summary
+***************
+
+- sdvun_sim: Metapackage that contains all packages that belongs to this project. Not contains executable files.
+- labfabex_gazebo: Package that contains LabFabEx model (walls, textures). Contains *launch* files, 3D files and *world* files required by Gazebo.
+- sdvun_description: Package with *xacro* files and 3D files. Used to describe any SDVUN robot model in ROS and Gazebo.
+- sdvun_gazebo: Package with *launch* files to run Gazebo simulations.
+- sdvun_navigation: Package with *launch* that configurates and runs Navigation Stack nodes of SDVUN mobile robot.
+- sdvun_rviz: Package with *config* files for RViz.
+
+
+
+Links of interest
+*****************
+
+.. toctree::
+   :maxdepth: 1
+
+   labfabex_gazebo_package
+   sdvun_description_package
+   sdvun_gazebo_package
+   sdvun_navigation_package
+   sdvun_rviz_package

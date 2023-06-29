@@ -1,0 +1,178 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Vehículos Auto Guiados SDV-UN &#8212; LabFabEx  documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Node-Red" href="node_red/node_red.html" />
+    <link rel="prev" title="Plataforma robótica - Motoman" href="motoman.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+
+<div style="background-color: #f8f8f8; text-align: left; padding: 10px 10px 15px 15px">
+    <a href="../index.html"><h1 font-family="" style="font-size: 15pt;">Documentación LabFabEx</h1></a>
+</div>
+
+
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="vehiculos-auto-guiados-sdv-un">
+<h1>Vehículos Auto Guiados SDV-UN<a class="headerlink" href="#vehiculos-auto-guiados-sdv-un" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="inicio-de-operacion">
+<h2>Inicio de operación<a class="headerlink" href="#inicio-de-operacion" title="Permalink to this headline">¶</a></h2>
+<p>Para conectarse con el vehículo de forma remota se usa el protocolo <em>ssh</em> con el siguiente comando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Formato</span>
+<span class="c1"># ssh sdvunX@192.168.1.1X</span>
+<span class="c1"># Ejemplo con SDV-UN 2</span>
+<span class="n">ssh</span> <span class="n">sdvun2</span><span class="o">@</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">1.12</span>
+</pre></div>
+</div>
+<p>Una vez iniciada una sesión remota se debe ejecutar desde la terminal el siguiente comando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">sdv_process</span> <span class="n">process</span><span class="o">.</span><span class="n">launch</span>
+</pre></div>
+</div>
+<p>Finalmente, para conectarlo con la base de datos remota se ejecuta el siguiente comando desde otra terminal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">X</span> <span class="n">POST</span> <span class="n">localhost</span><span class="p">:</span><span class="mi">3000</span><span class="o">/</span><span class="n">connect</span>
+</pre></div>
+</div>
+<p>También es posible conectar el equipo desde otro computador incluyendo la IP del vehículo. Por ejemplo, para conectar el vehículo SDV-UN 2 desde cualquier computador dentro de la red del laboratorio se puede ejecutar en la terminal del computador remoto:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">X</span> <span class="n">POST</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">1.12</span><span class="p">:</span><span class="mi">3000</span><span class="o">/</span><span class="n">connect</span>
+</pre></div>
+</div>
+<p>El resultado de cualquiera de los dos comandos anteriores debe ser de éxito <code class="code docutils literal notranslate"><span class="pre">{status:</span> <span class="pre">&quot;OK&quot;,</span> <span class="pre">code:</span> <span class="pre">200}</span></code></p>
+</div>
+<div class="section" id="multiples-terminales">
+<h2>Múltiples terminales<a class="headerlink" href="#multiples-terminales" title="Permalink to this headline">¶</a></h2>
+<p>Para el procedimiento anterior se necesitan como mínimo dos terminales, ya que la conexión es remota y por medio de <em>ssh</em>, se debería repetir el proceso de conexión para cada uno de los comandos, por esta razón se recomienda el uso de la herramienta <em>tmux</em> que permite dividir la pantalla en varias terminales sin necesidad de autenticarse nuevamente. Para ello, luego de iniciar sesión por primera vez se ejecuta el siguiente comando en la terminal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tmux</span>
+</pre></div>
+</div>
+<p>La pantalla adquiere una apariencia distita y es posible dividirla usando las siguientes combinaciónes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="32%" />
+<col width="68%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" rowspan="2">Teclas</th>
+<th class="head" rowspan="2">Función</th>
+</tr>
+<tr class="row-even"></tr>
+</thead>
+<tbody valign="top">
+<tr class="row-odd"><td rowspan="2">Ctrl + A + |</td>
+<td rowspan="2">Crea una división vertical</td>
+</tr>
+<tr class="row-even"></tr>
+<tr class="row-odd"><td rowspan="2">Ctrl + A + -</td>
+<td rowspan="2">Crea una división horizontal</td>
+</tr>
+<tr class="row-even"></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">LabFabEx</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../motoman/motoman.html">Plataforma robótica</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pria.html">PRIA - UN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../almacen/almacen_material.html">Automated warehouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdv_slam/sdv_slam.html">SDV SLAM aplication</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="pria.html">PRIA - UN</a><ul>
+      <li>Previous: <a href="motoman.html" title="previous chapter">Plataforma robótica - Motoman</a></li>
+      <li>Next: <a href="node_red/node_red.html" title="next chapter">Node-Red</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, LabFabEx.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/pria/sdv.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

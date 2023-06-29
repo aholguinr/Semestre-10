@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Node-Red &#8212; LabFabEx  documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="PRIA &amp; Odoo" href="../pilots/2019_2/2019_2.html" />
+    <link rel="prev" title="Vehículos Auto Guiados SDV-UN" href="../sdv.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+
+<div style="background-color: #f8f8f8; text-align: left; padding: 10px 10px 15px 15px">
+    <a href="../../index.html"><h1 font-family="" style="font-size: 15pt;">Documentación LabFabEx</h1></a>
+</div>
+
+
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="node-red">
+<h1>Node-Red<a class="headerlink" href="#node-red" title="Permalink to this headline">¶</a></h1>
+<p>La interfaz web utiliza una herramienta creada por IBM (Node-Red) por medio de la cual es posible diseñar procesos que involucran las máquinas del laboratorio. En la siguiente imagen se muestran los cuatro nodos que representan a cada uno de los equipos integrados hasta ahora.</p>
+<img alt="../../_images/node_red.png" src="../../_images/node_red.png" />
+<p>Así mismo, al hacer doble clic en alguno de ellos (en este caso el motoman) es posible escoger entre alguna de las primitivas para que sea esta la tarea que él deba realizar:</p>
+<img alt="../../_images/motoman_primitives.png" src="../../_images/motoman_primitives.png" />
+<p>Adicionalmente, se debe tener en cuenta que la referencia en caracteres que se evalúa en los condicionales debe coincidir con los valores que se envían <em>firebase_initializer.py</em>. A continuación se muestra un fragmento del código <em>motoman.html</em>.</p>
+<div class="highlight-html notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span> &lt;script type=&quot;text/x-red&quot; data-template-name=&quot;MOTOMAN&quot;&gt;
+     &lt;div class=&quot;form-row&quot;&gt;
+         &lt;label for=&quot;node-input-typeProp&quot;&gt;&lt;i class=&quot;icon-tag&quot;&gt;&lt;/i&gt; Type:&lt;/label&gt;
+         &lt;select id=&quot;node-input-typeProp&quot;&gt;
+<span class="hll">             &lt;option value=&quot;pick_sdv&quot;&gt;Pick from SDV&lt;/option&gt;
+</span><span class="hll">             &lt;option value=&quot;place_sdv&quot;&gt;Place to SDV&lt;/option&gt;
+</span>         &lt;/select&gt;
+     &lt;/div&gt;
+     &lt;hr&gt;
+     &lt;img src=&quot;/img/motoman_home.jpg&quot; alt=&quot;Motoman machine&quot; width=&quot;400&quot; height=&quot;160&quot;&gt;
+ &lt;/script&gt;
+</pre></div>
+</td></tr></table></div>
+<p>Una vez lanzado node-red:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">node</span><span class="o">-</span><span class="n">red</span>
+</pre></div>
+</div>
+<p>Se puede visitar la página 192.168.1.70:1880 para realizar el diseño de los procesos. Cuando se valide la funcionalidad (por parte de un operario) se procede a desplegar (Deploy) la misma.</p>
+<p>Se deben haber ejecutado los pasos de conexión mencionados en <a class="reference internal" href="../motoman.html#motoman-node-red"><span class="std std-ref">Plataforma robótica - Motoman</span></a> y en <a class="reference internal" href="../torno.html#torno-node-red"><span class="std std-ref">Torno Suizo</span></a>.</p>
+<p>Luego de tener autorización por parte de LabFabEx, el código fuente puede ser descargado utilizando el siguiente comando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="o">-</span><span class="n">b</span> <span class="n">develop</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gitlab</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">LabFabEx</span><span class="o">/</span><span class="n">node</span><span class="o">-</span><span class="n">red</span><span class="o">-</span><span class="n">pria</span><span class="o">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">submodule</span> <span class="n">init</span>
+<span class="n">git</span> <span class="n">submodule</span> <span class="n">update</span>
+<span class="n">cd</span> <span class="n">src</span><span class="o">/</span><span class="n">firebase</span><span class="o">-</span><span class="n">coms</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">basic_dt</span>
+<span class="n">cd</span> <span class="o">../..</span>
+<span class="n">cd</span> <span class="n">src</span><span class="o">/</span><span class="n">task_generator</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">basic_dt</span>
+<span class="n">cd</span> <span class="o">../..</span>
+<span class="n">yarn</span> <span class="n">start</span>
+</pre></div>
+</div>
+<div class="section" id="publicacion-de-proceso-en-rtdb-firebase">
+<h2>Publicación de proceso en RTDB (Firebase)<a class="headerlink" href="#publicacion-de-proceso-en-rtdb-firebase" title="Permalink to this headline">¶</a></h2>
+<p>Para publicar el flujo de proceso guardado cualquiera de las pestañas de Node-Red se debe hacer clic al botón <em>Deploy</em>. El archivo que publica la información en la base de datos remota es el servidor del laboratorio, los siguientes son los comandos que se deben ejecutar para conectarse y para publicar el flujo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">server</span><span class="o">@</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">1.70</span>
+<span class="n">cd</span> <span class="n">Documents</span><span class="o">/</span><span class="n">node</span><span class="o">-</span><span class="n">red</span><span class="o">-</span><span class="n">pria</span>
+<span class="c1"># Formato</span>
+<span class="c1"># node dist/utils/linker.js X</span>
+<span class="c1"># Ejemplo para publicar el flujo de la pestaña 2 (Flow 2)</span>
+<span class="n">node</span> <span class="n">dist</span><span class="o">/</span><span class="n">utils</span><span class="o">/</span><span class="n">linker</span><span class="o">.</span><span class="n">js</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Si el procedimiento anterior se realiza con éxito se debe ver en pantalla el ID del proceso publicado.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">LabFabEx</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../motoman/motoman.html">Plataforma robótica</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../pria.html">PRIA - UN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../almacen/almacen_material.html">Automated warehouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sdv_slam/sdv_slam.html">SDV SLAM aplication</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../pria.html">PRIA - UN</a><ul>
+      <li>Previous: <a href="../sdv.html" title="previous chapter">Vehículos Auto Guiados SDV-UN</a></li>
+      <li>Next: <a href="../pilots/2019_2/2019_2.html" title="next chapter">PRIA &amp; Odoo</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, LabFabEx.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/pria/node_red/node_red.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

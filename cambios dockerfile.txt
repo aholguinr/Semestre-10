@@ -1,0 +1,9 @@
+agregar al dockerfile
+
+docker run -it --name apm_proyectox2 -v APMdatax2:/data -v /tmp/.X11-unix:/tmp/.X11-unix:rw  -v /lib/modules:/lib/modules --privileged --device=/dev/dri:/dev/dri --net=host --gpus all --security-opt seccomp=unconfined  --group-add audio --group-add video aholguinr/apm_proyecto:v1
+
+
+LIBGL_ALWAYS_INDIRECT=
+
+necesario para correr el repo
+sudo apt install ros-melodic-gazebo-ros ros-melodic-gazebo-plugins ros-melodic-move-base ros-melodic-amcl ros-melodic-joint-state-publisher ros-melodic-rosbridge-suite ros-melodic-map-server ros-melodic-hector-slam ros-melodic-robot-state-publisher -y

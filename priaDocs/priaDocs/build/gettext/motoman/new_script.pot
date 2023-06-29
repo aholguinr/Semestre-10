@@ -1,0 +1,198 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, LabFabEx
+# This file is distributed under the same license as the LabFabEx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: LabFabEx \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 15:34-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/motoman/new_script.rst:3
+msgid "Crear nuevo script"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:5
+msgid "Si se desea crear una nueva rutina de movimiento de la plataforma existen dos maneras en las cuales se puede realizar, ya sea por medio de un script en el lenguaje *C++* o en *python*. El  procedimiento sugerido es el siguiente:"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:7
+msgid "Posicionar el robot en las poses deseadas."
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:8
+msgid "Conocer el valor de las articulaciones o del efector final."
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:9
+msgid "Guardar la información anterior en el nuevo script."
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:13
+msgid "Pose actual"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:15
+msgid "Existen dos métodos para conocer la información sobre la pose. El primero de estos es a través de la información contenida en el tópico */joinState* el cual mostrará como resultado el valor en radianes de cada uno de los ocho grados de libertad de la plataforma."
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:18
+msgid "Valores articulares"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:20
+msgid "Para conocer el valor de las ocho articulaciones se debe ejecutar en una terminal el comando::"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:24
+msgid "La información relevante del resultado mostrado es el arreglo denominado *position*. El siguiente resultado se genera cuando el robot se encuentra en la posición *home*."
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:42
+msgid "Valores de la pose"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:44
+msgid "Para conocer los valores de la pose actual en términos de la posición (x, y, z) y orientación (x, y, z, w) se debe ejecutar el script de python ubicado en la ruta :code:`~/motoman_ws/src/scripts/`::"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:48
+msgid "En consola se mostrará el resultado esperado."
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:52
+msgid "Script en C++"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:54
+msgid "Se debe crear un archivo dentro del *workspace* de ROS en el equipo destinado para uso de la plataforma robótica, el directorio estándar para esto es el ubicado en la dirección :code:`~/motoman_ws/src/robot_position_cmd/src`. Desde luego el archivo debe tener la extensión *cpp*. A continuación se enuncian las partes que debe contener el código:"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:57
+msgid "Encabezado"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:59
+msgid "La primera sección de código debe llamar a las librerías del sistema para que puedan estar disponibles las funcionalidades posteriormente. En caso que se deseen utilizar las salidas y entradas lógicas (actuador neumático y sensor fotosensible) es necesario importar las librerías opcionales."
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:78
+msgid "Prototipos de funciones"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:80
+msgid "Siguiendo las buenas prácticas para desarrollo de código en *C++* se deben declarar los prototipos de las funciones utilizadas en el código:"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:119
+msgid "Variables globales"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:121
+msgid "Se recomienda continuar con la definición de las variables globales. Cabe resaltar que existen dos tipos de variables mencionadas, las obligatorias y las opcionales."
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:154
+msgid "Tópicos de ROS"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:156
+msgid "Finalmente, antes de iniciar con la función principal *main* se recomienda incluir los nombres de los tópicos que publicarán la información. Estos son opcionales y su definición es decisión del programador."
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:169
+msgid "Función principal (main)"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:171
+msgid "En este segmento es necesario realizar la definición de las variables de ROS declaradas anteriormente (publishers y subscribers) para que pueda existir una comunicación eficaz. Las siguientes líneas de ejemplo han sido extraidas del código *pick_table.cpp*."
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:173
+msgid "Como se resalta a continuación, el funcionamiento del código depende de la correcta publicación y subscripción al mismo tópico, es decir, el robot informa por medio del tópico :code:`/motoman_table/wait_pose_reached` que acaba de culminar el primer paso de la tarea (línea 44), esta información regresa al script ya que existe un subscriptor que apunta al mismo tópico (línea 36). De esta manera se cierra el lazo de la información y se dispara el siguiente paso."
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:252
+msgid "Callbacks"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:254
+msgid "Como es sabido, cada vez que un subscriptor recibe información por parte de un tópico se dispara la función callback referenciada. La línea 36 del código anterior por ejemplo hace un llamado a la función *pick_piece_cb()*, el trabajo de esta función es cambiar el valor la variable :code:`move_to_pick_up` a verdadero (true)."
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:264
+msgid "Compilación y uso"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:267
+msgid "CMakeLists"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:269
+msgid "El proceso de compilación y generación del ejecutable es estándar para archivos hecho en *C++*, ROS utiliza *catkin* para realizar este proceso. Este proceso se debe realizar con cada uno de los nuevos códigos, se debe incluir manualmente en el archivo *CMakeLists.txt* ubicado en :code:`~/motoman_ws/src/robot_position_cmd/src`."
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:277
+msgid "El siguiente es un ejemplo para el código pick_lathe.cpp"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:286
+msgid "Una vez hecho esto se debe compilar, desde la ubicación :code:`~/motoman_ws` se ejecuta el siguiente comando::"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:290
+msgid "El resultado de esta operación debe ser exitoso y con un porcentaje de compilación del 100%."
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:293
+#: ../../source/motoman/new_script.rst:462
+msgid "Nodo de ROS"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:295
+msgid "El lanzamiento individual del nodo se hace utilizando el comando *rosrun*, para un nuevo archivo el siguiente sería el ejemplo de este lanzamiento::"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:302
+msgid "Inicio de tarea"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:304
+msgid "Ya que la lógica de ejecución implica la publicación en el tópico inicial, para disparar el nodo se debe usar *rostopic pub*::"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:309
+msgid "Launch general"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:311
+msgid "Por último, para poder ejecutar el nuevo nodo se debe incluir dentro del launch file *motoman_task.launch* ubicado en la ruta :code:`~/motoman_ws/src/robot_position_cmd/launch`"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:322
+msgid "Script en python"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:324
+msgid "Este lenguaje de programación es más simple que *C++*, por tal razón se recomienda su uso, adicionalmente no es necesario realizar ningún proceso de compilación."
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:464
+msgid "Es necesario que el archivo tenga permisos de ejecución, para configurarlos se utiliza el siguiente comando::"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:468
+msgid "Luego de esto es posible ejecutar el script::"
+msgstr ""
+
+#: ../../source/motoman/new_script.rst:472
+msgid "Para comenzar la ejecución se sigue el mismo procedimiento mencionado en :ref:`TaskRun`"
+msgstr ""

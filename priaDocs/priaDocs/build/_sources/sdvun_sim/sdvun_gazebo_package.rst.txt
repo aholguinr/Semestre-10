@@ -1,0 +1,72 @@
+*sdvun_gazebo* Package
+######################
+
+This package contains *launch* files, *world* files and params files for run
+Gazebo, spawn LabFabEx world and SDVUN mobile robots and call required nodes for
+Navigation Stack.
+
+Contained *launch* files are:
+
+- *sdvun_nav.launch*: Calls another *launch* files that runs Gazebo, spawn LabFabEx world and spawn an SDVUN with Navigation Stack.
+- *sdvun_empty_world.launch*: Runs Gazebo in an empty world an spawns an SDVUN without Navigation Stack. Inteded for testing the SDVUN movements.
+- *spawn_sdvun.launch*: Loads the SDVUN robot description and spawns it in Gazebo, without Navigation Stack nodes. Requires a running Gazebo world.
+- *spawn_sdvun_nav.launch*: Loads the SDVUN robot description and spawns it in Gazebo, with Navigation Stack nodes. Requires a running Gazebo world (preferably a LabFabEx world).
+
+
+
+sdvun_nav.launch
+****************
+
+This launch is intended to run a quick simulation of SDVUN in Gazebo, spawning 
+the LabFabEx model and one SDVUN. Receives multiple arguments that allows you 
+to configure some aspects of the simulation. These arguments are:
+
+- rviz (true or false, Default false): If true, runs RViz configured to show the topics of runnnig SDVUN
+- localization (amcl or hector. Default hector): Defines the LOcalization Component used by spawned SDVUN.
+- robot_model (sdvun1, sdvun2 or sdvun3. Default sdvun1): Sets the model of SDVUN.
+- namespace (Default ""): Namespace of all nodes and topics that belongs to Navigation Stack of the SDVUN. By default, no namespace is used.
+
+
+
+sdvun_empty_world.launch
+************************
+
+This launch is intended to run a quick simulation of SDVUN in Gazebo, without 
+any other object in the Gazebo world and without any of the Navigation Stack 
+nodes. Its main purpose is allow to view the SDVUN in Gazebo, test its movements 
+and check if the SDVUN Visual Model spawns correctly in Gazebo.
+
+Arguments used in this launch file are:
+
+- robot_model (sdvun1, sdvun2 or sdvun3. Default sdvun1): Sets the model of SDVUN.
+- joypad (true or false. Default false): If true, launch a joy node that allows you to move the SDVUN using a joypad. Requires *sdv_scripts* package.
+- namespace (Default ""): Namespace of all nodes and topics that belongs to SDVUN. By default, no namespace is used.
+
+
+
+spawn_sdvun.launch
+******************
+
+With this *launch* you can spawn an SDVUN in a running Gazebo simulation, without
+a Navigation Stack nodes.
+
+Arguments used in this launch file are:
+
+- robot_model (sdvun1, sdvun2 or sdvun3. Default sdvun1): Sets the model of SDVUN.
+- namespace (Default ""): Namespace of all nodes and topics that belongs to SDVUN. By default, no namespace is used.
+
+
+
+spawn_sdvun_nav.launch
+**********************
+
+This *launch* file spawns a SDVUN in a running Gazebo simulation with Navigation 
+Stack nodes. By default, uses *hector_mapping* as *Localization Component* an 
+*sdvun1* as *robot_model*
+
+Arguments used in this launch file are:
+
+
+- localization (amcl or hector. Default hector): Defines the LOcalization Component used by spawned SDVUN.
+- namespace (Default ""): Namespace of all nodes and topics that belongs to SDVUN. By default, no namespace is used.
+- robot_model (sdvun1, sdvun2 or sdvun3. Default sdvun1): Sets the model of SDVUN.

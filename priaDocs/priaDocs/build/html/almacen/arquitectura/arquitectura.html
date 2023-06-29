@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Warehouse architecture &#8212; LabFabEx  documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="User manual" href="../manual_usuario/manual.html" />
+    <link rel="prev" title="Automated warehouse" href="../almacen_material.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+
+<div style="background-color: #f8f8f8; text-align: left; padding: 10px 10px 15px 15px">
+    <a href="../../index.html"><h1 font-family="" style="font-size: 15pt;">Documentación LabFabEx</h1></a>
+</div>
+
+
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="warehouse-architecture">
+<h1>Warehouse architecture<a class="headerlink" href="#warehouse-architecture" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="mechanical-architecture">
+<h2>Mechanical Architecture<a class="headerlink" href="#mechanical-architecture" title="Permalink to this headline">¶</a></h2>
+<p>The Warehouse compose for two principal module: A mecanic group of three prismatic links confugurate as a elevator whose function is move material box between shelf and a scissors lift that put the box on SDVs.</p>
+</div>
+<div class="section" id="electric-architecture">
+<h2>Electric Architecture<a class="headerlink" href="#electric-architecture" title="Permalink to this headline">¶</a></h2>
+<p>The warehouse is compose of:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 16%" />
+<col style="width: 14%" />
+<col style="width: 47%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Component</p></th>
+<th class="head"><p>Reference</p></th>
+<th class="head"><p>Code</p></th>
+<th class="head"><p>Function</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Switch</p></td>
+<td></td>
+<td><p>SW1</p></td>
+<td><p>General power on</p></td>
+</tr>
+<tr class="row-odd"><td><p>Emergency stop</p></td>
+<td></td>
+<td><p>P1</p></td>
+<td><p>Power fase power off</p></td>
+</tr>
+<tr class="row-even"><td><p>DC source 24V 3A</p></td>
+<td></td>
+<td><p>ACDC</p></td>
+<td><p>AC DC conversion</p></td>
+</tr>
+<tr class="row-odd"><td><p>12V regulator</p></td>
+<td><p>XL4015</p></td>
+<td><p>Re_12</p></td>
+<td><p>12V source</p></td>
+</tr>
+<tr class="row-even"><td><p>5V regulator</p></td>
+<td><p>LM2596</p></td>
+<td><p>Re_5</p></td>
+<td><p>5V source</p></td>
+</tr>
+<tr class="row-odd"><td><p>Motor driver</p></td>
+<td><p>L298HN</p></td>
+<td><p>Dr1</p></td>
+<td><p>Motor axis X control</p></td>
+</tr>
+<tr class="row-even"><td><p>Motor driver</p></td>
+<td><p>L298HN</p></td>
+<td><p>Dr2</p></td>
+<td><p>Motor axis Y control</p></td>
+</tr>
+<tr class="row-odd"><td><p>Motor driver</p></td>
+<td><p>BTS7960</p></td>
+<td><p>Dr3, Dr4</p></td>
+<td><p>Motors axis Z control</p></td>
+</tr>
+<tr class="row-even"><td><p>Microstep driver</p></td>
+<td><p>TB6560</p></td>
+<td><p>Dr5</p></td>
+<td><p>Scissors motor control</p></td>
+</tr>
+<tr class="row-odd"><td><p>Microstep driver</p></td>
+<td><p>TB6600</p></td>
+<td><p>Dr6</p></td>
+<td><p>Gate motor control</p></td>
+</tr>
+<tr class="row-even"><td><p>DC motor</p></td>
+<td></td>
+<td><p>MZI, MZD</p></td>
+<td><p>Axis Z motors</p></td>
+</tr>
+<tr class="row-odd"><td><p>DC motor</p></td>
+<td></td>
+<td><p>MX</p></td>
+<td><p>Axis X motor</p></td>
+</tr>
+<tr class="row-even"><td><p>Stepper motor</p></td>
+<td></td>
+<td><p>MY</p></td>
+<td><p>Axis Y motor</p></td>
+</tr>
+<tr class="row-odd"><td><p>Stepper motor</p></td>
+<td><p>STP-MTR-23079</p></td>
+<td><p>MT</p></td>
+<td><p>Scissors motor</p></td>
+</tr>
+<tr class="row-even"><td><p>Stepper motor</p></td>
+<td><p>STP-MTR-17048</p></td>
+<td><p>MP</p></td>
+<td><p>Gate motor</p></td>
+</tr>
+<tr class="row-odd"><td><p>Inductive sensor</p></td>
+<td></td>
+<td><p>ISL, ISR</p></td>
+<td><p>Read Z axis position marks</p></td>
+</tr>
+<tr class="row-even"><td><p>2 Chanels optocuple</p></td>
+<td><p>Pc817</p></td>
+<td><p>OC</p></td>
+<td><p>Inductive sensors arduino interfaz</p></td>
+</tr>
+<tr class="row-odd"><td><p>Limit switch</p></td>
+<td></td>
+<td><p>SW_YF</p></td>
+<td><p>Y axis position read front</p></td>
+</tr>
+<tr class="row-even"><td><p>Limit switch</p></td>
+<td></td>
+<td><p>SW_YB</p></td>
+<td><p>Y axis position read back</p></td>
+</tr>
+<tr class="row-odd"><td><p>Limit switch</p></td>
+<td></td>
+<td><p>SW_XR</p></td>
+<td><p>X axis position read rigth</p></td>
+</tr>
+<tr class="row-even"><td><p>Limit switch</p></td>
+<td></td>
+<td><p>SW_XI</p></td>
+<td><p>X axis position read left</p></td>
+</tr>
+<tr class="row-odd"><td><p>Limit switch</p></td>
+<td></td>
+<td><p>SW_ZRD</p></td>
+<td><p>Z axis position read rigth down</p></td>
+</tr>
+<tr class="row-even"><td><p>Limit switch</p></td>
+<td></td>
+<td><p>SW_ZRU</p></td>
+<td><p>Z axis position read rigth up</p></td>
+</tr>
+<tr class="row-odd"><td><p>Limit switch</p></td>
+<td></td>
+<td><p>SW_ZID</p></td>
+<td><p>Z axis position read left down</p></td>
+</tr>
+<tr class="row-even"><td><p>Limit switch</p></td>
+<td></td>
+<td><p>SW_ZIU</p></td>
+<td><p>Z axis position read left up</p></td>
+</tr>
+<tr class="row-odd"><td><p>Limit switch</p></td>
+<td></td>
+<td><p>SW_T</p></td>
+<td><p>Scissors home indicator</p></td>
+</tr>
+<tr class="row-even"><td><p>Limit switch</p></td>
+<td></td>
+<td><p>SW_G</p></td>
+<td><p>Gate home indicator</p></td>
+</tr>
+<tr class="row-odd"><td><p>Microcontroller board</p></td>
+<td><p>Arduino mega 2560</p></td>
+<td><p>Ar</p></td>
+<td><p>Server comunication and embedded control algorithm</p></td>
+</tr>
+</tbody>
+</table>
+<p>In <a class="reference external" href="Esquematico.pdf">Esquematico</a>  is show the electrical circuit diagram.</p>
+</div>
+<div class="section" id="software-architecture">
+<h2>Software architecture<a class="headerlink" href="#software-architecture" title="Permalink to this headline">¶</a></h2>
+<p>The warehouse is controlled by a arduino board, in order to update the code in the warehouse it is necessary to have the arduino IDE and the library <a class="reference external" href="http://wiki.ros.org/rosserial_arduino/Tutorials/Arduino%20IDE%20Setup">rosserial_arduino</a> installed. To access the codes of the warehouse and its VMD, clone the repository:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gitlab</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">LabFabEx</span><span class="o">/</span><span class="n">almacen_material</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>In this you will find the folder ‘Almacen_PAI’ with the Arduino code, the other files correspond to its VMD package for gazebo.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">LabFabEx</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../motoman/motoman.html">Plataforma robótica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pria/pria.html">PRIA - UN</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../almacen_material.html">Automated warehouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sdv_slam/sdv_slam.html">SDV SLAM aplication</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../almacen_material.html">Automated warehouse</a><ul>
+      <li>Previous: <a href="../almacen_material.html" title="previous chapter">Automated warehouse</a></li>
+      <li>Next: <a href="../manual_usuario/manual.html" title="next chapter">User manual</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, LabFabEx.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/almacen/arquitectura/arquitectura.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

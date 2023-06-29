@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check position on [R1S1] &#8212; LabFabEx  documentation</title>
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="PRIA - UN" href="../../../pria/pria.html" />
+    <link rel="prev" title="Errores comunes" href="../errors.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+
+<div style="background-color: #f8f8f8; text-align: left; padding: 10px 10px 15px 15px">
+    <a href="../../../index.html"><h1 font-family="" style="font-size: 15pt;">Documentación LabFabEx</h1></a>
+</div>
+
+
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="check-position-on-r1s1">
+<h1>Check position on [R1S1]<a class="headerlink" href="#check-position-on-r1s1" title="Permalink to this headline">¶</a></h1>
+<p>Además de esta advertencia, el robot no realizaba los movimientos a las posiciones predeterminadas (Second Home Position y Work Home Position) como tampoco encontrar las soluciones de trayectoria a las posiciones enviadas desde ROS.</p>
+<p>Para solucionar este problema revisara que el reconocimiento de los Softlimits estuviese activado, como que los valores de estos y de la posición de HOME fueran los correctos siguiendo el procedimiento mostrado a continuación.</p>
+<img alt="../../../_images/1.png" src="../../../_images/1.png" />
+<p>Opción de seguridad</p>
+<img alt="../../../_images/2.png" src="../../../_images/2.png" />
+<p>Opción de entrada a modo mantenimiento</p>
+<p>Una vez se selecciona, pedirá una contraseña de seguridad, esta es la que trae por defecto el Robot. En este modo, Se Busca la opción de LIMIT RELEASE, en la pestaña ROBOT del menú principal.</p>
+<img alt="../../../_images/3.png" src="../../../_images/3.png" />
+<p>Opción limit release</p>
+<img alt="../../../_images/4.png" src="../../../_images/4.png" />
+<p>Validación de valor Invalid</p>
+<p>Una vez adentro de esta opción se debe verificar que los 2 ítems que aparecen (SOFT LIMIT RELEASE y ALL LIMIT RELEASE) tengan el valor de INVALID, este valor define si se ignoraran o no los valores de los Softlimits con el riesgo que el ROBOT sufra una colisión con él mismo. Después de esto, en la misma pestaña ROBOT, se selecciona la opción SOFTLIMIT SETTING. Aquí se encontrarán los valores por de los SOFTLIMITS. No se deben cambiar estos valores a menos que se tenga claridad de que se está haciendo.</p>
+<img alt="../../../_images/5.png" src="../../../_images/5.png" />
+<p>Opción Soft limit setiing</p>
+<p>Una vez aquí verificamos que los límites de todas las juntas sean los siguientes:</p>
+<img alt="../../../_images/6.png" src="../../../_images/6.png" />
+<p>Verificación de límites de página 1 (primeros 6 grados de libertad)</p>
+<img alt="../../../_images/7.png" src="../../../_images/7.png" />
+<p>Verificación de límites de página 2 (últimos 2 grados de libertad)</p>
+<p>Como paso final se ingresa a la opción HOME POSITION en la pestaña ROBOT del menú principal , aquí se verán los valores por defecto de la posición de Home del robot , estos valores son muy importantes por que es desde estos es que el robot ubica todos sus límites. Los Valores de HOME deben ser los siguientes:</p>
+<img alt="../../../_images/8.png" src="../../../_images/8.png" />
+<p>Verificación valores de HOME (1).</p>
+<img alt="../../../_images/9.png" src="../../../_images/9.png" />
+<p>Verificación valores de HOME (2).</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">LabFabEx</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../motoman.html">Plataforma robótica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pria/pria.html">PRIA - UN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../almacen/almacen_material.html">Automated warehouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sdv_slam/sdv_slam.html">SDV SLAM aplication</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../motoman.html">Plataforma robótica</a><ul>
+  <li><a href="../errors.html">Errores comunes</a><ul>
+      <li>Previous: <a href="../errors.html" title="previous chapter">Errores comunes</a></li>
+      <li>Next: <a href="../../../pria/pria.html" title="next chapter">PRIA - UN</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, LabFabEx.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../../_sources/motoman/errors/Check_position_R1S1/check_position_R1S1.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

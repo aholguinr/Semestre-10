@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maintenance manual &#8212; LabFabEx  documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="SDV SLAM aplication" href="../../sdv_slam/sdv_slam.html" />
+    <link rel="prev" title="User manual" href="../manual_usuario/manual.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+
+<div style="background-color: #f8f8f8; text-align: left; padding: 10px 10px 15px 15px">
+    <a href="../../index.html"><h1 font-family="" style="font-size: 15pt;">Documentación LabFabEx</h1></a>
+</div>
+
+
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="maintenance-manual">
+<h1>Maintenance manual<a class="headerlink" href="#maintenance-manual" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="commun-errors">
+<h2>Commun errors<a class="headerlink" href="#commun-errors" title="Permalink to this headline">¶</a></h2>
+<p>Listed below are common problems and their possible solution:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 51%" />
+<col style="width: 49%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Problem</strong></p></th>
+<th class="head"><p><strong>Solution</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Some axis does not stop in a mecanical limit</p></td>
+<td><p>Run test_fc.ino script and confirm the correct
+reading  of limit switch, if reading is falling
+check the conection in the terminal boards
+and arduino board.</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>Vertical axis does not move</p></td>
+<td><p>If the lift is inclined, move one of the motors
+to straightened it, can do it manually but
+ideally with the script testZ.ino,loop function
+may need some modification.</p></td>
+</tr>
+<tr class="row-even"><td><p>If the lift is in the botom of warehouse,
+restart it to made the home routine ,check
+the marks for inductive sensors.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Some motor of vertical axis does not stop in the
+desired mark.</p></td>
+<td><p>Check the marks for inductive sensors.</p></td>
+</tr>
+<tr class="row-even"><td><p>Warehouse does not repond</p></td>
+<td><p>Check the conection between the computer and
+the arduino, note that the store only receives
+select Cell instructions if the status is
+ready (0) and toSDV if the status is
+wait sdv(2).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="periodic-maintenance">
+<h2>Periodic maintenance<a class="headerlink" href="#periodic-maintenance" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Check nuts and bolts, vibrations may have loosened them.</p></li>
+<li><p>Tighten the belts of each axis.</p></li>
+<li><p>Engage the horizontal and vertical linear guides and the scissor screw.</p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">LabFabEx</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../motoman/motoman.html">Plataforma robótica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pria/pria.html">PRIA - UN</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../almacen_material.html">Automated warehouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sdv_slam/sdv_slam.html">SDV SLAM aplication</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../almacen_material.html">Automated warehouse</a><ul>
+      <li>Previous: <a href="../manual_usuario/manual.html" title="previous chapter">User manual</a></li>
+      <li>Next: <a href="../../sdv_slam/sdv_slam.html" title="next chapter">SDV SLAM aplication</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, LabFabEx.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/almacen/mantenimiento/manual.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

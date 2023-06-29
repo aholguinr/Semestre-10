@@ -1,0 +1,117 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, LabFabEx
+# This file is distributed under the same license as the LabFabEx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: LabFabEx \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 15:34-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/almacen/almacen_material.rst:9
+msgid "Automated warehouse"
+msgstr ""
+
+#: ../../source/almacen/almacen_material.rst:17
+msgid "**Data sheet**"
+msgstr ""
+
+#: ../../source/almacen/almacen_material.rst:19
+msgid "Automated warehouse is an equipment for storing raw material to provision of other equipment inside of the laboratory, it has 10shelfs for the location of various material, operated in conlavoration with SDVs to transport the material to its destination."
+msgstr ""
+
+#: ../../source/almacen/almacen_material.rst:23
+msgid "**Desing phase I**"
+msgstr ""
+
+#: ../../source/almacen/almacen_material.rst:23
+msgid "Diego Alfredo Quexada Rodríguez, Daniel Felipe Aza de la Espriella, Daniela Moreno Chaparro"
+msgstr ""
+
+#: ../../source/almacen/almacen_material.rst:26
+msgid "**Desing phase II**"
+msgstr ""
+
+#: ../../source/almacen/almacen_material.rst:26
+msgid "Laura Valentina Lopez Villalba, Diego Fernando Flórez Rodríguez, Sergio Andres Sarmiento Aguirre, Wilmer David Garzón Cáceres"
+msgstr ""
+
+#: ../../source/almacen/almacen_material.rst:29
+msgid "**Overview**"
+msgstr ""
+
+#: ../../source/almacen/almacen_material.rst:31
+msgid "**Length**"
+msgstr ""
+
+#: ../../source/almacen/almacen_material.rst:31
+msgid "0.7 m"
+msgstr ""
+
+#: ../../source/almacen/almacen_material.rst:31
+msgid "**Width**"
+msgstr ""
+
+#: ../../source/almacen/almacen_material.rst:31
+msgid "0.90 m"
+msgstr ""
+
+#: ../../source/almacen/almacen_material.rst:33
+msgid "**Height**"
+msgstr ""
+
+#: ../../source/almacen/almacen_material.rst:33
+msgid "1.10 m"
+msgstr ""
+
+#: ../../source/almacen/almacen_material.rst:33
+msgid "**Weight**"
+msgstr ""
+
+#: ../../source/almacen/almacen_material.rst:33
+msgid "25 kg"
+msgstr ""
+
+#: ../../source/almacen/almacen_material.rst:35
+msgid "**Power Source**"
+msgstr ""
+
+#: ../../source/almacen/almacen_material.rst:35
+msgid "120V AC"
+msgstr ""
+
+#: ../../source/almacen/almacen_material.rst:35
+msgid "**Shlefs**"
+msgstr ""
+
+#: ../../source/almacen/almacen_material.rst:35
+msgid "10"
+msgstr ""
+
+#: ../../source/almacen/almacen_material.rst:37
+msgid "**Box load capacity**"
+msgstr ""
+
+#: ../../source/almacen/almacen_material.rst:37
+msgid "5 Kg"
+msgstr ""
+
+#: ../../source/almacen/almacen_material.rst:37
+msgid "**Deliver heigth**"
+msgstr ""
+
+#: ../../source/almacen/almacen_material.rst:37
+msgid "320 mm - 390 mm"
+msgstr ""
+
+#: ../../source/almacen/almacen_material.rst:41
+msgid "Additional links"
+msgstr ""

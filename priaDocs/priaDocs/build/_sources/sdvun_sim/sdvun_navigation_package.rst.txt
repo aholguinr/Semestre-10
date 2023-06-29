@@ -1,0 +1,78 @@
+sdvun_navigation Package
+########################
+
+This package contains *launch* files and params files for run and configure 
+required nodes of SDVUN Navigation Stack.
+
+Contained *launch* files are:
+
+- *amcl.launch*: Launch and configure the *AMCL* node. This node is used as *Localization Component* in Navigation Stack.
+- *hector.launch*: Launch and configure the *Hector Mapping* node. This node is used as *Localization Component* in Navigation Stack.
+- *move_base.launch*: Calls and configures the *move_base* node. This node makes multiple tasks like move robot base, path planning and apply robot recovery behaviors.
+
+
+Navigation Stack: amcl, hector and move_base launch files
+*********************************************************
+
+SDVUN Navigation Stack is a set of nodes and topics that gives to the mobile 
+robot the capability to drive itself, avoiding obstacles, planning paths and 
+calculating its own pose in a LabFabEx map. More info in 
+`ROS.org: Navigation <http://wiki.ros.org/navigation>`_
+
+move_base
+=========
+
+The *move_base* node is the main node of Navigation Stack: controls the SDVUN 
+sending *Twist* messages to controller, plans the best path and fix estimated 
+pose. *move_base.launch* can call this node and configures it using *yaml* files
+that contains all the required parameters. These configuration files are:
+
+- move_base_params.yaml
+- costmap_common_params.yaml
+- global_costmap_params.yaml
+- local_costmap_params.yaml
+- base_local_planner_params.yaml
+- eband_local_planner_params.yaml
+
+*move_base* requires other nodes like a *Localization Component*, TF and a Scan 
+Source (Laser Scans). This file is called by other launch files as 
+*spawn_sdvun_nav.launch*.
+
+hector_mapping
+==============
+
+*hector_mapping* is used in Navigation Stack as *Localization Component*. This 
+node belongs to *hector_slam* metapackage. Its not a part of default ROS 
+repositories and can be outdated or  not supported in current verisons of ROS.
+
+This node is configured in *hector.launch* file. Parameters contained in this 
+file are related with Scan topic, coordinated frames, map resolution and origin, 
+and map update parameters.
+
+*hector_mapping* builds a map while robot scans the enviroment (this is its main
+purpose). This map is diferent from the *map_server*, that was built in a 
+previus activity. 
+
+This file is called by other launch files that inserts the Navigation Stack 
+nodes.
+
+amcl
+====
+
+Similarly to *hector_mapping*, *amcl* node is used in Navigation Stack as 
+*Localization Component*. This node belongs to supported ROS packages and 
+updates more frequently. AMCL (Adaptive Monte Carlo Localization) generates 
+multiple probable poses of the robot, using sensor data like Laser Scans and IMU
+messures. This node is not implemented in real SDVUN mobile robots, but in a 
+future update, can be used (main objective of *sdvun_sim* is develop and test 
+new software!).
+
+This node is configured in *amcl.launch* file. Contains a lot of parameters 
+related with probalistyc and error manage, laser options, map parameters, 
+initial pose and others.
+
+This file is called by other launch files that inserts the Navigation Stack 
+nodes.
+
+To find more info about this node visit `ROS.org: AMCL <http://wiki.ros.org/amcl>`_
+

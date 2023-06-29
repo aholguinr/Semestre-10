@@ -1,0 +1,41 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, LabFabEx
+# This file is distributed under the same license as the LabFabEx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: LabFabEx \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 15:34-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/pria/motoman.rst:11
+msgid "Plataforma robótica - Motoman"
+msgstr ""
+
+#: ../../source/pria/motoman.rst:13
+msgid "El robot inicia el puente entre la base de datos y el controlador con el código *firebase_initializer.py*. Lo más importante a tener en cuenta es que debido a que el desarrollo es hecho en ROS, los procesos son lanzados por medio de un tópico, y su finalización también es anunciada por medio del uso de otro tópico. En el siguiente fragmento se muestra y resaltan las líneas de código que hacen referencia a los dos tópicos mencionados anteriormente para dos procesos diferentes (Pick SDV y Place SDV)."
+msgstr ""
+
+#: ../../source/pria/motoman.rst:15
+msgid "Adicionalmente, se debe tener en cuenta que la referencia en caracteres que se evalúa en los condicionales (if, elif) debe coincidir con los valores que envía node-red."
+msgstr ""
+
+#: ../../source/pria/motoman.rst:47
+msgid "Para lanzar la conexión se debe ejecutar el siguiente comando en terminal::"
+msgstr ""
+
+#: ../../source/pria/motoman.rst:51
+msgid "Por último, para conectar el robot con la base de datos se realizar una petición HTTP en otra terminal::"
+msgstr ""
+
+#: ../../source/pria/motoman.rst:55
+msgid "Luego de tener autorización por parte de LabFabEx, el código fuente puede ser descargado utilizando el siguiente comando::"
+msgstr ""

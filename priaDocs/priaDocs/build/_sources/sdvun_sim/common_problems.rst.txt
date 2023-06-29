@@ -1,0 +1,47 @@
+Common Problems
+===============
+
+1. Build fails when run *catkin_make* in the workspace:
+
+    If build fails, you have to verify if all required packages are installed.
+    Also, you have to verify the ROS version: *sdvun_sim* was developed for ROS
+    Melodic distro, and has not been tested in other versions
+
+2. Some errors appear after run sdv_nav.launch command:
+
+    A correct build of *sdvun_sim* don't generate errors in the terminal. If 
+    you find an error (generally, text in red color), you can search in 
+    internet copying the text. Most errors occurs because some missing package
+    or configuration.
+
+3. SDVUN robot don't moves after clicking the screen in RViz:
+
+    Verify that all requiered nodes of Navigation Stack are running, through
+    this command::
+
+     rosnode list
+    
+    The list depends of localization node, if RViz is running and if you use 
+    namespaces. The list may look like this:
+
+    - /gazebo
+    - /gazebo_gui
+    - /hector_mapping
+    - /map_server
+    - /move_base
+    - /odom_to_map_tf
+    - /robot_pose_publisher
+    - /robot_state_publisher
+    - /rosapi
+    - /rosbridge_websocket
+    - /rosout
+
+    A missing node in the list may be the reason of the fail.
+
+    Other reason: RViz needs to be configured to read messages from topics. In 
+    the *sdvun_rviz* package you'll find some .config files that you can use to 
+    configure RViz. Go to *File > Open Config* and select any of the files 
+    containded in *<workspace/src/sdvun_sim/sdvun_rviz/rviz>*.
+
+
+

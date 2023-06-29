@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, LabFabEx
+# This file is distributed under the same license as the LabFabEx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: LabFabEx \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 15:34-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/pria/node_red/node_red.rst:9
+msgid "Node-Red"
+msgstr ""
+
+#: ../../source/pria/node_red/node_red.rst:11
+msgid "La interfaz web utiliza una herramienta creada por IBM (Node-Red) por medio de la cual es posible diseñar procesos que involucran las máquinas del laboratorio. En la siguiente imagen se muestran los cuatro nodos que representan a cada uno de los equipos integrados hasta ahora."
+msgstr ""
+
+#: ../../source/pria/node_red/node_red.rst:15
+msgid "Así mismo, al hacer doble clic en alguno de ellos (en este caso el motoman) es posible escoger entre alguna de las primitivas para que sea esta la tarea que él deba realizar:"
+msgstr ""
+
+#: ../../source/pria/node_red/node_red.rst:19
+msgid "Adicionalmente, se debe tener en cuenta que la referencia en caracteres que se evalúa en los condicionales debe coincidir con los valores que se envían *firebase_initializer.py*. A continuación se muestra un fragmento del código *motoman.html*."
+msgstr ""
+
+#: ../../source/pria/node_red/node_red.rst:37
+msgid "Una vez lanzado node-red::"
+msgstr ""
+
+#: ../../source/pria/node_red/node_red.rst:41
+msgid "Se puede visitar la página 192.168.1.70:1880 para realizar el diseño de los procesos. Cuando se valide la funcionalidad (por parte de un operario) se procede a desplegar (Deploy) la misma."
+msgstr ""
+
+#: ../../source/pria/node_red/node_red.rst:43
+msgid "Se deben haber ejecutado los pasos de conexión mencionados en :ref:`motoman_node_red` y en :ref:`torno_node_red`."
+msgstr ""
+
+#: ../../source/pria/node_red/node_red.rst:45
+msgid "Luego de tener autorización por parte de LabFabEx, el código fuente puede ser descargado utilizando el siguiente comando::"
+msgstr ""
+
+#: ../../source/pria/node_red/node_red.rst:59
+msgid "Publicación de proceso en RTDB (Firebase)"
+msgstr ""
+
+#: ../../source/pria/node_red/node_red.rst:61
+msgid "Para publicar el flujo de proceso guardado cualquiera de las pestañas de Node-Red se debe hacer clic al botón *Deploy*. El archivo que publica la información en la base de datos remota es el servidor del laboratorio, los siguientes son los comandos que se deben ejecutar para conectarse y para publicar el flujo::"
+msgstr ""
+
+#: ../../source/pria/node_red/node_red.rst:70
+msgid "Si el procedimiento anterior se realiza con éxito se debe ver en pantalla el ID del proceso publicado."
+msgstr ""

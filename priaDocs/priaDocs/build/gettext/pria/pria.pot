@@ -1,0 +1,172 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, LabFabEx
+# This file is distributed under the same license as the LabFabEx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: LabFabEx \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 15:34-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/pria/pria.rst:13
+#: ../../source/pria/pria.rst:13
+msgid "Contents:"
+msgstr ""
+
+#: ../../source/pria/pria.rst:11
+msgid "PRIA - UN"
+msgstr ""
+
+#: ../../source/pria/pria.rst:25
+msgid "Plataforma Robótica de Integración y Automatización"
+msgstr ""
+
+#: ../../source/pria/pria.rst:27
+msgid "Desarrollo software que busca integrar los equipos de manufactura de planta presentes en el laboratorio fábrica experimental (LabFabEx) para el diseño, monitorizacion, supervision y control de tareas o procesos en tiempo real."
+msgstr ""
+
+#: ../../source/pria/pria.rst:29
+msgid "Equipos disponibles para integración:"
+msgstr ""
+
+#: ../../source/pria/pria.rst:31
+msgid "Robot Motoman"
+msgstr ""
+
+#: ../../source/pria/pria.rst:32
+msgid "Torno Tipo Suizo"
+msgstr ""
+
+#: ../../source/pria/pria.rst:33
+#: ../../source/pria/pria.rst:53
+msgid "Grúa Maya"
+msgstr ""
+
+#: ../../source/pria/pria.rst:34
+msgid "SDV-UN"
+msgstr ""
+
+#: ../../source/pria/pria.rst:36
+msgid "El protocolo que se sigue para la integración de los equipos se describe a continuación:"
+msgstr ""
+
+#: ../../source/pria/pria.rst:38
+msgid "Identificación de las variables de proceso mínimas (primitivas) necesarias para el envío de órdenes de tareas."
+msgstr ""
+
+#: ../../source/pria/pria.rst:39
+msgid "Estandarización de tareas realizables por parte de las máquinas."
+msgstr ""
+
+#: ../../source/pria/pria.rst:40
+msgid "Generación de código para ejecución local (standalone) que pruebe la funcionalidad d elas tareas identificadas anteriormente. El lenguaje de programación recomendado para esto es Typescript junto con el uso del entorno NodeJS."
+msgstr ""
+
+#: ../../source/pria/pria.rst:41
+msgid "Vinculación del código anterior con la base de datos de tiempo real (Firebase) por medio de la creación de un servidor local."
+msgstr ""
+
+#: ../../source/pria/pria.rst:42
+msgid "Pruebas de funcionamiento de conectividad con la base de datos."
+msgstr ""
+
+#: ../../source/pria/pria.rst:44
+msgid "Los numerales 1 al 3 son responsabilidad el desarrollador específico de cada máquina. PRIA-UN integra el recurso en los numerales 4 y 5."
+msgstr ""
+
+#: ../../source/pria/pria.rst:46
+msgid "En la siguiente tabla se encuncias las primitivas estandarizadas de cada una de las máquinas. En el caso del Torno tipo suizo y el robot Motoman, sus primitivas relacionan procesos de manufactura completos, es decir, una rutina pregrabada que es invocada utilizando PRIA-UN."
+msgstr ""
+
+#: ../../source/pria/pria.rst:49
+msgid "Equipo"
+msgstr ""
+
+#: ../../source/pria/pria.rst:49
+msgid "Primitivas"
+msgstr ""
+
+#: ../../source/pria/pria.rst:51
+msgid "SDV"
+msgstr ""
+
+#: ../../source/pria/pria.rst:51
+msgid "X, Y, Y, W"
+msgstr ""
+
+#: ../../source/pria/pria.rst:53
+msgid "X, Y, Z"
+msgstr ""
+
+#: ../../source/pria/pria.rst:55
+msgid "Torno Suizo"
+msgstr ""
+
+#: ../../source/pria/pria.rst:55
+#: ../../source/pria/pria.rst:57
+msgid "Proceso"
+msgstr ""
+
+#: ../../source/pria/pria.rst:57
+msgid "Motoman"
+msgstr ""
+
+#: ../../source/pria/pria.rst:60
+msgid "Como ejemplo se enuncian los procesos a los que se refiere la tabla anterior."
+msgstr ""
+
+#: ../../source/pria/pria.rst:62
+msgid "Procesos Torno Suizo:"
+msgstr ""
+
+#: ../../source/pria/pria.rst:64
+msgid "Digitech: pieza mecanizada que incluye el uso de los dos sistemas (S1 y S2)."
+msgstr ""
+
+#: ../../source/pria/pria.rst:65
+msgid "Banda: movimiento de la banda para expulsión de material."
+msgstr ""
+
+#: ../../source/pria/pria.rst:67
+msgid "Procesos Motoman:"
+msgstr ""
+
+#: ../../source/pria/pria.rst:69
+msgid "Pick table: agarre de bandeja situada en la mesa de trabajo ubicada frente al robot motoman."
+msgstr ""
+
+#: ../../source/pria/pria.rst:70
+msgid "Pick lathe: agarre de bandeja situada frente al torno suizo."
+msgstr ""
+
+#: ../../source/pria/pria.rst:71
+msgid "Pick SDV: agarre de bandeja situada en plataforma del vehículo SDV una vez es situado al lado del robot Motoman."
+msgstr ""
+
+#: ../../source/pria/pria.rst:72
+msgid "Place table: Depósito de bandeja en la mesa de trabajo ubicada frente al robot motoman."
+msgstr ""
+
+#: ../../source/pria/pria.rst:73
+msgid "Place lathe: Depósito de bandeja en frente del torno suizo."
+msgstr ""
+
+#: ../../source/pria/pria.rst:74
+msgid "Place SDV: Depósito de bandeja en plataforma del vehículo SDV una vez es situado al lado del robot Motoman."
+msgstr ""
+
+#: ../../source/pria/pria.rst:77
+msgid "Red de conexiones"
+msgstr ""
+
+#: ../../source/pria/pria.rst:79
+msgid "La topología de comunicaciones que se utiliza para conectar un equipo (agente) a PRIA-UN es la mostrada a continuación:"
+msgstr ""

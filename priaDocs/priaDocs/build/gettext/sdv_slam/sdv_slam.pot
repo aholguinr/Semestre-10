@@ -1,0 +1,205 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, LabFabEx
+# This file is distributed under the same license as the LabFabEx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: LabFabEx \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 15:34-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/sdv_slam/sdv_slam.rst:9
+msgid "SDV SLAM aplication"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:12
+msgid "System requirement"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:14
+msgid "Ros Melodic."
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:15
+msgid "Python 2.7."
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:16
+msgid "OpenCV 3.3."
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:19
+msgid "Installation"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:22
+msgid "Install realsense r200 ROS node"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:23
+msgid "For ROS Melodic distribution we will use the G.Doisy work, the following instructions are an abstract from `the original instructions`_."
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:25
+msgid "Install the packages required for librealsense build::"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:30
+msgid "Get the git repository for librealsense ROS Melodic compatible::"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:37
+msgid "or download :download:`the .zip folder <https://github.com/doisyg/librealsense/archive/recent_kernel_compatibility.zip>`"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:39
+msgid "Apply required patches to kernel modules and build the patched module::"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:45
+msgid "Verify the latest entries in kernel log::"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:49
+msgid "The log should indicate that a new uvcvideo driver has been registered. If any errors have been noted, attempt the patching process again."
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:51
+msgid "Add uvcvideo driver to modules file::"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:56
+msgid "Library Build::"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:64
+msgid "Get the git repository for realsense-ros in your catkin src folder::"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:70
+msgid "or download :download:`the .zip folder  <https://github.com/intel-ros/realsense/archive/indigo-devel.zip>`."
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:72
+msgid "Download and replace the file :download:`CMakeLists.txt <https://github.com/intel-ros/realsense/files/2401961/CMakeLists.txt>`."
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:73
+msgid "Build."
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:77
+msgid "Install RTAB-Map node"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:79
+msgid "For full instruction go to `rtabmap repository`_."
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:81
+msgid "Install rtabmap binaries and unistall for get all required dependencies::"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:87
+msgid "Get optional dependency g2o::"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:91
+msgid "Get optional dependency ceres-solver::"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:131
+msgid "Get optional dependency libpointmatcher:"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:107
+msgid "4.1 Get dependencies::"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:121
+msgid "4.2 Get libpointmatcher::"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:133
+msgid "Install rtabmap library::"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:142
+msgid "Install rtabmap ROS package::"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:148
+msgid "catkin_make options:"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:150
+msgid "Add -DRTABMAP_SYNC_MULTI_RGBD=ON to catkin_make if you plan to use multiple cameras."
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:151
+msgid "Add -DRTABMAP_SYNC_USER_DATA=ON to catkin_make if you plan to use user data synchronized topics."
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:156
+msgid "SDV SLAM usage"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:159
+msgid "Localization task"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:161
+msgid "For use the camera info in the odometry estimation rtabmap parameter must be set true in the roslaunch instruction. There are three options acording the node that manage the laser scan information:"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:163
+msgid "For use Hector SLAM launch the SDV with::"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:167
+msgid "The localization parameter value is hector by default."
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:170
+msgid "For use AMCL type::"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:174
+msgid "For ICP aproximation use::"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:178
+msgid "Note that rtabmap parameter will set true automatically."
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:182
+msgid "Mapping task"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:184
+msgid "To construct a new map set mapping parameter to true. e.g.::"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:188
+msgid "Set mapping and rtabmap to true will erase the map database localised at ~/.ros/rtabmap.db, so there is a backup file in ~/.ros/backup.db. Don't forget update it when a new map is available."
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:190
+msgid "For extend the actual map with a new zone use the command::"
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:194
+msgid "So you have not to remap all the zones."
+msgstr ""
+
+#: ../../source/sdv_slam/sdv_slam.rst:196
+msgid "To visualize de new map type::"
+msgstr ""

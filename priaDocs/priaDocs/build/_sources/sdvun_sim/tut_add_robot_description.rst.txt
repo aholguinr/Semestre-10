@@ -1,0 +1,34 @@
+Tutorial: Adding a new robot description
+########################################
+
+*Robot Description* is a file that contains all properties that models a robot 
+and allows Gazebo simulate all physics involved in world simualtion.
+
+Recomended properties and models are:
+
+- Visual model: a set of meshes that represent the robot.
+- Collission model: a set of meshes (or basic forms) used by Gazebo to solve collisions of robot with other .
+- Inertial model: numeric values. Describes inertial, mass and center of mass of real robot (or ideal robot).
+- Friction model: SDF tags that describes the friction properties of real robot.
+
+In this tutorial, you'll see diferent steps taken in the develop of SDVUN3 robot 
+description.
+
+Inertial model
+**************
+
+
+Visual model
+************
+
+
+Colission model
+***************
+
+
+Joints and Links
+****************
+
+
+Gazebo Plugins
+**************

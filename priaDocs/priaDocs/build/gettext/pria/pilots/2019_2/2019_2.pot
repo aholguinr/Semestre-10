@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, LabFabEx
+# This file is distributed under the same license as the LabFabEx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: LabFabEx \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 15:34-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/pria/pilots/2019_2/2019_2.rst:10
+msgid "PRIA & Odoo"
+msgstr ""
+
+#: ../../source/pria/pilots/2019_2/2019_2.rst:12
+msgid "La prueba consiste en un ciclo de operacion en donde se utilizan dos máquinas: Torno & Motoman."
+msgstr ""
+
+#: ../../source/pria/pilots/2019_2/2019_2.rst:14
+msgid "Se contempla un escenario industrial en donde el diseño del proceso es acompañado por una plataforma de apoyo en PLM (Odoo) en donde se crean usuarios que son responsables de interactuar con los archivos y con los demás participantes. El objetivo final es poder comparar los tiempos proyectados con los reales. Finalmente se puede calcular algún indicador de productividad, en este caso el OEE."
+msgstr ""
+
+#: ../../source/pria/pilots/2019_2/2019_2.rst:18
+msgid "La ECO ordena entonces el cambio de rama para la ejecución de la rutina mejorada::"
+msgstr ""
+
+#: ../../source/pria/pilots/2019_2/2019_2.rst:24
+msgid "Reglaje de máquinas"
+msgstr ""
+
+#: ../../source/pria/pilots/2019_2/2019_2.rst:26
+msgid "Para el desarrollo exitoso de la prueba se deben consultar los requerimientos establecidos dentro de los documentos de Odoo, así como la conexión de todas las máquinas con la base de datos."
+msgstr ""
+
+#: ../../source/pria/pilots/2019_2/2019_2.rst:30
+msgid "Correcta posición de la mesa:"
+msgstr ""
+
+#: ../../source/pria/pilots/2019_2/2019_2.rst:34
+msgid "La cámara ubicada en la muñeca del robot Motoman es la que se muestra a continuación:"
+msgstr ""
+
+#: ../../source/pria/pilots/2019_2/2019_2.rst:38
+msgid "El correcto posicionamiento de la cámara se garantiza cuando las cintas se encuentran alineadas, esta alineación se puede corregir de forma manual."
+msgstr ""
+
+#: ../../source/pria/pilots/2019_2/2019_2.rst:7
+msgid "(`Source code <../../../pria/pilots/2019_2/2019_2-1.py>`__, `png <../../../pria/pilots/2019_2/2019_2-1.png>`__, `hires.png <../../../pria/pilots/2019_2/2019_2-1.hires.png>`__, `pdf <../../../pria/pilots/2019_2/2019_2-1.pdf>`__)"
+msgstr ""
+
+#: ../../source/pria/pilots/2019_2/2019_2.rst:7
+msgid "(`Source code <../../../pria/pilots/2019_2/2019_2-2.py>`__, `png <../../../pria/pilots/2019_2/2019_2-2.png>`__, `hires.png <../../../pria/pilots/2019_2/2019_2-2.hires.png>`__, `pdf <../../../pria/pilots/2019_2/2019_2-2.pdf>`__)"
+msgstr ""
+
+#: ../../source/pria/pilots/2019_2/2019_2.rst:78
+msgid "Productividad"
+msgstr ""
+
+#: ../../source/pria/pilots/2019_2/2019_2.rst:80
+msgid "Se calcula a partir de la relación del tiempo real (:math:`T_r`) y el tiempo estimado (:math:`T_s`)."
+msgstr ""
+
+#: ../../source/pria/pilots/2019_2/2019_2.rst:82
+msgid ":math:`P = \\frac{T_s}{T_r}`"
+msgstr ""
+
+#: ../../source/pria/pilots/2019_2/2019_2.rst:84
+msgid "Con un tiempo estimado de 180 segundos los resultados son los siguientes:"
+msgstr ""
+
+#: ../../source/pria/pilots/2019_2/2019_2.rst:86
+msgid ":math:`P_{version 1} = 0.983`"
+msgstr ""
+
+#: ../../source/pria/pilots/2019_2/2019_2.rst:88
+msgid ":math:`P_{version 2} = 0.658`"
+msgstr ""
+
+#: ../../source/pria/pilots/2019_2/2019_2.rst:7
+msgid "(`Source code <../../../pria/pilots/2019_2/2019_2-3.py>`__, `png <../../../pria/pilots/2019_2/2019_2-3.png>`__, `hires.png <../../../pria/pilots/2019_2/2019_2-3.hires.png>`__, `pdf <../../../pria/pilots/2019_2/2019_2-3.pdf>`__)"
+msgstr ""

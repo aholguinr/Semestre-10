@@ -1,0 +1,162 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>sdvun_rviz Package &#8212; documentación de LabFabEx - </title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="License" href="license.html" />
+    <link rel="prev" title="sdvun_navigation Package" href="sdvun_navigation_package.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+
+<div style="background-color: #f8f8f8; text-align: left; padding: 10px 10px 15px 15px">
+    <a href="../index.html"><h1 font-family="" style="font-size: 15pt;">Documentación LabFabEx</h1></a>
+</div>
+
+
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="sdvun-rviz-package">
+<h1><em>sdvun_rviz</em> Package<a class="headerlink" href="#sdvun-rviz-package" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>This package contains <em>rviz</em> config files and <em>launch</em> files, intended to
+configure and use RViz with any SDVUN that runs ROS Navigation Stack.</p>
+<div class="section" id="configuration-files-for-rviz">
+<h2>Configuration files for RViz<a class="headerlink" href="#configuration-files-for-rviz" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>RViz is a complete ROS-topic viewer that requires some configurations that allow
+us to use all topics that a running SDVUN simulation can generate. Its
+complicated and tedius make this settings every time that we launch RViz. For
+this reason, <em>sdvun_rviz</em> contains some general <em>rviz</em> config files that are
+called for some <em>launch</em> files of others packages and, also, you can use with an
+independent RViz instance.</p>
+<p><em>rviz</em> files contained in this package are:</p>
+<ul class="simple">
+<li>sdvun_amcl.rviz</li>
+<li>sdvun_hector.rviz</li>
+<li>sdvun1_hector.rviz</li>
+<li>sdvun3_hector.rviz</li>
+<li>sdvun2_hector.rviz</li>
+<li>view_robot_description.rviz</li>
+</ul>
+<p>Some rules to use any of these config files:</p>
+<ul class="simple">
+<li>All files that starts with <em>sdvun</em> prefix are used to view main topics of Navigation Stack.</li>
+<li>If <em>sdvun</em> is followed by a number, this configuration file is intended to use when simulate sn SDVUN with namespace.</li>
+<li>Last word indicates the Localization Component used by Navigation Stack.</li>
+</ul>
+<p>Finally, <em>view_robot_description.rviz</em> file is used by RViz to view any SDVUN model.</p>
+</div>
+<div class="section" id="view-robot-model-in-rviz">
+<span id="view-model-rviz"></span><h2>View Robot Model in RViz<a class="headerlink" href="#view-robot-model-in-rviz" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>To see an specific SDVUN robot model, you can use a <em>launch</em> file that loads a
+robot description in ROS param an show loaded model:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">sdvun_rviz</span> <span class="n">view_robot_description</span><span class="o">.</span><span class="n">launch</span> <span class="n">robot_model</span><span class="p">:</span><span class="o">=</span><span class="n">sdvun</span>
+</pre></div>
+</div>
+<p>You’ll see something like picture below:</p>
+<a class="reference internal image-reference" href="../_images/rviz_view_robot_model.png"><img alt="../_images/rviz_view_robot_model.png" class="align-center" src="../_images/rviz_view_robot_model.png" style="width: 100%;" /></a>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">LabFabEx</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegación</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="sdvun_sim.html">SDVUN_SIM</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="sdvun_sim.html">SDVUN_SIM</a><ul>
+  <li><a href="packages.html"><em>sdvun_sim</em> packages</a><ul>
+      <li>Previous: <a href="sdvun_navigation_package.html" title="capítulo anterior">sdvun_navigation Package</a></li>
+      <li>Next: <a href="license.html" title="próximo capítulo">License</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Ir a" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, LabFabEx.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/sdvun_sim/sdvun_rviz_package.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

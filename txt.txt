@@ -1,0 +1,25 @@
+
+docker run -it --name apm_proyectox2 -v APMdatax2:/data   --gpus all --net=host  --security-opt seccomp=unconfined  --group-add audio --group-add video apm_proyecto
+
+docker run -it --name apm_proyectox2 -v APMdatax2:/data apm_proyecto
+
+
+docker run -it --name apm_proyectox2 --gpus all -v /tmp/.X11-unix:/tmp/.X11-unix apm_proyecto
+apt-get update && apt-get upgrade -y
+apt-get install -y curl
+apt-get install -y --no-install-recommends gcc libc-dev
+apt-get install sudo
+
+
+curl -o /usr/local/bin/su-exec.c https://raw.githubusercontent.com/ncopa/su-exec/master/su-exec.c
+gcc -Wall /usr/local/bin/su-exec.c -o/usr/local/bin/su-exec
+chown root:root /usr/local/bin/su-exec
+chmod 0755 /usr/local/bin/su-exec
+
+apt-get update -q
+apt-get upgrade -yq
+apt-get install -yq wget curl git build-essential vim sudo lsb-release locales bash-completion
+
+
+
+#ROS

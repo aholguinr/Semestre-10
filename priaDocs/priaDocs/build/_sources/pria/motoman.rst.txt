@@ -1,0 +1,57 @@
+..
+   Authors:
+      David Tosse
+   email:
+      dftossem@unal.edu.co
+..
+
+.. _motoman_node_red:
+
+Plataforma robótica - Motoman
+=============================
+
+El robot inicia el puente entre la base de datos y el controlador con el código *firebase_initializer.py*. Lo más importante a tener en cuenta es que debido a que el desarrollo es hecho en ROS, los procesos son lanzados por medio de un tópico, y su finalización también es anunciada por medio del uso de otro tópico. En el siguiente fragmento se muestra y resaltan las líneas de código que hacen referencia a los dos tópicos mencionados anteriormente para dos procesos diferentes (Pick SDV y Place SDV).
+
+Adicionalmente, se debe tener en cuenta que la referencia en caracteres que se evalúa en los condicionales (if, elif) debe coincidir con los valores que envía node-red.
+
+.. code-block:: python
+   :emphasize-lines: 1,2,21,25
+   :linenos:
+
+   pickSDV_Topic = rospy.Publisher('/motoman_maya/move_reference_pose', Int8, queue_size=10)
+   placeTopic = rospy.Publisher('/motoman_torno/place_to_sdv', Int8, queue_size=10)
+
+   def step_received(self, msg):
+
+        try:
+            command_type, _ = self.decode_command(msg)
+            rospy.logwarn('Got command %s' % command_type)
+
+            if 'abort' in command_type:
+                rospy.logwarn('ABORTING')
+                abortTopic.publish(Int8())
+                data = {
+                    'success': True
+                }
+                resultPub.publish(json.dumps(data))
+                return
+
+            if 'pick_sdv' in command_type:
+                pickSDV_Topic.publish(Int8())
+                self.pickcallback = rospy.Subscriber('/motoman_maya/task_completed', Int8, self.stepCallback)
+
+            elif 'place_sdv' in command_type:
+                placeTopic.publish(Int8())
+                self.pickcallback = rospy.Subscriber('/motoman_torno/place_completed', Int8, self.stepCallback)
+
+Para lanzar la conexión se debe ejecutar el siguiente comando en terminal::
+
+    roslaunch motoman_firebase process.launch
+
+Por último, para conectar el robot con la base de datos se realizar una petición HTTP en otra terminal::
+
+    curl -X POST localhost:3000/connect
+
+Luego de tener autorización por parte de LabFabEx, el código fuente puede ser descargado utilizando el siguiente comando::
+
+    git clone https://gitlab.com/LabFabEx/motoman.git

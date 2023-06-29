@@ -1,0 +1,153 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, LabFabEx
+# This file is distributed under the same license as the LabFabEx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: LabFabEx \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 15:34-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/motoman/motoman.rst:3
+msgid "Plataforma robótica"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:5
+msgid "La plataforma robótica es un equipo conformado por un robot motoman de seis (6) grados de libertad, una guía lineal y un motor, para un total de ocho (8) grados de libertad operados por un controlador Yaskawa DX100. Ubicado en la celda industrial dentro del laboratorio fábrica experimental (LabFabEx)."
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:7
+msgid "Para hacer uso del equipo se debe tener autorización previa del director del laboratorio y del laboratorista encargado. La operación del robot es realizada utilizando el middelware ROS (Robotic Operating System), por lo que conocimientos previos de este desarrollo son deseables."
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:11
+msgid "Requisitos del sistema"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:13
+msgid "Sistema operativo Linux Ubuntu 16.04.6 LTS (Xenial Xerus)"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:14
+msgid "ROS Kinetic"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:15
+msgid "ROS industrial"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:16
+msgid "Repositorio LabFabEx/motoman"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:17
+msgid "OpenCV 4.2.0"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:18
+msgid "TensorFlow 1.0 o superior"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:20
+msgid "Dentro del laboratorio se encuentra un equipo de computo dedicado al uso de la plataforma robótica, para utilizarlo debe contar con las credenciales de autenticación. Una vez iniciada la sesión será posible manejar la plataforma. Deberá abrir una consola de terminal y ejecutar el siguiente comando::"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:27
+msgid "Lo que abrirá una ventana del visualizador RVIZ que mostrará una virtualización de la plataforma como en la siguiente imagen:"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:30
+msgid "Se recomienda utilizar la configuración que permite visualizar la imagen actual de la cámara que se encuentra ubicada en la muñeca del robot Motoman. Esta cámara se encarga de realizar una captura de imagen cuando la función de análisis de imagen. Al ver la imagen de la cámara será posible verificar que se está transmitiendo información y así mismo que se encuentra en la orientación indicada:"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:33
+msgid "Las rutinas que el robot realiza se encuentran en la siguiente ruta :code:`~/motoman_ws/src/robot_position_cmd/src` utilizan el lenguaje C++ y deben ser compiladas cuando se realizen cambios o adiciones. Actualmente se tienen las siguientes rutinas:"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:36
+msgid "Archivo"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:36
+msgid "Descripción de Tarea"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:38
+msgid "pick_sdv.cpp"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:38
+msgid "Recoger pallet negro del SDV (usa visión)"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:40
+msgid "pick_lathe.cpp"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:40
+msgid "Recoger pallet de torno (usa visión)"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:42
+msgid "pick_table.cpp"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:42
+msgid "Recoger pallet de mesa"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:44
+msgid "place_sdv.cpp"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:44
+msgid "Colocar pallet en SDV (usa visión)"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:46
+msgid "place_lathe.cpp"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:46
+msgid "Colocar pallet en torno"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:48
+msgid "place_table.cpp"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:48
+msgid "Colocar pallet en mesa"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:50
+msgid "off_vacuum.cpp"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:50
+msgid "Toogle actuador neumático"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:52
+msgid "sensor_data.cpp"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:52
+msgid "Lectura de estado de sensor"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:55
+msgid "Para conocer la programación que puede ser realizada utilizando el desarrollo Node-Red PRIA por favor dirígase a la siguiente documentación: :ref:`motoman_node_red`"
+msgstr ""
+
+#: ../../source/motoman/motoman.rst:58
+msgid "Enlaces adicionales"
+msgstr ""

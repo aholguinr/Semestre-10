@@ -1,9 +1,4 @@
-/* 
- * File:   LibLCDXC8.h
- * Author: Robin
- *
- * Created on 2 de septiembre de 2018, 08:15 PM
- */
+
 
 #ifndef LIBLCDXC8_H
 #define	LIBLCDXC8_H
@@ -11,17 +6,14 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
-
-
-
-
 #ifdef	__cplusplus
 }
+
 #endif
+
 #include<xc.h>
 #include<string.h>
 #ifndef _XTAL_FREQ
-#define _XTAL_FREQ 10000000
 #endif
 #ifndef Datos
 #define Datos LATD	//El puerto de conexión de los datos el cual se puede cambiar
@@ -68,6 +60,8 @@ void EnviaDato(unsigned char a){
 		Datos=a;
 	}	
 }
+
+
 void InicializaLCD(void){
 //Función que inicializa el LCD caracteres
 	RS=0;
@@ -106,7 +100,7 @@ void InicializaLCD(void){
 void HabilitaLCD(void){
 //Función que genera los pulsos de habilitación al LCD 	
 	E=1;
-	__delay_us(40);
+	__delay_us(50);
     //Delay1TCY();
 	E=0;
 }
@@ -127,6 +121,8 @@ void EscribeLCD_c(unsigned char a){
 	EnviaDato(a);
 	HabilitaLCD();
 	RetardoLCD(4);
+	RetardoLCD(4);
+    __delay_ms(0.1);
 }
 
 void EscribeLCD_n8(unsigned char a,unsigned char b){
@@ -298,23 +294,20 @@ void EscribeLCD_n32(unsigned long a){
 	}	
 }
 
-
-void EscribeLCD_d(double num, unsigned char digi, unsigned char digd){
-	
-}
-
-
-
 void Mensaje_LCD_Var_Mensaje20x4(char* a,char* b,char* c,char* d){
     BorraLCD();
     DireccionaLCD(0x00);
     Mensaje_LCD_Var_Centrado(a);
+    RetardoLCD(5);
     DireccionaLCD(0xC0);
     Mensaje_LCD_Var_Centrado(b);
+    RetardoLCD(5);
     DireccionaLCD(0xC0-44);
     Mensaje_LCD_Var_Centrado(c);
+    RetardoLCD(5);
     DireccionaLCD(0xC0+20);
     Mensaje_LCD_Var_Centrado(d);
+    RetardoLCD(5);
 }
 
 
@@ -333,10 +326,13 @@ void Mensaje_LCD_Var_Centrado(char* a){
     
     for(i=0;i<n;i++){
         EscribeLCD_c(' ');
+        RetardoLCD(4);
     }
+    RetardoLCD(4);
     while(*a != '\0'){
         EscribeLCD_c(*a);
         a++;
+        RetardoLCD(4);
     }
     
     
@@ -375,6 +371,12 @@ void RetardoLCD(unsigned char a){
 				break;
 		case 4: __delay_us(40);
                 //Delay10TCYx(1); //Retardo de mas de 40 us
+				break;
+        case 5: __delay_ms(30);
+                //Delay100TCYx(38); //Retardo de mas de 15 ms
+				break;
+        case 6: __delay_ms(50);
+                //Delay100TCYx(38); //Retardo de mas de 15 ms
 				break;
 		default:
 				break;

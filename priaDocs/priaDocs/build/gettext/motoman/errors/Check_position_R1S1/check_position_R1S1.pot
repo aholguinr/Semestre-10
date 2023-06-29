@@ -1,0 +1,81 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, LabFabEx
+# This file is distributed under the same license as the LabFabEx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: LabFabEx \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 15:34-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/motoman/errors/Check_position_R1S1/check_position_R1S1.rst:7
+msgid "Check position on [R1S1]"
+msgstr ""
+
+#: ../../source/motoman/errors/Check_position_R1S1/check_position_R1S1.rst:9
+msgid "Además de esta advertencia, el robot no realizaba los movimientos a las posiciones predeterminadas (Second Home Position y Work Home Position) como tampoco encontrar las soluciones de trayectoria a las posiciones enviadas desde ROS."
+msgstr ""
+
+#: ../../source/motoman/errors/Check_position_R1S1/check_position_R1S1.rst:11
+msgid "Para solucionar este problema revisara que el reconocimiento de los Softlimits estuviese activado, como que los valores de estos y de la posición de HOME fueran los correctos siguiendo el procedimiento mostrado a continuación."
+msgstr ""
+
+#: ../../source/motoman/errors/Check_position_R1S1/check_position_R1S1.rst:15
+msgid "Opción de seguridad"
+msgstr ""
+
+#: ../../source/motoman/errors/Check_position_R1S1/check_position_R1S1.rst:19
+msgid "Opción de entrada a modo mantenimiento"
+msgstr ""
+
+#: ../../source/motoman/errors/Check_position_R1S1/check_position_R1S1.rst:21
+msgid "Una vez se selecciona, pedirá una contraseña de seguridad, esta es la que trae por defecto el Robot. En este modo, Se Busca la opción de LIMIT RELEASE, en la pestaña ROBOT del menú principal."
+msgstr ""
+
+#: ../../source/motoman/errors/Check_position_R1S1/check_position_R1S1.rst:25
+msgid "Opción limit release"
+msgstr ""
+
+#: ../../source/motoman/errors/Check_position_R1S1/check_position_R1S1.rst:29
+msgid "Validación de valor Invalid"
+msgstr ""
+
+#: ../../source/motoman/errors/Check_position_R1S1/check_position_R1S1.rst:31
+msgid "Una vez adentro de esta opción se debe verificar que los 2 ítems que aparecen (SOFT LIMIT RELEASE y ALL LIMIT RELEASE) tengan el valor de INVALID, este valor define si se ignoraran o no los valores de los Softlimits con el riesgo que el ROBOT sufra una colisión con él mismo. Después de esto, en la misma pestaña ROBOT, se selecciona la opción SOFTLIMIT SETTING. Aquí se encontrarán los valores por de los SOFTLIMITS. No se deben cambiar estos valores a menos que se tenga claridad de que se está haciendo."
+msgstr ""
+
+#: ../../source/motoman/errors/Check_position_R1S1/check_position_R1S1.rst:36
+msgid "Opción Soft limit setiing"
+msgstr ""
+
+#: ../../source/motoman/errors/Check_position_R1S1/check_position_R1S1.rst:38
+msgid "Una vez aquí verificamos que los límites de todas las juntas sean los siguientes:"
+msgstr ""
+
+#: ../../source/motoman/errors/Check_position_R1S1/check_position_R1S1.rst:42
+msgid "Verificación de límites de página 1 (primeros 6 grados de libertad)"
+msgstr ""
+
+#: ../../source/motoman/errors/Check_position_R1S1/check_position_R1S1.rst:46
+msgid "Verificación de límites de página 2 (últimos 2 grados de libertad)"
+msgstr ""
+
+#: ../../source/motoman/errors/Check_position_R1S1/check_position_R1S1.rst:48
+msgid "Como paso final se ingresa a la opción HOME POSITION en la pestaña ROBOT del menú principal , aquí se verán los valores por defecto de la posición de Home del robot , estos valores son muy importantes por que es desde estos es que el robot ubica todos sus límites. Los Valores de HOME deben ser los siguientes:"
+msgstr ""
+
+#: ../../source/motoman/errors/Check_position_R1S1/check_position_R1S1.rst:52
+msgid "Verificación valores de HOME (1)."
+msgstr ""
+
+#: ../../source/motoman/errors/Check_position_R1S1/check_position_R1S1.rst:56
+msgid "Verificación valores de HOME (2)."
+msgstr ""

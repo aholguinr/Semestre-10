@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, LabFabEx
+# This file is distributed under the same license as the LabFabEx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: LabFabEx \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 15:34-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/almacen/manual_usuario/manual.rst:10
+msgid "User manual"
+msgstr ""
+
+#: ../../source/almacen/manual_usuario/manual.rst:14
+msgid "Turn On"
+msgstr ""
+
+#: ../../source/almacen/manual_usuario/manual.rst:16
+msgid "Turn on the server computer."
+msgstr ""
+
+#: ../../source/almacen/manual_usuario/manual.rst:17
+msgid "Then turn on the warehouse, plug it into a 120V source push the switch to On position, the pilot ligthmust turn on if the warehouse is energized, after remove the emergency stop."
+msgstr ""
+
+#: ../../source/almacen/manual_usuario/manual.rst:18
+msgid "In a Linux console conect the warehouse to the serverwith a USB type B cable, now the warehouse should go  to \"Home\" position and wait."
+msgstr ""
+
+#: ../../source/almacen/manual_usuario/manual.rst:19
+msgid "Use the ’roscore’ comand to initialize the ROS core."
+msgstr ""
+
+#: ../../source/almacen/manual_usuario/manual.rst:20
+msgid "Launch the serial comunication node in other console by executing the command::"
+msgstr ""
+
+#: ../../source/almacen/manual_usuario/manual.rst:25
+msgid "Where ’port’ is the server USB port conected to Arduino board and’baud’ is comunication speed that should be 57600 baudios. Now you are able to command the warehouse."
+msgstr ""
+
+#: ../../source/almacen/manual_usuario/manual.rst:28
+msgid "To Select a cell type::"
+msgstr ""
+
+#: ../../source/almacen/manual_usuario/manual.rst:32
+msgid "To put a box on SDV type::"
+msgstr ""
+
+#: ../../source/almacen/manual_usuario/manual.rst:38
+msgid "Shutdown"
+msgstr ""
+
+#: ../../source/almacen/manual_usuario/manual.rst:40
+msgid "Activate the emergency stop."
+msgstr ""
+
+#: ../../source/almacen/manual_usuario/manual.rst:42
+msgid "Turn off the light switch on the warehouse front panel."
+msgstr ""
+
+#: ../../source/almacen/manual_usuario/manual.rst:44
+msgid "For each open console type ’Ctrl+C’ to close all the nodes."
+msgstr ""
+
+#: ../../source/almacen/manual_usuario/manual.rst:46
+msgid "Once this is done the server computer can be safely shut down."
+msgstr ""
+
+#: ../../source/almacen/manual_usuario/manual.rst:50
+msgid "Safety precaution"
+msgstr ""
+
+#: ../../source/almacen/manual_usuario/manual.rst:52
+msgid "An emergency button is available which must be activated in case of any emergency."
+msgstr ""
+
+#: ../../source/almacen/manual_usuario/manual.rst:54
+msgid "The machine must not be manipulated while it is running."
+msgstr ""
+
+#: ../../source/almacen/manual_usuario/manual.rst:61
+msgid "VMD usage"
+msgstr ""
+
+#: ../../source/almacen/manual_usuario/manual.rst:67
+msgid "Cloning the project in your catkin_ws folder::"
+msgstr ""
+
+#: ../../source/almacen/manual_usuario/manual.rst:71
+msgid "Install additional ROS packages::"
+msgstr ""
+
+#: ../../source/almacen/manual_usuario/manual.rst:75
+msgid "Launch gazebo node::"
+msgstr ""
+
+#: ../../source/almacen/manual_usuario/manual.rst:80
+msgid "To control the warehouse, in other console type::"
+msgstr ""
+
+#: ../../source/almacen/manual_usuario/manual.rst:85
+msgid "Then publish the positions in the joint topics, where 'joint1' is the z axis joint; 'joint1' is the x axis joint; and 'joint3' is the y axis joint, example::"
+msgstr ""

@@ -1,0 +1,202 @@
+..
+   Authors:
+      Wilmer David Garzon caceres
+   email:
+      wdgarzonc@unal.edu.co
+
+
+SDV SLAM aplication
+###################
+
+System requirement
+------------------
+
+* Ros Melodic. 
+* Python 2.7.
+* OpenCV 3.3.
+
+Installation
+------------------------------
+
+Install realsense r200 ROS node
+*******************************
+For ROS Melodic distribution we will use the G.Doisy work, the following instructions are an abstract from `the original instructions`_.
+
+1. Install the packages required for librealsense build::
+
+      sudo apt-get install libusb-1.0-0-dev pkg-config libglfw3-dev libssl-dev ros-melodic-camera-info-manager ros-melodic-rgbd-launch
+
+
+2. Get the git repository for librealsense ROS Melodic compatible::
+
+      cd ~ 
+      git clone https://github.com/doisyg/librealsense.git
+      cd librealsense/
+      git checkout recent_kernel_compatibility
+
+   or download :download:`the .zip folder <https://github.com/doisyg/librealsense/archive/recent_kernel_compatibility.zip>` 
+
+3. Apply required patches to kernel modules and build the patched module::
+      
+      sudo cp config/99-realsense-libusb.rules /etc/udev/rules.d/
+      sudo udevadm control --reload-rules && udevadm trigger
+      ./scripts/patch-realsense-ubuntu-xenial.sh
+
+4. Verify the latest entries in kernel log::
+
+      sudo dmesg | tail -n 50
+
+   The log should indicate that a new uvcvideo driver has been registered. If any errors have been noted, attempt the patching process again.
+
+5. Add uvcvideo driver to modules file::
+
+      sudo tee -a /etc/modules <<< "uvcvideo"
+      sudo update-initramfs -u
+
+6. Library Build::
+    
+      mkdir build
+      cd build
+      cmake ../
+      make
+      sudo make install
+
+7. Get the git repository for realsense-ros in your catkin src folder::
+
+      cd ~/catkin_ws/src/
+      git clone https://github.com/intel-ros/realsense/
+      git checkout indigo-devel 
+
+   or download :download:`the .zip folder  <https://github.com/intel-ros/realsense/archive/indigo-devel.zip>`. 
+
+8. Download and replace the file :download:`CMakeLists.txt <https://github.com/intel-ros/realsense/files/2401961/CMakeLists.txt>`.
+9. Build.
+
+
+Install RTAB-Map node
+*********************
+
+For full instruction go to `rtabmap repository`_.
+
+1. Install rtabmap binaries and unistall for get all required dependencies::
+
+      sudo apt install ros-melodic-rtabmap ros-melodic-rtabmap-ros
+      sudo apt remove ros-melodic-rtabmap ros-melodic-rtabmap-ros
+      sudo apt install ros-melodic-apriltag-ros
+
+2. Get optional dependency g2o::
+
+      sudo apt-get install ros-melodic-libg2o
+
+3. Get optional dependency ceres-solver::
+      
+      cd ~
+      sudo apt-get install libgoogle-glog-dev libgflags-dev
+      sudo apt-get install libatlas-base-dev
+      sudo apt-get install libeigen3-dev
+      sudo apt-get install libsuitesparse-dev
+      git clone https://ceres-solver.googlesource.com/ceres-solver
+
+      mkdir ceres-bin
+      cd ceres-bin
+      cmake ../ceres-solver
+      make -j3
+      make install
+
+4. Get optional dependency libpointmatcher:
+      4.1 Get dependencies::
+
+            sudo apt-get install libboost-all-dev
+            cd ~
+            git clone git://github.com/ethz-asl/libnabo.git
+            cd libnabo
+            SRC_DIR=$PWD
+            BUILD_DIR=${SRC_DIR}/build
+            mkdir -p ${BUILD_DIR} && cd ${BUILD_DIR}
+            cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ${SRC_DIR}
+            make
+            sudo make install
+
+
+      4.2 Get libpointmatcher::
+
+            cd ~
+            git clone git://github.com/ethz-asl/libpointmatcher.git
+            cd libpointmatcher
+            SRC_DIR=${PWD}
+            BUILD_DIR=${SRC_DIR}/build
+            mkdir -p ${BUILD_DIR} && cd ${BUILD_DIR}
+            cmake -D CMAKE_BUILD_TYPE=RelWithDebInfo ${SRC_DIR}
+            make
+            sudo make install
+
+5. Install rtabmap library::
+
+      cd ~
+      git clone https://github.com/introlab/rtabmap.git rtabmap
+      cd rtabmap/build/
+      cmake ..  
+      make
+      sudo make install
+
+6. Install rtabmap ROS package::
+
+      cd ~/catkin_ws
+      git clone https://github.com/introlab/rtabmap_ros.git src/rtabmap_ros
+      catkin_make -j1
+
+catkin_make options:
+
+      * Add -DRTABMAP_SYNC_MULTI_RGBD=ON to catkin_make if you plan to use multiple cameras.
+      * Add -DRTABMAP_SYNC_USER_DATA=ON to catkin_make if you plan to use user data synchronized topics.
+
+
+
+SDV SLAM usage
+--------------
+
+Localization task
+*****************
+
+For use the camera info in the odometry estimation rtabmap parameter must be set true in the roslaunch instruction. There are three options acording the node that manage the laser scan information:
+
+* For use Hector SLAM launch the SDV with::
+
+      roslaunch sdv_nav sdv_nav.launch rtabmap:=true
+
+The localization parameter value is hector by default. 
+
+
+* For use AMCL type::
+
+      roslaunch sdv_nav sdv_nav.launch localization:=amcl rtabmap:=true
+
+* For ICP aproximation use::
+
+      roslaunch sdv_nav sdv_nav.launch localization:=icp 
+
+Note that rtabmap parameter will set true automatically.
+
+
+Mapping task
+************
+
+To construct a new map set mapping parameter to true. e.g.::
+
+      roslaunch sdv_nav sdv_nav.launch localization:=icp mapping:=true
+
+Set mapping and rtabmap to true will erase the map database localised at ~/.ros/rtabmap.db, so there is a backup file in ~/.ros/backup.db. Don't forget update it when a new map is available.
+
+For extend the actual map with a new zone use the command::
+
+      rtabmap-reprocess "pathmap1.db;pathmap2.db" outmap.db 
+
+So you have not to remap all the zones.
+
+To visualize de new map type::
+
+      rtabmap-databaseViewer pathmap.db
+
+
+.. _the original instructions: https://github.com/doisyg/librealsense/blob/recent_kernel_compatibility/doc/installation.md
+.. _rtabmap repository: https://github.com/introlab/rtabmap_ros

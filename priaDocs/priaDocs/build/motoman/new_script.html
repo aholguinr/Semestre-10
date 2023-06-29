@@ -1,0 +1,626 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Crear nuevo script &#8212; LabFabEx  documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Sensor foto sensible" href="sensor/sensor.html" />
+    <link rel="prev" title="Plataforma robótica" href="motoman.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+
+<div style="background-color: #f8f8f8; text-align: left; padding: 10px 10px 15px 15px">
+    <a href="../index.html"><h1 font-family="" style="font-size: 15pt;">Documentación LabFabEx</h1></a>
+</div>
+
+
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="crear-nuevo-script">
+<h1>Crear nuevo script<a class="headerlink" href="#crear-nuevo-script" title="Permalink to this headline">¶</a></h1>
+<p>Si se desea crear una nueva rutina de movimiento de la plataforma existen dos maneras en las cuales se puede realizar, ya sea por medio de un script en el lenguaje <em>C++</em> o en <em>python</em>. El  procedimiento sugerido es el siguiente:</p>
+<ol class="arabic simple">
+<li>Posicionar el robot en las poses deseadas.</li>
+<li>Conocer el valor de las articulaciones o del efector final.</li>
+<li>Guardar la información anterior en el nuevo script.</li>
+</ol>
+<div class="section" id="pose-actual">
+<h2>Pose actual<a class="headerlink" href="#pose-actual" title="Permalink to this headline">¶</a></h2>
+<p>Existen dos métodos para conocer la información sobre la pose. El primero de estos es a través de la información contenida en el tópico <em>/joinState</em> el cual mostrará como resultado el valor en radianes de cada uno de los ocho grados de libertad de la plataforma.</p>
+<div class="section" id="valores-articulares">
+<h3>Valores articulares<a class="headerlink" href="#valores-articulares" title="Permalink to this headline">¶</a></h3>
+<p>Para conocer el valor de las ocho articulaciones se debe ejecutar en una terminal el comando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rostopic</span> <span class="n">echo</span> <span class="o">/</span><span class="n">joint_states</span>
+</pre></div>
+</div>
+<p>La información relevante del resultado mostrado es el arreglo denominado <em>position</em>. El siguiente resultado se genera cuando el robot se encuentra en la posición <em>home</em>.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>header:
+seq: <span class="m">381</span>
+stamp:
+    secs: <span class="m">1583595150</span>
+    nsecs: <span class="m">852149009</span>
+frame_id: <span class="s1">&#39;&#39;</span>
+name: <span class="o">[</span>base_joint_b1, arm_joint_s, arm_joint_l, arm_joint_u, arm_joint_r, arm_joint_b, arm_joint_t,
+station_joint_s1<span class="o">]</span>
+<span class="hll">position: <span class="o">[</span><span class="m">0</span>.0, <span class="m">0</span>.0, <span class="m">0</span>.0, <span class="m">0</span>.0, <span class="m">0</span>.0, <span class="m">0</span>.0, <span class="m">0</span>.0, <span class="m">0</span>.0<span class="o">]</span>
+</span>velocity: <span class="o">[]</span>
+effort: <span class="o">[]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="valores-de-la-pose">
+<h3>Valores de la pose<a class="headerlink" href="#valores-de-la-pose" title="Permalink to this headline">¶</a></h3>
+<p>Para conocer los valores de la pose actual en términos de la posición (x, y, z) y orientación (x, y, z, w) se debe ejecutar el script de python ubicado en la ruta <code class="code docutils literal notranslate"><span class="pre">~/motoman_ws/src/scripts/</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">getPose</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>En consola se mostrará el resultado esperado.</p>
+</div>
+</div>
+<div class="section" id="script-en-c">
+<h2>Script en C++<a class="headerlink" href="#script-en-c" title="Permalink to this headline">¶</a></h2>
+<p>Se debe crear un archivo dentro del <em>workspace</em> de ROS en el equipo destinado para uso de la plataforma robótica, el directorio estándar para esto es el ubicado en la dirección <code class="code docutils literal notranslate"><span class="pre">~/motoman_ws/src/robot_position_cmd/src</span></code>. Desde luego el archivo debe tener la extensión <em>cpp</em>. A continuación se enuncian las partes que debe contener el código:</p>
+<div class="section" id="encabezado">
+<h3>Encabezado<a class="headerlink" href="#encabezado" title="Permalink to this headline">¶</a></h3>
+<p>La primera sección de código debe llamar a las librerías del sistema para que puedan estar disponibles las funcionalidades posteriormente. En caso que se deseen utilizar las salidas y entradas lógicas (actuador neumático y sensor fotosensible) es necesario importar las librerías opcionales.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// MANDATORY</span>
+<span class="cp">#include</span> <span class="cpf">&lt;ros/ros.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;moveit/move_group_interface/move_group_interface.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;moveit/planning_scene_interface/planning_scene_interface.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;moveit_msgs/GetPositionIK.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;std_msgs/Int8.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;geometry_msgs/Pose.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;geometry_msgs/Point.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;industrial_msgs/RobotStatus.h&gt;</span><span class="cp"></span>
+
+<span class="c1">// OPTIONAL</span>
+<span class="cp">#include</span> <span class="cpf">&lt;motoman_msgs/WriteSingleIO.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;motoman_msgs/ReadSingleIO.h&gt;</span><span class="cp"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="prototipos-de-funciones">
+<h3>Prototipos de funciones<a class="headerlink" href="#prototipos-de-funciones" title="Permalink to this headline">¶</a></h3>
+<p>Siguiendo las buenas prácticas para desarrollo de código en <em>C++</em> se deben declarar los prototipos de las funciones utilizadas en el código:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Callbacks prototipes</span>
+<span class="kt">void</span> <span class="nf">move_take_img_pose_cb</span><span class="p">(</span><span class="k">const</span> <span class="n">std_msgs</span><span class="o">::</span><span class="n">Int8ConstPtr</span> <span class="n">msg</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">pick_piece_cb</span><span class="p">(</span><span class="k">const</span> <span class="n">std_msgs</span><span class="o">::</span><span class="n">Int8ConstPtr</span> <span class="n">msg</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">place_piece_cb</span><span class="p">(</span><span class="k">const</span> <span class="n">geometry_msgs</span><span class="o">::</span><span class="n">PointConstPtr</span> <span class="n">msg</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">move_start_cb</span><span class="p">(</span><span class="k">const</span> <span class="n">std_msgs</span><span class="o">::</span><span class="n">Int8ConstPtr</span> <span class="n">msg</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">move_wait_pose_cb</span><span class="p">(</span><span class="k">const</span> <span class="n">std_msgs</span><span class="o">::</span><span class="n">Int8ConstPtr</span> <span class="n">msg</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">in_motion_cb</span><span class="p">(</span><span class="k">const</span> <span class="n">industrial_msgs</span><span class="o">::</span><span class="n">RobotStatusConstPtr</span> <span class="n">msg</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">abort_cb</span><span class="p">(</span><span class="k">const</span> <span class="n">std_msgs</span><span class="o">::</span><span class="n">Int8ConstPtr</span> <span class="n">msg</span><span class="p">,</span> <span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span> <span class="o">&amp;</span><span class="n">move_group</span><span class="p">);</span>
+
+<span class="c1">// Robot movement functions prototipes</span>
+<span class="kt">int</span> <span class="nf">getIK</span><span class="p">(</span><span class="n">moveit_msgs</span><span class="o">::</span><span class="n">GetPositionIK</span> <span class="o">&amp;</span> <span class="n">server</span><span class="p">,</span> <span class="n">ros</span><span class="o">::</span><span class="n">ServiceClient</span> <span class="o">&amp;</span> <span class="n">client</span><span class="p">,</span>
+    <span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span> <span class="o">&amp;</span> <span class="n">group</span><span class="p">,</span>
+    <span class="n">geometry_msgs</span><span class="o">::</span><span class="n">Pose</span> <span class="o">&amp;</span> <span class="n">target_pose</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="o">&amp;</span> <span class="n">joint_group_positions</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">move_robot_joints</span><span class="p">(</span><span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span> <span class="o">&amp;</span> <span class="n">move_group</span><span class="p">,</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="o">&amp;</span> <span class="n">target_joints</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">define_task_positions</span><span class="p">();</span>
+<span class="kt">void</span> <span class="nf">move_robot_to_pose</span><span class="p">(</span><span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span> <span class="o">&amp;</span> <span class="n">group</span><span class="p">,</span>
+    <span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span> <span class="o">&amp;</span> <span class="n">move_group</span><span class="p">,</span> <span class="n">geometry_msgs</span><span class="o">::</span><span class="n">Pose</span> <span class="o">&amp;</span> <span class="n">pose</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">move_to_take_img_pose</span><span class="p">(</span><span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span> <span class="o">&amp;</span> <span class="n">group</span><span class="p">,</span>
+    <span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span> <span class="o">&amp;</span> <span class="n">move_group</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">move_to_pick_piece</span><span class="p">(</span><span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span> <span class="o">&amp;</span> <span class="n">group</span><span class="p">,</span>
+    <span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span> <span class="o">&amp;</span> <span class="n">move_group</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">move_to_place_piece</span><span class="p">(</span><span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span> <span class="o">&amp;</span> <span class="n">group</span><span class="p">,</span>
+    <span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span> <span class="o">&amp;</span> <span class="n">move_group</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">move_to_start</span><span class="p">(</span><span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span> <span class="o">&amp;</span> <span class="n">group</span><span class="p">,</span>
+    <span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span> <span class="o">&amp;</span> <span class="n">move_group</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">move_to_wait_pose</span><span class="p">(</span><span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span> <span class="o">&amp;</span> <span class="n">group</span><span class="p">,</span>
+    <span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span> <span class="o">&amp;</span> <span class="n">move_group</span><span class="p">);</span>
+
+<span class="c1">// Aditional util function prototipes (optional)</span>
+<span class="kt">void</span> <span class="nf">set_vaccum</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">get_sensor</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">get_offset</span><span class="p">(</span><span class="kt">double</span><span class="p">,</span> <span class="kt">double</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="variables-globales">
+<h3>Variables globales<a class="headerlink" href="#variables-globales" title="Permalink to this headline">¶</a></h3>
+<p>Se recomienda continuar con la definición de las variables globales. Cabe resaltar que existen dos tipos de variables mencionadas, las obligatorias y las opcionales.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// MANDATORY</span>
+<span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">PLANNING_GROUP</span> <span class="o">=</span> <span class="s">&quot;arm_on_rail&quot;</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">MOVE_GROUP</span> <span class="o">=</span> <span class="s">&quot;mh6&quot;</span><span class="p">;</span>
+<span class="c1">// Services</span>
+<span class="n">ros</span><span class="o">::</span><span class="n">ServiceClient</span> <span class="n">ik_client</span><span class="p">;</span>
+<span class="c1">// ROS variables</span>
+<span class="n">geometry_msgs</span><span class="o">::</span><span class="n">Pose</span> <span class="n">wait_pose</span><span class="p">;</span>
+<span class="n">geometry_msgs</span><span class="o">::</span><span class="n">Point</span> <span class="n">offset_object</span><span class="p">;</span>
+<span class="n">sensor_msgs</span><span class="o">::</span><span class="n">JointState</span> <span class="n">joint_state</span><span class="p">;</span>
+<span class="n">moveit_msgs</span><span class="o">::</span><span class="n">GetPositionIK</span> <span class="n">ik_server</span><span class="p">;</span>
+<span class="n">geometry_msgs</span><span class="o">::</span><span class="n">PoseStamped</span> <span class="n">start_pose_stmp</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">joint_move_group_positions</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">home_position</span><span class="p">,</span> <span class="n">rail_fwd</span><span class="p">,</span> <span class="n">rail_bwd</span><span class="p">;</span>
+
+<span class="c1">// OPTIONAL</span>
+<span class="c1">// Services</span>
+<span class="n">ros</span><span class="o">::</span><span class="n">ServiceClient</span> <span class="n">io_client</span><span class="p">;</span>
+<span class="n">ros</span><span class="o">::</span><span class="n">ServiceClient</span> <span class="n">read_io_client</span><span class="p">;</span>
+<span class="c1">// I/O signals</span>
+<span class="n">motoman_msgs</span><span class="o">::</span><span class="n">ReadSingleIO</span> <span class="n">read_io</span><span class="p">;</span>
+<span class="n">motoman_msgs</span><span class="o">::</span><span class="n">WriteSingleIO</span> <span class="n">io_server</span><span class="p">;</span>
+<span class="c1">// Other variables</span>
+<span class="n">geometry_msgs</span><span class="o">::</span><span class="n">Pose</span> <span class="n">pick_up_pose</span><span class="p">,</span> <span class="n">place_pose</span><span class="p">,</span> <span class="n">take_img_pose</span><span class="p">;</span>
+<span class="c1">// C++ variables</span>
+<span class="kt">bool</span> <span class="n">move_to_wait</span> <span class="o">=</span> <span class="nb">false</span><span class="p">,</span> <span class="n">move_to_pick_up</span> <span class="o">=</span> <span class="nb">false</span><span class="p">,</span>
+    <span class="n">move_to_place</span> <span class="o">=</span> <span class="nb">false</span><span class="p">,</span> <span class="n">move_start_pos</span> <span class="o">=</span> <span class="nb">false</span><span class="p">,</span>
+    <span class="n">move_to_take_img</span> <span class="o">=</span> <span class="nb">false</span><span class="p">,</span> <span class="n">is_moving_</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="topicos-de-ros">
+<h3>Tópicos de ROS<a class="headerlink" href="#topicos-de-ros" title="Permalink to this headline">¶</a></h3>
+<p>Finalmente, antes de iniciar con la función principal <em>main</em> se recomienda incluir los nombres de los tópicos que publicarán la información. Estos son opcionales y su definición es decisión del programador.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Publishers</span>
+<span class="n">ros</span><span class="o">::</span><span class="n">Publisher</span> <span class="n">move_wait_pose_pub</span><span class="p">;</span>
+<span class="n">ros</span><span class="o">::</span><span class="n">Publisher</span> <span class="n">pick_up_complete_pub</span><span class="p">;</span>
+<span class="n">ros</span><span class="o">::</span><span class="n">Publisher</span> <span class="n">place_complete_pub</span><span class="p">;</span>
+<span class="n">ros</span><span class="o">::</span><span class="n">Publisher</span> <span class="n">task_complete_pub</span><span class="p">;</span>
+<span class="n">ros</span><span class="o">::</span><span class="n">Publisher</span> <span class="n">piece_on_vaccum_pub</span><span class="p">;</span>
+<span class="n">ros</span><span class="o">::</span><span class="n">Publisher</span> <span class="n">move_take_img_pose_pub</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="funcion-principal-main">
+<h3>Función principal (main)<a class="headerlink" href="#funcion-principal-main" title="Permalink to this headline">¶</a></h3>
+<p>En este segmento es necesario realizar la definición de las variables de ROS declaradas anteriormente (publishers y subscribers) para que pueda existir una comunicación eficaz. Las siguientes líneas de ejemplo han sido extraidas del código <em>pick_table.cpp</em>.</p>
+<p>Como se resalta a continuación, el funcionamiento del código depende de la correcta publicación y subscripción al mismo tópico, es decir, el robot informa por medio del tópico <code class="code docutils literal notranslate"><span class="pre">/motoman_table/wait_pose_reached</span></code> que acaba de culminar el primer paso de la tarea (línea 44), esta información regresa al script ya que existe un subscriptor que apunta al mismo tópico (línea 36). De esta manera se cierra el lazo de la información y se dispara el siguiente paso.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+    <span class="c1">// MANDATORY</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">,</span> <span class="s">&quot;motoman_robot&quot;</span><span class="p">);</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">NodeHandle</span> <span class="n">nh</span><span class="p">;</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">AsyncSpinner</span> <span class="n">spinner</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="n">spinner</span><span class="p">.</span><span class="n">start</span><span class="p">();</span>
+
+    <span class="c1">// Planning group</span>
+    <span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span> <span class="n">group</span><span class="p">(</span><span class="n">PLANNING_GROUP</span><span class="p">);</span>
+    <span class="n">group</span><span class="p">.</span><span class="n">setPlannerId</span><span class="p">(</span><span class="s">&quot;RRTConnectkConfigDefault&quot;</span><span class="p">);</span>
+    <span class="n">moveit</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">RobotStatePtr</span> <span class="n">current_state_group</span> <span class="o">=</span> <span class="n">group</span><span class="p">.</span><span class="n">getCurrentState</span><span class="p">();</span>
+    <span class="k">const</span> <span class="n">robot_state</span><span class="o">::</span><span class="n">JointModelGroup</span> <span class="o">*</span><span class="n">joint_model_group</span> <span class="o">=</span> <span class="n">group</span><span class="p">.</span><span class="n">getCurrentState</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">getJointModelGroup</span><span class="p">(</span><span class="n">PLANNING_GROUP</span><span class="p">);</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">joint_group_positions</span><span class="p">;</span>
+    <span class="n">current_state_group</span><span class="o">-&gt;</span><span class="n">copyJointGroupPositions</span><span class="p">(</span><span class="n">joint_model_group</span><span class="p">,</span> <span class="n">joint_group_positions</span><span class="p">);</span>
+    <span class="n">start_pose_stmp</span> <span class="o">=</span> <span class="n">group</span><span class="p">.</span><span class="n">getCurrentPose</span><span class="p">(</span><span class="n">group</span><span class="p">.</span><span class="n">getEndEffectorLink</span><span class="p">());</span>
+
+    <span class="c1">// Move group</span>
+    <span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span> <span class="n">move_group</span><span class="p">(</span><span class="n">MOVE_GROUP</span><span class="p">);</span>
+    <span class="n">move_group</span><span class="p">.</span><span class="n">setPlannerId</span><span class="p">(</span><span class="s">&quot;RRTConnectkConfigDefault&quot;</span><span class="p">);</span>
+    <span class="n">moveit</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">RobotStatePtr</span> <span class="n">current_state_move_group</span> <span class="o">=</span> <span class="n">move_group</span><span class="p">.</span><span class="n">getCurrentState</span><span class="p">();</span>
+    <span class="k">const</span> <span class="n">robot_state</span><span class="o">::</span><span class="n">JointModelGroup</span> <span class="o">*</span><span class="n">joint_model_move_group</span> <span class="o">=</span> <span class="n">move_group</span><span class="p">.</span><span class="n">getCurrentState</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">getJointModelGroup</span><span class="p">(</span><span class="n">MOVE_GROUP</span><span class="p">);</span>
+
+    <span class="c1">// Client</span>
+    <span class="n">ik_client</span> <span class="o">=</span> <span class="n">nh</span><span class="p">.</span><span class="n">serviceClient</span><span class="o">&lt;</span><span class="n">moveit_msgs</span><span class="o">::</span><span class="n">GetPositionIK</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;compute_ik&quot;</span><span class="p">);</span>
+
+    <span class="n">current_state_group</span><span class="o">-&gt;</span><span class="n">copyJointGroupPositions</span><span class="p">(</span><span class="n">joint_model_move_group</span><span class="p">,</span> <span class="n">joint_move_group_positions</span><span class="p">);</span>
+
+    <span class="c1">// Predefined platform poses</span>
+    <span class="n">define_task_positions</span><span class="p">();</span>
+
+    <span class="c1">// OPTIONAL</span>
+
+    <span class="c1">// Subscribers</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">Subscriber</span> <span class="n">move_wait_pose_sub</span> <span class="o">=</span> <span class="n">nh</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s">&quot;/motoman_table/pick_pallete&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">move_wait_pose_cb</span><span class="p">);</span>
+<span class="hll">    <span class="n">ros</span><span class="o">::</span><span class="n">Subscriber</span> <span class="n">pick_piece_sub</span> <span class="o">=</span> <span class="n">nh</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s">&quot;/motoman_table/wait_pose_reached&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">pick_piece_cb</span><span class="p">);</span>
+</span>    <span class="n">ros</span><span class="o">::</span><span class="n">Subscriber</span> <span class="n">move_take_img_sub</span> <span class="o">=</span> <span class="n">nh</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s">&quot;/motoman_table/pick_up_completed&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">move_take_img_pose_cb</span><span class="p">);</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">Subscriber</span> <span class="n">place_piece_sub</span> <span class="o">=</span> <span class="n">nh</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s">&quot;/motoman_table/center_point&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">place_piece_cb</span><span class="p">);</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">Subscriber</span> <span class="n">start_pose_cmd_sub</span> <span class="o">=</span> <span class="n">nh</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s">&quot;/motoman_table/place_completed&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">move_start_cb</span><span class="p">);</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">Subscriber</span> <span class="n">abort_cmd_sub</span> <span class="o">=</span> <span class="n">nh</span><span class="p">.</span><span class="n">subscribe</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">Int8</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;/motoman_abort&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">boost</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="n">abort_cb</span><span class="p">,</span> <span class="n">_1</span><span class="p">,</span> <span class="n">boost</span><span class="o">::</span><span class="n">ref</span><span class="p">(</span><span class="n">move_group</span><span class="p">)));</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">Subscriber</span> <span class="n">in_motion_sub</span> <span class="o">=</span> <span class="n">nh</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s">&quot;/robot_status&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">in_motion_cb</span><span class="p">);</span>
+
+    <span class="c1">// Publishers</span>
+<span class="hll">    <span class="n">move_wait_pose_pub</span> <span class="o">=</span> <span class="n">nh</span><span class="p">.</span><span class="n">advertise</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">Int8</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;/motoman_table/wait_pose_reached&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span>    <span class="n">pick_up_complete_pub</span> <span class="o">=</span> <span class="n">nh</span><span class="p">.</span><span class="n">advertise</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">Int8</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;/motoman_table/pick_up_completed&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="n">move_take_img_pose_pub</span> <span class="o">=</span> <span class="n">nh</span><span class="p">.</span><span class="n">advertise</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">Int8</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;/motoman_table/reference_pose_reached&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="n">piece_on_vaccum_pub</span> <span class="o">=</span> <span class="n">nh</span><span class="p">.</span><span class="n">advertise</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">Int8</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;/motoman_table/piece_on_vaccum&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="n">place_complete_pub</span> <span class="o">=</span> <span class="n">nh</span><span class="p">.</span><span class="n">advertise</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">Int8</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;/motoman_table/place_completed&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="n">task_complete_pub</span> <span class="o">=</span> <span class="n">nh</span><span class="p">.</span><span class="n">advertise</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">Int8</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;/motoman_table/task_completed&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+    <span class="c1">// I/O Clients</span>
+    <span class="n">io_client</span> <span class="o">=</span> <span class="n">nh</span><span class="p">.</span><span class="n">serviceClient</span><span class="o">&lt;</span><span class="n">motoman_msgs</span><span class="o">::</span><span class="n">WriteSingleIO</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;write_single_io&quot;</span><span class="p">);</span>
+    <span class="n">read_io_client</span> <span class="o">=</span> <span class="n">nh</span><span class="p">.</span><span class="n">serviceClient</span><span class="o">&lt;</span><span class="n">motoman_msgs</span><span class="o">::</span><span class="n">ReadSingleIO</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;read_single_io&quot;</span><span class="p">);</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">ros</span><span class="o">::</span><span class="n">ok</span><span class="p">())</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">move_to_wait</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">move_to_wait</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+            <span class="n">move_to_wait_pose</span><span class="p">(</span><span class="n">group</span><span class="p">,</span> <span class="n">move_group</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">move_to_pick_up</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">move_to_pick_up</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+            <span class="n">move_to_pick_piece</span><span class="p">(</span><span class="n">group</span><span class="p">,</span> <span class="n">move_group</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">ros</span><span class="o">::</span><span class="n">spinOnce</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="callbacks">
+<h3>Callbacks<a class="headerlink" href="#callbacks" title="Permalink to this headline">¶</a></h3>
+<p>Como es sabido, cada vez que un subscriptor recibe información por parte de un tópico se dispara la función callback referenciada. La línea 36 del código anterior por ejemplo hace un llamado a la función <em>pick_piece_cb()</em>, el trabajo de esta función es cambiar el valor la variable <code class="code docutils literal notranslate"><span class="pre">move_to_pick_up</span></code> a verdadero (true).</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">pick_piece_cb</span><span class="p">(</span><span class="k">const</span> <span class="n">std_msgs</span><span class="o">::</span><span class="n">Int8ConstPtr</span> <span class="n">msg</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">move_to_pick_up</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="compilacion-y-uso">
+<h3>Compilación y uso<a class="headerlink" href="#compilacion-y-uso" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="cmakelists">
+<h4>CMakeLists<a class="headerlink" href="#cmakelists" title="Permalink to this headline">¶</a></h4>
+<p>El proceso de compilación y generación del ejecutable es estándar para archivos hecho en <em>C++</em>, ROS utiliza <em>catkin</em> para realizar este proceso. Este proceso se debe realizar con cada uno de los nuevos códigos, se debe incluir manualmente en el archivo <em>CMakeLists.txt</em> ubicado en <code class="code docutils literal notranslate"><span class="pre">~/motoman_ws/src/robot_position_cmd/src</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span># Usage
+add_executable(NEW_NAME src/NEW_NAME.cpp)
+target_link_libraries(NEW_NAME ${catkin_LIBRARIES})
+</pre></div>
+</div>
+<p>El siguiente es un ejemplo para el código pick_lathe.cpp</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span># Example
+add_executable(pick_lathe src/pick_lathe.cpp)
+target_link_libraries(pick_lathe ${catkin_LIBRARIES})
+</pre></div>
+</div>
+<p>Una vez hecho esto se debe compilar, desde la ubicación <code class="code docutils literal notranslate"><span class="pre">~/motoman_ws</span></code> se ejecuta el siguiente comando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">catkin_make</span>
+</pre></div>
+</div>
+<p>El resultado de esta operación debe ser exitoso y con un porcentaje de compilación del 100%.</p>
+</div>
+<div class="section" id="nodo-de-ros">
+<h4>Nodo de ROS<a class="headerlink" href="#nodo-de-ros" title="Permalink to this headline">¶</a></h4>
+<p>El lanzamiento individual del nodo se hace utilizando el comando <em>rosrun</em>, para un nuevo archivo el siguiente sería el ejemplo de este lanzamiento:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rosrun</span> <span class="n">robot_position_cmd</span> <span class="n">NEW_NAME_node</span>
+</pre></div>
+</div>
+<div class="section" id="inicio-de-tarea">
+<span id="taskrun"></span><h5>Inicio de tarea<a class="headerlink" href="#inicio-de-tarea" title="Permalink to this headline">¶</a></h5>
+<p>Ya que la lógica de ejecución implica la publicación en el tópico inicial, para disparar el nodo se debe usar <em>rostopic pub</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rostopic</span> <span class="n">pub</span> <span class="o">-</span><span class="mi">1</span> <span class="o">/</span><span class="n">motoman_table</span><span class="o">/</span><span class="n">pick_pallete</span> <span class="n">std_msgs</span><span class="o">/</span><span class="n">Int8</span> <span class="s2">&quot;data: 1&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="launch-general">
+<h4>Launch general<a class="headerlink" href="#launch-general" title="Permalink to this headline">¶</a></h4>
+<p>Por último, para poder ejecutar el nuevo nodo se debe incluir dentro del launch file <em>motoman_task.launch</em> ubicado en la ruta <code class="code docutils literal notranslate"><span class="pre">~/motoman_ws/src/robot_position_cmd/launch</span></code></p>
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- Template --&gt;</span>
+<span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;robot_position_cmd&quot;</span> <span class="na">type=</span><span class="s">&quot;NEW_NAME&quot;</span> <span class="na">name=</span><span class="s">&quot;NEW_NAME_node&quot;</span> <span class="na">output=</span><span class="s">&quot;screen&quot;</span> <span class="nt">/&gt;</span>
+<span class="c">&lt;!-- Example with pick_lathe --&gt;</span>
+<span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;robot_position_cmd&quot;</span> <span class="na">type=</span><span class="s">&quot;pick_lathe&quot;</span> <span class="na">name=</span><span class="s">&quot;pick_lathe_node&quot;</span> <span class="na">output=</span><span class="s">&quot;screen&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="script-en-python">
+<h2>Script en python<a class="headerlink" href="#script-en-python" title="Permalink to this headline">¶</a></h2>
+<p>Este lenguaje de programación es más simple que <em>C++</em>, por tal razón se recomienda su uso, adicionalmente no es necesario realizar ningún proceso de compilación.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1"># Python imports</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+<span class="kn">import</span> <span class="nn">rospy</span>
+<span class="kn">import</span> <span class="nn">moveit_commander</span>
+<span class="c1"># MANDATORY</span>
+<span class="kn">from</span> <span class="nn">geometry_msgs.msg</span> <span class="kn">import</span> <span class="n">Pose</span>
+<span class="kn">from</span> <span class="nn">std_msgs.msg</span> <span class="kn">import</span> <span class="n">Int8</span>
+<span class="kn">from</span> <span class="nn">moveit_msgs.srv</span> <span class="kn">import</span> <span class="n">GetPositionIK</span>
+<span class="kn">from</span> <span class="nn">moveit_msgs.msg</span> <span class="kn">import</span> <span class="n">PositionIKRequest</span>
+<span class="c1"># OPTIONAL</span>
+<span class="kn">from</span> <span class="nn">motoman_msgs.srv</span> <span class="kn">import</span> <span class="n">WriteSingleIO</span>
+<span class="kn">from</span> <span class="nn">motoman_msgs.srv</span> <span class="kn">import</span> <span class="n">ReadSingleIO</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">robot</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">robot</span> <span class="o">=</span> <span class="n">moveit_commander</span><span class="o">.</span><span class="n">RobotCommander</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">group</span> <span class="o">=</span> <span class="n">moveit_commander</span><span class="o">.</span><span class="n">MoveGroupCommander</span><span class="p">(</span><span class="s1">&#39;arm_on_rail&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">set_planner_id</span><span class="p">(</span><span class="s1">&#39;RRTConnectkConfigDefault&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">group_move</span> <span class="o">=</span> <span class="n">moveit_commander</span><span class="o">.</span><span class="n">MoveGroupCommander</span><span class="p">(</span><span class="s1">&#39;mh6&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">group_move</span><span class="o">.</span><span class="n">set_planner_id</span><span class="p">(</span><span class="s1">&#39;RRTConnectkConfigDefault&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_pose</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">get_current_pose</span><span class="p">(</span><span class="s1">&#39;arm_link_tool0&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_pose_modificable</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">get_current_pose</span><span class="p">(</span><span class="s1">&#39;arm_link_tool0&#39;</span><span class="p">)</span>
+        <span class="c1"># G, S, L, U, R, B, T, P [meters, rads{7}]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">home_position</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.43</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">secure_lathe</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.43</span><span class="p">,</span> <span class="mf">1.43</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">camera_lathe</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.4334598779678345</span><span class="p">,</span> <span class="mf">1.4308449029922485</span><span class="p">,</span> <span class="mf">0.6417216658592224</span><span class="p">,</span> <span class="mf">0.19153209030628204</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5524171590805054</span><span class="p">,</span> <span class="mf">0.9107017517089844</span><span class="p">,</span> <span class="mf">0.9756916761398315</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+
+        <span class="c1"># Subscribers</span>
+        <span class="c1"># Entrada</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">Subscriber</span><span class="p">(</span><span class="s1">&#39;/move_reference_pose&#39;</span><span class="p">,</span> <span class="n">Int8</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">move_home_cb</span><span class="p">,</span> <span class="n">queue_size</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">Subscriber</span><span class="p">(</span><span class="s1">&#39;/max_x_cmd&#39;</span><span class="p">,</span> <span class="n">Int8</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_x_cmd_cb</span><span class="p">,</span> <span class="n">queue_size</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">Subscriber</span><span class="p">(</span><span class="s1">&#39;/secure_lathe_cmd&#39;</span><span class="p">,</span> <span class="n">Int8</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">secure_lathe_cmd_cb</span><span class="p">,</span> <span class="n">queue_size</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">Subscriber</span><span class="p">(</span><span class="s1">&#39;/camera_lathe_cmd&#39;</span><span class="p">,</span> <span class="n">Int8</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">camera_lathe_cmd_cb</span><span class="p">,</span> <span class="n">queue_size</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="c1"># publishers</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_x_cmd</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s1">&#39;/max_x_cmd&#39;</span><span class="p">,</span> <span class="n">Int8</span><span class="p">,</span> <span class="n">queue_size</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">secure_lathe_cmd</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s1">&#39;/secure_lathe_cmd&#39;</span><span class="p">,</span> <span class="n">Int8</span><span class="p">,</span> <span class="n">queue_size</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">camera_lathe_cmd</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s1">&#39;/camera_lathe_cmd&#39;</span><span class="p">,</span> <span class="n">Int8</span><span class="p">,</span> <span class="n">queue_size</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">task_complete_pub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s1">&#39;/task_completed&#39;</span><span class="p">,</span> <span class="n">Int8</span><span class="p">,</span> <span class="n">queue_size</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+
+
+    <span class="k">def</span> <span class="nf">camera_lathe_cmd_cb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s1">&#39;Moving robot to camera_lathe position&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">move_robot_joint</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">camera_lathe</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">task_complete_pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">Int8</span><span class="p">())</span>
+
+
+    <span class="k">def</span> <span class="nf">secure_lathe_cmd_cb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s1">&#39;Moving robot to secure_lathe position&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">move_robot_joint</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">secure_lathe</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">camera_lathe_cmd</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">Int8</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">max_x_cmd_cb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s1">&#39;Moving robot to max_x position&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">move_robot_joint</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">max_x</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">secure_lathe_cmd</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">Int8</span><span class="p">())</span>
+
+
+    <span class="k">def</span> <span class="nf">move_home_cb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s1">&#39;Moving robot to home position&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">move_robot_joint</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">home_position</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">max_x_cmd</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">Int8</span><span class="p">())</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">task_complete_pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">Int8</span><span class="p">())</span>
+
+
+
+    <span class="k">def</span> <span class="nf">move_robot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target_pose</span><span class="p">):</span>
+        <span class="n">ik</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_ik</span><span class="p">(</span><span class="n">target_pose</span><span class="p">)</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">ik</span><span class="o">.</span><span class="n">error_code</span><span class="o">.</span><span class="n">val</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">joints</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ik</span><span class="o">.</span><span class="n">solution</span><span class="o">.</span><span class="n">joint_state</span><span class="o">.</span><span class="n">position</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ik</span><span class="o">.</span><span class="n">solution</span><span class="o">.</span><span class="n">joint_state</span><span class="o">.</span><span class="n">position</span><span class="p">)):</span>
+                <span class="n">joints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ik</span><span class="o">.</span><span class="n">solution</span><span class="o">.</span><span class="n">joint_state</span><span class="o">.</span><span class="n">position</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">move_robot_joint</span><span class="p">(</span><span class="n">joints</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s1">&#39;IK not found&#39;</span><span class="p">)</span>
+
+
+    <span class="k">def</span> <span class="nf">move_robot_joint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target_joints</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">group_move</span><span class="o">.</span><span class="n">set_joint_value_target</span><span class="p">(</span><span class="n">target_joints</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">group_move</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
+
+
+    <span class="k">def</span> <span class="nf">get_ik</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose</span><span class="p">):</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s1">&#39;Waiting for IK service&#39;</span><span class="p">)</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">wait_for_service</span><span class="p">(</span><span class="s1">&#39;compute_ik&#39;</span><span class="p">)</span>
+
+        <span class="n">ik_request</span> <span class="o">=</span> <span class="n">PositionIKRequest</span><span class="p">()</span>
+        <span class="n">ik_request</span><span class="o">.</span><span class="n">group_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">get_name</span><span class="p">()</span>
+        <span class="n">ik_request</span><span class="o">.</span><span class="n">robot_state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">get_current_state</span><span class="p">()</span>
+        <span class="n">ik_request</span><span class="o">.</span><span class="n">ik_link_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">get_end_effector_link</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ik_request.ik_link_name: &#39;</span><span class="p">,</span> <span class="n">ik_request</span><span class="o">.</span><span class="n">ik_link_name</span><span class="p">)</span>
+
+        <span class="n">pose_stmp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_pose_modificable</span>
+        <span class="n">pose_stmp</span><span class="o">.</span><span class="n">pose</span> <span class="o">=</span> <span class="n">pose</span>
+        <span class="n">ik_request</span><span class="o">.</span><span class="n">pose_stamped</span> <span class="o">=</span> <span class="n">pose_stmp</span>
+        <span class="n">ik_request</span><span class="o">.</span><span class="n">timeout</span><span class="o">.</span><span class="n">secs</span> <span class="o">=</span> <span class="mi">10</span>
+        <span class="n">ik_request</span><span class="o">.</span><span class="n">attempts</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">ik_service</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceProxy</span><span class="p">(</span><span class="s1">&#39;compute_ik&#39;</span><span class="p">,</span> <span class="n">GetPositionIK</span><span class="p">)</span>
+            <span class="n">resp</span> <span class="o">=</span> <span class="n">ik_service</span><span class="p">(</span><span class="n">ik_request</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">solution</span><span class="o">.</span><span class="n">joint_state</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">resp</span>
+        <span class="k">except</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceException</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">rospy</span><span class="o">.</span><span class="n">logerr</span><span class="p">(</span><span class="s1">&#39;Error with IK service&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">getSensorState</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s1">&#39;Waiting for IO service&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">io_service</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceProxy</span><span class="p">(</span><span class="s1">&#39;read_single_io&#39;</span><span class="p">,</span> <span class="n">ReadSingleIO</span><span class="p">)</span>
+            <span class="n">io_service</span><span class="p">(</span><span class="mi">10001</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">rospy</span><span class="o">.</span><span class="n">logerr</span><span class="p">(</span><span class="s1">&#39;Error with IO service reading&#39;</span><span class="p">)</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="n">io_service</span><span class="o">.</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">print_pose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;============ Start pose ============&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Position: &quot;</span><span class="p">,</span> <span class="n">pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span><span class="p">,</span>
+            <span class="n">pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span><span class="p">,</span>
+            <span class="n">pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Orientation: &quot;</span><span class="p">,</span> <span class="n">pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">x</span><span class="p">,</span>
+            <span class="n">pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">y</span><span class="p">,</span>
+            <span class="n">pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">z</span><span class="p">,</span>
+            <span class="n">pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">w</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;====================================&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="id1">
+<h3>Nodo de ROS<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Es necesario que el archivo tenga permisos de ejecución, para configurarlos se utiliza el siguiente comando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">NEW_NAME</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Luego de esto es posible ejecutar el script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">NEW_NAME</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Para comenzar la ejecución se sigue el mismo procedimiento mencionado en <a class="reference internal" href="#taskrun"><span class="std std-ref">Inicio de tarea</span></a></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">LabFabEx</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="motoman.html">Plataforma robótica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pria/pria.html">PRIA - UN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../almacen/almacen_material.html">Automated warehouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdv_slam/sdv_slam.html">SDV SLAM aplication</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="motoman.html">Plataforma robótica</a><ul>
+      <li>Previous: <a href="motoman.html" title="previous chapter">Plataforma robótica</a></li>
+      <li>Next: <a href="sensor/sensor.html" title="next chapter">Sensor foto sensible</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, LabFabEx.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/motoman/new_script.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

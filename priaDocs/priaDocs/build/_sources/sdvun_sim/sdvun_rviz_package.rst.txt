@@ -1,0 +1,50 @@
+*sdvun_rviz* Package
+####################
+
+This package contains *rviz* config files and *launch* files, intended to 
+configure and use RViz with any SDVUN that runs ROS Navigation Stack.
+
+
+
+Configuration files for RViz
+****************************
+
+RViz is a complete ROS-topic viewer that requires some configurations that allow 
+us to use all topics that a running SDVUN simulation can generate. Its 
+complicated and tedius make this settings every time that we launch RViz. For 
+this reason, *sdvun_rviz* contains some general *rviz* config files that are 
+called for some *launch* files of others packages and, also, you can use with an
+independent RViz instance.
+
+*rviz* files contained in this package are:
+
+- sdvun_amcl.rviz
+- sdvun_hector.rviz
+- sdvun1_hector.rviz
+- sdvun3_hector.rviz
+- sdvun2_hector.rviz
+- view_robot_description.rviz
+
+Some rules to use any of these config files:
+
+- All files that starts with *sdvun* prefix are used to view main topics of Navigation Stack. 
+- If *sdvun* is followed by a number, this configuration file is intended to use when simulate sn SDVUN with namespace.
+- Last word indicates the Localization Component used by Navigation Stack.
+
+Finally, *view_robot_description.rviz* file is used by RViz to view any SDVUN model.
+
+.. _view-model-rviz:
+
+View Robot Model in RViz
+************************
+
+To see an specific SDVUN robot model, you can use a *launch* file that loads a 
+robot description in ROS param an show loaded model::
+
+ roslaunch sdvun_rviz view_robot_description.launch robot_model:=sdvun
+
+You'll see something like picture below:
+
+.. image:: _static/img/rviz_view_robot_model.png
+   :width: 100 %
+   :align: center

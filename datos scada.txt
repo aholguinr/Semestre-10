@@ -1,0 +1,6 @@
+DRV1TEST1 (?)
+DRV1TEST2
+
+
+
+esta prendido o apagado para mover: ns=3;s=140-102229_140-102229/RAPID/T_ROB1/TaskExecutionState

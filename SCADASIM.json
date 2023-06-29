@@ -1,0 +1,6231 @@
+[
+    {
+        "id": "128ad8a8437bc20b",
+        "type": "tab",
+        "label": "Real",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "83a54f9f17308e4e",
+        "type": "tab",
+        "label": "Simulacion",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e4f17468987c1144",
+        "type": "group",
+        "z": "128ad8a8437bc20b",
+        "name": "Write",
+        "style": {
+            "fill": "#ffff7f",
+            "label": true
+        },
+        "nodes": [
+            "b412608d2fb99a38",
+            "a4f133058c81b4ad",
+            "fd9f75ad343e118d",
+            "2930bd5ae0186410",
+            "4a41016a4672f94d",
+            "ce2f4abd9fa4b071",
+            "a52e1c62a4a14d92",
+            "3667068907e01c2d",
+            "b773c9dae118682e",
+            "3aec52898033e95b"
+        ],
+        "x": 34,
+        "y": 39,
+        "w": 772,
+        "h": 302
+    },
+    {
+        "id": "31f5dba0d63b227e",
+        "type": "group",
+        "z": "128ad8a8437bc20b",
+        "name": "DAQ ANGLES REAL",
+        "style": {
+            "label": true,
+            "stroke": "#d1d1d1",
+            "fill": "#ffff7f"
+        },
+        "nodes": [
+            "4c300fea07429722",
+            "f6b96b3acd95e6f2",
+            "b3774e8618d6657b",
+            "73985e4a6cffb946",
+            "e31d016dea8a3395",
+            "12246f795b3563dc",
+            "e464557a8aa93e01",
+            "8606e2b711b97666",
+            "f2fe85ab415b3cbe",
+            "cd5555a11ad9d155",
+            "a83a5244bf23f2b6",
+            "8dca06d5296376a5",
+            "9ea51aecee991e70",
+            "3687c21c717a6789",
+            "411d221abe78385a",
+            "aab731f2fec2c243",
+            "2c0a35f393068227",
+            "facea5d9b27802d4",
+            "babf751814128a5a",
+            "bd483f208114fad4",
+            "a69af0bea00360c6",
+            "f15476262b4f221a",
+            "0e8a0f08b9c88024",
+            "2c8f7511171067d8",
+            "db0cec083c71965b",
+            "8588f9059fa949b7",
+            "021de871cfeec9db",
+            "e6b48c93d88b6a95",
+            "aa8d212daf3960bd"
+        ],
+        "x": 654,
+        "y": 359,
+        "w": 792,
+        "h": 382
+    },
+    {
+        "id": "5e629f504954e331",
+        "type": "group",
+        "z": "83a54f9f17308e4e",
+        "name": "Write",
+        "style": {
+            "fill": "#addb7b",
+            "label": true
+        },
+        "nodes": [
+            "f528f10492178492",
+            "510da619870cf82c",
+            "4b9e15935e407bae",
+            "f429b55f2fb32640",
+            "373c5b26481845b6",
+            "32748e30cf220b86",
+            "4c367beaebf24ccf",
+            "276af53bd6e15913",
+            "e7f778b8ba7b81a4",
+            "a43f1c0757e2a2f3"
+        ],
+        "x": 74,
+        "y": 79,
+        "w": 772,
+        "h": 302
+    },
+    {
+        "id": "fea1d10012c3a130",
+        "type": "group",
+        "z": "83a54f9f17308e4e",
+        "name": "Pulse",
+        "style": {
+            "fill": "#addb7b",
+            "label": true
+        },
+        "nodes": [
+            "eb2a6b0bd5ad1014",
+            "6f88ad079fe7cb78",
+            "4e9d73afb8e99370",
+            "06a7da3531ead599",
+            "e28087b4618c583e",
+            "7d7aa9fc835dfb34",
+            "beacea29fafde03f",
+            "6274cfc39d737dfe",
+            "c0aa300f5d850c43",
+            "c2d75c35d31dbdd9"
+        ],
+        "x": 74,
+        "y": 419,
+        "w": 832,
+        "h": 262
+    },
+    {
+        "id": "e57e5251ccd0c627",
+        "type": "group",
+        "z": "83a54f9f17308e4e",
+        "name": "DAQ ANGLES SIM",
+        "style": {
+            "label": true,
+            "fill": "#addb7b"
+        },
+        "nodes": [
+            "fe31ccfbb368d0c2",
+            "69848a93c66ae3f6",
+            "a497d5ef03ab15b4",
+            "35361647ee1acd78",
+            "58036a8c2fbd9ae9",
+            "eea2b9c1a63b93cb",
+            "dff790bf06b055f1",
+            "bc6c5175082ef009",
+            "e9e7f189fb7ca65f",
+            "9ba1ec2b8d4a84e4",
+            "0c36d42ded5283b9",
+            "adfdfa0ca500ae08",
+            "e2f7f94a12b9efa7",
+            "437c415d34b7fe20",
+            "b73c767d1096246e",
+            "bd0e6033f9593895",
+            "8d422c339fdba695",
+            "013a86d5758a289e"
+        ],
+        "x": 1054,
+        "y": 739,
+        "w": 492,
+        "h": 382
+    },
+    {
+        "id": "60dd0b05f0eac015",
+        "type": "group",
+        "z": "128ad8a8437bc20b",
+        "name": "Pulse",
+        "style": {
+            "fill": "#addb7b",
+            "label": true
+        },
+        "nodes": [
+            "481b099a981c7f23",
+            "a3a1ada1250d5dcf",
+            "c67513558226c5ef",
+            "2a15951f114d59ab",
+            "c575a5dcffa4c863",
+            "245dedb84492919a",
+            "43354f98c579f5b5",
+            "3d2e77b20d90fec6",
+            "c6376eced53f0ced",
+            "c3a9bd36d0a3ce9c"
+        ],
+        "x": 14,
+        "y": 1219,
+        "w": 832,
+        "h": 262
+    },
+    {
+        "id": "444094b3ee0fdacc",
+        "type": "group",
+        "z": "128ad8a8437bc20b",
+        "name": "Dashboard Control",
+        "style": {
+            "fill": "#addb7b",
+            "label": true
+        },
+        "nodes": [
+            "0fab176532f42545",
+            "eccfe7b175759d2c",
+            "269a2b8f4d8bcd7c",
+            "a340ab34118900a4",
+            "a72965f206f3b6c0",
+            "8a4010bc044202b1",
+            "ee7c09796f9fd8f7",
+            "8f74bb32ff073d29",
+            "63991ef6aa9e3d32",
+            "f5aa7c1531f9bdc9",
+            "38bccae075f76a38",
+            "cccbc8b1328d8c2a",
+            "32ca2878651beb9d",
+            "49695cb954ac26ce",
+            "5dba1415f8117ea6",
+            "919ca3c2936f26ae",
+            "74a0f305d42e4cd0"
+        ],
+        "x": 134,
+        "y": 1539,
+        "w": 732,
+        "h": 302
+    },
+    {
+        "id": "c9954077b455da8c",
+        "type": "group",
+        "z": "128ad8a8437bc20b",
+        "name": "Clock",
+        "style": {
+            "stroke": "#000000",
+            "label": true,
+            "fill": "#ffff7f"
+        },
+        "nodes": [
+            "a90f2bcbc4d37538",
+            "a7cae49b812a524b",
+            "b124fef027406c12",
+            "b54021197670c9bf",
+            "a247b1b0ad914cf7"
+        ],
+        "x": 34,
+        "y": 479,
+        "w": 552,
+        "h": 142
+    },
+    {
+        "id": "e05aea7e4fb98542",
+        "type": "group",
+        "z": "83a54f9f17308e4e",
+        "name": "Jogging",
+        "style": {
+            "fill": "#ffcf3f",
+            "label": true
+        },
+        "nodes": [
+            "2f0e1495d9cb894e",
+            "0fc1663ed4d19052",
+            "dc19373ff663711f",
+            "26a84d450ad1a770",
+            "8844480768963bce",
+            "6990cfbdc520c7af",
+            "861990f289871887",
+            "b81cbfac57d39ccc",
+            "1d626f941b4c9e67",
+            "14ad135d8e86df74",
+            "1cc146afd0c5ef5b",
+            "ea6180d4c962abe3",
+            "fa2c52829d947d02",
+            "608baf14b98bfc92",
+            "baf6b75eb233450d",
+            "95be6655ab5fedc0",
+            "0fcc303a4f71b83e",
+            "a6b1f7023632aa47"
+        ],
+        "x": 694,
+        "y": 1939,
+        "w": 592,
+        "h": 282
+    },
+    {
+        "id": "825cfcc9574f0bc6",
+        "type": "group",
+        "z": "83a54f9f17308e4e",
+        "name": "clock",
+        "style": {
+            "fill": "#ffff7f",
+            "label": true
+        },
+        "nodes": [
+            "f4d9fe79aa739b59",
+            "4372ee5e0a25f661",
+            "a03ebf0beace863e",
+            "97b1783e1a349c17",
+            "d035016515b0d5fb",
+            "2db8426c11c341c5"
+        ],
+        "x": 14,
+        "y": 839,
+        "w": 532,
+        "h": 442
+    },
+    {
+        "id": "b362225641bc7a8a",
+        "type": "group",
+        "z": "83a54f9f17308e4e",
+        "name": "Dashboard Control",
+        "style": {
+            "fill": "#addb7b",
+            "label": true
+        },
+        "nodes": [
+            "01fb1bbe7ed2b74d",
+            "08465d5070418b91",
+            "e64c3a46b0f41479",
+            "4e32e3e60b686903",
+            "27aac4ce453dca63",
+            "ce377a92a26285c8",
+            "6d4339dc28e8c4f7",
+            "eec369e2f2f41862",
+            "e113f57fd09a7505",
+            "c99538ae733ff7a9",
+            "1e5e3c69c17a5d9a"
+        ],
+        "x": 34,
+        "y": 1799,
+        "w": 592,
+        "h": 222
+    },
+    {
+        "id": "fa3b8ec8649317fe",
+        "type": "group",
+        "z": "83a54f9f17308e4e",
+        "name": "DAQ POS",
+        "style": {
+            "fill": "#c8e7a7",
+            "label": true
+        },
+        "nodes": [
+            "0e53dfe9be87e363",
+            "8ee08f06debcd5fe",
+            "9eb011cd34d5d9a7",
+            "4832004a58ace02c",
+            "9c477d7006d88bc8",
+            "62823c8e2414a58b",
+            "9c9976b79b725abe",
+            "4f730aae23265986",
+            "847cca5394adb35d"
+        ],
+        "x": 14,
+        "y": 1319,
+        "w": 552,
+        "h": 202
+    },
+    {
+        "id": "a7610954717e0879",
+        "type": "group",
+        "z": "83a54f9f17308e4e",
+        "name": "Linear Move",
+        "style": {
+            "fill": "#7fb7df",
+            "label": true
+        },
+        "nodes": [
+            "8404cb58aa932a94",
+            "9810b04ac33dc642",
+            "4e9a5a4dc242c6d6",
+            "c6c53aad1acac5a0",
+            "c61199dc5d80f489",
+            "46afdaf2c4226c29",
+            "d4b5389a7d3e61c2",
+            "3fcc6240d116496c",
+            "0abafa98bb2786da",
+            "71846d7364ab28c2",
+            "2426f02b808fa07c",
+            "38dca30917021cca"
+        ],
+        "x": 694,
+        "y": 2239,
+        "w": 712,
+        "h": 342
+    },
+    {
+        "id": "4902160ce26e1ae1",
+        "type": "group",
+        "z": "83a54f9f17308e4e",
+        "name": "Serial number",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "532a33f3f4ad0cfa",
+            "30ebadece4a26343",
+            "7fdee18dbef995a9"
+        ],
+        "x": 574,
+        "y": 1259,
+        "w": 452,
+        "h": 82
+    },
+    {
+        "id": "ce68e5f6a0108094",
+        "type": "group",
+        "z": "83a54f9f17308e4e",
+        "name": "EMERGENCY STOP",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "75aa207bfbae20b3",
+            "7e0d1736ae18894c",
+            "bf8c3dcb9b3c6edc"
+        ],
+        "x": 1034,
+        "y": 1139,
+        "w": 432,
+        "h": 82
+    },
+    {
+        "id": "4027fbf4f7ab5979",
+        "type": "group",
+        "z": "83a54f9f17308e4e",
+        "name": "Start ROBOTSTUDIO TASK",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "343f827a852642cb",
+            "940c57e8bfd6aab0",
+            "75e94915d7e1cda5"
+        ],
+        "x": 1074,
+        "y": 1239,
+        "w": 532,
+        "h": 82
+    },
+    {
+        "id": "3a547e85fca22b25",
+        "type": "group",
+        "z": "83a54f9f17308e4e",
+        "name": "IN CONTROL",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "8feaaf1f641eaa97",
+            "73af4ba93f483e44",
+            "b1cf219e897ed28d"
+        ],
+        "x": 1074,
+        "y": 1359,
+        "w": 452,
+        "h": 82
+    },
+    {
+        "id": "6303a6ee8c48f2b5",
+        "type": "group",
+        "z": "83a54f9f17308e4e",
+        "name": "EMERGENCY STOP",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "cfe47039db6b81de",
+            "289ee8241919b331",
+            "90644ee9f624b92c"
+        ],
+        "x": 1074,
+        "y": 1459,
+        "w": 432,
+        "h": 82
+    },
+    {
+        "id": "7717ce4beb2574cf",
+        "type": "group",
+        "z": "83a54f9f17308e4e",
+        "name": "Serial number",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "b7213d856c0e70c9",
+            "2ffb2ebb5c6dcf3c",
+            "244a455a02022cd2"
+        ],
+        "x": 574,
+        "y": 1359,
+        "w": 432,
+        "h": 82
+    },
+    {
+        "id": "f03fc388447ff6e6",
+        "type": "group",
+        "z": "83a54f9f17308e4e",
+        "name": "Serial number",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "994f8acb7e26f7bd",
+            "2c852f60c97e6688",
+            "b645c5748cc97b2d"
+        ],
+        "x": 114,
+        "y": 1559,
+        "w": 512,
+        "h": 82
+    },
+    {
+        "id": "4f89b5860ba1c170",
+        "type": "mqtt-broker",
+        "name": "node red mqtt",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "991a363c9d9d402d",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://localhost:61510/ABB.IoTGateway",
+        "secpol": "Basic256Sha256",
+        "secmode": "SignAndEncrypt",
+        "none": false,
+        "login": true,
+        "usercert": false,
+        "usercertificate": "",
+        "userprivatekey": ""
+    },
+    {
+        "id": "c38d73b4c9026bb4",
+        "type": "OPCUA-IIoT-Connector",
+        "discoveryUrl": "",
+        "endpoint": "opc.tcp://localhost:61510/ABB.IoTGateway",
+        "endpointMustExist": false,
+        "keepSessionAlive": true,
+        "loginEnabled": true,
+        "name": "LOCAL SERVER",
+        "showErrors": false,
+        "securityPolicy": "Basic256Sha256",
+        "securityMode": "SignAndEncrypt",
+        "individualCerts": false,
+        "publicCertificateFile": "",
+        "privateKeyFile": "",
+        "defaultSecureTokenLifetime": "",
+        "autoSelectRightEndpoint": false,
+        "strategyMaxRetry": "",
+        "strategyInitialDelay": "",
+        "strategyMaxDelay": "",
+        "strategyRandomisationFactor": "",
+        "requestedSessionTimeout": "",
+        "connectionStartDelay": "",
+        "reconnectDelay": "",
+        "maxBadSessionRequests": "10"
+    },
+    {
+        "id": "85f93a96fa14a98f",
+        "type": "ui_tab",
+        "name": "Simulación",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e3a2d9d7ca30ae70",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "true",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "acbc68497209c498",
+        "type": "ui_group",
+        "name": "Ángulos",
+        "tab": "85f93a96fa14a98f",
+        "order": 5,
+        "disp": true,
+        "width": "12",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "7f09c7c851559128",
+        "type": "ui_tab",
+        "name": "LabSir",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f9fab65f3bfb3ef6",
+        "type": "ui_group",
+        "name": "Ángulos",
+        "tab": "7f09c7c851559128",
+        "order": 3,
+        "disp": true,
+        "width": "12",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "a3f484320da25085",
+        "type": "ui_group",
+        "name": "Control",
+        "tab": "85f93a96fa14a98f",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "7b7fb2b782acc222",
+        "type": "ui_group",
+        "name": "Estados",
+        "tab": "7f09c7c851559128",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "acf892039fa08adc",
+        "type": "ui_group",
+        "name": "Jogging",
+        "tab": "85f93a96fa14a98f",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "bee392b6bc79b20b",
+        "type": "ui_group",
+        "name": "Posición",
+        "tab": "85f93a96fa14a98f",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "763a195c9fd18f53",
+        "type": "ui_group",
+        "name": "Move linear",
+        "tab": "85f93a96fa14a98f",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1f0ba8197bea5228",
+        "type": "ui_group",
+        "name": "Estados",
+        "tab": "85f93a96fa14a98f",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3f06ffdf43fde693",
+        "type": "ui_group",
+        "name": "Control",
+        "tab": "7f09c7c851559128",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "79460a3c3dc6415c",
+        "type": "ui_group",
+        "name": "Move Linear",
+        "tab": "7f09c7c851559128",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "debe9dda6ef6aa96",
+        "type": "ui_group",
+        "name": "Ángulos",
+        "tab": "7f09c7c851559128",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b080b492fea73c8b",
+        "type": "ui_group",
+        "name": "Posición",
+        "tab": "7f09c7c851559128",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b412608d2fb99a38",
+        "type": "inject",
+        "z": "128ad8a8437bc20b",
+        "g": "e4f17468987c1144",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "fd9f75ad343e118d"
+            ]
+        ]
+    },
+    {
+        "id": "a4f133058c81b4ad",
+        "type": "OpcUa-Client",
+        "z": "128ad8a8437bc20b",
+        "g": "e4f17468987c1144",
+        "endpoint": "991a363c9d9d402d",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "65535",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "",
+        "x": 520,
+        "y": 120,
+        "wires": [
+            [
+                "4a41016a4672f94d"
+            ]
+        ]
+    },
+    {
+        "id": "fd9f75ad343e118d",
+        "type": "OpcUa-Item",
+        "z": "128ad8a8437bc20b",
+        "g": "e4f17468987c1144",
+        "item": "ns=3;s=140-102229_140-102229/IO_System/IO_Signals/DI_IOT_01",
+        "datatype": "Boolean",
+        "value": "0",
+        "name": "",
+        "x": 320,
+        "y": 120,
+        "wires": [
+            [
+                "a4f133058c81b4ad"
+            ]
+        ]
+    },
+    {
+        "id": "2930bd5ae0186410",
+        "type": "inject",
+        "z": "128ad8a8437bc20b",
+        "g": "e4f17468987c1144",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 130,
+        "y": 160,
+        "wires": [
+            [
+                "fd9f75ad343e118d"
+            ]
+        ]
+    },
+    {
+        "id": "4a41016a4672f94d",
+        "type": "debug",
+        "z": "128ad8a8437bc20b",
+        "g": "e4f17468987c1144",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "ce2f4abd9fa4b071",
+        "type": "inject",
+        "z": "128ad8a8437bc20b",
+        "g": "e4f17468987c1144",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "100",
+        "payloadType": "num",
+        "x": 130,
+        "y": 220,
+        "wires": [
+            [
+                "3667068907e01c2d"
+            ]
+        ]
+    },
+    {
+        "id": "a52e1c62a4a14d92",
+        "type": "OpcUa-Client",
+        "z": "128ad8a8437bc20b",
+        "g": "e4f17468987c1144",
+        "endpoint": "991a363c9d9d402d",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "65535",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "",
+        "x": 520,
+        "y": 260,
+        "wires": [
+            [
+                "3aec52898033e95b"
+            ]
+        ]
+    },
+    {
+        "id": "3667068907e01c2d",
+        "type": "OpcUa-Item",
+        "z": "128ad8a8437bc20b",
+        "g": "e4f17468987c1144",
+        "item": "ns=3;s=140-102229_140-102229/IO_System/IO_Signals/DI_INT_IOT_01",
+        "datatype": "UInt32",
+        "value": "0",
+        "name": "",
+        "x": 320,
+        "y": 260,
+        "wires": [
+            [
+                "a52e1c62a4a14d92"
+            ]
+        ]
+    },
+    {
+        "id": "b773c9dae118682e",
+        "type": "inject",
+        "z": "128ad8a8437bc20b",
+        "g": "e4f17468987c1144",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "20",
+        "payloadType": "num",
+        "x": 130,
+        "y": 300,
+        "wires": [
+            [
+                "3667068907e01c2d"
+            ]
+        ]
+    },
+    {
+        "id": "3aec52898033e95b",
+        "type": "debug",
+        "z": "128ad8a8437bc20b",
+        "g": "e4f17468987c1144",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "4c300fea07429722",
+        "type": "OpcUa-Item",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "item": "ns=4;s=140-102229_140-102229/MotionDevices/ROB_1/Axes/Rax_1/ParameterSet/ActualPosition",
+        "datatype": "Double",
+        "value": "1",
+        "name": "ART 1 REAL",
+        "x": 750,
+        "y": 400,
+        "wires": [
+            [
+                "f6b96b3acd95e6f2"
+            ]
+        ]
+    },
+    {
+        "id": "f6b96b3acd95e6f2",
+        "type": "OpcUa-Client",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 900,
+        "y": 400,
+        "wires": [
+            [
+                "9ea51aecee991e70"
+            ]
+        ]
+    },
+    {
+        "id": "b3774e8618d6657b",
+        "type": "OpcUa-Item",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "item": "ns=4;s=140-102229_140-102229/MotionDevices/ROB_1/Axes/Rax_2/ParameterSet/ActualPosition",
+        "datatype": "Double",
+        "value": "1",
+        "name": "ART 2 REAL",
+        "x": 750,
+        "y": 460,
+        "wires": [
+            [
+                "73985e4a6cffb946"
+            ]
+        ]
+    },
+    {
+        "id": "73985e4a6cffb946",
+        "type": "OpcUa-Client",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 900,
+        "y": 460,
+        "wires": [
+            [
+                "3687c21c717a6789"
+            ]
+        ]
+    },
+    {
+        "id": "e31d016dea8a3395",
+        "type": "OpcUa-Item",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "item": "ns=4;s=140-102229_140-102229/MotionDevices/ROB_1/Axes/Rax_3/ParameterSet/ActualPosition",
+        "datatype": "Double",
+        "value": "1",
+        "name": "ART 3 REAL",
+        "x": 750,
+        "y": 520,
+        "wires": [
+            [
+                "12246f795b3563dc"
+            ]
+        ]
+    },
+    {
+        "id": "12246f795b3563dc",
+        "type": "OpcUa-Client",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 900,
+        "y": 520,
+        "wires": [
+            [
+                "411d221abe78385a"
+            ]
+        ]
+    },
+    {
+        "id": "e464557a8aa93e01",
+        "type": "OpcUa-Item",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "item": "ns=4;s=140-102229_140-102229/MotionDevices/ROB_1/Axes/Rax_4/ParameterSet/ActualPosition",
+        "datatype": "Double",
+        "value": "1",
+        "name": "ART 4 REAL",
+        "x": 750,
+        "y": 580,
+        "wires": [
+            [
+                "8606e2b711b97666"
+            ]
+        ]
+    },
+    {
+        "id": "8606e2b711b97666",
+        "type": "OpcUa-Client",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 900,
+        "y": 580,
+        "wires": [
+            [
+                "aab731f2fec2c243"
+            ]
+        ]
+    },
+    {
+        "id": "f2fe85ab415b3cbe",
+        "type": "OpcUa-Item",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "item": "ns=4;s=140-102229_140-102229/MotionDevices/ROB_1/Axes/Rax_5/ParameterSet/ActualPosition",
+        "datatype": "Double",
+        "value": "1",
+        "name": "ART 5 REAL",
+        "x": 750,
+        "y": 640,
+        "wires": [
+            [
+                "cd5555a11ad9d155"
+            ]
+        ]
+    },
+    {
+        "id": "cd5555a11ad9d155",
+        "type": "OpcUa-Client",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 900,
+        "y": 640,
+        "wires": [
+            [
+                "2c0a35f393068227"
+            ]
+        ]
+    },
+    {
+        "id": "a83a5244bf23f2b6",
+        "type": "OpcUa-Item",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "item": "ns=4;s=140-102229_140-102229/MotionDevices/ROB_1/Axes/Rax_6/ParameterSet/ActualPosition",
+        "datatype": "Double",
+        "value": "1",
+        "name": "ART 6 REAL",
+        "x": 750,
+        "y": 700,
+        "wires": [
+            [
+                "8dca06d5296376a5"
+            ]
+        ]
+    },
+    {
+        "id": "8dca06d5296376a5",
+        "type": "OpcUa-Client",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 900,
+        "y": 700,
+        "wires": [
+            [
+                "facea5d9b27802d4"
+            ]
+        ]
+    },
+    {
+        "id": "9ea51aecee991e70",
+        "type": "ui_chart",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "name": "ANG1 REAL",
+        "group": "f9fab65f3bfb3ef6",
+        "order": 1,
+        "width": "6",
+        "height": "5",
+        "label": "Articulación 1",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1050,
+        "y": 400,
+        "wires": [
+            [
+                "babf751814128a5a"
+            ]
+        ]
+    },
+    {
+        "id": "3687c21c717a6789",
+        "type": "ui_chart",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "name": "ANG2 REAL",
+        "group": "f9fab65f3bfb3ef6",
+        "order": 2,
+        "width": "6",
+        "height": "5",
+        "label": "Articulación  2",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1050,
+        "y": 460,
+        "wires": [
+            [
+                "bd483f208114fad4"
+            ]
+        ]
+    },
+    {
+        "id": "411d221abe78385a",
+        "type": "ui_chart",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "name": "ANG3 REAL",
+        "group": "f9fab65f3bfb3ef6",
+        "order": 3,
+        "width": "6",
+        "height": "5",
+        "label": "Articulación  3",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1050,
+        "y": 520,
+        "wires": [
+            [
+                "a69af0bea00360c6"
+            ]
+        ]
+    },
+    {
+        "id": "aab731f2fec2c243",
+        "type": "ui_chart",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "name": "ANG4 REAL",
+        "group": "f9fab65f3bfb3ef6",
+        "order": 4,
+        "width": "6",
+        "height": "5",
+        "label": "Articulación 4",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1050,
+        "y": 580,
+        "wires": [
+            [
+                "f15476262b4f221a"
+            ]
+        ]
+    },
+    {
+        "id": "2c0a35f393068227",
+        "type": "ui_chart",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "name": "ANG5 REAL",
+        "group": "f9fab65f3bfb3ef6",
+        "order": 5,
+        "width": "6",
+        "height": "5",
+        "label": "Articulación  5",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1050,
+        "y": 640,
+        "wires": [
+            [
+                "0e8a0f08b9c88024"
+            ]
+        ]
+    },
+    {
+        "id": "facea5d9b27802d4",
+        "type": "ui_chart",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "name": "ANG6 REAL",
+        "group": "f9fab65f3bfb3ef6",
+        "order": 7,
+        "width": "6",
+        "height": "5",
+        "label": "Articulación  6",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1050,
+        "y": 700,
+        "wires": [
+            [
+                "2c8f7511171067d8"
+            ]
+        ]
+    },
+    {
+        "id": "a90f2bcbc4d37538",
+        "type": "function",
+        "z": "128ad8a8437bc20b",
+        "g": "c9954077b455da8c",
+        "name": "",
+        "func": "var est = flow.get(\"DAQREAL\");\n\nmsg.payload=est;\n    return msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 520,
+        "wires": [
+            [
+                "b124fef027406c12",
+                "4c300fea07429722",
+                "b3774e8618d6657b",
+                "e31d016dea8a3395",
+                "e464557a8aa93e01",
+                "a83a5244bf23f2b6",
+                "f2fe85ab415b3cbe",
+                "23fed959be05f172"
+            ]
+        ]
+    },
+    {
+        "id": "a7cae49b812a524b",
+        "type": "delay",
+        "z": "128ad8a8437bc20b",
+        "g": "c9954077b455da8c",
+        "name": "delay 0.2",
+        "pauseType": "delay",
+        "timeout": "200",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 380,
+        "y": 520,
+        "wires": [
+            [
+                "a90f2bcbc4d37538"
+            ]
+        ]
+    },
+    {
+        "id": "b124fef027406c12",
+        "type": "switch",
+        "z": "128ad8a8437bc20b",
+        "g": "c9954077b455da8c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 270,
+        "y": 520,
+        "wires": [
+            [
+                "a7cae49b812a524b"
+            ]
+        ]
+    },
+    {
+        "id": "b54021197670c9bf",
+        "type": "ui_switch",
+        "z": "128ad8a8437bc20b",
+        "g": "c9954077b455da8c",
+        "name": "",
+        "label": "DAQ",
+        "tooltip": "",
+        "group": "7b7fb2b782acc222",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 110,
+        "y": 540,
+        "wires": [
+            [
+                "b124fef027406c12",
+                "a247b1b0ad914cf7"
+            ]
+        ]
+    },
+    {
+        "id": "a247b1b0ad914cf7",
+        "type": "function",
+        "z": "128ad8a8437bc20b",
+        "g": "c9954077b455da8c",
+        "name": "FLOW DAQ",
+        "func": "flow.set(\"DAQREAL\",msg.payload)\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "481b099a981c7f23",
+        "type": "inject",
+        "z": "128ad8a8437bc20b",
+        "g": "60dd0b05f0eac015",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 1260,
+        "wires": [
+            [
+                "c3a9bd36d0a3ce9c"
+            ]
+        ]
+    },
+    {
+        "id": "a3a1ada1250d5dcf",
+        "type": "OpcUa-Client",
+        "z": "128ad8a8437bc20b",
+        "g": "60dd0b05f0eac015",
+        "endpoint": "991a363c9d9d402d",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "65535",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "",
+        "x": 540,
+        "y": 1260,
+        "wires": [
+            [
+                "2a15951f114d59ab"
+            ]
+        ]
+    },
+    {
+        "id": "c67513558226c5ef",
+        "type": "OpcUa-Item",
+        "z": "128ad8a8437bc20b",
+        "g": "60dd0b05f0eac015",
+        "item": "ns=3;s=140-102229_140-102229/IO_System/IO_Signals/DI_IOT_01",
+        "datatype": "Boolean",
+        "value": "0",
+        "name": "",
+        "x": 380,
+        "y": 1260,
+        "wires": [
+            [
+                "a3a1ada1250d5dcf"
+            ]
+        ]
+    },
+    {
+        "id": "2a15951f114d59ab",
+        "type": "debug",
+        "z": "128ad8a8437bc20b",
+        "g": "60dd0b05f0eac015",
+        "name": "debug 17",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "c575a5dcffa4c863",
+        "type": "inject",
+        "z": "128ad8a8437bc20b",
+        "g": "60dd0b05f0eac015",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "100",
+        "payloadType": "num",
+        "x": 170,
+        "y": 1360,
+        "wires": [
+            [
+                "43354f98c579f5b5"
+            ]
+        ]
+    },
+    {
+        "id": "245dedb84492919a",
+        "type": "OpcUa-Client",
+        "z": "128ad8a8437bc20b",
+        "g": "60dd0b05f0eac015",
+        "endpoint": "991a363c9d9d402d",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "65535",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "",
+        "x": 560,
+        "y": 1400,
+        "wires": [
+            [
+                "c6376eced53f0ced"
+            ]
+        ]
+    },
+    {
+        "id": "43354f98c579f5b5",
+        "type": "OpcUa-Item",
+        "z": "128ad8a8437bc20b",
+        "g": "60dd0b05f0eac015",
+        "item": "ns=3;s=140-102229_140-102229/IO_System/IO_Signals/DI_INT_IOT_01",
+        "datatype": "UInt32",
+        "value": "0",
+        "name": "",
+        "x": 360,
+        "y": 1400,
+        "wires": [
+            [
+                "245dedb84492919a"
+            ]
+        ]
+    },
+    {
+        "id": "3d2e77b20d90fec6",
+        "type": "inject",
+        "z": "128ad8a8437bc20b",
+        "g": "60dd0b05f0eac015",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "20",
+        "payloadType": "num",
+        "x": 170,
+        "y": 1440,
+        "wires": [
+            [
+                "43354f98c579f5b5"
+            ]
+        ]
+    },
+    {
+        "id": "c6376eced53f0ced",
+        "type": "debug",
+        "z": "128ad8a8437bc20b",
+        "g": "60dd0b05f0eac015",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "c3a9bd36d0a3ce9c",
+        "type": "trigger",
+        "z": "128ad8a8437bc20b",
+        "g": "60dd0b05f0eac015",
+        "name": "PULSE",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "num",
+        "op2type": "num",
+        "duration": "250",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 240,
+        "y": 1260,
+        "wires": [
+            [
+                "c67513558226c5ef"
+            ]
+        ]
+    },
+    {
+        "id": "0fab176532f42545",
+        "type": "OpcUa-Client",
+        "z": "128ad8a8437bc20b",
+        "g": "444094b3ee0fdacc",
+        "endpoint": "991a363c9d9d402d",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "65535",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "",
+        "x": 620,
+        "y": 1580,
+        "wires": [
+            [
+                "269a2b8f4d8bcd7c"
+            ]
+        ]
+    },
+    {
+        "id": "eccfe7b175759d2c",
+        "type": "OpcUa-Item",
+        "z": "128ad8a8437bc20b",
+        "g": "444094b3ee0fdacc",
+        "item": "ns=3;s=140-102229_140-102229/IO_System/IO_Signals/DI_IOT_01",
+        "datatype": "Boolean",
+        "value": "0",
+        "name": "",
+        "x": 460,
+        "y": 1580,
+        "wires": [
+            [
+                "0fab176532f42545"
+            ]
+        ]
+    },
+    {
+        "id": "269a2b8f4d8bcd7c",
+        "type": "debug",
+        "z": "128ad8a8437bc20b",
+        "g": "444094b3ee0fdacc",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "a340ab34118900a4",
+        "type": "OpcUa-Client",
+        "z": "128ad8a8437bc20b",
+        "g": "444094b3ee0fdacc",
+        "endpoint": "991a363c9d9d402d",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "65535",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "",
+        "x": 560,
+        "y": 1720,
+        "wires": [
+            [
+                "8a4010bc044202b1"
+            ]
+        ]
+    },
+    {
+        "id": "a72965f206f3b6c0",
+        "type": "OpcUa-Item",
+        "z": "128ad8a8437bc20b",
+        "g": "444094b3ee0fdacc",
+        "item": "ns=3;s=140-102229_140-102229/IO_System/IO_Signals/DI_INT_IOT_01",
+        "datatype": "UInt32",
+        "value": "0",
+        "name": "",
+        "x": 400,
+        "y": 1720,
+        "wires": [
+            [
+                "a340ab34118900a4"
+            ]
+        ]
+    },
+    {
+        "id": "8a4010bc044202b1",
+        "type": "debug",
+        "z": "128ad8a8437bc20b",
+        "g": "444094b3ee0fdacc",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "ee7c09796f9fd8f7",
+        "type": "trigger",
+        "z": "128ad8a8437bc20b",
+        "g": "444094b3ee0fdacc",
+        "name": "PULSE",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "num",
+        "op2type": "num",
+        "duration": "250",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 320,
+        "y": 1580,
+        "wires": [
+            [
+                "eccfe7b175759d2c"
+            ]
+        ]
+    },
+    {
+        "id": "8f74bb32ff073d29",
+        "type": "ui_slider",
+        "z": "128ad8a8437bc20b",
+        "g": "444094b3ee0fdacc",
+        "name": "",
+        "label": "Valor Entero",
+        "tooltip": "",
+        "group": "7b7fb2b782acc222",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "10",
+        "step": 1,
+        "className": "",
+        "x": 230,
+        "y": 1720,
+        "wires": [
+            [
+                "a72965f206f3b6c0"
+            ]
+        ]
+    },
+    {
+        "id": "63991ef6aa9e3d32",
+        "type": "ui_button",
+        "z": "128ad8a8437bc20b",
+        "g": "444094b3ee0fdacc",
+        "name": "",
+        "group": "7b7fb2b782acc222",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Iniciar",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 210,
+        "y": 1580,
+        "wires": [
+            [
+                "ee7c09796f9fd8f7",
+                "f5aa7c1531f9bdc9"
+            ]
+        ]
+    },
+    {
+        "id": "babf751814128a5a",
+        "type": "file",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "name": "datos ANG SIM",
+        "filename": "C:\\Users\\andre\\Downloads\\Semestre-10\\SCADA y controladores industriales\\Projecto\\valsAngLabSir.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1200,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bd483f208114fad4",
+        "type": "delay",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1190,
+        "y": 460,
+        "wires": [
+            [
+                "db0cec083c71965b"
+            ]
+        ]
+    },
+    {
+        "id": "db0cec083c71965b",
+        "type": "file",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "name": "datos ANG SIM",
+        "filename": "C:\\Users\\andre\\Downloads\\Semestre-10\\SCADA y controladores industriales\\Projecto\\valsAngLabSir.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1340,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a69af0bea00360c6",
+        "type": "delay",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1190,
+        "y": 520,
+        "wires": [
+            [
+                "8588f9059fa949b7"
+            ]
+        ]
+    },
+    {
+        "id": "8588f9059fa949b7",
+        "type": "file",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "name": "datos ANG SIM",
+        "filename": "C:\\Users\\andre\\Downloads\\Semestre-10\\SCADA y controladores industriales\\Projecto\\valsAngLabSir.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1340,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "021de871cfeec9db",
+        "type": "file",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "name": "datos ANG SIM",
+        "filename": "C:\\Users\\andre\\Downloads\\Semestre-10\\SCADA y controladores industriales\\Projecto\\valsAngLabSir.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1340,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f15476262b4f221a",
+        "type": "delay",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1190,
+        "y": 580,
+        "wires": [
+            [
+                "021de871cfeec9db"
+            ]
+        ]
+    },
+    {
+        "id": "0e8a0f08b9c88024",
+        "type": "delay",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1190,
+        "y": 640,
+        "wires": [
+            [
+                "e6b48c93d88b6a95"
+            ]
+        ]
+    },
+    {
+        "id": "e6b48c93d88b6a95",
+        "type": "file",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "name": "datos ANG SIM",
+        "filename": "C:\\Users\\andre\\Downloads\\Semestre-10\\SCADA y controladores industriales\\Projecto\\valsAngLabSir.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1340,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aa8d212daf3960bd",
+        "type": "file",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "name": "datos ANG SIM",
+        "filename": "C:\\Users\\andre\\Downloads\\Semestre-10\\SCADA y controladores industriales\\Projecto\\valsAngLabSir.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1340,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2c8f7511171067d8",
+        "type": "delay",
+        "z": "128ad8a8437bc20b",
+        "g": "31f5dba0d63b227e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1190,
+        "y": 700,
+        "wires": [
+            [
+                "aa8d212daf3960bd"
+            ]
+        ]
+    },
+    {
+        "id": "f5aa7c1531f9bdc9",
+        "type": "OpcUa-Item",
+        "z": "128ad8a8437bc20b",
+        "g": "444094b3ee0fdacc",
+        "item": "ns=4;s=140-102229_140-102229/SafetyStates/SAF/ParameterSet/OperationalMode",
+        "datatype": "Extension Object",
+        "value": "Modo",
+        "name": "Modo planta",
+        "x": 390,
+        "y": 1660,
+        "wires": [
+            [
+                "38bccae075f76a38"
+            ]
+        ]
+    },
+    {
+        "id": "38bccae075f76a38",
+        "type": "OpcUa-Client",
+        "z": "128ad8a8437bc20b",
+        "g": "444094b3ee0fdacc",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 540,
+        "y": 1660,
+        "wires": [
+            [
+                "cccbc8b1328d8c2a"
+            ]
+        ]
+    },
+    {
+        "id": "cccbc8b1328d8c2a",
+        "type": "function",
+        "z": "128ad8a8437bc20b",
+        "g": "444094b3ee0fdacc",
+        "name": "",
+        "func": "\nswitch(msg.payload){\n    case 1:\n        msg.payload=\"Manual con velocidad reducida\";\n        break;\n    case 2: \n        msg.payload = \"Manual con alta velocidad\"\n        break;\n    case 3: \n        msg.payload = \"Automático\"\n        break;\n    case 4:\n        msg.payload = \"Otro\"\n        break;\n    default:\n        msg.payload = \"Otro\"\n    break;\n\n\n}\n\n    return msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 1660,
+        "wires": [
+            [
+                "32ca2878651beb9d"
+            ]
+        ]
+    },
+    {
+        "id": "32ca2878651beb9d",
+        "type": "ui_text",
+        "z": "128ad8a8437bc20b",
+        "g": "444094b3ee0fdacc",
+        "group": "7b7fb2b782acc222",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Modo",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 790,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "23fed959be05f172",
+        "type": "OpcUa-Item",
+        "z": "128ad8a8437bc20b",
+        "item": "ns=4;s=140-102229_140-102229/SafetyStates/SAF/ParameterSet/EmergencyStop",
+        "datatype": "Boolean",
+        "value": "1",
+        "name": "ES",
+        "x": 90,
+        "y": 680,
+        "wires": [
+            [
+                "23c4891b581578c2"
+            ]
+        ]
+    },
+    {
+        "id": "23c4891b581578c2",
+        "type": "OpcUa-Client",
+        "z": "128ad8a8437bc20b",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 240,
+        "y": 680,
+        "wires": [
+            [
+                "2c1a91453bf02f3d"
+            ]
+        ]
+    },
+    {
+        "id": "2c1a91453bf02f3d",
+        "type": "ui_led",
+        "z": "128ad8a8437bc20b",
+        "order": 4,
+        "group": "7b7fb2b782acc222",
+        "width": 0,
+        "height": 0,
+        "label": "Prendido",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 430,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "9b3c33d0bd7e2611",
+        "type": "OpcUa-Item",
+        "z": "128ad8a8437bc20b",
+        "item": "ns=0;i=18830",
+        "datatype": "String",
+        "value": "",
+        "name": "int",
+        "x": 470,
+        "y": 1960,
+        "wires": [
+            [
+                "41bf8e8a2b956865"
+            ]
+        ]
+    },
+    {
+        "id": "232578629df6287c",
+        "type": "inject",
+        "z": "128ad8a8437bc20b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 340,
+        "y": 1960,
+        "wires": [
+            [
+                "9b3c33d0bd7e2611"
+            ]
+        ]
+    },
+    {
+        "id": "41bf8e8a2b956865",
+        "type": "OpcUa-Client",
+        "z": "128ad8a8437bc20b",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 620,
+        "y": 1960,
+        "wires": [
+            [
+                "6e7394fabf76eec1"
+            ]
+        ]
+    },
+    {
+        "id": "6e7394fabf76eec1",
+        "type": "debug",
+        "z": "128ad8a8437bc20b",
+        "name": "debug 21",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 1960,
+        "wires": []
+    },
+    {
+        "id": "49695cb954ac26ce",
+        "type": "ui_switch",
+        "z": "128ad8a8437bc20b",
+        "g": "444094b3ee0fdacc",
+        "name": "",
+        "label": "ON",
+        "tooltip": "",
+        "group": "7b7fb2b782acc222",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 210,
+        "y": 1800,
+        "wires": [
+            [
+                "5dba1415f8117ea6"
+            ]
+        ]
+    },
+    {
+        "id": "5dba1415f8117ea6",
+        "type": "OpcUa-Item",
+        "z": "128ad8a8437bc20b",
+        "g": "444094b3ee0fdacc",
+        "item": "ns=3;s=140-102229_140-102229/IO_System/IO_Signals/DI_IOT_02",
+        "datatype": "Boolean",
+        "value": "0",
+        "name": "STOP",
+        "x": 350,
+        "y": 1800,
+        "wires": [
+            [
+                "919ca3c2936f26ae"
+            ]
+        ]
+    },
+    {
+        "id": "919ca3c2936f26ae",
+        "type": "OpcUa-Client",
+        "z": "128ad8a8437bc20b",
+        "g": "444094b3ee0fdacc",
+        "endpoint": "991a363c9d9d402d",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "65535",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "",
+        "x": 520,
+        "y": 1800,
+        "wires": [
+            [
+                "74a0f305d42e4cd0"
+            ]
+        ]
+    },
+    {
+        "id": "74a0f305d42e4cd0",
+        "type": "debug",
+        "z": "128ad8a8437bc20b",
+        "g": "444094b3ee0fdacc",
+        "name": "debug 22",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "f528f10492178492",
+        "type": "inject",
+        "z": "83a54f9f17308e4e",
+        "g": "5e629f504954e331",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 170,
+        "y": 120,
+        "wires": [
+            [
+                "4b9e15935e407bae"
+            ]
+        ]
+    },
+    {
+        "id": "510da619870cf82c",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "5e629f504954e331",
+        "endpoint": "991a363c9d9d402d",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "65535",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "",
+        "x": 560,
+        "y": 160,
+        "wires": [
+            [
+                "373c5b26481845b6"
+            ]
+        ]
+    },
+    {
+        "id": "4b9e15935e407bae",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "5e629f504954e331",
+        "item": "ns=3;s=DESKTOP-6OKFIJO_IRB140_6_81/IO_System/IO_Signals/DI_IOT_01",
+        "datatype": "Boolean",
+        "value": "0",
+        "name": "",
+        "x": 360,
+        "y": 160,
+        "wires": [
+            [
+                "510da619870cf82c"
+            ]
+        ]
+    },
+    {
+        "id": "f429b55f2fb32640",
+        "type": "inject",
+        "z": "83a54f9f17308e4e",
+        "g": "5e629f504954e331",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 170,
+        "y": 200,
+        "wires": [
+            [
+                "4b9e15935e407bae"
+            ]
+        ]
+    },
+    {
+        "id": "373c5b26481845b6",
+        "type": "debug",
+        "z": "83a54f9f17308e4e",
+        "g": "5e629f504954e331",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "32748e30cf220b86",
+        "type": "inject",
+        "z": "83a54f9f17308e4e",
+        "g": "5e629f504954e331",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "100",
+        "payloadType": "num",
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "276af53bd6e15913"
+            ]
+        ]
+    },
+    {
+        "id": "4c367beaebf24ccf",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "5e629f504954e331",
+        "endpoint": "991a363c9d9d402d",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "65535",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "",
+        "x": 560,
+        "y": 300,
+        "wires": [
+            [
+                "a43f1c0757e2a2f3"
+            ]
+        ]
+    },
+    {
+        "id": "276af53bd6e15913",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "5e629f504954e331",
+        "item": "ns=3;s=DESKTOP-6OKFIJO_IRB140_6_81/IO_System/IO_Signals/DI_INT_IOT_01",
+        "datatype": "UInt32",
+        "value": "0",
+        "name": "",
+        "x": 360,
+        "y": 300,
+        "wires": [
+            [
+                "4c367beaebf24ccf"
+            ]
+        ]
+    },
+    {
+        "id": "e7f778b8ba7b81a4",
+        "type": "inject",
+        "z": "83a54f9f17308e4e",
+        "g": "5e629f504954e331",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "20",
+        "payloadType": "num",
+        "x": 170,
+        "y": 340,
+        "wires": [
+            [
+                "276af53bd6e15913"
+            ]
+        ]
+    },
+    {
+        "id": "a43f1c0757e2a2f3",
+        "type": "debug",
+        "z": "83a54f9f17308e4e",
+        "g": "5e629f504954e331",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "eb2a6b0bd5ad1014",
+        "type": "inject",
+        "z": "83a54f9f17308e4e",
+        "g": "fea1d10012c3a130",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 460,
+        "wires": [
+            [
+                "c2d75c35d31dbdd9"
+            ]
+        ]
+    },
+    {
+        "id": "6f88ad079fe7cb78",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "fea1d10012c3a130",
+        "endpoint": "991a363c9d9d402d",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "65535",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "",
+        "x": 600,
+        "y": 460,
+        "wires": [
+            [
+                "06a7da3531ead599"
+            ]
+        ]
+    },
+    {
+        "id": "4e9d73afb8e99370",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "fea1d10012c3a130",
+        "item": "ns=3;s=DESKTOP-6OKFIJO_IRB140_6_81/IO_System/IO_Signals/DI_IOT_01",
+        "datatype": "Boolean",
+        "value": "0",
+        "name": "",
+        "x": 440,
+        "y": 460,
+        "wires": [
+            [
+                "6f88ad079fe7cb78"
+            ]
+        ]
+    },
+    {
+        "id": "06a7da3531ead599",
+        "type": "debug",
+        "z": "83a54f9f17308e4e",
+        "g": "fea1d10012c3a130",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "e28087b4618c583e",
+        "type": "inject",
+        "z": "83a54f9f17308e4e",
+        "g": "fea1d10012c3a130",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "100",
+        "payloadType": "num",
+        "x": 230,
+        "y": 560,
+        "wires": [
+            [
+                "beacea29fafde03f"
+            ]
+        ]
+    },
+    {
+        "id": "7d7aa9fc835dfb34",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "fea1d10012c3a130",
+        "endpoint": "991a363c9d9d402d",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "65535",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "",
+        "x": 620,
+        "y": 600,
+        "wires": [
+            [
+                "c0aa300f5d850c43"
+            ]
+        ]
+    },
+    {
+        "id": "beacea29fafde03f",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "fea1d10012c3a130",
+        "item": "ns=3;s=DESKTOP-6OKFIJO_IRB140_6_81/IO_System/IO_Signals/DI_INT_IOT_01",
+        "datatype": "UInt32",
+        "value": "0",
+        "name": "",
+        "x": 420,
+        "y": 600,
+        "wires": [
+            [
+                "7d7aa9fc835dfb34"
+            ]
+        ]
+    },
+    {
+        "id": "6274cfc39d737dfe",
+        "type": "inject",
+        "z": "83a54f9f17308e4e",
+        "g": "fea1d10012c3a130",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "20",
+        "payloadType": "num",
+        "x": 230,
+        "y": 640,
+        "wires": [
+            [
+                "beacea29fafde03f"
+            ]
+        ]
+    },
+    {
+        "id": "c0aa300f5d850c43",
+        "type": "debug",
+        "z": "83a54f9f17308e4e",
+        "g": "fea1d10012c3a130",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "c2d75c35d31dbdd9",
+        "type": "trigger",
+        "z": "83a54f9f17308e4e",
+        "g": "fea1d10012c3a130",
+        "name": "PULSE",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "num",
+        "op2type": "num",
+        "duration": "250",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 300,
+        "y": 460,
+        "wires": [
+            [
+                "4e9d73afb8e99370"
+            ]
+        ]
+    },
+    {
+        "id": "fe31ccfbb368d0c2",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "e57e5251ccd0c627",
+        "item": "ns=4;s=DESKTOP-6OKFIJO_IRB140_6_81/MotionDevices/ROB_1/Axes/Rax_1/ParameterSet/ActualPosition",
+        "datatype": "Double",
+        "value": "1",
+        "name": "ART 1 SIM",
+        "x": 1150,
+        "y": 780,
+        "wires": [
+            [
+                "69848a93c66ae3f6"
+            ]
+        ]
+    },
+    {
+        "id": "69848a93c66ae3f6",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "e57e5251ccd0c627",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": "100",
+        "timeUnit": "ms",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 1300,
+        "y": 780,
+        "wires": [
+            [
+                "e2f7f94a12b9efa7"
+            ]
+        ]
+    },
+    {
+        "id": "a497d5ef03ab15b4",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "e57e5251ccd0c627",
+        "item": "ns=4;s=DESKTOP-6OKFIJO_IRB140_6_81/MotionDevices/ROB_1/Axes/Rax_2/ParameterSet/ActualPosition",
+        "datatype": "Double",
+        "value": "1",
+        "name": "ART 2 SIM",
+        "x": 1150,
+        "y": 840,
+        "wires": [
+            [
+                "35361647ee1acd78"
+            ]
+        ]
+    },
+    {
+        "id": "35361647ee1acd78",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "e57e5251ccd0c627",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": "100",
+        "timeUnit": "ms",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 1300,
+        "y": 840,
+        "wires": [
+            [
+                "437c415d34b7fe20"
+            ]
+        ]
+    },
+    {
+        "id": "58036a8c2fbd9ae9",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "e57e5251ccd0c627",
+        "item": "ns=4;s=DESKTOP-6OKFIJO_IRB140_6_81/MotionDevices/ROB_1/Axes/Rax_3/ParameterSet/ActualPosition",
+        "datatype": "Double",
+        "value": "1",
+        "name": "ART 3 SIM",
+        "x": 1150,
+        "y": 900,
+        "wires": [
+            [
+                "eea2b9c1a63b93cb"
+            ]
+        ]
+    },
+    {
+        "id": "eea2b9c1a63b93cb",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "e57e5251ccd0c627",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": "100",
+        "timeUnit": "ms",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 1300,
+        "y": 900,
+        "wires": [
+            [
+                "b73c767d1096246e"
+            ]
+        ]
+    },
+    {
+        "id": "dff790bf06b055f1",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "e57e5251ccd0c627",
+        "item": "ns=4;s=DESKTOP-6OKFIJO_IRB140_6_81/MotionDevices/ROB_1/Axes/Rax_4/ParameterSet/ActualPosition",
+        "datatype": "Double",
+        "value": "1",
+        "name": "ART 4 SIM",
+        "x": 1150,
+        "y": 960,
+        "wires": [
+            [
+                "bc6c5175082ef009"
+            ]
+        ]
+    },
+    {
+        "id": "bc6c5175082ef009",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "e57e5251ccd0c627",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": "100",
+        "timeUnit": "ms",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 1300,
+        "y": 960,
+        "wires": [
+            [
+                "bd0e6033f9593895"
+            ]
+        ]
+    },
+    {
+        "id": "e9e7f189fb7ca65f",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "e57e5251ccd0c627",
+        "item": "ns=4;s=DESKTOP-6OKFIJO_IRB140_6_81/MotionDevices/ROB_1/Axes/Rax_5/ParameterSet/ActualPosition",
+        "datatype": "Double",
+        "value": "1",
+        "name": "ART 5 SIM",
+        "x": 1150,
+        "y": 1020,
+        "wires": [
+            [
+                "9ba1ec2b8d4a84e4"
+            ]
+        ]
+    },
+    {
+        "id": "9ba1ec2b8d4a84e4",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "e57e5251ccd0c627",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": "100",
+        "timeUnit": "ms",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 1300,
+        "y": 1020,
+        "wires": [
+            [
+                "8d422c339fdba695"
+            ]
+        ]
+    },
+    {
+        "id": "0c36d42ded5283b9",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "e57e5251ccd0c627",
+        "item": "ns=4;s=DESKTOP-6OKFIJO_IRB140_6_81/MotionDevices/ROB_1/Axes/Rax_6/ParameterSet/ActualPosition",
+        "datatype": "Double",
+        "value": "1",
+        "name": "ART 6 SIM",
+        "x": 1150,
+        "y": 1080,
+        "wires": [
+            [
+                "adfdfa0ca500ae08"
+            ]
+        ]
+    },
+    {
+        "id": "adfdfa0ca500ae08",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "e57e5251ccd0c627",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": "100",
+        "timeUnit": "ms",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 1300,
+        "y": 1080,
+        "wires": [
+            [
+                "013a86d5758a289e"
+            ]
+        ]
+    },
+    {
+        "id": "e2f7f94a12b9efa7",
+        "type": "ui_chart",
+        "z": "83a54f9f17308e4e",
+        "g": "e57e5251ccd0c627",
+        "name": "ANG1 SIM",
+        "group": "acbc68497209c498",
+        "order": 1,
+        "width": "6",
+        "height": "5",
+        "label": "Ángulo articulación 1",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1450,
+        "y": 780,
+        "wires": [
+            [
+                "a31a57bbda9347ba"
+            ]
+        ]
+    },
+    {
+        "id": "437c415d34b7fe20",
+        "type": "ui_chart",
+        "z": "83a54f9f17308e4e",
+        "g": "e57e5251ccd0c627",
+        "name": "ANG2 SIM",
+        "group": "acbc68497209c498",
+        "order": 2,
+        "width": "6",
+        "height": "5",
+        "label": "Ángulo articulación 2",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1450,
+        "y": 840,
+        "wires": [
+            [
+                "46ed53cc8b35f0e4"
+            ]
+        ]
+    },
+    {
+        "id": "b73c767d1096246e",
+        "type": "ui_chart",
+        "z": "83a54f9f17308e4e",
+        "g": "e57e5251ccd0c627",
+        "name": "ANG3 SIM",
+        "group": "acbc68497209c498",
+        "order": 3,
+        "width": "6",
+        "height": "5",
+        "label": "Ángulo articulación 3",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1450,
+        "y": 900,
+        "wires": [
+            [
+                "5e3f364037e77d4d"
+            ]
+        ]
+    },
+    {
+        "id": "bd0e6033f9593895",
+        "type": "ui_chart",
+        "z": "83a54f9f17308e4e",
+        "g": "e57e5251ccd0c627",
+        "name": "ANG4 SIM",
+        "group": "acbc68497209c498",
+        "order": 4,
+        "width": "6",
+        "height": "5",
+        "label": "Ángulo articulación 4",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1450,
+        "y": 960,
+        "wires": [
+            [
+                "bf650cfe6df6b0d6"
+            ]
+        ]
+    },
+    {
+        "id": "8d422c339fdba695",
+        "type": "ui_chart",
+        "z": "83a54f9f17308e4e",
+        "g": "e57e5251ccd0c627",
+        "name": "ANG5 SIM",
+        "group": "acbc68497209c498",
+        "order": 5,
+        "width": "6",
+        "height": "5",
+        "label": "Ángulo articulación 5",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1450,
+        "y": 1020,
+        "wires": [
+            [
+                "2a574c3bf2747261"
+            ]
+        ]
+    },
+    {
+        "id": "013a86d5758a289e",
+        "type": "ui_chart",
+        "z": "83a54f9f17308e4e",
+        "g": "e57e5251ccd0c627",
+        "name": "ANG6 SIM",
+        "group": "acbc68497209c498",
+        "order": 6,
+        "width": "6",
+        "height": "5",
+        "label": "Ángulo articulación 6",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1450,
+        "y": 1080,
+        "wires": [
+            [
+                "6f3e9855c858a1ea"
+            ]
+        ]
+    },
+    {
+        "id": "a31a57bbda9347ba",
+        "type": "file",
+        "z": "83a54f9f17308e4e",
+        "d": true,
+        "name": "datos ANG SIM",
+        "filename": "C:\\Users\\andre\\Downloads\\Semestre-10\\SCADA y controladores industriales\\Projecto\\ang1.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1880,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1547c22ed6b7d88c",
+        "type": "file",
+        "z": "83a54f9f17308e4e",
+        "d": true,
+        "name": "datos ANG SIM",
+        "filename": "C:\\Users\\andre\\Downloads\\Semestre-10\\SCADA y controladores industriales\\Projecto\\ang1.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 2020,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5c16e72d5b092b90",
+        "type": "file",
+        "z": "83a54f9f17308e4e",
+        "d": true,
+        "name": "datos ANG SIM",
+        "filename": "C:\\Users\\andre\\Downloads\\Semestre-10\\SCADA y controladores industriales\\Projecto\\ang1.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 2020,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "80c074dd6099ebb4",
+        "type": "file",
+        "z": "83a54f9f17308e4e",
+        "d": true,
+        "name": "datos ANG SIM",
+        "filename": "C:\\Users\\andre\\Downloads\\Semestre-10\\SCADA y controladores industriales\\Projecto\\ang1.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 2020,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "62aaea9a8c5c8673",
+        "type": "file",
+        "z": "83a54f9f17308e4e",
+        "d": true,
+        "name": "datos ANG SIM",
+        "filename": "C:\\Users\\andre\\Downloads\\Semestre-10\\SCADA y controladores industriales\\Projecto\\ang1.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 2020,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f3f7cd5811204cef",
+        "type": "file",
+        "z": "83a54f9f17308e4e",
+        "d": true,
+        "name": "datos ANG SIM",
+        "filename": "C:\\Users\\andre\\Downloads\\Semestre-10\\SCADA y controladores industriales\\Projecto\\ang1.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 2020,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "46ed53cc8b35f0e4",
+        "type": "delay",
+        "z": "83a54f9f17308e4e",
+        "d": true,
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1870,
+        "y": 840,
+        "wires": [
+            [
+                "1547c22ed6b7d88c"
+            ]
+        ]
+    },
+    {
+        "id": "5e3f364037e77d4d",
+        "type": "delay",
+        "z": "83a54f9f17308e4e",
+        "d": true,
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1870,
+        "y": 900,
+        "wires": [
+            [
+                "5c16e72d5b092b90"
+            ]
+        ]
+    },
+    {
+        "id": "bf650cfe6df6b0d6",
+        "type": "delay",
+        "z": "83a54f9f17308e4e",
+        "d": true,
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1870,
+        "y": 960,
+        "wires": [
+            [
+                "80c074dd6099ebb4"
+            ]
+        ]
+    },
+    {
+        "id": "2a574c3bf2747261",
+        "type": "delay",
+        "z": "83a54f9f17308e4e",
+        "d": true,
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1870,
+        "y": 1020,
+        "wires": [
+            [
+                "62aaea9a8c5c8673"
+            ]
+        ]
+    },
+    {
+        "id": "6f3e9855c858a1ea",
+        "type": "delay",
+        "z": "83a54f9f17308e4e",
+        "d": true,
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1870,
+        "y": 1080,
+        "wires": [
+            [
+                "f3f7cd5811204cef"
+            ]
+        ]
+    },
+    {
+        "id": "f4d9fe79aa739b59",
+        "type": "function",
+        "z": "83a54f9f17308e4e",
+        "g": "825cfcc9574f0bc6",
+        "name": "FLOW DAQ",
+        "func": "flow.set(\"DAQSIM\",msg.payload)\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4372ee5e0a25f661",
+        "type": "switch",
+        "z": "83a54f9f17308e4e",
+        "g": "825cfcc9574f0bc6",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 250,
+        "y": 880,
+        "wires": [
+            [
+                "a03ebf0beace863e"
+            ]
+        ]
+    },
+    {
+        "id": "a03ebf0beace863e",
+        "type": "delay",
+        "z": "83a54f9f17308e4e",
+        "g": "825cfcc9574f0bc6",
+        "name": "del .2s",
+        "pauseType": "delay",
+        "timeout": "200",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 350,
+        "y": 880,
+        "wires": [
+            [
+                "97b1783e1a349c17"
+            ]
+        ]
+    },
+    {
+        "id": "97b1783e1a349c17",
+        "type": "function",
+        "z": "83a54f9f17308e4e",
+        "g": "825cfcc9574f0bc6",
+        "name": "Clock .2s",
+        "func": "var est = flow.get(\"DAQSIM\");\n\nmsg.payload=est;\n    return msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 880,
+        "wires": [
+            [
+                "4372ee5e0a25f661",
+                "0c36d42ded5283b9",
+                "e9e7f189fb7ca65f",
+                "dff790bf06b055f1",
+                "58036a8c2fbd9ae9",
+                "a497d5ef03ab15b4",
+                "fe31ccfbb368d0c2",
+                "75aa207bfbae20b3",
+                "343f827a852642cb",
+                "8feaaf1f641eaa97"
+            ]
+        ]
+    },
+    {
+        "id": "2f0e1495d9cb894e",
+        "type": "ui_slider",
+        "z": "83a54f9f17308e4e",
+        "g": "e05aea7e4fb98542",
+        "name": "",
+        "label": "Articulación 1",
+        "tooltip": "",
+        "group": "acf892039fa08adc",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-179",
+        "max": "179",
+        "step": 1,
+        "className": "",
+        "x": 800,
+        "y": 1980,
+        "wires": [
+            [
+                "b81cbfac57d39ccc"
+            ]
+        ]
+    },
+    {
+        "id": "0fc1663ed4d19052",
+        "type": "ui_slider",
+        "z": "83a54f9f17308e4e",
+        "g": "e05aea7e4fb98542",
+        "name": "",
+        "label": "Articulación 2",
+        "tooltip": "",
+        "group": "acf892039fa08adc",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-79",
+        "max": "109",
+        "step": 1,
+        "className": "",
+        "x": 800,
+        "y": 2020,
+        "wires": [
+            [
+                "14ad135d8e86df74"
+            ]
+        ]
+    },
+    {
+        "id": "dc19373ff663711f",
+        "type": "ui_slider",
+        "z": "83a54f9f17308e4e",
+        "g": "e05aea7e4fb98542",
+        "name": "",
+        "label": "Articulación 3",
+        "tooltip": "",
+        "group": "acf892039fa08adc",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-229",
+        "max": "49",
+        "step": 1,
+        "className": "",
+        "x": 800,
+        "y": 2060,
+        "wires": [
+            [
+                "ea6180d4c962abe3"
+            ]
+        ]
+    },
+    {
+        "id": "26a84d450ad1a770",
+        "type": "ui_slider",
+        "z": "83a54f9f17308e4e",
+        "g": "e05aea7e4fb98542",
+        "name": "",
+        "label": "Articulación 4",
+        "tooltip": "",
+        "group": "acf892039fa08adc",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-199",
+        "max": "199",
+        "step": 1,
+        "className": "",
+        "x": 800,
+        "y": 2100,
+        "wires": [
+            [
+                "608baf14b98bfc92"
+            ]
+        ]
+    },
+    {
+        "id": "8844480768963bce",
+        "type": "ui_slider",
+        "z": "83a54f9f17308e4e",
+        "g": "e05aea7e4fb98542",
+        "name": "",
+        "label": "Articulación 5",
+        "tooltip": "",
+        "group": "acf892039fa08adc",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-114",
+        "max": "114",
+        "step": 1,
+        "className": "",
+        "x": 800,
+        "y": 2140,
+        "wires": [
+            [
+                "95be6655ab5fedc0"
+            ]
+        ]
+    },
+    {
+        "id": "6990cfbdc520c7af",
+        "type": "ui_slider",
+        "z": "83a54f9f17308e4e",
+        "g": "e05aea7e4fb98542",
+        "name": "",
+        "label": "Articulación 6",
+        "tooltip": "",
+        "group": "acf892039fa08adc",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-399",
+        "max": "399",
+        "step": 1,
+        "className": "",
+        "x": 800,
+        "y": 2180,
+        "wires": [
+            [
+                "a6b1f7023632aa47"
+            ]
+        ]
+    },
+    {
+        "id": "861990f289871887",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "e05aea7e4fb98542",
+        "endpoint": "991a363c9d9d402d",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "65535",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "",
+        "x": 1180,
+        "y": 1980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b81cbfac57d39ccc",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "e05aea7e4fb98542",
+        "item": "ns=3;s=DESKTOP-6OKFIJO_IRB140_6_81/RAPID/T_ROB1/Module1/IOTJ1",
+        "datatype": "Double",
+        "value": "0",
+        "name": "",
+        "x": 1020,
+        "y": 1980,
+        "wires": [
+            [
+                "861990f289871887"
+            ]
+        ]
+    },
+    {
+        "id": "1d626f941b4c9e67",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "e05aea7e4fb98542",
+        "endpoint": "991a363c9d9d402d",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "65535",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "",
+        "x": 1180,
+        "y": 2020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "14ad135d8e86df74",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "e05aea7e4fb98542",
+        "item": "ns=3;s=DESKTOP-6OKFIJO_IRB140_6_81/RAPID/T_ROB1/Module1/IOTJ2",
+        "datatype": "Double",
+        "value": "0",
+        "name": "",
+        "x": 1020,
+        "y": 2020,
+        "wires": [
+            [
+                "1d626f941b4c9e67"
+            ]
+        ]
+    },
+    {
+        "id": "1cc146afd0c5ef5b",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "e05aea7e4fb98542",
+        "endpoint": "991a363c9d9d402d",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "65535",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "",
+        "x": 1180,
+        "y": 2060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ea6180d4c962abe3",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "e05aea7e4fb98542",
+        "item": "ns=3;s=DESKTOP-6OKFIJO_IRB140_6_81/RAPID/T_ROB1/Module1/IOTJ3",
+        "datatype": "Double",
+        "value": "0",
+        "name": "",
+        "x": 1020,
+        "y": 2060,
+        "wires": [
+            [
+                "1cc146afd0c5ef5b"
+            ]
+        ]
+    },
+    {
+        "id": "fa2c52829d947d02",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "e05aea7e4fb98542",
+        "endpoint": "991a363c9d9d402d",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "65535",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "",
+        "x": 1180,
+        "y": 2100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "608baf14b98bfc92",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "e05aea7e4fb98542",
+        "item": "ns=3;s=DESKTOP-6OKFIJO_IRB140_6_81/RAPID/T_ROB1/Module1/IOTJ4",
+        "datatype": "Double",
+        "value": "0",
+        "name": "",
+        "x": 1020,
+        "y": 2100,
+        "wires": [
+            [
+                "fa2c52829d947d02"
+            ]
+        ]
+    },
+    {
+        "id": "baf6b75eb233450d",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "e05aea7e4fb98542",
+        "endpoint": "991a363c9d9d402d",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "65535",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "",
+        "x": 1180,
+        "y": 2140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "95be6655ab5fedc0",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "e05aea7e4fb98542",
+        "item": "ns=3;s=DESKTOP-6OKFIJO_IRB140_6_81/RAPID/T_ROB1/Module1/IOTJ5",
+        "datatype": "Double",
+        "value": "0",
+        "name": "",
+        "x": 1020,
+        "y": 2140,
+        "wires": [
+            [
+                "baf6b75eb233450d"
+            ]
+        ]
+    },
+    {
+        "id": "0fcc303a4f71b83e",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "e05aea7e4fb98542",
+        "endpoint": "991a363c9d9d402d",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "65535",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "",
+        "x": 1180,
+        "y": 2180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a6b1f7023632aa47",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "e05aea7e4fb98542",
+        "item": "ns=3;s=DESKTOP-6OKFIJO_IRB140_6_81/RAPID/T_ROB1/Module1/IOTJ6",
+        "datatype": "Double",
+        "value": "0",
+        "name": "",
+        "x": 1020,
+        "y": 2180,
+        "wires": [
+            [
+                "0fcc303a4f71b83e"
+            ]
+        ]
+    },
+    {
+        "id": "0e53dfe9be87e363",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "fa3b8ec8649317fe",
+        "item": "ns=3;s=DESKTOP-6OKFIJO_IRB140_6_81/RAPID/T_ROB1/Module1/POSY",
+        "datatype": "Boolean",
+        "value": "1",
+        "name": "ART 2 SIM",
+        "x": 110,
+        "y": 1420,
+        "wires": [
+            [
+                "4832004a58ace02c"
+            ]
+        ]
+    },
+    {
+        "id": "8ee08f06debcd5fe",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "fa3b8ec8649317fe",
+        "item": "ns=3;s=DESKTOP-6OKFIJO_IRB140_6_81/RAPID/T_ROB1/Module1/POSZ",
+        "datatype": "Double",
+        "value": "1",
+        "name": "ART 3 SIM",
+        "x": 110,
+        "y": 1480,
+        "wires": [
+            [
+                "9eb011cd34d5d9a7"
+            ]
+        ]
+    },
+    {
+        "id": "9eb011cd34d5d9a7",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "fa3b8ec8649317fe",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 260,
+        "y": 1480,
+        "wires": [
+            [
+                "62823c8e2414a58b"
+            ]
+        ]
+    },
+    {
+        "id": "4832004a58ace02c",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "fa3b8ec8649317fe",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 260,
+        "y": 1420,
+        "wires": [
+            [
+                "9c477d7006d88bc8"
+            ]
+        ]
+    },
+    {
+        "id": "9c477d7006d88bc8",
+        "type": "ui_text",
+        "z": "83a54f9f17308e4e",
+        "g": "fa3b8ec8649317fe",
+        "group": "bee392b6bc79b20b",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Coordenada Y (mm)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 440,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "62823c8e2414a58b",
+        "type": "ui_text",
+        "z": "83a54f9f17308e4e",
+        "g": "fa3b8ec8649317fe",
+        "group": "bee392b6bc79b20b",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Coordenada Z (mm)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 440,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "9c9976b79b725abe",
+        "type": "ui_text",
+        "z": "83a54f9f17308e4e",
+        "g": "fa3b8ec8649317fe",
+        "group": "bee392b6bc79b20b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Coordenada X (mm)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 440,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "4f730aae23265986",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "fa3b8ec8649317fe",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": "1",
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT SUBS",
+        "x": 260,
+        "y": 1360,
+        "wires": [
+            [
+                "9c9976b79b725abe"
+            ]
+        ]
+    },
+    {
+        "id": "847cca5394adb35d",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "fa3b8ec8649317fe",
+        "item": "ns=3;s=DESKTOP-6OKFIJO_IRB140_6_81/RAPID/T_ROB1/Module1/POSX",
+        "datatype": "Double",
+        "value": "1",
+        "name": "ART 1 SIM",
+        "x": 110,
+        "y": 1360,
+        "wires": [
+            [
+                "4f730aae23265986"
+            ]
+        ]
+    },
+    {
+        "id": "d035016515b0d5fb",
+        "type": "ui_switch",
+        "z": "83a54f9f17308e4e",
+        "g": "825cfcc9574f0bc6",
+        "name": "",
+        "label": "DAQ",
+        "tooltip": "",
+        "group": "a3f484320da25085",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 90,
+        "y": 920,
+        "wires": [
+            [
+                "f4d9fe79aa739b59",
+                "4372ee5e0a25f661",
+                "2db8426c11c341c5",
+                "7fdee18dbef995a9",
+                "244a455a02022cd2"
+            ]
+        ]
+    },
+    {
+        "id": "2db8426c11c341c5",
+        "type": "clock-generator",
+        "z": "83a54f9f17308e4e",
+        "g": "825cfcc9574f0bc6",
+        "name": "Clock 1s",
+        "topic": "",
+        "period": "1",
+        "output": "1",
+        "init": false,
+        "x": 120,
+        "y": 1240,
+        "wires": [
+            [
+                "847cca5394adb35d",
+                "0e53dfe9be87e363",
+                "8ee08f06debcd5fe",
+                "5aef43c8a3fadfdf",
+                "d9848ad22e61baa6",
+                "b645c5748cc97b2d"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "01fb1bbe7ed2b74d",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "b362225641bc7a8a",
+        "endpoint": "991a363c9d9d402d",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "65535",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "",
+        "x": 520,
+        "y": 1840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "08465d5070418b91",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "b362225641bc7a8a",
+        "item": "ns=3;s=DESKTOP-6OKFIJO_IRB140_6_81/IO_System/IO_Signals/DI_IOT_01",
+        "datatype": "Boolean",
+        "value": "0",
+        "name": "",
+        "x": 360,
+        "y": 1840,
+        "wires": [
+            [
+                "01fb1bbe7ed2b74d"
+            ]
+        ]
+    },
+    {
+        "id": "e64c3a46b0f41479",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "b362225641bc7a8a",
+        "endpoint": "991a363c9d9d402d",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "65535",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "",
+        "x": 460,
+        "y": 1980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4e32e3e60b686903",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "b362225641bc7a8a",
+        "item": "ns=3;s=DESKTOP-6OKFIJO_IRB140_6_81/IO_System/IO_Signals/DI_INT_IOT_01",
+        "datatype": "UInt32",
+        "value": "0",
+        "name": "",
+        "x": 300,
+        "y": 1980,
+        "wires": [
+            [
+                "e64c3a46b0f41479"
+            ]
+        ]
+    },
+    {
+        "id": "27aac4ce453dca63",
+        "type": "trigger",
+        "z": "83a54f9f17308e4e",
+        "g": "b362225641bc7a8a",
+        "name": "PULSE",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "num",
+        "op2type": "num",
+        "duration": "250",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 220,
+        "y": 1840,
+        "wires": [
+            [
+                "08465d5070418b91"
+            ]
+        ]
+    },
+    {
+        "id": "ce377a92a26285c8",
+        "type": "ui_button",
+        "z": "83a54f9f17308e4e",
+        "g": "b362225641bc7a8a",
+        "name": "",
+        "group": "a3f484320da25085",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Iniciar",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "green",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 1840,
+        "wires": [
+            [
+                "27aac4ce453dca63"
+            ]
+        ]
+    },
+    {
+        "id": "6d4339dc28e8c4f7",
+        "type": "ui_dropdown",
+        "z": "83a54f9f17308e4e",
+        "g": "b362225641bc7a8a",
+        "name": "",
+        "label": "Acción",
+        "tooltip": "Seleccione una acción a realizar",
+        "place": "Select option",
+        "group": "a3f484320da25085",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Program Home",
+                "value": 1,
+                "type": "num"
+            },
+            {
+                "label": "Routine Home",
+                "value": 2,
+                "type": "num"
+            },
+            {
+                "label": "Tool Left",
+                "value": "3",
+                "type": "str"
+            },
+            {
+                "label": "Tool Right",
+                "value": "4",
+                "type": "str"
+            },
+            {
+                "label": "Security",
+                "value": "5",
+                "type": "str"
+            },
+            {
+                "label": "Joint Move",
+                "value": "6",
+                "type": "str"
+            },
+            {
+                "label": "Linear Move",
+                "value": "7",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 110,
+        "y": 1980,
+        "wires": [
+            [
+                "4e32e3e60b686903"
+            ]
+        ]
+    },
+    {
+        "id": "8404cb58aa932a94",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "a7610954717e0879",
+        "item": "ns=3;s=DESKTOP-6OKFIJO_IRB140_6_81/RAPID/T_ROB1/Module1/MOVEPOSZ",
+        "datatype": "Double",
+        "value": "1",
+        "name": "MOVE POS Z",
+        "x": 1080,
+        "y": 2500,
+        "wires": [
+            [
+                "9810b04ac33dc642"
+            ]
+        ]
+    },
+    {
+        "id": "9810b04ac33dc642",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "a7610954717e0879",
+        "endpoint": "991a363c9d9d402d",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 1300,
+        "y": 2500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4e9a5a4dc242c6d6",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "a7610954717e0879",
+        "item": "ns=3;s=DESKTOP-6OKFIJO_IRB140_6_81/RAPID/T_ROB1/Module1/MOVEPOSY",
+        "datatype": "Double",
+        "value": "1",
+        "name": "MOVE POS Y",
+        "x": 1080,
+        "y": 2400,
+        "wires": [
+            [
+                "c6c53aad1acac5a0"
+            ]
+        ]
+    },
+    {
+        "id": "c6c53aad1acac5a0",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "a7610954717e0879",
+        "endpoint": "991a363c9d9d402d",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 1300,
+        "y": 2400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c61199dc5d80f489",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "a7610954717e0879",
+        "item": "ns=3;s=DESKTOP-6OKFIJO_IRB140_6_81/RAPID/T_ROB1/Module1/MOVEPOSX",
+        "datatype": "Double",
+        "value": "1",
+        "name": "MOVE POS X",
+        "x": 1080,
+        "y": 2320,
+        "wires": [
+            [
+                "46afdaf2c4226c29"
+            ]
+        ]
+    },
+    {
+        "id": "46afdaf2c4226c29",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "a7610954717e0879",
+        "endpoint": "991a363c9d9d402d",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 1300,
+        "y": 2320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d4b5389a7d3e61c2",
+        "type": "ui_text_input",
+        "z": "83a54f9f17308e4e",
+        "g": "a7610954717e0879",
+        "name": "",
+        "label": "Move X",
+        "tooltip": "",
+        "group": "763a195c9fd18f53",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": "100",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 780,
+        "y": 2280,
+        "wires": [
+            [
+                "c61199dc5d80f489"
+            ]
+        ]
+    },
+    {
+        "id": "3fcc6240d116496c",
+        "type": "ui_text_input",
+        "z": "83a54f9f17308e4e",
+        "g": "a7610954717e0879",
+        "name": "",
+        "label": "Move Y",
+        "tooltip": "",
+        "group": "763a195c9fd18f53",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": "100",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 780,
+        "y": 2380,
+        "wires": [
+            [
+                "4e9a5a4dc242c6d6"
+            ]
+        ]
+    },
+    {
+        "id": "0abafa98bb2786da",
+        "type": "ui_text_input",
+        "z": "83a54f9f17308e4e",
+        "g": "a7610954717e0879",
+        "name": "",
+        "label": "Move Z",
+        "tooltip": "",
+        "group": "763a195c9fd18f53",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": "100",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 780,
+        "y": 2480,
+        "wires": [
+            [
+                "8404cb58aa932a94"
+            ]
+        ]
+    },
+    {
+        "id": "71846d7364ab28c2",
+        "type": "ui_slider",
+        "z": "83a54f9f17308e4e",
+        "g": "a7610954717e0879",
+        "name": "",
+        "label": "Move X",
+        "tooltip": "",
+        "group": "763a195c9fd18f53",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-100",
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 780,
+        "y": 2340,
+        "wires": [
+            [
+                "c61199dc5d80f489"
+            ]
+        ]
+    },
+    {
+        "id": "2426f02b808fa07c",
+        "type": "ui_slider",
+        "z": "83a54f9f17308e4e",
+        "g": "a7610954717e0879",
+        "name": "",
+        "label": "Move Y",
+        "tooltip": "",
+        "group": "763a195c9fd18f53",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-100",
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 780,
+        "y": 2420,
+        "wires": [
+            [
+                "4e9a5a4dc242c6d6"
+            ]
+        ]
+    },
+    {
+        "id": "38dca30917021cca",
+        "type": "ui_slider",
+        "z": "83a54f9f17308e4e",
+        "g": "a7610954717e0879",
+        "name": "",
+        "label": "Move Z",
+        "tooltip": "",
+        "group": "763a195c9fd18f53",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-100",
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 780,
+        "y": 2540,
+        "wires": [
+            [
+                "8404cb58aa932a94"
+            ]
+        ]
+    },
+    {
+        "id": "1e5e3c69c17a5d9a",
+        "type": "debug",
+        "z": "83a54f9f17308e4e",
+        "g": "b362225641bc7a8a",
+        "name": "debug 24",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 1920,
+        "wires": []
+    },
+    {
+        "id": "c99538ae733ff7a9",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "b362225641bc7a8a",
+        "endpoint": "991a363c9d9d402d",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "65535",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "",
+        "x": 340,
+        "y": 1920,
+        "wires": [
+            [
+                "1e5e3c69c17a5d9a"
+            ]
+        ]
+    },
+    {
+        "id": "e113f57fd09a7505",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "b362225641bc7a8a",
+        "item": "ns=3;s=DESKTOP-6OKFIJO_IRB140_6_81/IO_System/IO_Signals/DI_IOT_02",
+        "datatype": "Boolean",
+        "value": "0",
+        "name": "STOP",
+        "x": 210,
+        "y": 1920,
+        "wires": [
+            [
+                "c99538ae733ff7a9"
+            ]
+        ]
+    },
+    {
+        "id": "eec369e2f2f41862",
+        "type": "ui_switch",
+        "z": "83a54f9f17308e4e",
+        "g": "b362225641bc7a8a",
+        "name": "",
+        "label": "ON",
+        "tooltip": "",
+        "group": "a3f484320da25085",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 110,
+        "y": 1920,
+        "wires": [
+            [
+                "e113f57fd09a7505"
+            ]
+        ]
+    },
+    {
+        "id": "75aa207bfbae20b3",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "ce68e5f6a0108094",
+        "item": "ns=4;s=DESKTOP-6OKFIJO_IRB140_6_81/SafetyStates/SAF/ParameterSet/EmergencyStop",
+        "datatype": "Boolean",
+        "value": "1",
+        "name": "PARADA",
+        "x": 1120,
+        "y": 1180,
+        "wires": [
+            [
+                "7e0d1736ae18894c"
+            ]
+        ]
+    },
+    {
+        "id": "7e0d1736ae18894c",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "ce68e5f6a0108094",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 1260,
+        "y": 1180,
+        "wires": [
+            [
+                "bf8c3dcb9b3c6edc"
+            ]
+        ]
+    },
+    {
+        "id": "bf8c3dcb9b3c6edc",
+        "type": "ui_led",
+        "z": "83a54f9f17308e4e",
+        "g": "ce68e5f6a0108094",
+        "order": 6,
+        "group": "1f0ba8197bea5228",
+        "width": 0,
+        "height": 0,
+        "label": "Emergency Stop",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "ES",
+        "x": 1390,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "532a33f3f4ad0cfa",
+        "type": "ui_text",
+        "z": "83a54f9f17308e4e",
+        "g": "4902160ce26e1ae1",
+        "group": "1f0ba8197bea5228",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Nombre:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 940,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "30ebadece4a26343",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "4902160ce26e1ae1",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 800,
+        "y": 1300,
+        "wires": [
+            [
+                "532a33f3f4ad0cfa"
+            ]
+        ]
+    },
+    {
+        "id": "7fdee18dbef995a9",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "4902160ce26e1ae1",
+        "item": "ns=3;s=DESKTOP-6OKFIJO_IRB140_6_81/ControllerName",
+        "datatype": "String",
+        "value": "1",
+        "name": "Name",
+        "x": 650,
+        "y": 1300,
+        "wires": [
+            [
+                "30ebadece4a26343"
+            ]
+        ]
+    },
+    {
+        "id": "343f827a852642cb",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "4027fbf4f7ab5979",
+        "item": "ns=3;s=DESKTOP-6OKFIJO_IRB140_6_81/ControllerExecutionState",
+        "datatype": "Boolean",
+        "value": "1",
+        "name": "PARADA",
+        "x": 1160,
+        "y": 1280,
+        "wires": [
+            [
+                "940c57e8bfd6aab0"
+            ]
+        ]
+    },
+    {
+        "id": "940c57e8bfd6aab0",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "4027fbf4f7ab5979",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 1300,
+        "y": 1280,
+        "wires": [
+            [
+                "75e94915d7e1cda5"
+            ]
+        ]
+    },
+    {
+        "id": "75e94915d7e1cda5",
+        "type": "ui_led",
+        "z": "83a54f9f17308e4e",
+        "g": "4027fbf4f7ab5979",
+        "order": 7,
+        "group": "1f0ba8197bea5228",
+        "width": 0,
+        "height": 0,
+        "label": "Prendido",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "2",
+                "valueType": "num"
+            },
+            {
+                "color": "#008000",
+                "value": "1",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "PRENDIDO",
+        "x": 1510,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "8feaaf1f641eaa97",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "3a547e85fca22b25",
+        "item": "ns=4;s=DESKTOP-6OKFIJO_IRB140_6_81/MotionDevices/ROB_1/ParameterSet/InControl",
+        "datatype": "Boolean",
+        "value": "1",
+        "name": "IN CONTROL",
+        "x": 1180,
+        "y": 1400,
+        "wires": [
+            [
+                "73af4ba93f483e44"
+            ]
+        ]
+    },
+    {
+        "id": "73af4ba93f483e44",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "3a547e85fca22b25",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 1300,
+        "y": 1400,
+        "wires": [
+            [
+                "b1cf219e897ed28d"
+            ]
+        ]
+    },
+    {
+        "id": "b1cf219e897ed28d",
+        "type": "ui_led",
+        "z": "83a54f9f17308e4e",
+        "g": "3a547e85fca22b25",
+        "order": 8,
+        "group": "1f0ba8197bea5228",
+        "width": 0,
+        "height": 0,
+        "label": "In Control",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "In Control",
+        "x": 1440,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "cfe47039db6b81de",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "6303a6ee8c48f2b5",
+        "item": "ns=4;s=DESKTOP-6OKFIJO_IRB140_6_81/MotionDevices/ROB_1/ParameterSet/InControl",
+        "datatype": "Boolean",
+        "value": "1",
+        "name": "IN CONTROL",
+        "x": 1180,
+        "y": 1500,
+        "wires": [
+            [
+                "289ee8241919b331"
+            ]
+        ]
+    },
+    {
+        "id": "289ee8241919b331",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "6303a6ee8c48f2b5",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 1300,
+        "y": 1500,
+        "wires": [
+            [
+                "90644ee9f624b92c"
+            ]
+        ]
+    },
+    {
+        "id": "90644ee9f624b92c",
+        "type": "ui_led",
+        "z": "83a54f9f17308e4e",
+        "g": "6303a6ee8c48f2b5",
+        "order": 9,
+        "group": "1f0ba8197bea5228",
+        "width": 0,
+        "height": 0,
+        "label": "In Control",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 1430,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "b7213d856c0e70c9",
+        "type": "ui_text",
+        "z": "83a54f9f17308e4e",
+        "g": "7717ce4beb2574cf",
+        "group": "1f0ba8197bea5228",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "IP:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 930,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "2ffb2ebb5c6dcf3c",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "7717ce4beb2574cf",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 800,
+        "y": 1400,
+        "wires": [
+            [
+                "b7213d856c0e70c9"
+            ]
+        ]
+    },
+    {
+        "id": "244a455a02022cd2",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "7717ce4beb2574cf",
+        "item": "ns=3;s=DESKTOP-6OKFIJO_IRB140_6_81/ControllerAddress",
+        "datatype": "String",
+        "value": "1",
+        "name": "IP",
+        "x": 650,
+        "y": 1400,
+        "wires": [
+            [
+                "2ffb2ebb5c6dcf3c"
+            ]
+        ]
+    },
+    {
+        "id": "2f0b677010155fb6",
+        "type": "ui_text",
+        "z": "83a54f9f17308e4e",
+        "group": "1f0ba8197bea5228",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Modo planta:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 590,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "8c528eaa714eef46",
+        "type": "function",
+        "z": "83a54f9f17308e4e",
+        "name": "",
+        "func": "\nswitch(msg.payload){\n    case 1:\n        msg.payload=\"Manual con velocidad reducida\";\n        break;\n    case 2: \n        msg.payload = \"Manual con alta velocidad\"\n        break;\n    case 3: \n        msg.payload = \"Automático\"\n        break;\n    case 4:\n        msg.payload = \"Otro\"\n        break;\n    default:\n        msg.payload = \"Otro\"\n    break;\n\n\n}\n\n    return msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 1700,
+        "wires": [
+            [
+                "2f0b677010155fb6"
+            ]
+        ]
+    },
+    {
+        "id": "31977bedd926b183",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 320,
+        "y": 1700,
+        "wires": [
+            [
+                "8c528eaa714eef46"
+            ]
+        ]
+    },
+    {
+        "id": "5aef43c8a3fadfdf",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "item": "ns=4;s=DESKTOP-6OKFIJO_IRB140_6_81/SafetyStates/SAF/ParameterSet/OperationalMode",
+        "datatype": "Extension Object",
+        "value": "Modo",
+        "name": "Modo planta",
+        "x": 170,
+        "y": 1700,
+        "wires": [
+            [
+                "31977bedd926b183"
+            ]
+        ]
+    },
+    {
+        "id": "468e46e1a581e6ba",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 300,
+        "y": 1760,
+        "wires": [
+            [
+                "9d625f98ffce82da"
+            ]
+        ]
+    },
+    {
+        "id": "d9848ad22e61baa6",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "item": "ns=4;s=DESKTOP-6OKFIJO_IRB140_6_81/Controllers/DESKTOP-6OKFIJO/TaskControls/T_ROB1/ParameterSet/TaskProgramLoaded",
+        "datatype": "Boolean",
+        "value": "Cargado",
+        "name": "Modo planta",
+        "x": 150,
+        "y": 1760,
+        "wires": [
+            [
+                "468e46e1a581e6ba"
+            ]
+        ]
+    },
+    {
+        "id": "9d625f98ffce82da",
+        "type": "ui_led",
+        "z": "83a54f9f17308e4e",
+        "order": 5,
+        "group": "1f0ba8197bea5228",
+        "width": 0,
+        "height": 0,
+        "label": "Program Loaded",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "PROGRAM LOADED",
+        "x": 500,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "994f8acb7e26f7bd",
+        "type": "ui_text",
+        "z": "83a54f9f17308e4e",
+        "g": "f03fc388447ff6e6",
+        "group": "1f0ba8197bea5228",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Nombre programa:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 510,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "2c852f60c97e6688",
+        "type": "OpcUa-Client",
+        "z": "83a54f9f17308e4e",
+        "g": "f03fc388447ff6e6",
+        "endpoint": "991a363c9d9d402d",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "maxChunkCount": 1,
+        "maxMessageSize": "4194304",
+        "receiveBufferSize": "65535",
+        "sendBufferSize": "65535",
+        "name": "CLIENT READ",
+        "x": 340,
+        "y": 1600,
+        "wires": [
+            [
+                "994f8acb7e26f7bd"
+            ]
+        ]
+    },
+    {
+        "id": "b645c5748cc97b2d",
+        "type": "OpcUa-Item",
+        "z": "83a54f9f17308e4e",
+        "g": "f03fc388447ff6e6",
+        "item": "ns=4;s=DESKTOP-6OKFIJO_IRB140_6_81/Controllers/DESKTOP-6OKFIJO/TaskControls/T_ROB1/ParameterSet/TaskProgramName",
+        "datatype": "String",
+        "value": "1",
+        "name": "PARADA",
+        "x": 200,
+        "y": 1600,
+        "wires": [
+            [
+                "2c852f60c97e6688"
+            ]
+        ]
+    }
+]

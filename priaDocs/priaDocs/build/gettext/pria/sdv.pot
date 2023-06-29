@@ -1,0 +1,81 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, LabFabEx
+# This file is distributed under the same license as the LabFabEx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: LabFabEx \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 15:34-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/pria/sdv.rst:2
+msgid "Vehículos Auto Guiados SDV-UN"
+msgstr ""
+
+#: ../../source/pria/sdv.rst:5
+msgid "Inicio de operación"
+msgstr ""
+
+#: ../../source/pria/sdv.rst:7
+msgid "Para conectarse con el vehículo de forma remota se usa el protocolo *ssh* con el siguiente comando::"
+msgstr ""
+
+#: ../../source/pria/sdv.rst:14
+msgid "Una vez iniciada una sesión remota se debe ejecutar desde la terminal el siguiente comando::"
+msgstr ""
+
+#: ../../source/pria/sdv.rst:18
+msgid "Finalmente, para conectarlo con la base de datos remota se ejecuta el siguiente comando desde otra terminal::"
+msgstr ""
+
+#: ../../source/pria/sdv.rst:22
+msgid "También es posible conectar el equipo desde otro computador incluyendo la IP del vehículo. Por ejemplo, para conectar el vehículo SDV-UN 2 desde cualquier computador dentro de la red del laboratorio se puede ejecutar en la terminal del computador remoto::"
+msgstr ""
+
+#: ../../source/pria/sdv.rst:26
+msgid "El resultado de cualquiera de los dos comandos anteriores debe ser de éxito :code:`{status: \"OK\", code: 200}`"
+msgstr ""
+
+#: ../../source/pria/sdv.rst:29
+msgid "Múltiples terminales"
+msgstr ""
+
+#: ../../source/pria/sdv.rst:31
+msgid "Para el procedimiento anterior se necesitan como mínimo dos terminales, ya que la conexión es remota y por medio de *ssh*, se debería repetir el proceso de conexión para cada uno de los comandos, por esta razón se recomienda el uso de la herramienta *tmux* que permite dividir la pantalla en varias terminales sin necesidad de autenticarse nuevamente. Para ello, luego de iniciar sesión por primera vez se ejecuta el siguiente comando en la terminal::"
+msgstr ""
+
+#: ../../source/pria/sdv.rst:35
+msgid "La pantalla adquiere una apariencia distita y es posible dividirla usando las siguientes combinaciónes:"
+msgstr ""
+
+#: ../../source/pria/sdv.rst:38
+msgid "Teclas"
+msgstr ""
+
+#: ../../source/pria/sdv.rst:38
+msgid "Función"
+msgstr ""
+
+#: ../../source/pria/sdv.rst:40
+msgid "Ctrl + A + |"
+msgstr ""
+
+#: ../../source/pria/sdv.rst:40
+msgid "Crea una división vertical"
+msgstr ""
+
+#: ../../source/pria/sdv.rst:42
+msgid "Ctrl + A + -"
+msgstr ""
+
+#: ../../source/pria/sdv.rst:42
+msgid "Crea una división horizontal"
+msgstr ""

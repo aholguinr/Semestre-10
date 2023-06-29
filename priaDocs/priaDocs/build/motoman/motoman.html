@@ -1,0 +1,203 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Plataforma robótica &#8212; LabFabEx  documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Crear nuevo script" href="new_script.html" />
+    <link rel="prev" title="Indices y tablas" href="../index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+
+<div style="background-color: #f8f8f8; text-align: left; padding: 10px 10px 15px 15px">
+    <a href="../index.html"><h1 font-family="" style="font-size: 15pt;">Documentación LabFabEx</h1></a>
+</div>
+
+
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="plataforma-robotica">
+<h1>Plataforma robótica<a class="headerlink" href="#plataforma-robotica" title="Permalink to this headline">¶</a></h1>
+<p>La plataforma robótica es un equipo conformado por un robot motoman de seis (6) grados de libertad, una guía lineal y un motor, para un total de ocho (8) grados de libertad operados por un controlador Yaskawa DX100. Ubicado en la celda industrial dentro del laboratorio fábrica experimental (LabFabEx).</p>
+<p>Para hacer uso del equipo se debe tener autorización previa del director del laboratorio y del laboratorista encargado. La operación del robot es realizada utilizando el middelware ROS (Robotic Operating System), por lo que conocimientos previos de este desarrollo son deseables.</p>
+<div class="section" id="requisitos-del-sistema">
+<h2>Requisitos del sistema<a class="headerlink" href="#requisitos-del-sistema" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Sistema operativo Linux Ubuntu 16.04.6 LTS (Xenial Xerus)</li>
+<li>ROS Kinetic</li>
+<li>ROS industrial</li>
+<li>Repositorio LabFabEx/motoman</li>
+<li>OpenCV 4.2.0</li>
+<li>TensorFlow 1.0 o superior</li>
+</ul>
+<p>Dentro del laboratorio se encuentra un equipo de computo dedicado al uso de la plataforma robótica, para utilizarlo debe contar con las credenciales de autenticación. Una vez iniciada la sesión será posible manejar la plataforma. Deberá abrir una consola de terminal y ejecutar el siguiente comando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Simulation</span>
+<span class="n">roslaunch</span> <span class="n">motoman_mh6full_moveit_config</span> <span class="n">demo</span><span class="o">.</span><span class="n">launch</span>
+<span class="c1"># Real connection to robot platform</span>
+<span class="n">roslaunch</span> <span class="n">motoman_mh6full_moveit_config</span> <span class="n">moveit_planning_execution</span><span class="o">.</span><span class="n">launch</span> <span class="n">sim</span><span class="p">:</span><span class="o">=</span><span class="n">false</span> <span class="n">controller</span><span class="p">:</span><span class="o">=</span><span class="n">dx100</span> <span class="n">robot_ip</span><span class="p">:</span><span class="o">=</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">1.20</span>
+</pre></div>
+</div>
+<p>Lo que abrirá una ventana del visualizador RVIZ que mostrará una virtualización de la plataforma como en la siguiente imagen:</p>
+<p>Se recomienda utilizar la configuración que permite visualizar la imagen actual de la cámara que se encuentra ubicada en la muñeca del robot Motoman. Esta cámara se encarga de realizar una captura de imagen cuando la función de análisis de imagen. Al ver la imagen de la cámara será posible verificar que se está transmitiendo información y así mismo que se encuentra en la orientación indicada:</p>
+<p>Las rutinas que el robot realiza se encuentran en la siguiente ruta <code class="code docutils literal notranslate"><span class="pre">~/motoman_ws/src/robot_position_cmd/src</span></code> utilizan el lenguaje C++ y deben ser compiladas cuando se realizen cambios o adiciones. Actualmente se tienen las siguientes rutinas:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" rowspan="2">Archivo</th>
+<th class="head" rowspan="2">Descripción de Tarea</th>
+</tr>
+<tr class="row-even"></tr>
+</thead>
+<tbody valign="top">
+<tr class="row-odd"><td rowspan="2">pick_sdv.cpp</td>
+<td rowspan="2">Recoger pallet negro del SDV (usa visión)</td>
+</tr>
+<tr class="row-even"></tr>
+<tr class="row-odd"><td rowspan="2">pick_lathe.cpp</td>
+<td rowspan="2">Recoger pallet de torno (usa visión)</td>
+</tr>
+<tr class="row-even"></tr>
+<tr class="row-odd"><td rowspan="2">pick_table.cpp</td>
+<td rowspan="2">Recoger pallet de mesa</td>
+</tr>
+<tr class="row-even"></tr>
+<tr class="row-odd"><td rowspan="2">place_sdv.cpp</td>
+<td rowspan="2">Colocar pallet en SDV (usa visión)</td>
+</tr>
+<tr class="row-even"></tr>
+<tr class="row-odd"><td rowspan="2">place_lathe.cpp</td>
+<td rowspan="2">Colocar pallet en torno</td>
+</tr>
+<tr class="row-even"></tr>
+<tr class="row-odd"><td rowspan="2">place_table.cpp</td>
+<td rowspan="2">Colocar pallet en mesa</td>
+</tr>
+<tr class="row-even"></tr>
+<tr class="row-odd"><td rowspan="2">off_vacuum.cpp</td>
+<td rowspan="2">Toogle actuador neumático</td>
+</tr>
+<tr class="row-even"></tr>
+<tr class="row-odd"><td rowspan="2">sensor_data.cpp</td>
+<td rowspan="2">Lectura de estado de sensor</td>
+</tr>
+<tr class="row-even"></tr>
+</tbody>
+</table>
+<p>Para conocer la programación que puede ser realizada utilizando el desarrollo Node-Red PRIA por favor dirígase a la siguiente documentación: <a class="reference internal" href="../pria/motoman.html#motoman-node-red"><span class="std std-ref">Plataforma robótica - Motoman</span></a></p>
+<div class="section" id="enlaces-adicionales">
+<h3>Enlaces adicionales<a class="headerlink" href="#enlaces-adicionales" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="new_script.html">Crear nuevo script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sensor/sensor.html">Sensor foto sensible</a></li>
+<li class="toctree-l1"><a class="reference internal" href="errors/errors.html">Errores comunes</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">LabFabEx</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Plataforma robótica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pria/pria.html">PRIA - UN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../almacen/almacen_material.html">Automated warehouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdv_slam/sdv_slam.html">SDV SLAM aplication</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../index.html" title="previous chapter">Indices y tablas</a></li>
+      <li>Next: <a href="new_script.html" title="next chapter">Crear nuevo script</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, LabFabEx.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/motoman/motoman.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,325 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>SDV SLAM aplication &#8212; LabFabEx  documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Maintenance manual" href="../almacen/mantenimiento/manual.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+
+<div style="background-color: #f8f8f8; text-align: left; padding: 10px 10px 15px 15px">
+    <a href="../index.html"><h1 font-family="" style="font-size: 15pt;">Documentación LabFabEx</h1></a>
+</div>
+
+
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="sdv-slam-aplication">
+<h1>SDV SLAM aplication<a class="headerlink" href="#sdv-slam-aplication" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="system-requirement">
+<h2>System requirement<a class="headerlink" href="#system-requirement" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Ros Melodic.</li>
+<li>Python 2.7.</li>
+<li>OpenCV 3.3.</li>
+</ul>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="install-realsense-r200-ros-node">
+<h3>Install realsense r200 ROS node<a class="headerlink" href="#install-realsense-r200-ros-node" title="Permalink to this headline">¶</a></h3>
+<p>For ROS Melodic distribution we will use the G.Doisy work, the following instructions are an abstract from <a class="reference external" href="https://github.com/doisyg/librealsense/blob/recent_kernel_compatibility/doc/installation.md">the original instructions</a>.</p>
+<ol class="arabic">
+<li><p class="first">Install the packages required for librealsense build:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libusb</span><span class="o">-</span><span class="mf">1.0</span><span class="o">-</span><span class="mi">0</span><span class="o">-</span><span class="n">dev</span> <span class="n">pkg</span><span class="o">-</span><span class="n">config</span> <span class="n">libglfw3</span><span class="o">-</span><span class="n">dev</span> <span class="n">libssl</span><span class="o">-</span><span class="n">dev</span> <span class="n">ros</span><span class="o">-</span><span class="n">melodic</span><span class="o">-</span><span class="n">camera</span><span class="o">-</span><span class="n">info</span><span class="o">-</span><span class="n">manager</span> <span class="n">ros</span><span class="o">-</span><span class="n">melodic</span><span class="o">-</span><span class="n">rgbd</span><span class="o">-</span><span class="n">launch</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Get the git repository for librealsense ROS Melodic compatible:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">doisyg</span><span class="o">/</span><span class="n">librealsense</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">librealsense</span><span class="o">/</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">recent_kernel_compatibility</span>
+</pre></div>
+</div>
+<p>or download <a class="reference download external" download="" href="https://github.com/doisyg/librealsense/archive/recent_kernel_compatibility.zip"><code class="xref download docutils literal notranslate"><span class="pre">the</span> <span class="pre">.zip</span> <span class="pre">folder</span></code></a></p>
+</li>
+<li><p class="first">Apply required patches to kernel modules and build the patched module:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">cp</span> <span class="n">config</span><span class="o">/</span><span class="mi">99</span><span class="o">-</span><span class="n">realsense</span><span class="o">-</span><span class="n">libusb</span><span class="o">.</span><span class="n">rules</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">udev</span><span class="o">/</span><span class="n">rules</span><span class="o">.</span><span class="n">d</span><span class="o">/</span>
+<span class="n">sudo</span> <span class="n">udevadm</span> <span class="n">control</span> <span class="o">--</span><span class="n">reload</span><span class="o">-</span><span class="n">rules</span> <span class="o">&amp;&amp;</span> <span class="n">udevadm</span> <span class="n">trigger</span>
+<span class="o">./</span><span class="n">scripts</span><span class="o">/</span><span class="n">patch</span><span class="o">-</span><span class="n">realsense</span><span class="o">-</span><span class="n">ubuntu</span><span class="o">-</span><span class="n">xenial</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Verify the latest entries in kernel log:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dmesg</span> <span class="o">|</span> <span class="n">tail</span> <span class="o">-</span><span class="n">n</span> <span class="mi">50</span>
+</pre></div>
+</div>
+<p>The log should indicate that a new uvcvideo driver has been registered. If any errors have been noted, attempt the patching process again.</p>
+</li>
+<li><p class="first">Add uvcvideo driver to modules file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">tee</span> <span class="o">-</span><span class="n">a</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">modules</span> <span class="o">&lt;&lt;&lt;</span> <span class="s2">&quot;uvcvideo&quot;</span>
+<span class="n">sudo</span> <span class="n">update</span><span class="o">-</span><span class="n">initramfs</span> <span class="o">-</span><span class="n">u</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Library Build:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">build</span>
+<span class="n">cd</span> <span class="n">build</span>
+<span class="n">cmake</span> <span class="o">../</span>
+<span class="n">make</span>
+<span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Get the git repository for realsense-ros in your catkin src folder:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">catkin_ws</span><span class="o">/</span><span class="n">src</span><span class="o">/</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">intel</span><span class="o">-</span><span class="n">ros</span><span class="o">/</span><span class="n">realsense</span><span class="o">/</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">indigo</span><span class="o">-</span><span class="n">devel</span>
+</pre></div>
+</div>
+<p>or download <a class="reference download external" download="" href="https://github.com/intel-ros/realsense/archive/indigo-devel.zip"><code class="xref download docutils literal notranslate"><span class="pre">the</span> <span class="pre">.zip</span> <span class="pre">folder</span></code></a>.</p>
+</li>
+<li><p class="first">Download and replace the file <a class="reference download external" download="" href="https://github.com/intel-ros/realsense/files/2401961/CMakeLists.txt"><code class="xref download docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code></a>.</p>
+</li>
+<li><p class="first">Build.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="install-rtab-map-node">
+<h3>Install RTAB-Map node<a class="headerlink" href="#install-rtab-map-node" title="Permalink to this headline">¶</a></h3>
+<p>For full instruction go to <a class="reference external" href="https://github.com/introlab/rtabmap_ros">rtabmap repository</a>.</p>
+<ol class="arabic">
+<li><p class="first">Install rtabmap binaries and unistall for get all required dependencies:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">ros</span><span class="o">-</span><span class="n">melodic</span><span class="o">-</span><span class="n">rtabmap</span> <span class="n">ros</span><span class="o">-</span><span class="n">melodic</span><span class="o">-</span><span class="n">rtabmap</span><span class="o">-</span><span class="n">ros</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">remove</span> <span class="n">ros</span><span class="o">-</span><span class="n">melodic</span><span class="o">-</span><span class="n">rtabmap</span> <span class="n">ros</span><span class="o">-</span><span class="n">melodic</span><span class="o">-</span><span class="n">rtabmap</span><span class="o">-</span><span class="n">ros</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">ros</span><span class="o">-</span><span class="n">melodic</span><span class="o">-</span><span class="n">apriltag</span><span class="o">-</span><span class="n">ros</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Get optional dependency g2o:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ros</span><span class="o">-</span><span class="n">melodic</span><span class="o">-</span><span class="n">libg2o</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Get optional dependency ceres-solver:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libgoogle</span><span class="o">-</span><span class="n">glog</span><span class="o">-</span><span class="n">dev</span> <span class="n">libgflags</span><span class="o">-</span><span class="n">dev</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libatlas</span><span class="o">-</span><span class="n">base</span><span class="o">-</span><span class="n">dev</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libeigen3</span><span class="o">-</span><span class="n">dev</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libsuitesparse</span><span class="o">-</span><span class="n">dev</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">ceres</span><span class="o">-</span><span class="n">solver</span><span class="o">.</span><span class="n">googlesource</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ceres</span><span class="o">-</span><span class="n">solver</span>
+
+<span class="n">mkdir</span> <span class="n">ceres</span><span class="o">-</span><span class="nb">bin</span>
+<span class="n">cd</span> <span class="n">ceres</span><span class="o">-</span><span class="nb">bin</span>
+<span class="n">cmake</span> <span class="o">../</span><span class="n">ceres</span><span class="o">-</span><span class="n">solver</span>
+<span class="n">make</span> <span class="o">-</span><span class="n">j3</span>
+<span class="n">make</span> <span class="n">install</span>
+</pre></div>
+</div>
+</li>
+<li><dl class="first docutils">
+<dt>Get optional dependency libpointmatcher:</dt>
+<dd><p class="first">4.1 Get dependencies:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sudo apt-get install libboost-all-dev
+cd ~
+git clone git://github.com/ethz-asl/libnabo.git
+cd libnabo
+SRC_DIR=$PWD
+BUILD_DIR=${SRC_DIR}/build
+mkdir -p ${BUILD_DIR} &amp;&amp; cd ${BUILD_DIR}
+cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ${SRC_DIR}
+make
+sudo make install
+</pre></div>
+</div>
+<p>4.2 Get libpointmatcher:</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span>cd ~
+git clone git://github.com/ethz-asl/libpointmatcher.git
+cd libpointmatcher
+SRC_DIR=${PWD}
+BUILD_DIR=${SRC_DIR}/build
+mkdir -p ${BUILD_DIR} &amp;&amp; cd ${BUILD_DIR}
+cmake -D CMAKE_BUILD_TYPE=RelWithDebInfo ${SRC_DIR}
+make
+sudo make install
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><p class="first">Install rtabmap library:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">introlab</span><span class="o">/</span><span class="n">rtabmap</span><span class="o">.</span><span class="n">git</span> <span class="n">rtabmap</span>
+<span class="n">cd</span> <span class="n">rtabmap</span><span class="o">/</span><span class="n">build</span><span class="o">/</span>
+<span class="n">cmake</span> <span class="o">..</span>
+<span class="n">make</span>
+<span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Install rtabmap ROS package:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">catkin_ws</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">introlab</span><span class="o">/</span><span class="n">rtabmap_ros</span><span class="o">.</span><span class="n">git</span> <span class="n">src</span><span class="o">/</span><span class="n">rtabmap_ros</span>
+<span class="n">catkin_make</span> <span class="o">-</span><span class="n">j1</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>catkin_make options:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Add -DRTABMAP_SYNC_MULTI_RGBD=ON to catkin_make if you plan to use multiple cameras.</li>
+<li>Add -DRTABMAP_SYNC_USER_DATA=ON to catkin_make if you plan to use user data synchronized topics.</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="sdv-slam-usage">
+<h2>SDV SLAM usage<a class="headerlink" href="#sdv-slam-usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="localization-task">
+<h3>Localization task<a class="headerlink" href="#localization-task" title="Permalink to this headline">¶</a></h3>
+<p>For use the camera info in the odometry estimation rtabmap parameter must be set true in the roslaunch instruction. There are three options acording the node that manage the laser scan information:</p>
+<ul>
+<li><p class="first">For use Hector SLAM launch the SDV with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">sdv_nav</span> <span class="n">sdv_nav</span><span class="o">.</span><span class="n">launch</span> <span class="n">rtabmap</span><span class="p">:</span><span class="o">=</span><span class="n">true</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>The localization parameter value is hector by default.</p>
+<ul>
+<li><p class="first">For use AMCL type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">sdv_nav</span> <span class="n">sdv_nav</span><span class="o">.</span><span class="n">launch</span> <span class="n">localization</span><span class="p">:</span><span class="o">=</span><span class="n">amcl</span> <span class="n">rtabmap</span><span class="p">:</span><span class="o">=</span><span class="n">true</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">For ICP aproximation use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">sdv_nav</span> <span class="n">sdv_nav</span><span class="o">.</span><span class="n">launch</span> <span class="n">localization</span><span class="p">:</span><span class="o">=</span><span class="n">icp</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Note that rtabmap parameter will set true automatically.</p>
+</div>
+<div class="section" id="mapping-task">
+<h3>Mapping task<a class="headerlink" href="#mapping-task" title="Permalink to this headline">¶</a></h3>
+<p>To construct a new map set mapping parameter to true. e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">sdv_nav</span> <span class="n">sdv_nav</span><span class="o">.</span><span class="n">launch</span> <span class="n">localization</span><span class="p">:</span><span class="o">=</span><span class="n">icp</span> <span class="n">mapping</span><span class="p">:</span><span class="o">=</span><span class="n">true</span>
+</pre></div>
+</div>
+<p>Set mapping and rtabmap to true will erase the map database localised at ~/.ros/rtabmap.db, so there is a backup file in ~/.ros/backup.db. Don’t forget update it when a new map is available.</p>
+<p>For extend the actual map with a new zone use the command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rtabmap</span><span class="o">-</span><span class="n">reprocess</span> <span class="s2">&quot;pathmap1.db;pathmap2.db&quot;</span> <span class="n">outmap</span><span class="o">.</span><span class="n">db</span>
+</pre></div>
+</div>
+<p>So you have not to remap all the zones.</p>
+<p>To visualize de new map type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rtabmap</span><span class="o">-</span><span class="n">databaseViewer</span> <span class="n">pathmap</span><span class="o">.</span><span class="n">db</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">LabFabEx</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../motoman/motoman.html">Plataforma robótica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pria/pria.html">PRIA - UN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../almacen/almacen_material.html">Automated warehouse</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">SDV SLAM aplication</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../almacen/mantenimiento/manual.html" title="previous chapter">Maintenance manual</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, LabFabEx.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/sdv_slam/sdv_slam.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

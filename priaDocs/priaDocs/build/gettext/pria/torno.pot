@@ -1,0 +1,45 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, LabFabEx
+# This file is distributed under the same license as the LabFabEx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: LabFabEx \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 15:34-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/pria/torno.rst:11
+msgid "Torno Suizo"
+msgstr ""
+
+#: ../../source/pria/torno.rst:13
+msgid "El robot inicia el puente entre la base de datos y el controlador con el código *App.js*. Para realizar la conexión se debe ejecutar el comando una vez situada en la carpeta base::"
+msgstr ""
+
+#: ../../source/pria/torno.rst:17
+msgid "Luego de tener autorización por parte de LabFabEx, el código fuente puede ser descargado utilizando el siguiente comando::"
+msgstr ""
+
+#: ../../source/pria/torno.rst:21
+msgid "Los nuevos códigos de mecanizado se deben guardar en formato *.gcode* dentro de la carpeta denominada para este fin. Así mismo, dentro del código *LatheRobot.ts* se debe adicionar la información del nuevo mecanizado, como se muestra a continuación. Los datos importantes son:"
+msgstr ""
+
+#: ../../source/pria/torno.rst:23
+msgid "Nombre de la primitiva en Node-Red"
+msgstr ""
+
+#: ../../source/pria/torno.rst:24
+msgid "Ubicación relativa del archivo"
+msgstr ""
+
+#: ../../source/pria/torno.rst:25
+msgid "Tiempo que tarda en realizarse"
+msgstr ""

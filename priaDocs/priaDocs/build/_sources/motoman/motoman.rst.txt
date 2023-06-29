@@ -1,0 +1,65 @@
+###################
+Plataforma robótica
+###################
+
+La plataforma robótica es un equipo conformado por un robot motoman de seis (6) grados de libertad, una guía lineal y un motor, para un total de ocho (8) grados de libertad operados por un controlador Yaskawa DX100. Ubicado en la celda industrial dentro del laboratorio fábrica experimental (LabFabEx).
+
+Para hacer uso del equipo se debe tener autorización previa del director del laboratorio y del laboratorista encargado. La operación del robot es realizada utilizando el middelware ROS (Robotic Operating System), por lo que conocimientos previos de este desarrollo son deseables.
+
+**********************
+Requisitos del sistema
+**********************
+
+* Sistema operativo Linux Ubuntu 16.04.6 LTS (Xenial Xerus)
+* ROS Kinetic
+* ROS industrial
+* Repositorio LabFabEx/motoman
+* OpenCV 4.2.0
+* TensorFlow 1.0 o superior
+
+Dentro del laboratorio se encuentra un equipo de computo dedicado al uso de la plataforma robótica, para utilizarlo debe contar con las credenciales de autenticación. Una vez iniciada la sesión será posible manejar la plataforma. Deberá abrir una consola de terminal y ejecutar el siguiente comando::
+
+   # Simulation
+   roslaunch motoman_mh6full_moveit_config demo.launch
+   # Real connection to robot platform
+   roslaunch motoman_mh6full_moveit_config moveit_planning_execution.launch sim:=false controller:=dx100 robot_ip:=192.168.1.20
+
+Lo que abrirá una ventana del visualizador RVIZ que mostrará una virtualización de la plataforma como en la siguiente imagen:
+
+
+Se recomienda utilizar la configuración que permite visualizar la imagen actual de la cámara que se encuentra ubicada en la muñeca del robot Motoman. Esta cámara se encarga de realizar una captura de imagen cuando la función de análisis de imagen. Al ver la imagen de la cámara será posible verificar que se está transmitiendo información y así mismo que se encuentra en la orientación indicada:
+
+
+Las rutinas que el robot realiza se encuentran en la siguiente ruta :code:`~/motoman_ws/src/robot_position_cmd/src` utilizan el lenguaje C++ y deben ser compiladas cuando se realizen cambios o adiciones. Actualmente se tienen las siguientes rutinas:
+
++--------------------+-----------------------------------------+
++Archivo             +Descripción de Tarea                     +
++====================+=========================================+
++pick_sdv.cpp        +Recoger pallet negro del SDV (usa visión)+
++--------------------+-----------------------------------------+
++pick_lathe.cpp      +Recoger pallet de torno (usa visión)     +
++--------------------+-----------------------------------------+
++pick_table.cpp      +Recoger pallet de mesa                   +
++--------------------+-----------------------------------------+
++place_sdv.cpp       +Colocar pallet en SDV (usa visión)       +
++--------------------+-----------------------------------------+
++place_lathe.cpp     +Colocar pallet en torno                  +
++--------------------+-----------------------------------------+
++place_table.cpp     +Colocar pallet en mesa                   +
++--------------------+-----------------------------------------+
++off_vacuum.cpp      +Toogle actuador neumático                +
++--------------------+-----------------------------------------+
++sensor_data.cpp     +Lectura de estado de sensor              +
++--------------------+-----------------------------------------+
+
+Para conocer la programación que puede ser realizada utilizando el desarrollo Node-Red PRIA por favor dirígase a la siguiente documentación: :ref:`motoman_node_red`
+
+Enlaces adicionales
+===================
+
+.. toctree::
+   :maxdepth: 1
+
+   new_script.rst
+   sensor/sensor.rst
+   errors/errors.rst

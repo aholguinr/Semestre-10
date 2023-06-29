@@ -1,0 +1,133 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, LabFabEx
+# This file is distributed under the same license as the LabFabEx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: LabFabEx \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 15:34-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/index.rst:6
+#: ../../source/index.rst:6
+msgid "Contents:"
+msgstr ""
+
+#: ../../source/index.rst:18
+msgid "Indices y tablas"
+msgstr ""
+
+#: ../../source/index.rst:20
+msgid ":ref:`genindex`"
+msgstr ""
+
+#: ../../source/index.rst:21
+msgid ":ref:`modindex`"
+msgstr ""
+
+#: ../../source/index.rst:22
+msgid ":ref:`search`"
+msgstr ""
+
+#: ../../source/pyplots/ellipses.py:27
+msgid "(`Source code <./pyplots/ellipses.py>`__, `png <./pyplots/ellipses.png>`__, `hires.png <./pyplots/ellipses.hires.png>`__, `pdf <./pyplots/ellipses.pdf>`__)"
+msgstr ""
+
+#: ../../source/index.rst:32
+msgid "Making a list"
+msgstr ""
+
+#: ../../source/index.rst:34
+msgid "It is easy to make lists in rest"
+msgstr ""
+
+#: ../../source/index.rst:37
+msgid "Bullet points"
+msgstr ""
+
+#: ../../source/index.rst:39
+msgid "This is a subsection making bullet points"
+msgstr ""
+
+#: ../../source/index.rst:41
+#: ../../source/index.rst:53
+msgid "point A"
+msgstr ""
+
+#: ../../source/index.rst:43
+#: ../../source/index.rst:55
+msgid "point B"
+msgstr ""
+
+#: ../../source/index.rst:45
+#: ../../source/index.rst:57
+msgid "point C"
+msgstr ""
+
+#: ../../source/index.rst:49
+msgid "Enumerated points"
+msgstr ""
+
+#: ../../source/index.rst:51
+msgid "This is a subsection making numbered points"
+msgstr ""
+
+#: ../../source/index.rst:63
+msgid "Making a table"
+msgstr ""
+
+#: ../../source/index.rst:65
+msgid "This shows you how to make a table"
+msgstr ""
+
+#: ../../source/index.rst:68
+msgid "Name"
+msgstr ""
+
+#: ../../source/index.rst:68
+msgid "Age"
+msgstr ""
+
+#: ../../source/index.rst:70
+msgid "John D Hunter"
+msgstr ""
+
+#: ../../source/index.rst:70
+msgid "40"
+msgstr ""
+
+#: ../../source/index.rst:71
+msgid "Cast of Thousands"
+msgstr ""
+
+#: ../../source/index.rst:71
+msgid "41"
+msgstr ""
+
+#: ../../source/index.rst:72
+msgid "And Still More"
+msgstr ""
+
+#: ../../source/index.rst:72
+msgid "42"
+msgstr ""
+
+#: ../../source/index.rst:78
+msgid "Making links"
+msgstr ""
+
+#: ../../source/index.rst:80
+msgid "It is easy to make a link to `yahoo <http://yahoo.com>`_ or to some section inside this document (see :ref:`making-a-table`) or another document."
+msgstr ""
+
+#: ../../source/index.rst:84
+msgid "You can also reference classes, modules, functions, etc that are documented using the sphinx `autodoc <http://sphinx.pocoo.org/ext/autodoc.html>`_ facilites.  For example, see the module :mod:`matplotlib.backend_bases` documentation, or the class :class:`~matplotlib.backend_bases.LocationEvent`, or the method :meth:`~matplotlib.backend_bases.FigureCanvasBase.mpl_connect`."
+msgstr ""

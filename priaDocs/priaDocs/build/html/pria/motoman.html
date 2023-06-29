@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plataforma robótica - Motoman &#8212; LabFabEx  documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Vehículos Auto Guiados SDV-UN" href="sdv.html" />
+    <link rel="prev" title="Torno Suizo" href="torno.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+
+<div style="background-color: #f8f8f8; text-align: left; padding: 10px 10px 15px 15px">
+    <a href="../index.html"><h1 font-family="" style="font-size: 15pt;">Documentación LabFabEx</h1></a>
+</div>
+
+
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="plataforma-robotica-motoman">
+<span id="motoman-node-red"></span><h1>Plataforma robótica - Motoman<a class="headerlink" href="#plataforma-robotica-motoman" title="Permalink to this headline">¶</a></h1>
+<p>El robot inicia el puente entre la base de datos y el controlador con el código <em>firebase_initializer.py</em>. Lo más importante a tener en cuenta es que debido a que el desarrollo es hecho en ROS, los procesos son lanzados por medio de un tópico, y su finalización también es anunciada por medio del uso de otro tópico. En el siguiente fragmento se muestra y resaltan las líneas de código que hacen referencia a los dos tópicos mencionados anteriormente para dos procesos diferentes (Pick SDV y Place SDV).</p>
+<p>Adicionalmente, se debe tener en cuenta que la referencia en caracteres que se evalúa en los condicionales (if, elif) debe coincidir con los valores que envía node-red.</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hll"><span class="n">pickSDV_Topic</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s1">&#39;/motoman_maya/move_reference_pose&#39;</span><span class="p">,</span> <span class="n">Int8</span><span class="p">,</span> <span class="n">queue_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</span><span class="hll"><span class="n">placeTopic</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s1">&#39;/motoman_torno/place_to_sdv&#39;</span><span class="p">,</span> <span class="n">Int8</span><span class="p">,</span> <span class="n">queue_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</span>
+<span class="k">def</span> <span class="nf">step_received</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+
+     <span class="k">try</span><span class="p">:</span>
+         <span class="n">command_type</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decode_command</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+         <span class="n">rospy</span><span class="o">.</span><span class="n">logwarn</span><span class="p">(</span><span class="s1">&#39;Got command </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">command_type</span><span class="p">)</span>
+
+         <span class="k">if</span> <span class="s1">&#39;abort&#39;</span> <span class="ow">in</span> <span class="n">command_type</span><span class="p">:</span>
+             <span class="n">rospy</span><span class="o">.</span><span class="n">logwarn</span><span class="p">(</span><span class="s1">&#39;ABORTING&#39;</span><span class="p">)</span>
+             <span class="n">abortTopic</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">Int8</span><span class="p">())</span>
+             <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+                 <span class="s1">&#39;success&#39;</span><span class="p">:</span> <span class="kc">True</span>
+             <span class="p">}</span>
+             <span class="n">resultPub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+             <span class="k">return</span>
+
+         <span class="k">if</span> <span class="s1">&#39;pick_sdv&#39;</span> <span class="ow">in</span> <span class="n">command_type</span><span class="p">:</span>
+             <span class="n">pickSDV_Topic</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">Int8</span><span class="p">())</span>
+<span class="hll">             <span class="bp">self</span><span class="o">.</span><span class="n">pickcallback</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Subscriber</span><span class="p">(</span><span class="s1">&#39;/motoman_maya/task_completed&#39;</span><span class="p">,</span> <span class="n">Int8</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stepCallback</span><span class="p">)</span>
+</span>
+         <span class="k">elif</span> <span class="s1">&#39;place_sdv&#39;</span> <span class="ow">in</span> <span class="n">command_type</span><span class="p">:</span>
+             <span class="n">placeTopic</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">Int8</span><span class="p">())</span>
+<span class="hll">             <span class="bp">self</span><span class="o">.</span><span class="n">pickcallback</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Subscriber</span><span class="p">(</span><span class="s1">&#39;/motoman_torno/place_completed&#39;</span><span class="p">,</span> <span class="n">Int8</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stepCallback</span><span class="p">)</span>
+</span></pre></div>
+</td></tr></table></div>
+<p>Para lanzar la conexión se debe ejecutar el siguiente comando en terminal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">motoman_firebase</span> <span class="n">process</span><span class="o">.</span><span class="n">launch</span>
+</pre></div>
+</div>
+<p>Por último, para conectar el robot con la base de datos se realizar una petición HTTP en otra terminal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">X</span> <span class="n">POST</span> <span class="n">localhost</span><span class="p">:</span><span class="mi">3000</span><span class="o">/</span><span class="n">connect</span>
+</pre></div>
+</div>
+<p>Luego de tener autorización por parte de LabFabEx, el código fuente puede ser descargado utilizando el siguiente comando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gitlab</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">LabFabEx</span><span class="o">/</span><span class="n">motoman</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">LabFabEx</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../motoman/motoman.html">Plataforma robótica</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pria.html">PRIA - UN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../almacen/almacen_material.html">Automated warehouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdv_slam/sdv_slam.html">SDV SLAM aplication</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="pria.html">PRIA - UN</a><ul>
+      <li>Previous: <a href="torno.html" title="previous chapter">Torno Suizo</a></li>
+      <li>Next: <a href="sdv.html" title="next chapter">Vehículos Auto Guiados SDV-UN</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, LabFabEx.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/pria/motoman.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,39 @@
+..
+   Authors:
+      David Tosse
+   email:
+      dftossem@unal.edu.co
+..
+
+.. _torno_node_red:
+
+Torno Suizo
+===========
+
+El robot inicia el puente entre la base de datos y el controlador con el código *App.js*. Para realizar la conexión se debe ejecutar el comando una vez situada en la carpeta base::
+
+    yarn start
+
+Luego de tener autorización por parte de LabFabEx, el código fuente puede ser descargado utilizando el siguiente comando::
+
+    git clone -b lathe_dev https://gitlab.com/LabFabEx/serial-coms.git
+
+Los nuevos códigos de mecanizado se deben guardar en formato *.gcode* dentro de la carpeta denominada para este fin. Así mismo, dentro del código *LatheRobot.ts* se debe adicionar la información del nuevo mecanizado, como se muestra a continuación. Los datos importantes son:
+
+* Nombre de la primitiva en Node-Red
+* Ubicación relativa del archivo
+* Tiempo que tarda en realizarse
+
+.. code-block:: js
+   :emphasize-lines: 3,4,5
+   :linenos:
+
+   let file: string;
+        let duration = 0;
+        if (type == 'band') {
+            file = './gcode/band.gcode';
+            duration = 12_000;
+        } else if ( type == 'digitech') {
+            file = './gcode/digitech.gcode';
+            duration = 0_000;
+        }

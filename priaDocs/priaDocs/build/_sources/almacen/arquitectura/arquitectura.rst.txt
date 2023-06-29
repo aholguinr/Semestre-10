@@ -1,0 +1,74 @@
+..
+   Authors:
+      Wilmer David Garzon caceres
+   email:
+      wdgarzonc@unal.edu.co
+   date:
+      14/03/2022
+..
+
+Warehouse architecture
+======================
+
+
+.. toctree::
+  :maxdepth: 1
+  :numbered:
+
+
+Mechanical Architecture
+-----------------------
+
+The Warehouse compose for two principal module: A mecanic group of three prismatic links confugurate as a elevator whose function is move material box between shelf and a scissors lift that put the box on SDVs.
+
+Electric Architecture
+---------------------
+
+The warehouse is compose of:
+
+========================= ================= =============== ===================================================
+Component                 Reference         Code            Function
+========================= ================= =============== ===================================================
+Switch                                      SW1             General power on
+Emergency stop                              P1              Power fase power off
+DC source 24V 3A                            ACDC            AC DC conversion
+12V regulator             XL4015            Re_12           12V source
+5V regulator              LM2596            Re_5            5V source
+Motor driver              L298HN            Dr1             Motor axis X control
+Motor driver              L298HN            Dr2             Motor axis Y control
+Motor driver              BTS7960           Dr3, Dr4        Motors axis Z control
+Microstep driver          TB6560            Dr5             Scissors motor control
+Microstep driver          TB6600            Dr6             Gate motor control
+DC motor                                    MZI, MZD        Axis Z motors
+DC motor                                    MX              Axis X motor
+Stepper motor                               MY              Axis Y motor
+Stepper motor             STP-MTR-23079     MT              Scissors motor
+Stepper motor             STP-MTR-17048     MP              Gate motor
+Inductive sensor                            ISL, ISR        Read Z axis position marks
+2 Chanels optocuple       Pc817             OC              Inductive sensors arduino interfaz
+Limit switch                                SW_YF           Y axis position read front
+Limit switch                                SW_YB           Y axis position read back
+Limit switch                                SW_XR           X axis position read rigth
+Limit switch                                SW_XI           X axis position read left
+Limit switch                                SW_ZRD          Z axis position read rigth down
+Limit switch                                SW_ZRU          Z axis position read rigth up
+Limit switch                                SW_ZID          Z axis position read left down
+Limit switch                                SW_ZIU          Z axis position read left up
+Limit switch                                SW_T            Scissors home indicator
+Limit switch                                SW_G            Gate home indicator                                           
+Microcontroller board     Arduino mega 2560 Ar              Server comunication and embedded control algorithm
+========================= ================= =============== ===================================================
+
+In `Esquematico`_  is show the electrical circuit diagram.
+
+Software architecture
+---------------------
+
+The warehouse is controlled by a arduino board, in order to update the code in the warehouse it is necessary to have the arduino IDE and the library `rosserial_arduino`_ installed. To access the codes of the warehouse and its VMD, clone the repository::
+
+    git clone https://gitlab.com/LabFabEx/almacen_material.git
+
+In this you will find the folder 'Almacen_PAI' with the Arduino code, the other files correspond to its VMD package for gazebo.
+
+.. _Esquematico: Esquematico.pdf
+.. _rosserial_arduino: http://wiki.ros.org/rosserial_arduino/Tutorials/Arduino%20IDE%20Setup

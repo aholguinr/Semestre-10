@@ -1,0 +1,174 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>labfabex_gazebo Package &#8212; documentación de LabFabEx - </title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="sdvun_description Package" href="sdvun_description_package.html" />
+    <link rel="prev" title="sdvun_sim packages" href="packages.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+
+<div style="background-color: #f8f8f8; text-align: left; padding: 10px 10px 15px 15px">
+    <a href="../index.html"><h1 font-family="" style="font-size: 15pt;">Documentación LabFabEx</h1></a>
+</div>
+
+
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="labfabex-gazebo-package">
+<h1><em>labfabex_gazebo</em> Package<a class="headerlink" href="#labfabex-gazebo-package" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>The <em>labfabex_gazebo</em> package contains <em>launch</em> files, 3D files and <em>world</em>
+files inteded to spawn a LabFabEx model in Gazebo. This model is used by
+<em>sdvun_gazebo</em> package to build the enviroment of SDVUN mobile robots.</p>
+<div class="section" id="labfabex-walls">
+<h2>LabFabEx walls<a class="headerlink" href="#labfabex-walls" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>LabFabEx walls model was create from a map image, obtained in a SLAM task. This
+map is also used by SDVUN as global map in <em>map_server</em> node. In the image below
+you can see this image.</p>
+<a class="reference internal image-reference" href="../_images/map.png"><img alt="../_images/map.png" class="align-center" src="../_images/map.png" style="width: 60%;" /></a>
+<p>With a vectorial image editor (Inkscape), all walls in previous image were
+converted to simple squares. Then, using Blender 3D editor and the obtained
+vectorial image (SVG file), all squares were extrude, generating a 3D version
+of the original map. This 3D document was saved as a COLLADA file (dae
+extension).</p>
+<p>Using the COLLADA files, a <em>labfabex_walls</em> model was created. This model is
+stored in “&lt;sdvun_sim_path&gt;/labfabex_gazebo/models/labfabex_walls” and contains
+two files:</p>
+<ul class="simple">
+<li>model.config: a file that describes the model.</li>
+<li>model.sdf: A file in SDF format where COLLADA file is referenced.</li>
+</ul>
+<p>The described model was written using Gazebo specifications. More info in
+<a class="reference external" href="http://gazebosim.org/tutorials?tut=build_model">Gazebo: Make a model</a></p>
+</div>
+<div class="section" id="labfabex-world">
+<h2>LabFabEx world<a class="headerlink" href="#labfabex-world" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>LabFabEx world is the Gazebo world generated with <em>labfabex_1.world</em> file. In
+this file, the <em>labfabex_walls</em> model is inserted: pose of this model is
+configured to match the map origin (home 1) with Gazebo origin.</p>
+<p>A ground model is also added, using the map image as a texture, only for
+reference.</p>
+<p>Physics of <em>labfabex_1.world</em> are configured to be fast. Friction model used in
+this Gazebo world is <em>cone_model</em>, that allows a realistic interaction between
+SDV wheels and ground.</p>
+</div>
+<div class="section" id="labfabex-bringup-launch">
+<h2>labfabex_bringup.launch<a class="headerlink" href="#labfabex-bringup-launch" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><em>labfabex_bringup.launch</em> is the way to launch Gazebo and load the
+<em>labfabex_1.world</em>. Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">labfabex_gazebo</span> <span class="n">labfabex_bringup</span><span class="o">.</span><span class="n">launch</span>
+</pre></div>
+</div>
+<p>Previous command will launch Gazebo and you’ll see something like image below:</p>
+<a class="reference internal image-reference" href="../_images/labfabex_walls.png"><img alt="../_images/labfabex_walls.png" class="align-center" src="../_images/labfabex_walls.png" style="width: 100%;" /></a>
+<p>You can add a SDVUN using <em>sdvun_gazebo</em> package. Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">sdvun_gazebo</span> <span class="n">spawn_sdvun_nav</span><span class="o">.</span><span class="n">launch</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">LabFabEx</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegación</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="sdvun_sim.html">SDVUN_SIM</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="sdvun_sim.html">SDVUN_SIM</a><ul>
+  <li><a href="packages.html"><em>sdvun_sim</em> packages</a><ul>
+      <li>Previous: <a href="packages.html" title="capítulo anterior"><em>sdvun_sim</em> packages</a></li>
+      <li>Next: <a href="sdvun_description_package.html" title="próximo capítulo"><em>sdvun_description</em> Package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Ir a" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, LabFabEx.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/sdvun_sim/labfabex_gazebo_package.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,20 @@
+APM
+6 de junio, taller mini seminario sobre dinamic milling
+
+martes 13 de junio: sustentacion experimental de proyecto de curso
+
+20 de junio: autoevaluación final del curso
+
+ISO PROGRAMAS DE CONTROL NUMERICO
+
+DURALUMINIO 7075 NYLON 60
+
+20mm
+30mm de altura de pasado
+sandvid dynamix milling
+
+corte en paralelo	
+en contrasnetido hay vibración, hay backslash
+
+offside, más cerrada
+analizar leyes de movimiento, motion control de mastercam

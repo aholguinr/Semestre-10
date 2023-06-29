@@ -1,0 +1,145 @@
+SDVUN_SIM
+#########
+
+Welcome to sdvun_sim documentacion. In this page, you will find help and
+documentation about this ROS package and some tutorials that may help you.
+
+
+
+sdvun_sim: A ROS metapackage to run SDVUN mobile robots in Gazebo
+*****************************************************************
+
+Simulation of the SDVUN mobile robots in Gazebo is posible with this ROS 
+metapackage.
+
+This software was maded thinking in multirobot simulation: every robot can run
+its own Navigation Stack, using AMCL or HECTOR_SLAM as localization components.
+Main objective is that this simulation runs a realistic version of SDV robots
+of LabFabEx, allowing the develop of new software for these robots.
+
+.. image:: _static/img/sdvun_sim_sample.png
+   :width: 100 %
+   :align: center
+
+Installation
+************
+
+Requirements
+============
+
+* Ubuntu 18.04
+* ROS-Melodic
+
+To install the dependencies of sdvun_sim package, available in ROS repositories,
+run next commands::
+
+ sudo apt update
+ sudo apt install ros-melodic-gazebo-ros ros-melodic-gazebo-plugins ros-melodic-move-base ros-melodic-amcl ros-melodic-joint-state-publisher ros-melodic-rosbridge-suite ros-melodic-map-server ros-melodic-hector-slam ros-melodic-robot-state-publisher -y
+
+Clone repositorie
+=================
+
+Please, download the source code of *sdvun_sim* package through the official 
+link. You may require authorization of LabFabEx admins::
+ 
+ git clone https://gitlab.com/LabFabEx/sdv_un4.git
+
+Submodules
+^^^^^^^^^^
+Also, you have to install package submodules, contained in *sdvun_sim*::
+
+   cd sdv_un4
+   git submodule init
+   git submodule update
+
+Compiling
+=========
+
+Run catkin_make command in the workspace to build all packages of *sdvun_sim*::
+ 
+ cd ~/catkin_ws
+ catkin_make
+
+
+
+Simulation
+**********
+
+Quick Simulation
+================
+
+Main simulation launch an instance of Gazebo with LabFabEx walls and SDVUN1 
+mobile robot with AMCL Stack Navigation. Also calls RViz, that allows you to 
+send pose commands and view all planning maps and poses. To execute this 
+simulation, run next command::
+
+ roslaunch sdvun_gazebo sdvun_nav.launch rviz:=true
+
+.. image:: _static/img/gazebo_and_rviz.png
+   :width: 100 %
+   :align: center
+
+Custom simulation
+=================
+
+If you want to view LabFabEx world in Gazebo, without any robot, run next 
+command::
+
+ roslaunch labfabex_gazebo labfabex_bringup.launch
+
+.. image:: _static/img/labfabex_walls.png
+   :width: 100 %
+   :align: center
+
+To spawn a SDVUNX robot in Gazebo, with Navigation Stack Nodes, all inside a 
+namespace, run this command::
+
+ roslaunch sdvun_gazebo spawn_sdvun_nav.launch robot_model:=sdvun3 namespace:=sdvun3
+
+Also, you can use arguments like robot_model, localization and namespace to 
+adjust the simulation to your requirements. 
+
+Empty world
+===========
+
+If you want to view SDVUN3 mobile robot in an empty world, without walls, run
+this::
+
+ roslaunch sdvun_gazebo sdvun_empty_world.launch robot_model:=sdvun3
+
+.. image:: _static/img/sdvun3_empty_world.png
+   :width: 100 %
+   :align: center
+
+View model in RViz
+==================
+
+To view a SDVUNX 3D model in RViz, run this command::
+
+ roslaunch sdvun_gazebo sdvun_empty_world.launch robot_model:=sdvun1
+
+.. image:: _static/img/rviz_view_robot_model.png
+   :width: 100 %
+   :align: center
+
+
+
+Links of interest
+*****************
+
+.. toctree::
+   :maxdepth: 1
+ 
+   common_problems
+   packages
+
+
+
+Licence & Contact
+*****************
+
+.. toctree::
+   :maxdepth: 2
+ 
+   license.rst
+

@@ -1,0 +1,48 @@
+..
+   Authors:
+      Wilmer David Garzon caceres
+   email:
+      wdgarzonc@unal.edu.co
+
+
+Automated warehouse
+###################
+
+.. image:: img/almacen.png
+    :height: 300px
+    :align: center
+
+
++--------------------------------------------------------------------------------------------------+
+|                **Data sheet**                                                                    |
++==================================================================================================+
+|Automated warehouse is an equipment for storing raw material to provision of other equipment      |
+|inside of the laboratory, it has 10shelfs for the location of various material, operated in       |
+|conlavoration with SDVs to transport the material to its destination.                             |
++-------------------------+------------------------------------------------------------------------+
+| **Desing phase I**      | Diego Alfredo Quexada Rodríguez, Daniel Felipe Aza de la Espriella,    |
+|                         | Daniela Moreno Chaparro                                                |
++-------------------------+------------------------------------------------------------------------+
+| **Desing phase II**     | Laura Valentina Lopez Villalba, Diego Fernando Flórez Rodríguez,       |
+|                         | Sergio Andres Sarmiento Aguirre, Wilmer David Garzón Cáceres           |
++-------------------------+------------------------------------------------------------------------+
+|    **Overview**                                                                                  |
++-----------------------+-------------------------+-----------------------+------------------------+
+| **Length**            | 0.7 m                   | **Width**             |  0.90 m                |
++-----------------------+-------------------------+-----------------------+------------------------+
+| **Height**            | 1.10 m                  | **Weight**            | 25 kg                  |
++-----------------------+-------------------------+-----------------------+------------------------+
+| **Power Source**      | 120V AC                 | **Shlefs**            | 10                     |
++-----------------------+-------------------------+-----------------------+------------------------+
+| **Box load capacity** | 5 Kg                    | **Deliver heigth**    | 320 mm - 390 mm        |
++-----------------------+-------------------------+-----------------------+------------------------+
+
+Additional links
+================
+
+.. toctree::
+  :maxdepth: 1
+
+  arquitectura/arquitectura.rst
+  manual_usuario/manual.rst
+  mantenimiento/manual.rst

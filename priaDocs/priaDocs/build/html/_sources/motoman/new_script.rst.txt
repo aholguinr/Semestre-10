@@ -1,0 +1,472 @@
+##################
+Crear nuevo script
+##################
+
+Si se desea crear una nueva rutina de movimiento de la plataforma existen dos maneras en las cuales se puede realizar, ya sea por medio de un script en el lenguaje *C++* o en *python*. El  procedimiento sugerido es el siguiente:
+
+#. Posicionar el robot en las poses deseadas.
+#. Conocer el valor de las articulaciones o del efector final.
+#. Guardar la información anterior en el nuevo script.
+
+***********
+Pose actual
+***********
+
+Existen dos métodos para conocer la información sobre la pose. El primero de estos es a través de la información contenida en el tópico */joinState* el cual mostrará como resultado el valor en radianes de cada uno de los ocho grados de libertad de la plataforma.
+
+Valores articulares
+===================
+
+Para conocer el valor de las ocho articulaciones se debe ejecutar en una terminal el comando::
+
+    rostopic echo /joint_states
+
+La información relevante del resultado mostrado es el arreglo denominado *position*. El siguiente resultado se genera cuando el robot se encuentra en la posición *home*.
+
+.. code-block:: shell
+    :emphasize-lines: 9
+
+    header: 
+    seq: 381
+    stamp: 
+        secs: 1583595150
+        nsecs: 852149009
+    frame_id: ''
+    name: [base_joint_b1, arm_joint_s, arm_joint_l, arm_joint_u, arm_joint_r, arm_joint_b, arm_joint_t,
+    station_joint_s1]
+    position: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    velocity: []
+    effort: []
+
+Valores de la pose
+==================
+
+Para conocer los valores de la pose actual en términos de la posición (x, y, z) y orientación (x, y, z, w) se debe ejecutar el script de python ubicado en la ruta :code:`~/motoman_ws/src/scripts/`::
+
+    python getPose.py
+
+En consola se mostrará el resultado esperado.
+
+*************
+Script en C++
+*************
+
+Se debe crear un archivo dentro del *workspace* de ROS en el equipo destinado para uso de la plataforma robótica, el directorio estándar para esto es el ubicado en la dirección :code:`~/motoman_ws/src/robot_position_cmd/src`. Desde luego el archivo debe tener la extensión *cpp*. A continuación se enuncian las partes que debe contener el código:
+
+Encabezado
+==========
+
+La primera sección de código debe llamar a las librerías del sistema para que puedan estar disponibles las funcionalidades posteriormente. En caso que se deseen utilizar las salidas y entradas lógicas (actuador neumático y sensor fotosensible) es necesario importar las librerías opcionales.
+
+.. code-block:: cpp
+
+    // MANDATORY
+    #include <ros/ros.h>
+    #include <moveit/move_group_interface/move_group_interface.h>
+    #include <moveit/planning_scene_interface/planning_scene_interface.h>
+    #include <moveit_msgs/GetPositionIK.h>
+    #include <std_msgs/Int8.h>
+    #include <geometry_msgs/Pose.h>
+    #include <geometry_msgs/Point.h>
+    #include <industrial_msgs/RobotStatus.h>
+
+    // OPTIONAL
+    #include <motoman_msgs/WriteSingleIO.h>
+    #include <motoman_msgs/ReadSingleIO.h>
+
+Prototipos de funciones
+=======================
+
+Siguiendo las buenas prácticas para desarrollo de código en *C++* se deben declarar los prototipos de las funciones utilizadas en el código:
+
+.. code-block:: cpp
+
+    // Callbacks prototipes
+    void move_take_img_pose_cb(const std_msgs::Int8ConstPtr msg);
+    void pick_piece_cb(const std_msgs::Int8ConstPtr msg);
+    void place_piece_cb(const geometry_msgs::PointConstPtr msg);
+    void move_start_cb(const std_msgs::Int8ConstPtr msg);
+    void move_wait_pose_cb(const std_msgs::Int8ConstPtr msg);
+    void in_motion_cb(const industrial_msgs::RobotStatusConstPtr msg);
+    void abort_cb(const std_msgs::Int8ConstPtr msg, moveit::planning_interface::MoveGroupInterface &move_group);
+
+    // Robot movement functions prototipes
+    int getIK(moveit_msgs::GetPositionIK & server, ros::ServiceClient & client, 
+        moveit::planning_interface::MoveGroupInterface & group, 
+        geometry_msgs::Pose & target_pose, std::vector<double> & joint_group_positions);
+    void move_robot_joints(moveit::planning_interface::MoveGroupInterface & move_group, 
+        std::vector<double> & target_joints);
+    void define_task_positions();
+    void move_robot_to_pose(moveit::planning_interface::MoveGroupInterface & group, 
+        moveit::planning_interface::MoveGroupInterface & move_group, geometry_msgs::Pose & pose);
+    void move_to_take_img_pose(moveit::planning_interface::MoveGroupInterface & group, 
+        moveit::planning_interface::MoveGroupInterface & move_group);
+    void move_to_pick_piece(moveit::planning_interface::MoveGroupInterface & group, 
+        moveit::planning_interface::MoveGroupInterface & move_group);
+    void move_to_place_piece(moveit::planning_interface::MoveGroupInterface & group, 
+        moveit::planning_interface::MoveGroupInterface & move_group);
+    void move_to_start(moveit::planning_interface::MoveGroupInterface & group, 
+        moveit::planning_interface::MoveGroupInterface & move_group);
+    void move_to_wait_pose(moveit::planning_interface::MoveGroupInterface & group, 
+        moveit::planning_interface::MoveGroupInterface & move_group);
+
+    // Aditional util function prototipes (optional)
+    void set_vaccum(int, int);
+    void get_sensor(void);
+    void get_offset(double, double);
+
+Variables globales
+==================
+
+Se recomienda continuar con la definición de las variables globales. Cabe resaltar que existen dos tipos de variables mencionadas, las obligatorias y las opcionales.
+
+.. code-block:: cpp
+
+    // MANDATORY
+    static const std::string PLANNING_GROUP = "arm_on_rail";
+    static const std::string MOVE_GROUP = "mh6";
+    // Services
+    ros::ServiceClient ik_client;
+    // ROS variables
+    geometry_msgs::Pose wait_pose;
+    geometry_msgs::Point offset_object;
+    sensor_msgs::JointState joint_state;
+    moveit_msgs::GetPositionIK ik_server;
+    geometry_msgs::PoseStamped start_pose_stmp;
+    std::vector<double> joint_move_group_positions;
+    std::vector<double> home_position, rail_fwd, rail_bwd;
+
+    // OPTIONAL
+    // Services
+    ros::ServiceClient io_client;
+    ros::ServiceClient read_io_client;
+    // I/O signals
+    motoman_msgs::ReadSingleIO read_io;
+    motoman_msgs::WriteSingleIO io_server;
+    // Other variables
+    geometry_msgs::Pose pick_up_pose, place_pose, take_img_pose;
+    // C++ variables
+    bool move_to_wait = false, move_to_pick_up = false, 
+        move_to_place = false, move_start_pos = false,
+        move_to_take_img = false, is_moving_ = false;
+
+Tópicos de ROS
+==============
+
+Finalmente, antes de iniciar con la función principal *main* se recomienda incluir los nombres de los tópicos que publicarán la información. Estos son opcionales y su definición es decisión del programador.
+
+.. code-block:: cpp
+
+    // Publishers
+    ros::Publisher move_wait_pose_pub;
+    ros::Publisher pick_up_complete_pub;
+    ros::Publisher place_complete_pub;
+    ros::Publisher task_complete_pub;
+    ros::Publisher piece_on_vaccum_pub;
+    ros::Publisher move_take_img_pose_pub;
+
+Función principal (main)
+========================
+
+En este segmento es necesario realizar la definición de las variables de ROS declaradas anteriormente (publishers y subscribers) para que pueda existir una comunicación eficaz. Las siguientes líneas de ejemplo han sido extraidas del código *pick_table.cpp*.
+
+Como se resalta a continuación, el funcionamiento del código depende de la correcta publicación y subscripción al mismo tópico, es decir, el robot informa por medio del tópico :code:`/motoman_table/wait_pose_reached` que acaba de culminar el primer paso de la tarea (línea 44), esta información regresa al script ya que existe un subscriptor que apunta al mismo tópico (línea 36). De esta manera se cierra el lazo de la información y se dispara el siguiente paso.
+
+.. code-block:: cpp
+    :emphasize-lines: 36, 44
+    :linenos:
+
+    int main(int argc, char *argv[])
+    {
+        // MANDATORY
+        ros::init(argc, argv, "motoman_robot");
+        ros::NodeHandle nh;
+        ros::AsyncSpinner spinner(2);
+        spinner.start();
+
+        // Planning group
+        moveit::planning_interface::MoveGroupInterface group(PLANNING_GROUP);
+        group.setPlannerId("RRTConnectkConfigDefault");
+        moveit::core::RobotStatePtr current_state_group = group.getCurrentState();
+        const robot_state::JointModelGroup *joint_model_group = group.getCurrentState()->getJointModelGroup(PLANNING_GROUP);
+        std::vector<double> joint_group_positions;
+        current_state_group->copyJointGroupPositions(joint_model_group, joint_group_positions);
+        start_pose_stmp = group.getCurrentPose(group.getEndEffectorLink());
+
+        // Move group
+        moveit::planning_interface::MoveGroupInterface move_group(MOVE_GROUP);
+        move_group.setPlannerId("RRTConnectkConfigDefault");
+        moveit::core::RobotStatePtr current_state_move_group = move_group.getCurrentState();
+        const robot_state::JointModelGroup *joint_model_move_group = move_group.getCurrentState()->getJointModelGroup(MOVE_GROUP);
+
+        // Client
+        ik_client = nh.serviceClient<moveit_msgs::GetPositionIK>("compute_ik");
+
+        current_state_group->copyJointGroupPositions(joint_model_move_group, joint_move_group_positions);
+        
+        // Predefined platform poses
+        define_task_positions();
+
+        // OPTIONAL
+
+        // Subscribers
+        ros::Subscriber move_wait_pose_sub = nh.subscribe("/motoman_table/pick_pallete", 1, move_wait_pose_cb);
+        ros::Subscriber pick_piece_sub = nh.subscribe("/motoman_table/wait_pose_reached", 1, pick_piece_cb);
+        ros::Subscriber move_take_img_sub = nh.subscribe("/motoman_table/pick_up_completed", 1, move_take_img_pose_cb);
+        ros::Subscriber place_piece_sub = nh.subscribe("/motoman_table/center_point", 1, place_piece_cb);
+        ros::Subscriber start_pose_cmd_sub = nh.subscribe("/motoman_table/place_completed", 1, move_start_cb);
+        ros::Subscriber abort_cmd_sub = nh.subscribe<std_msgs::Int8>("/motoman_abort", 1, boost::bind(abort_cb, _1, boost::ref(move_group)));
+        ros::Subscriber in_motion_sub = nh.subscribe("/robot_status", 1, in_motion_cb);
+
+        // Publishers
+        move_wait_pose_pub = nh.advertise<std_msgs::Int8>("/motoman_table/wait_pose_reached", 1);
+        pick_up_complete_pub = nh.advertise<std_msgs::Int8>("/motoman_table/pick_up_completed", 1);
+        move_take_img_pose_pub = nh.advertise<std_msgs::Int8>("/motoman_table/reference_pose_reached", 1);
+        piece_on_vaccum_pub = nh.advertise<std_msgs::Int8>("/motoman_table/piece_on_vaccum", 1);
+        place_complete_pub = nh.advertise<std_msgs::Int8>("/motoman_table/place_completed", 1);
+        task_complete_pub = nh.advertise<std_msgs::Int8>("/motoman_table/task_completed", 1);
+
+        // I/O Clients
+        io_client = nh.serviceClient<motoman_msgs::WriteSingleIO>("write_single_io");
+        read_io_client = nh.serviceClient<motoman_msgs::ReadSingleIO>("read_single_io");
+
+        while (ros::ok())
+        {
+            if (move_to_wait)
+            {
+                move_to_wait = false;
+                move_to_wait_pose(group, move_group);
+            }
+            else if (move_to_pick_up)
+            {
+                move_to_pick_up = false;
+                move_to_pick_piece(group, move_group);
+            }
+            ros::spinOnce();
+        }
+        ros::shutdown();
+        return 0;
+    }
+
+Callbacks
+=========
+
+Como es sabido, cada vez que un subscriptor recibe información por parte de un tópico se dispara la función callback referenciada. La línea 36 del código anterior por ejemplo hace un llamado a la función *pick_piece_cb()*, el trabajo de esta función es cambiar el valor la variable :code:`move_to_pick_up` a verdadero (true).
+
+.. code-block:: cpp
+    
+    void pick_piece_cb(const std_msgs::Int8ConstPtr msg)
+    {
+        move_to_pick_up = true;
+    }
+
+Compilación y uso
+=================
+
+CMakeLists
+----------
+
+El proceso de compilación y generación del ejecutable es estándar para archivos hecho en *C++*, ROS utiliza *catkin* para realizar este proceso. Este proceso se debe realizar con cada uno de los nuevos códigos, se debe incluir manualmente en el archivo *CMakeLists.txt* ubicado en :code:`~/motoman_ws/src/robot_position_cmd/src`.
+
+.. code-block:: python
+
+   # Usage
+   add_executable(NEW_NAME src/NEW_NAME.cpp)
+   target_link_libraries(NEW_NAME ${catkin_LIBRARIES})
+
+El siguiente es un ejemplo para el código pick_lathe.cpp
+
+.. code-block:: python
+
+   # Example
+   add_executable(pick_lathe src/pick_lathe.cpp)
+   target_link_libraries(pick_lathe ${catkin_LIBRARIES})
+
+
+Una vez hecho esto se debe compilar, desde la ubicación :code:`~/motoman_ws` se ejecuta el siguiente comando::
+
+    catkin_make
+
+El resultado de esta operación debe ser exitoso y con un porcentaje de compilación del 100%.
+
+Nodo de ROS
+-----------
+
+El lanzamiento individual del nodo se hace utilizando el comando *rosrun*, para un nuevo archivo el siguiente sería el ejemplo de este lanzamiento::
+
+    rosrun robot_position_cmd NEW_NAME_node
+
+.. _TaskRun:
+
+Inicio de tarea
+^^^^^^^^^^^^^^^
+
+Ya que la lógica de ejecución implica la publicación en el tópico inicial, para disparar el nodo se debe usar *rostopic pub*::
+
+    rostopic pub -1 /motoman_table/pick_pallete std_msgs/Int8 "data: 1"
+
+Launch general
+--------------
+
+Por último, para poder ejecutar el nuevo nodo se debe incluir dentro del launch file *motoman_task.launch* ubicado en la ruta :code:`~/motoman_ws/src/robot_position_cmd/launch`
+
+.. code-block:: XML
+
+    <!-- Template -->
+    <node pkg="robot_position_cmd" type="NEW_NAME" name="NEW_NAME_node" output="screen" />
+    <!-- Example with pick_lathe -->
+    <node pkg="robot_position_cmd" type="pick_lathe" name="pick_lathe_node" output="screen" />
+
+****************
+Script en python
+****************
+
+Este lenguaje de programación es más simple que *C++*, por tal razón se recomienda su uso, adicionalmente no es necesario realizar ningún proceso de compilación.
+
+.. code-block:: python
+
+    #!/usr/bin/env python
+    # Python imports
+    import sys
+    import copy
+    import rospy
+    import moveit_commander
+    # MANDATORY
+    from geometry_msgs.msg import Pose
+    from std_msgs.msg import Int8
+    from moveit_msgs.srv import GetPositionIK
+    from moveit_msgs.msg import PositionIKRequest
+    # OPTIONAL
+    from motoman_msgs.srv import WriteSingleIO
+    from motoman_msgs.srv import ReadSingleIO
+
+.. code-block:: python
+
+    class robot:
+        def __init__(self):
+            self.robot = moveit_commander.RobotCommander()
+            self.group = moveit_commander.MoveGroupCommander('arm_on_rail')
+            self.group.set_planner_id('RRTConnectkConfigDefault')
+            self.group_move = moveit_commander.MoveGroupCommander('mh6')
+            self.group_move.set_planner_id('RRTConnectkConfigDefault')
+            self.start_pose = self.group.get_current_pose('arm_link_tool0')
+            self.start_pose_modificable = self.group.get_current_pose('arm_link_tool0')
+            # G, S, L, U, R, B, T, P [meters, rads{7}]
+            self.home_position = [0, 0, 0, 0, 0, 0, 0, 0]
+            self.max_x = [1.43, 0, 0, 0, 0, 0, 0, 0]
+            self.secure_lathe = [1.43, 1.43, 0, 0, 0, 0, 0, 0]
+            self.camera_lathe = [1.4334598779678345, 1.4308449029922485, 0.6417216658592224, 0.19153209030628204, -0.5524171590805054, 0.9107017517089844, 0.9756916761398315, 0.0]
+
+            # Subscribers
+            # Entrada
+            rospy.Subscriber('/move_reference_pose', Int8, self.move_home_cb, queue_size = 1)
+            rospy.Subscriber('/max_x_cmd', Int8, self.max_x_cmd_cb, queue_size = 1)
+            rospy.Subscriber('/secure_lathe_cmd', Int8, self.secure_lathe_cmd_cb, queue_size = 1)
+            rospy.Subscriber('/camera_lathe_cmd', Int8, self.camera_lathe_cmd_cb, queue_size = 1)
+
+            # publishers
+            self.max_x_cmd = rospy.Publisher('/max_x_cmd', Int8, queue_size = 1)
+            self.secure_lathe_cmd = rospy.Publisher('/secure_lathe_cmd', Int8, queue_size = 1)
+            self.camera_lathe_cmd = rospy.Publisher('/camera_lathe_cmd', Int8, queue_size = 1)
+            self.task_complete_pub = rospy.Publisher('/task_completed', Int8, queue_size = 1)
+            
+
+        def camera_lathe_cmd_cb(self, data):
+            rospy.loginfo('Moving robot to camera_lathe position')
+            self.move_robot_joint(self.camera_lathe)
+            self.task_complete_pub.publish(Int8())
+
+
+        def secure_lathe_cmd_cb(self, data):
+            rospy.loginfo('Moving robot to secure_lathe position')
+            self.move_robot_joint(self.secure_lathe)
+            self.camera_lathe_cmd.publish(Int8())
+
+        def max_x_cmd_cb(self, data):
+            rospy.loginfo('Moving robot to max_x position')
+            self.move_robot_joint(self.max_x)
+            self.secure_lathe_cmd.publish(Int8())
+            
+
+        def move_home_cb(self, data):
+            rospy.loginfo('Moving robot to home position')
+            self.move_robot_joint(self.home_position)
+            if data.data == 1:
+                self.max_x_cmd.publish(Int8())
+            else:
+                self.task_complete_pub.publish(Int8())
+
+
+        
+        def move_robot(self, target_pose):
+            ik = self.get_ik(target_pose)
+            if(ik.error_code.val == 1):
+                joints = []
+                print(len(ik.solution.joint_state.position))
+                for i in range(len(ik.solution.joint_state.position)):
+                    joints.append(ik.solution.joint_state.position[i])
+                self.move_robot_joint(joints)
+            else:
+                rospy.loginfo('IK not found')
+
+
+        def move_robot_joint(self, target_joints):
+            self.group_move.set_joint_value_target(target_joints)
+            self.group_move.go()
+            
+
+        def get_ik(self, pose):
+            rospy.loginfo('Waiting for IK service')
+            rospy.wait_for_service('compute_ik')
+            
+            ik_request = PositionIKRequest()
+            ik_request.group_name = self.group.get_name()
+            ik_request.robot_state = self.robot.get_current_state()
+            ik_request.ik_link_name = self.group.get_end_effector_link()
+            print('ik_request.ik_link_name: ', ik_request.ik_link_name)
+            
+            pose_stmp = self.start_pose_modificable
+            pose_stmp.pose = pose
+            ik_request.pose_stamped = pose_stmp
+            ik_request.timeout.secs = 10
+            ik_request.attempts = 0
+            try:
+                ik_service = rospy.ServiceProxy('compute_ik', GetPositionIK)
+                resp = ik_service(ik_request)
+                print(resp.solution.joint_state)
+                return resp
+            except rospy.ServiceException, e:
+                rospy.logerr('Error with IK service')
+
+        def getSensorState(self):
+            rospy.loginfo('Waiting for IO service')
+            try:
+                io_service = rospy.ServiceProxy('read_single_io', ReadSingleIO)
+                io_service(10001)
+            except:
+                rospy.logerr('Error with IO service reading')
+            rospy.loginfo(io_service.msg)
+
+        def print_pose(self, pose):
+            print("============ Start pose ============")
+            print("Position: ", pose.pose.position.x, 
+                pose.pose.position.y, 
+                pose.pose.position.z)
+            print("Orientation: ", pose.pose.orientation.x, 
+                pose.pose.orientation.y, 
+                pose.pose.orientation.z, 
+                pose.pose.orientation.w)
+            print("====================================")
+
+Nodo de ROS
+===========
+
+Es necesario que el archivo tenga permisos de ejecución, para configurarlos se utiliza el siguiente comando::
+
+    chmod +x NEW_NAME.py
+
+Luego de esto es posible ejecutar el script::
+
+    python NEW_NAME.py
+
+Para comenzar la ejecución se sigue el mismo procedimiento mencionado en :ref:`TaskRun`

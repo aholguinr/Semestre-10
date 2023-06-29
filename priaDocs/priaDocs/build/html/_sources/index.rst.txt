@@ -1,0 +1,89 @@
+.. LabFabEx documentation master file, created by
+   sphinx-quickstart on Wed Nov 20 19:15:55 2019.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Contents:
+
+   motoman/motoman.rst
+   pria/pria.rst
+   almacen/almacen_material.rst
+   sdv_slam/sdv_slam.rst
+
+
+
+Indices y tablas
+================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
+.. image:: _static/img/labfabex.png
+
+.. plot:: pyplots/ellipses.py
+   :include-source:
+
+.. inheritance-diagram:: codecs
+
+Making a list
+=============
+
+It is easy to make lists in rest
+
+Bullet points
+-------------
+
+This is a subsection making bullet points
+
+* point A
+
+* point B
+
+* point C
+
+
+Enumerated points
+------------------
+
+This is a subsection making numbered points
+
+#. point A
+
+#. point B
+
+#. point C
+
+
+.. _making-a-table:
+
+Making a table
+==============
+
+This shows you how to make a table
+
+==================   ============
+Name                 Age
+==================   ============
+John D Hunter        40
+Cast of Thousands    41
+And Still More       42
+==================   ============
+
+.. _making-links:
+
+Making links
+============
+
+It is easy to make a link to `yahoo <http://yahoo.com>`_ or to some
+section inside this document (see :ref:`making-a-table`) or another
+document.
+
+You can also reference classes, modules, functions, etc that are
+documented using the sphinx `autodoc
+<http://sphinx.pocoo.org/ext/autodoc.html>`_ facilites.  For example,
+see the module :mod:`matplotlib.backend_bases` documentation, or the
+class :class:`~matplotlib.backend_bases.LocationEvent`, or the method
+:meth:`~matplotlib.backend_bases.FigureCanvasBase.mpl_connect`.

@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, LabFabEx
+# This file is distributed under the same license as the LabFabEx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: LabFabEx \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 15:34-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/motoman/sensor/sensor.rst:7
+msgid "Sensor foto sensible"
+msgstr ""
+
+#: ../../source/motoman/sensor/sensor.rst:9
+msgid "Referencia: `FT18M-CP2 <http://www.z-trauq.com/sensors/FT18M.pdf>`_ Configuración: NPN"
+msgstr ""
+
+#: ../../source/motoman/sensor/sensor.rst:14
+msgid "Controlador (CN309)"
+msgstr ""
+
+#: ../../source/motoman/sensor/sensor.rst:14
+msgid "Num. cable Controlador"
+msgstr ""
+
+#: ../../source/motoman/sensor/sensor.rst:14
+msgid "Caja de paso"
+msgstr ""
+
+#: ../../source/motoman/sensor/sensor.rst:14
+msgid "Sensor"
+msgstr ""
+
+#: ../../source/motoman/sensor/sensor.rst:16
+msgid "B3"
+msgstr ""
+
+#: ../../source/motoman/sensor/sensor.rst:16
+msgid "13"
+msgstr ""
+
+#: ../../source/motoman/sensor/sensor.rst:16
+msgid "5 (PL9)"
+msgstr ""
+
+#: ../../source/motoman/sensor/sensor.rst:16
+msgid "Black"
+msgstr ""
+
+#: ../../source/motoman/sensor/sensor.rst:17
+msgid "B7"
+msgstr ""
+
+#: ../../source/motoman/sensor/sensor.rst:17
+msgid "12"
+msgstr ""
+
+#: ../../source/motoman/sensor/sensor.rst:17
+msgid "6 (PL10)"
+msgstr ""
+
+#: ../../source/motoman/sensor/sensor.rst:17
+msgid "Blue"
+msgstr ""
+
+#: ../../source/motoman/sensor/sensor.rst:18
+msgid "B19"
+msgstr ""
+
+#: ../../source/motoman/sensor/sensor.rst:18
+msgid "11"
+msgstr ""
+
+#: ../../source/motoman/sensor/sensor.rst:18
+msgid "7 (PL11)"
+msgstr ""
+
+#: ../../source/motoman/sensor/sensor.rst:18
+msgid "Brown"
+msgstr ""
+
+#: ../../source/motoman/sensor/sensor.rst:21
+msgid "A continuación se muestra el reglaje que debe respetarse con respecto a la instalación del sensor, el cual debe estar 21.8 mm por debajo de la base como se muestra en la siguiente imagen."
+msgstr ""
+
+#: ../../source/motoman/sensor/sensor.rst:25
+msgid "Igualmente la distacia de deteccion del sensor es de 40 mm como se muestra en la siguiente imagen."
+msgstr ""

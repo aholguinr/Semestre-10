@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Torno Suizo &#8212; LabFabEx  documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Plataforma robótica - Motoman" href="motoman.html" />
+    <link rel="prev" title="Grúa Maya" href="maya.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+
+<div style="background-color: #f8f8f8; text-align: left; padding: 10px 10px 15px 15px">
+    <a href="../index.html"><h1 font-family="" style="font-size: 15pt;">Documentación LabFabEx</h1></a>
+</div>
+
+
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="torno-suizo">
+<span id="torno-node-red"></span><h1>Torno Suizo<a class="headerlink" href="#torno-suizo" title="Permalink to this headline">¶</a></h1>
+<p>El robot inicia el puente entre la base de datos y el controlador con el código <em>App.js</em>. Para realizar la conexión se debe ejecutar el comando una vez situada en la carpeta base:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yarn</span> <span class="n">start</span>
+</pre></div>
+</div>
+<p>Luego de tener autorización por parte de LabFabEx, el código fuente puede ser descargado utilizando el siguiente comando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="o">-</span><span class="n">b</span> <span class="n">lathe_dev</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gitlab</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">LabFabEx</span><span class="o">/</span><span class="n">serial</span><span class="o">-</span><span class="n">coms</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>Los nuevos códigos de mecanizado se deben guardar en formato <em>.gcode</em> dentro de la carpeta denominada para este fin. Así mismo, dentro del código <em>LatheRobot.ts</em> se debe adicionar la información del nuevo mecanizado, como se muestra a continuación. Los datos importantes son:</p>
+<ul class="simple">
+<li><p>Nombre de la primitiva en Node-Red</p></li>
+<li><p>Ubicación relativa del archivo</p></li>
+<li><p>Tiempo que tarda en realizarse</p></li>
+</ul>
+<div class="highlight-js notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">file</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
+     <span class="kd">let</span> <span class="nx">duration</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="hll">     <span class="k">if</span> <span class="p">(</span><span class="nx">type</span> <span class="o">==</span> <span class="s1">&#39;band&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="hll">         <span class="nx">file</span> <span class="o">=</span> <span class="s1">&#39;./gcode/band.gcode&#39;</span><span class="p">;</span>
+</span><span class="hll">         <span class="nx">duration</span> <span class="o">=</span> <span class="mf">12</span><span class="nx">_000</span><span class="p">;</span>
+</span>     <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="nx">type</span> <span class="o">==</span> <span class="s1">&#39;digitech&#39;</span><span class="p">)</span> <span class="p">{</span>
+         <span class="nx">file</span> <span class="o">=</span> <span class="s1">&#39;./gcode/digitech.gcode&#39;</span><span class="p">;</span>
+         <span class="nx">duration</span> <span class="o">=</span> <span class="mf">0</span><span class="nx">_000</span><span class="p">;</span>
+     <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">LabFabEx</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../motoman/motoman.html">Plataforma robótica</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pria.html">PRIA - UN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../almacen/almacen_material.html">Automated warehouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdv_slam/sdv_slam.html">SDV SLAM aplication</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="pria.html">PRIA - UN</a><ul>
+      <li>Previous: <a href="maya.html" title="previous chapter">Grúa Maya</a></li>
+      <li>Next: <a href="motoman.html" title="next chapter">Plataforma robótica - Motoman</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, LabFabEx.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/pria/torno.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

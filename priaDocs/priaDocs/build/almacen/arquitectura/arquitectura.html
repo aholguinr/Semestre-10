@@ -1,0 +1,301 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Warehouse architecture &#8212; LabFabEx  documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="User manual" href="../manual_usuario/manual.html" />
+    <link rel="prev" title="Automated warehouse" href="../almacen_material.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+
+<div style="background-color: #f8f8f8; text-align: left; padding: 10px 10px 15px 15px">
+    <a href="../../index.html"><h1 font-family="" style="font-size: 15pt;">Documentación LabFabEx</h1></a>
+</div>
+
+
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="warehouse-architecture">
+<h1>Warehouse architecture<a class="headerlink" href="#warehouse-architecture" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="mechanical-architecture">
+<h2>Mechanical Architecture<a class="headerlink" href="#mechanical-architecture" title="Permalink to this headline">¶</a></h2>
+<p>The Warehouse compose for two principal module: A mecanic group of three prismatic links confugurate as a elevator whose function is move material box between shelf and a scissors lift that put the box on SDVs.</p>
+</div>
+<div class="section" id="electric-architecture">
+<h2>Electric Architecture<a class="headerlink" href="#electric-architecture" title="Permalink to this headline">¶</a></h2>
+<p>The warehouse is compose of:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="16%" />
+<col width="14%" />
+<col width="47%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Component</th>
+<th class="head">Reference</th>
+<th class="head">Code</th>
+<th class="head">Function</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Switch</td>
+<td>&#160;</td>
+<td>SW1</td>
+<td>General power on</td>
+</tr>
+<tr class="row-odd"><td>Emergency stop</td>
+<td>&#160;</td>
+<td>P1</td>
+<td>Power fase power off</td>
+</tr>
+<tr class="row-even"><td>DC source 24V 3A</td>
+<td>&#160;</td>
+<td>ACDC</td>
+<td>AC DC conversion</td>
+</tr>
+<tr class="row-odd"><td>12V regulator</td>
+<td>XL4015</td>
+<td>Re_12</td>
+<td>12V source</td>
+</tr>
+<tr class="row-even"><td>5V regulator</td>
+<td>LM2596</td>
+<td>Re_5</td>
+<td>5V source</td>
+</tr>
+<tr class="row-odd"><td>Motor driver</td>
+<td>L298HN</td>
+<td>Dr1</td>
+<td>Motor axis X control</td>
+</tr>
+<tr class="row-even"><td>Motor driver</td>
+<td>L298HN</td>
+<td>Dr2</td>
+<td>Motor axis Y control</td>
+</tr>
+<tr class="row-odd"><td>Motor driver</td>
+<td>BTS7960</td>
+<td>Dr3, Dr4</td>
+<td>Motors axis Z control</td>
+</tr>
+<tr class="row-even"><td>Microstep driver</td>
+<td>TB6560</td>
+<td>Dr5</td>
+<td>Scissors motor control</td>
+</tr>
+<tr class="row-odd"><td>Microstep driver</td>
+<td>TB6600</td>
+<td>Dr6</td>
+<td>Gate motor control</td>
+</tr>
+<tr class="row-even"><td>DC motor</td>
+<td>&#160;</td>
+<td>MZI, MZD</td>
+<td>Axis Z motors</td>
+</tr>
+<tr class="row-odd"><td>DC motor</td>
+<td>&#160;</td>
+<td>MX</td>
+<td>Axis X motor</td>
+</tr>
+<tr class="row-even"><td>Stepper motor</td>
+<td>&#160;</td>
+<td>MY</td>
+<td>Axis Y motor</td>
+</tr>
+<tr class="row-odd"><td>Stepper motor</td>
+<td>STP-MTR-23079</td>
+<td>MT</td>
+<td>Scissors motor</td>
+</tr>
+<tr class="row-even"><td>Stepper motor</td>
+<td>STP-MTR-17048</td>
+<td>MP</td>
+<td>Gate motor</td>
+</tr>
+<tr class="row-odd"><td>Inductive sensor</td>
+<td>&#160;</td>
+<td>ISL, ISR</td>
+<td>Read Z axis position marks</td>
+</tr>
+<tr class="row-even"><td>2 Chanels optocuple</td>
+<td>Pc817</td>
+<td>OC</td>
+<td>Inductive sensors arduino interfaz</td>
+</tr>
+<tr class="row-odd"><td>Limit switch</td>
+<td>&#160;</td>
+<td>SW_YF</td>
+<td>Y axis position read front</td>
+</tr>
+<tr class="row-even"><td>Limit switch</td>
+<td>&#160;</td>
+<td>SW_YB</td>
+<td>Y axis position read back</td>
+</tr>
+<tr class="row-odd"><td>Limit switch</td>
+<td>&#160;</td>
+<td>SW_XR</td>
+<td>X axis position read rigth</td>
+</tr>
+<tr class="row-even"><td>Limit switch</td>
+<td>&#160;</td>
+<td>SW_XI</td>
+<td>X axis position read left</td>
+</tr>
+<tr class="row-odd"><td>Limit switch</td>
+<td>&#160;</td>
+<td>SW_ZRD</td>
+<td>Z axis position read rigth down</td>
+</tr>
+<tr class="row-even"><td>Limit switch</td>
+<td>&#160;</td>
+<td>SW_ZRU</td>
+<td>Z axis position read rigth up</td>
+</tr>
+<tr class="row-odd"><td>Limit switch</td>
+<td>&#160;</td>
+<td>SW_ZID</td>
+<td>Z axis position read left down</td>
+</tr>
+<tr class="row-even"><td>Limit switch</td>
+<td>&#160;</td>
+<td>SW_ZIU</td>
+<td>Z axis position read left up</td>
+</tr>
+<tr class="row-odd"><td>Limit switch</td>
+<td>&#160;</td>
+<td>SW_T</td>
+<td>Scissors home indicator</td>
+</tr>
+<tr class="row-even"><td>Limit switch</td>
+<td>&#160;</td>
+<td>SW_G</td>
+<td>Gate home indicator</td>
+</tr>
+<tr class="row-odd"><td>Microcontroller board</td>
+<td>Arduino mega 2560</td>
+<td>Ar</td>
+<td>Server comunication and embedded control algorithm</td>
+</tr>
+</tbody>
+</table>
+<p>In <a class="reference external" href="Esquematico.pdf">Esquematico</a>  is show the electrical circuit diagram.</p>
+</div>
+<div class="section" id="software-architecture">
+<h2>Software architecture<a class="headerlink" href="#software-architecture" title="Permalink to this headline">¶</a></h2>
+<p>The warehouse is controlled by a arduino board, in order to update the code in the warehouse it is necessary to have the arduino IDE and the library <a class="reference external" href="http://wiki.ros.org/rosserial_arduino/Tutorials/Arduino%20IDE%20Setup">rosserial_arduino</a> installed. To access the codes of the warehouse and its VMD, clone the repository:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gitlab</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">LabFabEx</span><span class="o">/</span><span class="n">almacen_material</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>In this you will find the folder ‘Almacen_PAI’ with the Arduino code, the other files correspond to its VMD package for gazebo.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">LabFabEx</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../motoman/motoman.html">Plataforma robótica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pria/pria.html">PRIA - UN</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../almacen_material.html">Automated warehouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sdv_slam/sdv_slam.html">SDV SLAM aplication</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../almacen_material.html">Automated warehouse</a><ul>
+      <li>Previous: <a href="../almacen_material.html" title="previous chapter">Automated warehouse</a></li>
+      <li>Next: <a href="../manual_usuario/manual.html" title="next chapter">User manual</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, LabFabEx.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/almacen/arquitectura/arquitectura.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

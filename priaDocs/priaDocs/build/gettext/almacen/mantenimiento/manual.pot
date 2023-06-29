@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, LabFabEx
+# This file is distributed under the same license as the LabFabEx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: LabFabEx \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 15:34-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/almacen/mantenimiento/manual.rst:10
+msgid "Maintenance manual"
+msgstr ""
+
+#: ../../source/almacen/mantenimiento/manual.rst:13
+msgid "Commun errors"
+msgstr ""
+
+#: ../../source/almacen/mantenimiento/manual.rst:15
+msgid "Listed below are common problems and their possible solution:"
+msgstr ""
+
+#: ../../source/almacen/mantenimiento/manual.rst:18
+msgid "**Problem**"
+msgstr ""
+
+#: ../../source/almacen/mantenimiento/manual.rst:18
+msgid "**Solution**"
+msgstr ""
+
+#: ../../source/almacen/mantenimiento/manual.rst:20
+msgid "Some axis does not stop in a mecanical limit"
+msgstr ""
+
+#: ../../source/almacen/mantenimiento/manual.rst:20
+msgid "Run test_fc.ino script and confirm the correct reading  of limit switch, if reading is falling check the conection in the terminal boards and arduino board."
+msgstr ""
+
+#: ../../source/almacen/mantenimiento/manual.rst:25
+msgid "Vertical axis does not move"
+msgstr ""
+
+#: ../../source/almacen/mantenimiento/manual.rst:25
+msgid "If the lift is inclined, move one of the motors to straightened it, can do it manually but ideally with the script testZ.ino,loop function may need some modification."
+msgstr ""
+
+#: ../../source/almacen/mantenimiento/manual.rst:30
+msgid "If the lift is in the botom of warehouse, restart it to made the home routine ,check the marks for inductive sensors."
+msgstr ""
+
+#: ../../source/almacen/mantenimiento/manual.rst:34
+msgid "Some motor of vertical axis does not stop in the desired mark."
+msgstr ""
+
+#: ../../source/almacen/mantenimiento/manual.rst:34
+msgid "Check the marks for inductive sensors."
+msgstr ""
+
+#: ../../source/almacen/mantenimiento/manual.rst:37
+msgid "Warehouse does not repond"
+msgstr ""
+
+#: ../../source/almacen/mantenimiento/manual.rst:37
+msgid "Check the conection between the computer and the arduino, note that the store only receives select Cell instructions if the status is ready (0) and toSDV if the status is wait sdv(2)."
+msgstr ""
+
+#: ../../source/almacen/mantenimiento/manual.rst:45
+msgid "Periodic maintenance"
+msgstr ""
+
+#: ../../source/almacen/mantenimiento/manual.rst:46
+msgid "Check nuts and bolts, vibrations may have loosened them."
+msgstr ""
+
+#: ../../source/almacen/mantenimiento/manual.rst:47
+msgid "Tighten the belts of each axis."
+msgstr ""
+
+#: ../../source/almacen/mantenimiento/manual.rst:48
+msgid "Engage the horizontal and vertical linear guides and the scissor screw."
+msgstr ""
